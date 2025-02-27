@@ -5,7 +5,7 @@ namespace Paintvale.HLE.HOS.Services.Hid
 {
     public class DebugMouseDevice : BaseDevice
     {
-        public DebugMouseDevice(Switch device, bool active) : base(device, active) { }
+        public DebugMouseDevice(Flaminrex device, bool active) : base(device, active) { }
 
         public void Update()
         {

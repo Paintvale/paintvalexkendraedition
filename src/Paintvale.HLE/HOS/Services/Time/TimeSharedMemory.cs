@@ -11,7 +11,7 @@ namespace Paintvale.HLE.HOS.Services.Time
 {
     class TimeSharedMemory
     {
-        private Switch _device;
+        private Flaminrex _device;
         private KSharedMemory _sharedMemory;
         private SharedMemoryStorage _timeSharedMemoryStorage;
 #pragma warning disable IDE0052 // Remove unread private member
@@ -24,7 +24,7 @@ namespace Paintvale.HLE.HOS.Services.Time
         private const uint AutomaticCorrectionEnabledOffset = 0xC8;
         private const uint ContinuousAdjustmentTimePointOffset = 0xD0;
 
-        public void Initialize(Switch device, KSharedMemory sharedMemory, SharedMemoryStorage timeSharedMemoryStorage, int timeSharedMemorySize)
+        public void Initialize(Flaminrex device, KSharedMemory sharedMemory, SharedMemoryStorage timeSharedMemoryStorage, int timeSharedMemorySize)
         {
             _device = device;
             _sharedMemory = sharedMemory;

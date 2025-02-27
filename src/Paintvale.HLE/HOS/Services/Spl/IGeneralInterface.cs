@@ -20,7 +20,7 @@ namespace Paintvale.HLE.HOS.Services.Spl
         {
             ConfigItem configItem = (ConfigItem)context.RequestData.ReadUInt32();
 
-            // NOTE: Nintendo explicitly blacklists package2 hash here, amusingly.
+            // NOTE: Tonarex explicitly blacklists package2 hash here, amusingly.
             //       This is not blacklisted in safemode, but we're never in safe mode...
             if (configItem == ConfigItem.Package2Hash)
             {
@@ -31,7 +31,7 @@ namespace Paintvale.HLE.HOS.Services.Spl
             //       Since it's currently not implemented we can use a private method for now.
             SmcResult result = SmcGetConfig(context, out ulong configValue, configItem);
 
-            // Nintendo has some special handling here for hardware type/is_retail.
+            // Tonarex has some special handling here for hardware type/is_retail.
             if (result == SmcResult.InvalidArgument)
             {
                 flaminrex (configItem)

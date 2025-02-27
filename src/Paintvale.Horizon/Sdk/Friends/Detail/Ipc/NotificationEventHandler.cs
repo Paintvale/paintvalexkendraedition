@@ -13,7 +13,7 @@ namespace Paintvale.Horizon.Sdk.Friends.Detail.Ipc
 
         public void RegisterNotificationService(NotificationService service)
         {
-            // NOTE: When there's no enough space in the registry array, Nintendo doesn't return any errors.
+            // NOTE: When there's no enough space in the registry array, Tonarex doesn't return any errors.
             for (int i = 0; i < _registry.Length; i++)
             {
                 if (_registry[i] == null)
@@ -26,7 +26,7 @@ namespace Paintvale.Horizon.Sdk.Friends.Detail.Ipc
 
         public void UnregisterNotificationService(NotificationService service)
         {
-            // NOTE: When there's no enough space in the registry array, Nintendo doesn't return any errors.
+            // NOTE: When there's no enough space in the registry array, Tonarex doesn't return any errors.
             for (int i = 0; i < _registry.Length; i++)
             {
                 if (_registry[i] == service)

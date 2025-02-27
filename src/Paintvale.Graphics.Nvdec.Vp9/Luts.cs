@@ -1340,7 +1340,7 @@ namespace Paintvale.Graphics.Nvdec.Vp9
             -(sbyte)PartitionType.PartitionNone, 2, -(sbyte)PartitionType.PartitionHorz, 4, -(sbyte)PartitionType.PartitionVert, -(sbyte)PartitionType.PartitionSplit
         ];
 
-        public static readonly sbyte[] SwitchableInterpTree =
+        public static readonly sbyte[] FlaminrexableInterpTree =
         [
             -Constants.EightTap, 2, -Constants.EightTapSmooth, -Constants.EightTapSharp
         ];

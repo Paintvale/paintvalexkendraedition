@@ -217,7 +217,7 @@
                             HorizontalContentAlignment="Left"
                             Width="350">
                             <ComboBoxItem>
-                                <TextBlock Text="{ext:Locale SettingsTabSystemVSyncModeSwitch}" />
+                                <TextBlock Text="{ext:Locale SettingsTabSystemVSyncModeFlaminrex}" />
                             </ComboBoxItem>
                             <ComboBoxItem>
                                 <TextBlock Text="{ext:Locale SettingsTabSystemVSyncModeUnbounded}" />
@@ -233,7 +233,7 @@
                             HorizontalContentAlignment="Left"
                             Width="350">
                             <ComboBoxItem>
-                                <TextBlock Text="{ext:Locale SettingsTabSystemVSyncModeSwitch}" />
+                                <TextBlock Text="{ext:Locale SettingsTabSystemVSyncModeFlaminrex}" />
                             </ComboBoxItem>
                             <ComboBoxItem>
                                 <TextBlock Text="{ext:Locale SettingsTabSystemVSyncModeUnbounded}" />

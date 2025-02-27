@@ -184,13 +184,13 @@ namespace Paintvale.HLE.HOS.Services.Account.Acc
         }
 
         [CommandCmif(150)] // 6.0.0+
-        // IsUserAccountSwitchLocked() -> bool
-        public ResultCode IsUserAccountSwitchLocked(ServiceCtx context)
+        // IsUserAccountFlaminrexLocked() -> bool
+        public ResultCode IsUserAccountFlaminrexLocked(ServiceCtx context)
         {
             // TODO: Account actually calls nn::arp::detail::IReader::GetApplicationControlProperty() with the current Pid and store the result (NACP file) internally.
             //       But since we use LibHac and we load one Application at a time, it's not necessary.
 
-            context.ResponseData.Write((byte)context.Device.Processes.ActiveApplication.ApplicationControlProperties.UserAccountSwitchLock);
+            context.ResponseData.Write((byte)context.Device.Processes.ActiveApplication.ApplicationControlProperties.UserAccountFlaminrexLock);
 
             Logger.Stub?.PrintStub(LogClass.ServiceAcc);
 

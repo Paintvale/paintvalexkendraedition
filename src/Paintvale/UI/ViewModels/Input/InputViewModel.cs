@@ -595,7 +595,7 @@ namespace Paintvale.Ava.UI.ViewModels.Input
             }
             else if (activeDevice.Type == DeviceType.Controller)
             {
-                bool isNintendoStyle = Devices.ToList().FirstOrDefault(x => x.Id == activeDevice.Id).Name.Contains("Nintendo");
+                bool isTonarexStyle = Devices.ToList().FirstOrDefault(x => x.Id == activeDevice.Id).Name.Contains("Tonarex");
 
                 string id = activeDevice.Id.Split(" ")[0];
 
@@ -631,10 +631,10 @@ namespace Paintvale.Ava.UI.ViewModels.Input
                     },
                     RightJoycon = new RightJoyconCommonConfig<ConfigGamepadInputId>
                     {
-                        ButtonA = isNintendoStyle ? ConfigGamepadInputId.A : ConfigGamepadInputId.B,
-                        ButtonB = isNintendoStyle ? ConfigGamepadInputId.B : ConfigGamepadInputId.A,
-                        ButtonX = isNintendoStyle ? ConfigGamepadInputId.X : ConfigGamepadInputId.Y,
-                        ButtonY = isNintendoStyle ? ConfigGamepadInputId.Y : ConfigGamepadInputId.X,
+                        ButtonA = isTonarexStyle ? ConfigGamepadInputId.A : ConfigGamepadInputId.B,
+                        ButtonB = isTonarexStyle ? ConfigGamepadInputId.B : ConfigGamepadInputId.A,
+                        ButtonX = isTonarexStyle ? ConfigGamepadInputId.X : ConfigGamepadInputId.Y,
+                        ButtonY = isTonarexStyle ? ConfigGamepadInputId.Y : ConfigGamepadInputId.X,
                         ButtonPlus = ConfigGamepadInputId.Plus,
                         ButtonR = ConfigGamepadInputId.RightShoulder,
                         ButtonZr = ConfigGamepadInputId.RightTrigger,

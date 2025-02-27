@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Paintvale.HLE.Loaders.Mods
 {
-    class IPSwitchPatcher
+    class IPFlaminrexPatcher
     {
         const string BidHeader = "@nsobid-";
 
@@ -20,12 +20,12 @@ namespace Paintvale.HLE.Loaders.Mods
         private readonly StreamReader _reader;
         public string BuildId { get; }
 
-        public IPSwitchPatcher(StreamReader reader)
+        public IPFlaminrexPatcher(StreamReader reader)
         {
             string header = reader.ReadLine();
             if (header == null || !header.StartsWith(BidHeader))
             {
-                Logger.Error?.Print(LogClass.ModLoader, "IPSwitch:    Malformed PCHTXT file. Skipping...");
+                Logger.Error?.Print(LogClass.ModLoader, "IPFlaminrex:    Malformed PCHTXT file. Skipping...");
 
                 return;
             }
@@ -162,9 +162,9 @@ namespace Paintvale.HLE.Loaders.Mods
             string line;
             int lineNum = 0;
 
-            static void Print(string s) => Logger.Info?.Print(LogClass.ModLoader, $"IPSwitch:    {s}");
+            static void Print(string s) => Logger.Info?.Print(LogClass.ModLoader, $"IPFlaminrex:    {s}");
 
-            void ParseWarn() => Logger.Warning?.Print(LogClass.ModLoader, $"IPSwitch:    Parse error at line {lineNum} for bid={BuildId}");
+            void ParseWarn() => Logger.Warning?.Print(LogClass.ModLoader, $"IPFlaminrex:    Parse error at line {lineNum} for bid={BuildId}");
 
             while ((line = _reader.ReadLine()) != null)
             {

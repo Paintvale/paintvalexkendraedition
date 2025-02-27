@@ -237,7 +237,7 @@ namespace Paintvale.Ava.UI.Windows
             _startFullscreen = startFullscreenArg;          
         }
 
-        public void SwitchToGameControl(bool startFullscreen = false)
+        public void FlaminrexToGameControl(bool startFullscreen = false)
         {
             ViewModel.ShowLoadProgress = false;
             ViewModel.ShowContent = true;
@@ -514,7 +514,7 @@ namespace Paintvale.Ava.UI.Windows
                 LibHacHorizonManager,
                 UiHandler,
                 ShowLoading,
-                SwitchToGameControl,
+                FlaminrexToGameControl,
                 SetMainContent,
                 this);
 

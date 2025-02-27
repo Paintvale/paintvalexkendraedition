@@ -6,7 +6,7 @@ namespace Paintvale.HLE.HOS.Services.Hid
 {
     public class TouchDevice : BaseDevice
     {
-        public TouchDevice(Switch device, bool active) : base(device, active) { }
+        public TouchDevice(Flaminrex device, bool active) : base(device, active) { }
 
         public void Update(params ReadOnlySpan<TouchPoint> points)
         {

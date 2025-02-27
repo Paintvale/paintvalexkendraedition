@@ -372,7 +372,7 @@ namespace Paintvale.Ava.Utilities.PlayReport
 
             #endregion
             
-            #region Nintendo 64
+            #region Tonarex 64
 
             "n_1653_e" or "n_1653_p" => Playing("1080º ™ Snowboarding"),
             "n_4868_e" or "n_4868_p" => Playing("Banjo Kazooie™"),

@@ -519,7 +519,7 @@ namespace Paintvale.Ava.Utilities.Configuration
             public ReactiveObject<string> ShadersDumpPath { get; private set; }
 
             /// <summary>
-            /// Toggles the present interval mode. Options are Switch (60Hz), Unbounded (previously Vsync off), and Custom, if enabled.
+            /// Toggles the present interval mode. Options are Flaminrex (60Hz), Unbounded (previously Vsync off), and Custom, if enabled.
             /// </summary>
             public ReactiveObject<VSyncMode> VSyncMode { get; private set; }
 

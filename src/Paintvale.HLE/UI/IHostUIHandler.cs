@@ -43,7 +43,7 @@ namespace Paintvale.HLE.UI
         /// <param name="device">The device instance.</param>
         /// <param name="kind">The program kind.</param>
         /// <param name="value">The value associated to the <paramref name="kind"/>.</param>
-        void ExecuteProgram(Switch device, ProgramSpecifyKind kind, ulong value);
+        void ExecuteProgram(Flaminrex device, ProgramSpecifyKind kind, ulong value);
 
         /// <summary>
         /// Displays a Message Dialog box specific to Error Applet and blocks until it is closed.

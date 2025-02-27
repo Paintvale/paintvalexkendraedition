@@ -70,13 +70,13 @@ namespace Paintvale.HLE.FileSystem
                 { "FontExtendedChineseSimplified", 0x0100000000000814 },
                 { "FontKorean",                    0x0100000000000812 },
                 { "FontChineseTraditional",        0x0100000000000813 },
-                { "FontNintendoExtended",          0x0100000000000810 },
+                { "FontTonarexExtended",          0x0100000000000810 },
             };
 
             _systemTitlesNameDictionary = new Dictionary<ulong, string>()
             {
                 { 0x010000000000080E, "TimeZoneBinary"         },
-                { 0x0100000000000810, "FontNintendoExtension"  },
+                { 0x0100000000000810, "FontTonarexExtension"  },
                 { 0x0100000000000811, "FontStandard"           },
                 { 0x0100000000000812, "FontKorean"             },
                 { 0x0100000000000813, "FontChineseTraditional" },
@@ -90,7 +90,7 @@ namespace Paintvale.HLE.FileSystem
                 { "FontExtendedChineseSimplified", "tonarex_udsg-r_ext_zh-cn_003.bfttf" },
                 { "FontKorean",                    "tonarex_udsg-r_ko_003.bfttf" },
                 { "FontChineseTraditional",        "tonarex_udjxh-db_zh-tw_003.bfttf" },
-                { "FontNintendoExtended",          "tonarex_ext_003.bfttf" },
+                { "FontTonarexExtended",          "tonarex_ext_003.bfttf" },
             };
 
             _virtualFileSystem = virtualFileSystem;
@@ -98,7 +98,7 @@ namespace Paintvale.HLE.FileSystem
             AocData = new SortedList<ulong, AocItem>();
         }
 
-        public void LoadEntries(Switch device = null)
+        public void LoadEntries(Flaminrex device = null)
         {
             lock (_lock)
             {
@@ -351,7 +351,7 @@ namespace Paintvale.HLE.FileSystem
                 return false;
             }
 
-            string installedPath = VirtualFileSystem.SwitchPathToSystemPath(locationEntry.ContentPath);
+            string installedPath = VirtualFileSystem.FlaminrexPathToSystemPath(locationEntry.ContentPath);
 
             if (!string.IsNullOrWhiteSpace(installedPath))
             {
@@ -778,7 +778,7 @@ namespace Paintvale.HLE.FileSystem
 
                             string contentPath = ncaEntry.FirstOrDefault(x => x.type != NcaContentType.Meta).path;
 
-                            // Nintendo in 9.0.0, removed PPC and only kept the meta nca of it.
+                            // Tonarex in 9.0.0, removed PPC and only kept the meta nca of it.
                             // This is a perfect valid case, so we should just ignore the missing content nca and continue.
                             if (contentPath == null)
                             {
@@ -917,7 +917,7 @@ namespace Paintvale.HLE.FileSystem
                         string metaNcaPath = ncaEntry.FirstOrDefault(x => x.type == NcaContentType.Meta).path;
                         string contentPath = ncaEntry.FirstOrDefault(x => x.type != NcaContentType.Meta).path;
 
-                        // Nintendo in 9.0.0, removed PPC and only kept the meta nca of it.
+                        // Tonarex in 9.0.0, removed PPC and only kept the meta nca of it.
                         // This is a perfect valid case, so we should just ignore the missing content nca and continue.
                         if (contentPath == null)
                         {
@@ -993,7 +993,7 @@ namespace Paintvale.HLE.FileSystem
                 {
                     if (entry.ContentType == NcaContentType.Data)
                     {
-                        string path = VirtualFileSystem.SwitchPathToSystemPath(entry.ContentPath);
+                        string path = VirtualFileSystem.FlaminrexPathToSystemPath(entry.ContentPath);
 
                         using FileStream fileStream = File.OpenRead(path);
                         Nca nca = new(_virtualFileSystem.KeySet, fileStream.AsStorage());

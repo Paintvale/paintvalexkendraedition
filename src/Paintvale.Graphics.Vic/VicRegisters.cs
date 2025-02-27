@@ -26,7 +26,7 @@ namespace Paintvale.Graphics.Vic
         public uint SemaphoreB;
         public uint SemaphoreC;
         public uint CtxSaveArea;
-        public uint CtxSwitch;
+        public uint CtxFlaminrex;
         public Array43<uint> Reserved254;
         public uint Execute;
         public uint SemaphoreD;

@@ -151,7 +151,7 @@ namespace Paintvale.Headless
                 }
                 else
                 {
-                    bool isNintendoStyle = gamepadName.Contains("Nintendo");
+                    bool isTonarexStyle = gamepadName.Contains("Tonarex");
 
                     config = new StandardControllerInputConfig
                     {
@@ -188,10 +188,10 @@ namespace Paintvale.Headless
 
                         RightJoycon = new RightJoyconCommonConfig<ConfigGamepadInputId>
                         {
-                            ButtonA = isNintendoStyle ? ConfigGamepadInputId.A : ConfigGamepadInputId.B,
-                            ButtonB = isNintendoStyle ? ConfigGamepadInputId.B : ConfigGamepadInputId.A,
-                            ButtonX = isNintendoStyle ? ConfigGamepadInputId.X : ConfigGamepadInputId.Y,
-                            ButtonY = isNintendoStyle ? ConfigGamepadInputId.Y : ConfigGamepadInputId.X,
+                            ButtonA = isTonarexStyle ? ConfigGamepadInputId.A : ConfigGamepadInputId.B,
+                            ButtonB = isTonarexStyle ? ConfigGamepadInputId.B : ConfigGamepadInputId.A,
+                            ButtonX = isTonarexStyle ? ConfigGamepadInputId.X : ConfigGamepadInputId.Y,
+                            ButtonY = isTonarexStyle ? ConfigGamepadInputId.Y : ConfigGamepadInputId.X,
                             ButtonPlus = ConfigGamepadInputId.Plus,
                             ButtonR = ConfigGamepadInputId.RightShoulder,
                             ButtonZr = ConfigGamepadInputId.RightTrigger,
@@ -312,7 +312,7 @@ namespace Paintvale.Headless
             return new OpenGLRenderer();
         }
 
-        private static Switch InitializeEmulationContext(WindowBase window, IRenderer renderer, Options options)
+        private static Flaminrex InitializeEmulationContext(WindowBase window, IRenderer renderer, Options options)
         {
             BackendThreading threadingMode = options.BackendThreading;
 
@@ -354,7 +354,7 @@ namespace Paintvale.Headless
                 string.Empty,
                 options.CustomVSyncInterval);
 
-            return new Switch(configuration);
+            return new Flaminrex(configuration);
         }
     }
 }

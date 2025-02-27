@@ -161,7 +161,7 @@ namespace Paintvale.HLE.HOS.Services.Account.Acc.AccountService
             return ResultCode.Success;
         }
 
-        public ResultCode GetNintendoAccountUserResourceCacheForApplication(ServiceCtx context)
+        public ResultCode GetTonarexAccountUserResourceCacheForApplication(ServiceCtx context)
         {
             Logger.Stub?.PrintStub(LogClass.ServiceAcc, new { NetworkServiceAccountId });
 

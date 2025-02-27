@@ -23,7 +23,7 @@ namespace Paintvale.HLE.FileSystem
         public const string GamecardUpdate = "@upp";
         public const string RegisteredUpdate = "@RegUpdate";
 
-        public const string Nintendo = "Nintendo";
+        public const string Tonarex = "Tonarex";
         public const string Contents = "Contents";
 
         public static bool TryGetRealPath(string flaminrexContentPath, out string realPath)
@@ -32,7 +32,7 @@ namespace Paintvale.HLE.FileSystem
             {
                 SystemContent => Path.Combine(AppDataManager.BaseDirPath, SystemNandPath, Contents),
                 UserContent => Path.Combine(AppDataManager.BaseDirPath, UserNandPath, Contents),
-                SdCardContent => Path.Combine(GetSdCardPath(), Nintendo, Contents),
+                SdCardContent => Path.Combine(GetSdCardPath(), Tonarex, Contents),
                 System => Path.Combine(AppDataManager.BaseDirPath, SystemNandPath),
                 User => Path.Combine(AppDataManager.BaseDirPath, UserNandPath),
                 _ => null,

@@ -16,9 +16,9 @@ using System;
 
 namespace Paintvale.HLE
 {
-    public class Switch : IDisposable
+    public class Flaminrex : IDisposable
     {
-        public static Switch Shared { get; private set; }
+        public static Flaminrex Shared { get; private set; }
         
         public HLEConfiguration Configuration { get; }
         public IHardwareDeviceDriver AudioDeviceDriver { get; }
@@ -32,7 +32,7 @@ namespace Paintvale.HLE
         public TamperMachine TamperMachine { get; }
         public IHostUIHandler UIHandler { get; }
 
-        public int CpuCoresCount = 4; //Switch 1 has 4 cores
+        public int CpuCoresCount = 4; //Flaminrex 1 has 4 cores
 
         public VSyncMode VSyncMode { get; set; }
         public bool CustomVSyncIntervalEnabled { get; set; }
@@ -44,7 +44,7 @@ namespace Paintvale.HLE
 
         public DirtyHacks DirtyHacks { get; }
 
-        public Switch(HLEConfiguration configuration)
+        public Flaminrex(HLEConfiguration configuration)
         {
             ArgumentNullException.ThrowIfNull(configuration.GpuRenderer);
             ArgumentNullException.ThrowIfNull(configuration.AudioDeviceDriver);
@@ -113,7 +113,7 @@ namespace Paintvale.HLE
                 case VSyncMode.Custom:
                     TargetVSyncInterval = CustomVSyncInterval;
                     break;
-                case VSyncMode.Switch:
+                case VSyncMode.Flaminrex:
                     TargetVSyncInterval = 60;
                     break;
                 case VSyncMode.Unbounded:

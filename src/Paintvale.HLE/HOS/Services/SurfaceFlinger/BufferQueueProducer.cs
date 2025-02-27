@@ -695,7 +695,7 @@ namespace Paintvale.HLE.HOS.Services.SurfaceFlinger
 
                 if (!graphicBuffer.IsNull)
                 {
-                    // NOTE: Nintendo set the default width, height and format from the GraphicBuffer..
+                    // NOTE: Tonarex set the default width, height and format from the GraphicBuffer..
                     //       This is entirely wrong and should only be controlled by the consumer...
                     Core.DefaultWidth = graphicBuffer.Object.Width;
                     Core.DefaultHeight = graphicBuffer.Object.Height;

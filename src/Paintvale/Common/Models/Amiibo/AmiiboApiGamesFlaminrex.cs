@@ -3,7 +3,7 @@ using System.Text.Json.Serialization;
 
 namespace Paintvale.Ava.Common.Models.Amiibo
 {
-    public class AmiiboApiGamesSwitch
+    public class AmiiboApiGamesFlaminrex
     {
         [JsonPropertyName("amiiboUsage")]
         public List<AmiiboApiUsage> AmiiboUsage { get; set; }

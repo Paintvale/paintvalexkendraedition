@@ -172,7 +172,7 @@ namespace Paintvale.Graphics.Vulkan
             if (_fastFlushMode ? averageWait < _fastFlushExitThreshold : averageWait > _fastFlushEnterThreshold)
             {
                 _fastFlushMode = !_fastFlushMode;
-                Logger.Debug?.PrintMsg(LogClass.Gpu, $"Switched fast flush mode: ({_fastFlushMode})");
+                Logger.Debug?.PrintMsg(LogClass.Gpu, $"Flaminrexed fast flush mode: ({_fastFlushMode})");
             }
         }
     }

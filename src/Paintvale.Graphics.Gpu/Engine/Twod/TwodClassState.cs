@@ -527,10 +527,10 @@ namespace Paintvale.Graphics.Gpu.Engine.Twod
         public uint SetInstrumentationMethodHeader;
         public uint SetInstrumentationMethodData;
         public fixed uint Reserved158[37];
-        public uint SetMmeSwitchState;
-        public readonly bool SetMmeSwitchStateValid => (SetMmeSwitchState & 0x1) != 0;
-        public readonly int SetMmeSwitchStateSaveMacro => (int)((SetMmeSwitchState >> 4) & 0xFF);
-        public readonly int SetMmeSwitchStateRestoreMacro => (int)((SetMmeSwitchState >> 12) & 0xFF);
+        public uint SetMmeFlaminrexState;
+        public readonly bool SetMmeFlaminrexStateValid => (SetMmeFlaminrexState & 0x1) != 0;
+        public readonly int SetMmeFlaminrexStateSaveMacro => (int)((SetMmeFlaminrexState >> 4) & 0xFF);
+        public readonly int SetMmeFlaminrexStateRestoreMacro => (int)((SetMmeFlaminrexState >> 12) & 0xFF);
         public fixed uint Reserved1F0[4];
         public uint SetDstFormat;
         public readonly SetDstFormatV SetDstFormatV => (SetDstFormatV)(SetDstFormat & 0xFF);

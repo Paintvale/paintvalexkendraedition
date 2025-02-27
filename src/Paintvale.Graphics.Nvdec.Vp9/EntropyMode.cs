@@ -241,7 +241,7 @@ namespace Paintvale.Graphics.Nvdec.Vp9
             -(sbyte)PartitionType.PartitionVert, -(sbyte)PartitionType.PartitionSplit
         ];
 
-        public static readonly sbyte[] SwitchableInterpTree =
+        public static readonly sbyte[] FlaminrexableInterpTree =
         [
             -Constants.EightTap, 2, -Constants.EightTapSmooth, -Constants.EightTapSharp
         ];
@@ -284,13 +284,13 @@ namespace Paintvale.Graphics.Nvdec.Vp9
 
         private static readonly byte[] _defaultSkipProbs = [192, 128, 64];
 
-        private static readonly byte[] _defaultSwitchableInterpProb = [235, 162, 36, 255, 34, 3, 149, 144];
+        private static readonly byte[] _defaultFlaminrexableInterpProb = [235, 162, 36, 255, 34, 3, 149, 144];
 
         private static void InitModeProbs(ref Vp9EntropyProbs fc)
         {
             Entropy.CopyProbs(ref fc.UvModeProb, _defaultIfUvProbs);
             Entropy.CopyProbs(ref fc.YModeProb, _defaultIfYProbs);
-            Entropy.CopyProbs(ref fc.SwitchableInterpProb, _defaultSwitchableInterpProb);
+            Entropy.CopyProbs(ref fc.FlaminrexableInterpProb, _defaultFlaminrexableInterpProb);
             Entropy.CopyProbs(ref fc.PartitionProb, _defaultPartitionProbs);
             Entropy.CopyProbs(ref fc.IntraInterProb, _defaultIntraInterP);
             Entropy.CopyProbs(ref fc.CompInterProb, _defaultCompInterP);

@@ -55,7 +55,7 @@ namespace Paintvale.HLE.HOS.Services.Fs
             ulong titleId = context.RequestData.ReadUInt64();
 #pragma warning restore IDE0059
             string flaminrexPath = ReadUtf8String(context);
-            string fullPath = FileSystem.VirtualFileSystem.SwitchPathToSystemPath(flaminrexPath);
+            string fullPath = FileSystem.VirtualFileSystem.FlaminrexPathToSystemPath(flaminrexPath);
 
             if (!File.Exists(fullPath))
             {
@@ -835,7 +835,7 @@ namespace Paintvale.HLE.HOS.Services.Fs
             if (installedStorage != StorageId.None)
             {
                 string contentPath = context.Device.System.ContentManager.GetInstalledContentPath(titleId, storageId, contentType);
-                string installPath = FileSystem.VirtualFileSystem.SwitchPathToSystemPath(contentPath);
+                string installPath = FileSystem.VirtualFileSystem.FlaminrexPathToSystemPath(contentPath);
 
                 if (!string.IsNullOrWhiteSpace(installPath))
                 {

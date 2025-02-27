@@ -47,7 +47,7 @@ namespace Paintvale.HLE.HOS.Services.SurfaceFlinger
 
         public event Action BufferQueued;
 
-        public BufferQueueCore(Switch device, ulong pid)
+        public BufferQueueCore(Flaminrex device, ulong pid)
         {
             Slots = new BufferSlotArray();
             IsAbandoned = false;

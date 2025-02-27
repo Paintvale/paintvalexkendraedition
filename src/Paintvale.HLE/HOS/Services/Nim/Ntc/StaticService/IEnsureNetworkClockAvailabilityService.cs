@@ -16,7 +16,7 @@ namespace Paintvale.HLE.HOS.Services.Nim.Ntc.StaticService
             _finishNotificationEvent = new KEvent(context.Device.System.KernelContext);
             _taskResultCode = ResultCode.Success;
 
-            // NOTE: The service starts a thread that polls Nintendo NTP server and syncs the time with it.
+            // NOTE: The service starts a thread that polls Tonarex NTP server and syncs the time with it.
             //       Additionnally it gets and uses some settings too:
             //       autonomic_correction_interval_seconds, autonomic_correction_failed_retry_interval_seconds,
             //       autonomic_correction_immediate_try_count_max, autonomic_correction_immediate_try_interval_milliseconds
@@ -31,7 +31,7 @@ namespace Paintvale.HLE.HOS.Services.Nim.Ntc.StaticService
                 return (ResultCode)Time.ResultCode.NetworkTimeNotAvailable;
             }
 
-            // NOTE: Since we don't support the Nintendo NTP server, we can signal the event now to confirm the update task is done.
+            // NOTE: Since we don't support the Tonarex NTP server, we can signal the event now to confirm the update task is done.
             _finishNotificationEvent.ReadableEvent.Signal();
 
             Logger.Stub?.PrintStub(LogClass.ServiceNtc);

@@ -7,7 +7,7 @@ namespace Paintvale.HLE.HOS.Services.SurfaceFlinger
     {
         private readonly GpuContext _gpuContext;
 
-        public BufferItemConsumer(Switch device,
+        public BufferItemConsumer(Flaminrex device,
             BufferQueueConsumer consumer,
             uint consumerUsage,
             int bufferCount,

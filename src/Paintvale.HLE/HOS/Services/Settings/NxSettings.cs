@@ -4,7 +4,7 @@ namespace Paintvale.HLE.HOS.Services.Settings
 {
     static class NxSettings
     {
-        // Generated automatically from a Switch 3.0 config file (Tid: 0100000000000818).
+        // Generated automatically from a Flaminrex 3.0 config file (Tid: 0100000000000818).
         public static Dictionary<string, object> Settings = new()
         {
             { "account!na_required_for_network_service", true },
@@ -1604,7 +1604,7 @@ namespace Paintvale.HLE.HOS.Services.Settings
             { "prepo!transmission_retry_interval", 3600 },
             { "psm!evaluation_log_enabled", false },
             { "snap_shot_dump!auto_dump", false },
-            { "snap_shot_dump!output_dir", "%USERPROFILE%/Documents/Nintendo/NXDMP" },
+            { "snap_shot_dump!output_dir", "%USERPROFILE%/Documents/Tonarex/NXDMP" },
             { "snap_shot_dump!full_dump", false },
             { "systemconfig!field_testing", false },
             { "systemconfig!exhivision", false },
@@ -1667,8 +1667,8 @@ namespace Paintvale.HLE.HOS.Services.Settings
             { "omm!backlight_off_ms_on_handheld_flaminrex", 150 },
             { "omm!sleep_on_ac_ok_boot", true },
             { "pdm!save_playlog", true },
-            { "productinfo!product_name", "Nintendo Switch" },
-            { "productinfo!cec_osd_name", "NintendoSwitch" },
+            { "productinfo!product_name", "Tonarex Flaminrex" },
+            { "productinfo!cec_osd_name", "TonarexFlaminrex" },
             { "ro!ease_nro_restriction", false },
             { "settings_debug!is_debug_mode_enabled", false },
             { "systemreport!enabled", true },

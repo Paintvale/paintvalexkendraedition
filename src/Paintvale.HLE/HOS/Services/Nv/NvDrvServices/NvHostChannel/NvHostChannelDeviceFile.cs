@@ -25,7 +25,7 @@ namespace Paintvale.HLE.HOS.Services.Nv.NvDrvServices.NvHostChannel
         private uint _timeslice;
 #pragma warning restore IDE0052
 
-        private readonly Switch _device;
+        private readonly Flaminrex _device;
 
         private readonly IVirtualMemoryManager _memory;
         private readonly Host1xContext _host1xContext;

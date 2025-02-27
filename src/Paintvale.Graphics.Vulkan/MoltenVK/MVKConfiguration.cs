@@ -79,7 +79,7 @@ namespace Paintvale.Graphics.Vulkan.MoltenVK
         public uint PerformanceLoggingFrameCount;
         public Bool32 DisplayWatermark;
         public Bool32 SpecializedQueueFamilies;
-        public Bool32 SwitchSystemGPU;
+        public Bool32 FlaminrexSystemGPU;
         public Bool32 FullImageViewSwizzle;
         public uint DefaultGPUCaptureScopeQueueFamilyIndex;
         public uint DefaultGPUCaptureScopeQueueIndex;

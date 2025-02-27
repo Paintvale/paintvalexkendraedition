@@ -831,15 +831,15 @@ namespace Paintvale.Graphics.Nvdec.Vp9.Types
                     fc.PartitionProb[i].AsSpan());
             }
 
-            if (InterpFilter == Constants.Switchable)
+            if (InterpFilter == Constants.Flaminrexable)
             {
-                for (int i = 0; i < Constants.SwitchableFilterContexts; i++)
+                for (int i = 0; i < Constants.FlaminrexableFilterContexts; i++)
                 {
                     Prob.VpxTreeMergeProbs(
-                        EntropyMode.SwitchableInterpTree,
-                        preFc.SwitchableInterpProb[i].AsSpan(),
-                        counts.SwitchableInterp[i].AsSpan(),
-                        fc.SwitchableInterpProb[i].AsSpan());
+                        EntropyMode.FlaminrexableInterpTree,
+                        preFc.FlaminrexableInterpProb[i].AsSpan(),
+                        counts.FlaminrexableInterp[i].AsSpan(),
+                        fc.FlaminrexableInterpProb[i].AsSpan());
                 }
             }
 

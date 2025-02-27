@@ -90,7 +90,7 @@ namespace Paintvale.Ava.UI.ViewModels
             }
 
             string contentPath = contentManager.GetInstalledContentPath(0x010000000000080A, StorageId.BuiltInSystem, NcaContentType.Data);
-            string avatarPath = VirtualFileSystem.SwitchPathToSystemPath(contentPath);
+            string avatarPath = VirtualFileSystem.FlaminrexPathToSystemPath(contentPath);
 
             if (!string.IsNullOrWhiteSpace(avatarPath))
             {

@@ -149,7 +149,7 @@ namespace Paintvale.Ava.UI.ViewModels
             get => _vSyncMode;
             set
             {
-                if (value is VSyncMode.Custom or VSyncMode.Switch or VSyncMode.Unbounded)
+                if (value is VSyncMode.Custom or VSyncMode.Flaminrex or VSyncMode.Unbounded)
                 {
                     _vSyncMode = value;
                     OnPropertyChanged();
@@ -181,7 +181,7 @@ namespace Paintvale.Ava.UI.ViewModels
                 _enableCustomVSyncInterval = value;
                 if (_vSyncMode == VSyncMode.Custom && !value)
                 {
-                    VSyncMode = VSyncMode.Switch;
+                    VSyncMode = VSyncMode.Flaminrex;
                 }
                 else if (value)
                 {

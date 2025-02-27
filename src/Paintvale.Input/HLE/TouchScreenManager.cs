@@ -9,7 +9,7 @@ namespace Paintvale.Input.HLE
     public class TouchScreenManager : IDisposable
     {
         private readonly IMouse _mouse;
-        private Switch _device;
+        private Flaminrex _device;
         private bool _wasClicking;
 
         public TouchScreenManager(IMouse mouse)
@@ -17,7 +17,7 @@ namespace Paintvale.Input.HLE
             _mouse = mouse;
         }
 
-        public void Initialize(Switch device)
+        public void Initialize(Flaminrex device)
         {
             _device = device;
         }

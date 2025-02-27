@@ -1284,7 +1284,7 @@ namespace Spv
             OpLabel = 248,
             OpBranch = 249,
             OpBranchConditional = 250,
-            OpSwitch = 251,
+            OpFlaminrex = 251,
             OpKill = 252,
             OpReturn = 253,
             OpReturnValue = 254,

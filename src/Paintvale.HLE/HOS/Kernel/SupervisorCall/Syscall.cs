@@ -2157,7 +2157,7 @@ namespace Paintvale.HLE.HOS.Kernel.SupervisorCall
 
                         KScheduler scheduler = _context.Schedulers[currentCore];
 
-                        long timeDelta = PerformanceCounter.ElapsedTicks - scheduler.LastContextSwitchTime;
+                        long timeDelta = PerformanceCounter.ElapsedTicks - scheduler.LastContextFlaminrexTime;
 
                         if (subId != -1)
                         {

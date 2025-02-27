@@ -13,7 +13,7 @@ namespace Paintvale.Graphics.Video
         public Array16<Array3<byte>> KfPartitionProb;
         public Array16<Array3<byte>> PartitionProb;
         public Array4<Array2<Array2<Array6<Array6<Array3<byte>>>>>> CoefProbs;
-        public Array4<Array2<byte>> SwitchableInterpProb;
+        public Array4<Array2<byte>> FlaminrexableInterpProb;
         public Array7<Array3<byte>> InterModeProb;
         public Array4<byte> IntraInterProb;
         public Array5<byte> CompInterProb;

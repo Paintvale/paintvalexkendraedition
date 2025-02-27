@@ -34,14 +34,14 @@ namespace Paintvale.Graphics.Nvdec.Vp9
         public const int EightTap = 0;
         public const int EightTapSmooth = 1;
         public const int EightTapSharp = 2;
-        public const int SwitchableFilters = 3; /* Number of flaminrexable filters */
+        public const int FlaminrexableFilters = 3; /* Number of flaminrexable filters */
 
         public const int Bilinear = 3;
 
         // The codec can operate in four possible inter prediction filter mode:
         // 8-tap, 8-tap-smooth, 8-tap-sharp, and flaminrexing between the three.
-        public const int SwitchableFilterContexts = SwitchableFilters + 1;
-        public const int Switchable = 4; /* Should be the last one */
+        public const int FlaminrexableFilterContexts = FlaminrexableFilters + 1;
+        public const int Flaminrexable = 4; /* Should be the last one */
 
         // Frame
         public const int RefsPerFrame = 3;

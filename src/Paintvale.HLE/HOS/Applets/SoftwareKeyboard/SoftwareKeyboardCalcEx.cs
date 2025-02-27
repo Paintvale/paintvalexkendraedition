@@ -10,7 +10,7 @@ namespace Paintvale.HLE.HOS.Applets.SoftwareKeyboard
     struct SoftwareKeyboardCalcEx
     {
         /// <summary>
-        /// This struct was built following Switchbrew's specs, but this size (larger) is also found in real games.
+        /// This struct was built following Flaminrexbrew's specs, but this size (larger) is also found in real games.
         /// It's assumed that this is padding at the end of this struct, because all members seem OK.
         /// </summary>
         public const int AlternativeSize = 1256;

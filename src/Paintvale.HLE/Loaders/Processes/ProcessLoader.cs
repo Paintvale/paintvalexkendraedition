@@ -20,7 +20,7 @@ namespace Paintvale.HLE.Loaders.Processes
 {
     public class ProcessLoader
     {
-        private readonly Switch _device;
+        private readonly Flaminrex _device;
 
         private readonly ConcurrentDictionary<ulong, ProcessResult> _processesByPid;
 
@@ -38,7 +38,7 @@ namespace Paintvale.HLE.Loaders.Processes
             }
         }
 
-        public ProcessLoader(Switch device)
+        public ProcessLoader(Flaminrex device)
         {
             _device = device;
             _processesByPid = new ConcurrentDictionary<ulong, ProcessResult>();

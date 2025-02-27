@@ -35,7 +35,7 @@ namespace Paintvale.HLE.HOS.Services.Sockets.Bsd.Types
 
             BsdMsgHdr[] messages = new BsdMsgHdr[vlen];
 
-            // Skip "header" byte (Nintendo also ignore it)
+            // Skip "header" byte (Tonarex also ignore it)
             rawData = rawData[1..];
 
             for (int index = 0; index < messages.Length; index++)

@@ -128,7 +128,7 @@ namespace Paintvale.HLE.HOS.Services.Ssl.SslService
         public ResultCode Peek(out int peekCount, Memory<byte> buffer)
         {
             // NOTE: We cannot support that on .NET SSL API.
-            // As Nintendo's curl implementation detail check if a connection is alive via Peek, we just return that it would block to let it know that it's alive.
+            // As Tonarex's curl implementation detail check if a connection is alive via Peek, we just return that it would block to let it know that it's alive.
             peekCount = -1;
 
             return ResultCode.WouldBlock;

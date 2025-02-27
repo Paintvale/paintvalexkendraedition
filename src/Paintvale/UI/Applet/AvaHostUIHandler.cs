@@ -221,7 +221,7 @@ namespace Paintvale.Ava.UI.Applet
         }
 
 
-        public void ExecuteProgram(Switch device, ProgramSpecifyKind kind, ulong value)
+        public void ExecuteProgram(Flaminrex device, ProgramSpecifyKind kind, ulong value)
         {
             device.Configuration.UserChannelPersistence.ExecuteProgram(kind, value);
             _parent.ViewModel.AppHost?.Stop();

@@ -830,12 +830,12 @@ namespace Paintvale.HLE.HOS
                         IpsPatcher patcher = new(reader);
                         patcher.AddPatches(patches[index]);
                     }
-                    else if (StrEquals(".pchtxt", patchFile.Extension)) // IPSwitch
+                    else if (StrEquals(".pchtxt", patchFile.Extension)) // IPFlaminrex
                     {
                         using FileStream fs = patchFile.OpenRead();
                         using StreamReader reader = new(fs);
 
-                        IPSwitchPatcher patcher = new(reader);
+                        IPFlaminrexPatcher patcher = new(reader);
 
                         int index = GetIndex(patcher.BuildId);
                         if (index == -1)
@@ -843,7 +843,7 @@ namespace Paintvale.HLE.HOS
                             continue;
                         }
 
-                        Logger.Info?.Print(LogClass.ModLoader, $"Matching IPSwitch patch '{patchFile.Name}' in '{mod.Name}' bid={patcher.BuildId}");
+                        Logger.Info?.Print(LogClass.ModLoader, $"Matching IPFlaminrex patch '{patchFile.Name}' in '{mod.Name}' bid={patcher.BuildId}");
 
                         patcher.AddPatches(patches[index]);
                     }

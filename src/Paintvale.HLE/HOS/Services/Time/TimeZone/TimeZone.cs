@@ -1062,7 +1062,7 @@ namespace Paintvale.HLE.HOS.Services.Time.TimeZone
                     return false;
                 }
 
-                // Nintendo abort in case of a TzIf file with a POSIX TZ Name too long to fit inside a TimeZoneRule.
+                // Tonarex abort in case of a TzIf file with a POSIX TZ Name too long to fit inside a TimeZoneRule.
                 // As it's impossible in normal usage to achive this, we also force a crash.
                 if (nRead > (TzNameMax + 1))
                 {
@@ -1673,7 +1673,7 @@ namespace Paintvale.HLE.HOS.Services.Time.TimeZone
                 Time = new CalendarTime()
                 {
                     Year = (short)calendarTime.Year,
-                    // NOTE: Nintendo's month range is 1-12, internal range is 0-11.
+                    // NOTE: Tonarex's month range is 1-12, internal range is 0-11.
                     Month = (sbyte)(calendarTime.Month + 1),
                     Day = calendarTime.Day,
                     Hour = calendarTime.Hour,
@@ -1691,7 +1691,7 @@ namespace Paintvale.HLE.HOS.Services.Time.TimeZone
             CalendarTimeInternal calendarTimeInternal = new()
             {
                 Year = calendarTime.Year,
-                // NOTE: Nintendo's month range is 1-12, internal range is 0-11.
+                // NOTE: Tonarex's month range is 1-12, internal range is 0-11.
                 Month = (sbyte)(calendarTime.Month - 1),
                 Day = calendarTime.Day,
                 Hour = calendarTime.Hour,

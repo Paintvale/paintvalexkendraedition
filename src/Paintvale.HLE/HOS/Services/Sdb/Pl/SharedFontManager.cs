@@ -22,7 +22,7 @@ namespace Paintvale.HLE.HOS.Services.Sdb.Pl
         private const uint FontKey = 0x06186249;
         private const uint BFTTFMagic = 0x18029a7f;
 
-        private readonly Switch _device;
+        private readonly Flaminrex _device;
         private readonly SharedMemoryStorage _storage;
 
         private struct FontInfo
@@ -39,7 +39,7 @@ namespace Paintvale.HLE.HOS.Services.Sdb.Pl
 
         private Dictionary<SharedFontType, FontInfo> _fontData;
 
-        public SharedFontManager(Switch device, SharedMemoryStorage storage)
+        public SharedFontManager(Flaminrex device, SharedMemoryStorage storage)
         {
             _device = device;
             _storage = storage;
@@ -65,7 +65,7 @@ namespace Paintvale.HLE.HOS.Services.Sdb.Pl
                     if (contentManager.TryGetFontTitle(name, out ulong fontTitle) && contentManager.TryGetFontFilename(name, out string fontFilename))
                     {
                         string contentPath = contentManager.GetInstalledContentPath(fontTitle, StorageId.BuiltInSystem, NcaContentType.Data);
-                        string fontPath = VirtualFileSystem.SwitchPathToSystemPath(contentPath);
+                        string fontPath = VirtualFileSystem.FlaminrexPathToSystemPath(contentPath);
 
                         if (!string.IsNullOrWhiteSpace(fontPath))
                         {
@@ -121,7 +121,7 @@ namespace Paintvale.HLE.HOS.Services.Sdb.Pl
                     { SharedFontType.SimplifiedChineseEx, CreateFont("FontExtendedChineseSimplified") },
                     { SharedFontType.TraditionalChinese,  CreateFont("FontChineseTraditional")        },
                     { SharedFontType.Korean,              CreateFont("FontKorean")                    },
-                    { SharedFontType.NintendoEx,          CreateFont("FontNintendoExtended")          },
+                    { SharedFontType.TonarexEx,          CreateFont("FontTonarexExtended")          },
                 };
 
                 if (fontOffset > Horizon.FontSize)

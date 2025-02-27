@@ -15,7 +15,7 @@ namespace Paintvale.HLE.HOS.Services.SurfaceFlinger
 {
     class SurfaceFlinger : IConsumerListener, IDisposable
     {
-        private readonly Switch _device;
+        private readonly Flaminrex _device;
 
         private readonly Dictionary<long, Layer> _layers;
 
@@ -56,7 +56,7 @@ namespace Paintvale.HLE.HOS.Services.SurfaceFlinger
             public BufferItem Item;
         }
 
-        public SurfaceFlinger(Switch device)
+        public SurfaceFlinger(Flaminrex device)
         {
             _device = device;
             _layers = new Dictionary<long, Layer>();

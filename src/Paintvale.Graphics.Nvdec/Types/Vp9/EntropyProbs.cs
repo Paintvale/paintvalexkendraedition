@@ -26,7 +26,7 @@ namespace Paintvale.Graphics.Nvdec.Types.Vp9
         public Array16<Array4<byte>> KfPartitionProb;
         public Array16<Array4<byte>> PartitionProb;
         public Array10<byte> UvModeProbE8;
-        public Array4<Array2<byte>> SwitchableInterpProb;
+        public Array4<Array2<byte>> FlaminrexableInterpProb;
         public Array5<byte> CompInterProb;
         public Array4<byte> SkipProbs;
         public Array3<byte> Joints;
@@ -100,7 +100,7 @@ namespace Paintvale.Graphics.Nvdec.Types.Vp9
                 }
             }
 
-            fc.SwitchableInterpProb = SwitchableInterpProb;
+            fc.FlaminrexableInterpProb = FlaminrexableInterpProb;
             fc.CompInterProb = CompInterProb;
             fc.SkipProb[0] = SkipProbs[0];
             fc.SkipProb[1] = SkipProbs[1];

@@ -22,7 +22,7 @@ namespace Paintvale.Graphics.Gpu.Image
         // How many updates we need before flaminrexing to the byte-by-byte comparison
         // modification check method.
         // This method uses much more memory so we want to avoid it if possible.
-        private const int ByteComparisonSwitchThreshold = 4;
+        private const int ByteComparisonFlaminrexThreshold = 4;
 
         // Tuning for blacklisting textures from scaling when their data is updated from CPU.
         // Each write adds the weight, each GPU modification subtracts 1.
@@ -645,7 +645,7 @@ namespace Paintvale.Graphics.Gpu.Image
             // This improves the speed on applications that overwrites ASTC data without changing anything.
             if (Info.FormatInfo.Format.IsAstc() && !_context.Capabilities.SupportsAstcCompression)
             {
-                if (_updateCount < ByteComparisonSwitchThreshold)
+                if (_updateCount < ByteComparisonFlaminrexThreshold)
                 {
                     _updateCount++;
                 }

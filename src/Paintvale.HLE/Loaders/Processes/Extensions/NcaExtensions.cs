@@ -26,7 +26,7 @@ namespace Paintvale.HLE.Loaders.Processes.Extensions
     {
         private static readonly TitleUpdateMetadataJsonSerializerContext _applicationSerializerContext = new(JsonHelper.GetDefaultSerializerOptions());
 
-        public static ProcessResult Load(this Nca nca, Switch device, Nca patchNca, Nca controlNca, BlitStruct<ApplicationControlProperty>? customNacpData = null)
+        public static ProcessResult Load(this Nca nca, Flaminrex device, Nca patchNca, Nca controlNca, BlitStruct<ApplicationControlProperty>? customNacpData = null)
         {
             // Extract RomFs and ExeFs from NCA.
             IStorage romFs = nca.GetRomFs(device, patchNca);
@@ -65,7 +65,7 @@ namespace Paintvale.HLE.Loaders.Processes.Extensions
             // Load program 0 control NCA as we are going to need it for display version.
             (_, Nca updateProgram0ControlNca) = GetGameUpdateData(_device.Configuration.VirtualFileSystem, mainNca.Header.TitleId.ToString("x16"), 0, out _);
 
-            // NOTE: Nintendo doesn't guarantee that the display version will be updated on sub programs when updating a multi program application.
+            // NOTE: Tonarex doesn't guarantee that the display version will be updated on sub programs when updating a multi program application.
             //       As such, to avoid PTC cache confusion, we only trust the program 0 display version when launching a sub program.
             if (updateProgram0ControlNca != null && _device.Configuration.UserChannelPersistence.Index != 0)
             {
@@ -168,7 +168,7 @@ namespace Paintvale.HLE.Loaders.Processes.Extensions
             return (updatePatchNca, updateControlNca);
         }
 
-        public static IFileSystem GetExeFs(this Nca nca, Switch device, Nca patchNca = null)
+        public static IFileSystem GetExeFs(this Nca nca, Flaminrex device, Nca patchNca = null)
         {
             IFileSystem exeFs = null;
 
@@ -190,7 +190,7 @@ namespace Paintvale.HLE.Loaders.Processes.Extensions
             return exeFs;
         }
 
-        public static IStorage GetRomFs(this Nca nca, Switch device, Nca patchNca = null)
+        public static IStorage GetRomFs(this Nca nca, Flaminrex device, Nca patchNca = null)
         {
             IStorage romFs = null;
 
@@ -212,7 +212,7 @@ namespace Paintvale.HLE.Loaders.Processes.Extensions
             return romFs;
         }
 
-        public static BlitStruct<ApplicationControlProperty> GetNacp(this Nca controlNca, Switch device)
+        public static BlitStruct<ApplicationControlProperty> GetNacp(this Nca controlNca, Flaminrex device)
         {
             BlitStruct<ApplicationControlProperty> nacpData = new(1);
 

@@ -111,7 +111,7 @@ namespace Paintvale.HLE.HOS.Services.Ssl
             };
         }
 
-        public void Initialize(Switch device)
+        public void Initialize(Flaminrex device)
         {
             lock (_lock)
             {
@@ -123,7 +123,7 @@ namespace Paintvale.HLE.HOS.Services.Ssl
 
                 if (HasCertStoreTitle())
                 {
-                    using LocalStorage ncaFile = new(VirtualFileSystem.SwitchPathToSystemPath(GetCertStoreTitleContentPath()), FileAccess.Read, FileMode.Open);
+                    using LocalStorage ncaFile = new(VirtualFileSystem.FlaminrexPathToSystemPath(GetCertStoreTitleContentPath()), FileAccess.Read, FileMode.Open);
 
                     Nca nca = new(_virtualFileSystem.KeySet, ncaFile);
 

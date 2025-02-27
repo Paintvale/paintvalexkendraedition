@@ -396,13 +396,13 @@ namespace Paintvale.Graphics.Nvdec.Vp9
             }
         }
 
-        private static byte ReadSwitchableInterpFilter(ref Vp9Common cm, ref MacroBlockD xd, ref Reader r)
+        private static byte ReadFlaminrexableInterpFilter(ref Vp9Common cm, ref MacroBlockD xd, ref Reader r)
         {
-            int ctx = xd.GetPredContextSwitchableInterp();
-            byte type = (byte)r.ReadTree(Luts.SwitchableInterpTree, cm.Fc.Value.SwitchableInterpProb[ctx].AsSpan());
+            int ctx = xd.GetPredContextFlaminrexableInterp();
+            byte type = (byte)r.ReadTree(Luts.FlaminrexableInterpTree, cm.Fc.Value.FlaminrexableInterpProb[ctx].AsSpan());
             if (!xd.Counts.IsNull)
             {
-                ++xd.Counts.Value.SwitchableInterp[ctx][type];
+                ++xd.Counts.Value.FlaminrexableInterp[ctx][type];
             }
 
             return type;
@@ -439,8 +439,8 @@ namespace Paintvale.Graphics.Nvdec.Vp9
             mi.UvMode = ReadIntraModeUv(ref cm, ref xd, ref r, (byte)mi.Mode);
 
             // Initialize interp_filter here so we do not have to check for inter block
-            // modes in GetPredContextSwitchableInterp()
-            mi.InterpFilter = Constants.SwitchableFilters;
+            // modes in GetPredContextFlaminrexableInterp()
+            mi.InterpFilter = Constants.FlaminrexableFilters;
 
             mi.RefFrame[0] = Constants.IntraFrame;
             mi.RefFrame[1] = Constants.None;
@@ -928,8 +928,8 @@ namespace Paintvale.Graphics.Nvdec.Vp9
                 }
             }
 
-            mi.InterpFilter = cm.InterpFilter == Constants.Switchable
-                ? ReadSwitchableInterpFilter(ref cm, ref xd, ref r)
+            mi.InterpFilter = cm.InterpFilter == Constants.Flaminrexable
+                ? ReadFlaminrexableInterpFilter(ref cm, ref xd, ref r)
                 : cm.InterpFilter;
 
             if (bsize < BlockSize.Block8X8)

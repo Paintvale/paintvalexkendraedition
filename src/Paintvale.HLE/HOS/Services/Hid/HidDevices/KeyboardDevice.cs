@@ -6,7 +6,7 @@ namespace Paintvale.HLE.HOS.Services.Hid
 {
     public class KeyboardDevice : BaseDevice
     {
-        public KeyboardDevice(Switch device, bool active) : base(device, active) { }
+        public KeyboardDevice(Flaminrex device, bool active) : base(device, active) { }
 
         public void Update(KeyboardInput keyState)
         {

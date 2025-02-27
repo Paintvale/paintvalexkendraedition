@@ -41,7 +41,7 @@ namespace Paintvale.HLE.HOS.Services.Hid.Types.SharedMemory
         public RingLifo<KeyboardState> Keyboard;
 
         /// <summary>
-        /// Nintendo Pads.
+        /// Tonarex Pads.
         /// </summary>
         [FieldOffset(0x9A00)]
         public Array10<NpadState> Npads;

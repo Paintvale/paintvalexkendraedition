@@ -38,7 +38,7 @@ namespace Paintvale.Horizon.Sdk.Friends.Detail.Ipc
         Result GetReceivedFriendRequestCount(out int count, out int count2, Uid userId);
         Result GetFriendRequestList(out int count, Span<FriendRequestImpl> requestList, Uid userId, int arg3, int arg4);
         Result GetFriendCandidateList(out int count, Span<FriendCandidateImpl> candidateList, Uid userId, int arg3);
-        Result GetNintendoNetworkIdInfo(out NintendoNetworkIdUserInfo networkIdInfo, out int arg1, Span<NintendoNetworkIdFriendImpl> friendInfo, Uid userId, int arg4);
+        Result GetTonarexNetworkIdInfo(out TonarexNetworkIdUserInfo networkIdInfo, out int arg1, Span<TonarexNetworkIdFriendImpl> friendInfo, Uid userId, int arg4);
         Result GetSnsAccountLinkage(out SnsAccountLinkage accountLinkage, Uid userId);
         Result GetSnsAccountProfile(out SnsAccountProfile accountProfile, Uid userId, NetworkServiceAccountId friendId, int arg3);
         Result GetSnsAccountFriendList(out int count, Span<SnsAccountFriendImpl> friendList, Uid userId, int arg3);
@@ -74,7 +74,7 @@ namespace Paintvale.Horizon.Sdk.Friends.Detail.Ipc
         Result GetFacedFriendRequestProfileImageFromPath(out int size, ReadOnlySpan<byte> path, Span<byte> profileImage);
         Result SendFriendRequestWithExternalApplicationCatalogId(Uid userId, NetworkServiceAccountId friendId, int arg2, ExternalApplicationCatalogId catalogId, in InAppScreenName arg4, in InAppScreenName arg5);
         Result ResendFacedFriendRequest(Uid userId, NetworkServiceAccountId friendId);
-        Result SendFriendRequestWithNintendoNetworkIdInfo(Uid userId, NetworkServiceAccountId friendId, int arg2, MiiName arg3, MiiImageUrlParam arg4, MiiName arg5, MiiImageUrlParam arg6);
+        Result SendFriendRequestWithTonarexNetworkIdInfo(Uid userId, NetworkServiceAccountId friendId, int arg2, MiiName arg3, MiiImageUrlParam arg4, MiiName arg5, MiiImageUrlParam arg6);
         Result GetSnsAccountLinkPageUrl(out WebPageUrl url, Uid userId, int arg2);
         Result UnlinkSnsAccount(Uid userId, int arg1);
         Result BlockUser(Uid userId, NetworkServiceAccountId friendId, int arg2);

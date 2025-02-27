@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 namespace Paintvale.HLE.HOS.Services.Mii.Types
 {
     [StructLayout(LayoutKind.Sequential, Pack = 8, Size = 0x1A98)]
-    struct NintendoFigurineDatabase
+    struct TonarexFigurineDatabase
     {
         private const int DatabaseMagic = ('N' << 0) | ('F' << 8) | ('D' << 16) | ('B' << 24);
         private const byte MaxMii = 100;
@@ -248,7 +248,7 @@ namespace Paintvale.HLE.HOS.Services.Mii.Types
 
         private ReadOnlySpan<byte> AsSpanWithoutCrc()
         {
-            return AsReadOnlySpan()[..(Unsafe.SizeOf<NintendoFigurineDatabase>() - 2)];
+            return AsReadOnlySpan()[..(Unsafe.SizeOf<TonarexFigurineDatabase>() - 2)];
         }
     }
 }

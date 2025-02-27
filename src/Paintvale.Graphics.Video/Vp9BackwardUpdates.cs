@@ -9,7 +9,7 @@ namespace Paintvale.Graphics.Video
         public Array16<Array4<uint>> Partition;
         public Array4<Array2<Array2<Array6<Array6<Array4<uint>>>>>> Coef;
         public Array4<Array2<Array2<Array6<Array6<uint>>>>> EobBranch;
-        public Array4<Array3<uint>> SwitchableInterp;
+        public Array4<Array3<uint>> FlaminrexableInterp;
         public Array7<Array4<uint>> InterMode;
         public Array4<Array2<uint>> IntraInter;
         public Array5<Array2<uint>> CompInter;

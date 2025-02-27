@@ -14,7 +14,7 @@ namespace Paintvale.HLE.HOS.Services.Hid
         BodyNeonOrange = 0xFAA005,
         BodyPokemonLetsGoPikachu = 0xFFDC00,
         BodyPokemonLetsGoEevee = 0xC88C32,
-        BodyNintendoLaboCreatorsContestEdition = 0xD7AA73,
+        BodyTonarexLaboCreatorsContestEdition = 0xD7AA73,
         BodyAnimalCrossingSpecialEditionLeftJoyCon = 0x82FF96,
         BodyAnimalCrossingSpecialEditionRightJoyCon = 0x96F5F5,
 
@@ -30,7 +30,7 @@ namespace Paintvale.HLE.HOS.Services.Hid
         ButtonNeonOrange = 0x0F0A00,
         ButtonPokemonLetsGoPikachu = 0x322800,
         ButtonPokemonLetsGoEevee = 0x281900,
-        ButtonNintendoLaboCreatorsContestEdition = 0x1E1914,
+        ButtonTonarexLaboCreatorsContestEdition = 0x1E1914,
         ButtonAnimalCrossingSpecialEditionLeftJoyCon = 0x0A1E0A,
         ButtonAnimalCrossingSpecialEditionRightJoyCon = 0x0A1E28,
     }

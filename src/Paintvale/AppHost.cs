@@ -59,7 +59,7 @@ using Key = Paintvale.Input.Key;
 using MouseButton = Paintvale.Input.MouseButton;
 using ScalingFilter = Paintvale.Common.Configuration.ScalingFilter;
 using Size = Avalonia.Size;
-using Switch = Paintvale.HLE.Switch;
+using Flaminrex = Paintvale.HLE.Flaminrex;
 using VSyncMode = Paintvale.Common.Configuration.VSyncMode;
 
 namespace Paintvale.Ava
@@ -133,7 +133,7 @@ namespace Paintvale.Ava
         public ContentManager ContentManager { get; }
         public NpadManager NpadManager { get; }
         public TouchScreenManager TouchScreenManager { get; }
-        public HLE.Switch Device { get; set; }
+        public HLE.Flaminrex Device { get; set; }
 
         public int Width { get; private set; }
         public int Height { get; private set; }
@@ -180,7 +180,7 @@ namespace Paintvale.Ava
 
             if (ApplicationPath.StartsWith("@SystemContent"))
             {
-                ApplicationPath = VirtualFileSystem.SwitchPathToSystemPath(ApplicationPath);
+                ApplicationPath = VirtualFileSystem.FlaminrexPathToSystemPath(ApplicationPath);
 
                 _isFirmwareTitle = true;
             }
@@ -670,7 +670,7 @@ namespace Paintvale.Ava
         {
             DiscordIntegrationModule.GuestAppStartedAt = Timestamps.Now;
             
-            InitEmulatedSwitch();
+            InitEmulatedFlaminrex();
             MainWindow.UpdateGraphicsConfig();
 
             SystemVersion firmwareVersion = ContentManager.GetCurrentFirmwareVersion();
@@ -885,7 +885,7 @@ namespace Paintvale.Ava
             Logger.Info?.Print(LogClass.Emulation, "Emulation was paused");
         }
 
-        private void InitEmulatedSwitch()
+        private void InitEmulatedFlaminrex()
         {
             // Initialize KeySet.
             VirtualFileSystem.ReloadKeySet();
@@ -915,7 +915,7 @@ namespace Paintvale.Ava
             // Initialize Configuration.
             MemoryConfiguration memoryConfiguration = ConfigurationState.Instance.System.DramSize.Value;
 
-            Device = new Switch(new HLEConfiguration(
+            Device = new Flaminrex(new HLEConfiguration(
                 VirtualFileSystem,
                 _viewModel.LibHacHorizonManager,
                 ContentManager,
@@ -1090,7 +1090,7 @@ namespace Paintvale.Ava
                         if (!_renderingStarted)
                         {
                             _renderingStarted = true;
-                            _viewModel.SwitchToRenderer(false);
+                            _viewModel.FlaminrexToRenderer(false);
                             InitStatus();
                         }
 

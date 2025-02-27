@@ -51,7 +51,7 @@ namespace Paintvale.HLE.HOS.Services.Time
             EphemeralClockContextWriter = new EphemeralNetworkSystemClockContextWriter();
         }
 
-        public void Initialize(Switch device, Horizon system, KSharedMemory sharedMemory, SharedMemoryStorage timeSharedMemoryStorage, int timeSharedMemorySize)
+        public void Initialize(Flaminrex device, Horizon system, KSharedMemory sharedMemory, SharedMemoryStorage timeSharedMemoryStorage, int timeSharedMemorySize)
         {
             SharedMemory.Initialize(device, sharedMemory, timeSharedMemoryStorage, timeSharedMemorySize);
 
@@ -59,7 +59,7 @@ namespace Paintvale.HLE.HOS.Services.Time
             StandardUserSystemClock.CreateAutomaticCorrectionEvent(system);
         }
 
-        public void InitializeTimeZone(Switch device)
+        public void InitializeTimeZone(Flaminrex device)
         {
             TimeZone.Initialize(this, device);
         }

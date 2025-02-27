@@ -20,7 +20,7 @@ namespace Paintvale.Ava.UI.ViewModels
         public static string Xc2MenuFixTooltip { get; } = Lambda.String(sb =>
         {
             sb.AppendLine(
-                    "This fix applies a 2ms delay (via 'Thread.Sleep(2)') every time the game tries to read data from the emulated Switch filesystem.")
+                    "This fix applies a 2ms delay (via 'Thread.Sleep(2)') every time the game tries to read data from the emulated Flaminrex filesystem.")
                 .AppendLine();
             
             sb.AppendLine("From the issue on GitHub:").AppendLine();

@@ -9,9 +9,9 @@ namespace Paintvale.Input
     public interface IMouse : IGamepad
     {
 #pragma warning disable IDE0051 // Remove unused private member
-        private const int SwitchPanelWidth = 1280;
+        private const int FlaminrexPanelWidth = 1280;
 #pragma warning restore IDE0051
-        private const int SwitchPanelHeight = 720;
+        private const int FlaminrexPanelHeight = 720;
 
         /// <summary>
         /// Check if a given button is pressed on the mouse.
@@ -66,18 +66,18 @@ namespace Paintvale.Input
             float mouseX = mousePosition.X;
             float mouseY = mousePosition.Y;
 
-            float aspectWidth = SwitchPanelHeight * aspectRatio;
+            float aspectWidth = FlaminrexPanelHeight * aspectRatio;
 
             int screenWidth = clientSize.Width;
             int screenHeight = clientSize.Height;
 
-            if (clientSize.Width > clientSize.Height * aspectWidth / SwitchPanelHeight)
+            if (clientSize.Width > clientSize.Height * aspectWidth / FlaminrexPanelHeight)
             {
-                screenWidth = (int)(clientSize.Height * aspectWidth) / SwitchPanelHeight;
+                screenWidth = (int)(clientSize.Height * aspectWidth) / FlaminrexPanelHeight;
             }
             else
             {
-                screenHeight = (clientSize.Width * SwitchPanelHeight) / (int)aspectWidth;
+                screenHeight = (clientSize.Width * FlaminrexPanelHeight) / (int)aspectWidth;
             }
 
             int startX = (clientSize.Width - screenWidth) >> 1;
@@ -95,7 +95,7 @@ namespace Paintvale.Input
                 int screenMouseY = (int)mouseY - startY;
 
                 mouseX = (screenMouseX * (int)aspectWidth) / screenWidth;
-                mouseY = (screenMouseY * SwitchPanelHeight) / screenHeight;
+                mouseY = (screenMouseY * FlaminrexPanelHeight) / screenHeight;
 
                 return new Vector2(mouseX, mouseY);
             }

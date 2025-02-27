@@ -33,7 +33,7 @@ namespace Paintvale.HLE.Loaders.Processes
         // TODO: Remove this workaround when ASLR is implemented.
         private const ulong CodeStartOffset = 0x500000UL;
 
-        public static LibHac.Result RegisterProgramMapInfo(Switch device, IFileSystem partitionFileSystem)
+        public static LibHac.Result RegisterProgramMapInfo(Flaminrex device, IFileSystem partitionFileSystem)
         {
             ulong applicationId = 0;
             int programCount = 0;
@@ -94,7 +94,7 @@ namespace Paintvale.HLE.Loaders.Processes
             return device.System.LibHacHorizonManager.NsClient.Fs.RegisterProgramIndexMapInfo(mapInfo[..programCount]);
         }
 
-        public static LibHac.Result EnsureSaveData(Switch device, ApplicationId applicationId, BlitStruct<ApplicationControlProperty> applicationControlProperty)
+        public static LibHac.Result EnsureSaveData(Flaminrex device, ApplicationId applicationId, BlitStruct<ApplicationControlProperty> applicationControlProperty)
         {
             Logger.Info?.Print(LogClass.Application, "Ensuring required savedata exists.");
 
@@ -221,7 +221,7 @@ namespace Paintvale.HLE.Loaders.Processes
         }
 
         public static ProcessResult LoadNsos(
-            Switch device,
+            Flaminrex device,
             KernelContext context,
             MetaLoader metaLoader,
             BlitStruct<ApplicationControlProperty> applicationControlProperties,

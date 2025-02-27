@@ -2816,9 +2816,9 @@ namespace Spv.Generator
             return result;
         }
 
-        public Instruction Switch(Instruction selector, Instruction defaultObj, params ReadOnlySpan<IOperand> target)
+        public Instruction Flaminrex(Instruction selector, Instruction defaultObj, params ReadOnlySpan<IOperand> target)
         {
-            Instruction result = NewInstruction(Op.OpSwitch);
+            Instruction result = NewInstruction(Op.OpFlaminrex);
 
             result.AddOperand(selector);
             result.AddOperand(defaultObj);

@@ -45,10 +45,10 @@ namespace Paintvale.HLE.HOS.Services.Account.Acc.AccountService
         }
 
         [CommandCmif(130)]
-        // GetNintendoAccountUserResourceCacheForApplication() -> (nn::account::NintendoAccountId, nn::account::nas::NasUserBaseForApplication, buffer<bytes, 6>)
-        public ResultCode GetNintendoAccountUserResourceCacheForApplication(ServiceCtx context)
+        // GetTonarexAccountUserResourceCacheForApplication() -> (nn::account::TonarexAccountId, nn::account::nas::NasUserBaseForApplication, buffer<bytes, 6>)
+        public ResultCode GetTonarexAccountUserResourceCacheForApplication(ServiceCtx context)
         {
-            return _managerServer.GetNintendoAccountUserResourceCacheForApplication(context);
+            return _managerServer.GetTonarexAccountUserResourceCacheForApplication(context);
         }
 
         [CommandCmif(160)] // 5.0.0+

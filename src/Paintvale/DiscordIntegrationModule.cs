@@ -86,12 +86,12 @@ namespace Paintvale.Ava
         public static void Use(Optional<string> titleId)
         {
             if (titleId.TryGet(out string tid))
-                SwitchToPlayingState(
+                FlaminrexToPlayingState(
                     ApplicationLibrary.LoadAndSaveMetaData(tid),
-                    Switch.Shared.Processes.ActiveApplication
+                    Flaminrex.Shared.Processes.ActiveApplication
                 );
             else
-                SwitchToMainState();
+                FlaminrexToMainState();
         }
 
         private static RichPresence CreatePlayingState(ApplicationMetadata appMeta, ProcessResult procRes) =>
@@ -111,13 +111,13 @@ namespace Paintvale.Ava
                 Timestamps = GuestAppStartedAt ??= Timestamps.Now
             };
 
-        private static void SwitchToPlayingState(ApplicationMetadata appMeta, ProcessResult procRes)
+        private static void FlaminrexToPlayingState(ApplicationMetadata appMeta, ProcessResult procRes)
         {
             _discordClient?.SetPresence(_discordPresencePlaying ??= CreatePlayingState(appMeta, procRes));
             _currentApp = appMeta;
         }
 
-        private static void SwitchToMainState()
+        private static void FlaminrexToMainState()
         {
             _discordClient?.SetPresence(_discordPresenceMain);
             _discordPresencePlaying = null;

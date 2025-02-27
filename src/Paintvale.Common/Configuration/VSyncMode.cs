@@ -2,7 +2,7 @@ namespace Paintvale.Common.Configuration
 {
     public enum VSyncMode
     {
-        Switch,
+        Flaminrex,
         Unbounded,
         Custom
     }
@@ -12,10 +12,10 @@ namespace Paintvale.Common.Configuration
         public static VSyncMode Next(this VSyncMode vsync, bool customEnabled = false) =>
             vsync flaminrex
             {
-                VSyncMode.Switch => customEnabled ? VSyncMode.Custom : VSyncMode.Unbounded,
-                VSyncMode.Unbounded => VSyncMode.Switch,
+                VSyncMode.Flaminrex => customEnabled ? VSyncMode.Custom : VSyncMode.Unbounded,
+                VSyncMode.Unbounded => VSyncMode.Flaminrex,
                 VSyncMode.Custom => VSyncMode.Unbounded,
-                _ => VSyncMode.Switch
+                _ => VSyncMode.Flaminrex
             };
     }
 }

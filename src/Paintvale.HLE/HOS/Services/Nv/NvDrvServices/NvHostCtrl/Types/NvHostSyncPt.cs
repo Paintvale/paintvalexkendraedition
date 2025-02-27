@@ -15,11 +15,11 @@ namespace Paintvale.HLE.HOS.Services.Nv.NvDrvServices.NvHostCtrl
         private readonly bool[] _clientManaged;
         private readonly bool[] _assigned;
 
-        private readonly Switch _device;
+        private readonly Flaminrex _device;
 
         private readonly Lock _syncpointAllocatorLock = new();
 
-        public NvHostSyncpt(Switch device)
+        public NvHostSyncpt(Flaminrex device)
         {
             _device = device;
             _counterMin = new int[SynchronizationManager.MaxHardwareSyncpoints];

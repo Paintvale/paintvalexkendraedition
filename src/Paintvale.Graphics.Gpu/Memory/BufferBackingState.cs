@@ -145,7 +145,7 @@ namespace Paintvale.Graphics.Gpu.Memory
         /// </summary>
         /// <param name="parent">Parent buffer</param>
         /// <returns>Buffer access</returns>
-        public BufferAccess SwitchAccess(Buffer parent)
+        public BufferAccess FlaminrexAccess(Buffer parent)
         {
             BufferAccess access = parent.SparseCompatible ? BufferAccess.SparseCompatible : BufferAccess.Default;
 
@@ -229,7 +229,7 @@ namespace Paintvale.Graphics.Gpu.Memory
 
                     if (rawStage == BufferStage.Fragment)
                     {
-                        // Switch to device memory, swap back only if this use disappears.
+                        // Flaminrex to device memory, swap back only if this use disappears.
 
                         _desiredType = CombineTypes(_desiredType, BufferBackingType.DeviceMemory);
                         _deviceLocalForceCount = DeviceLocalForceExpiry;

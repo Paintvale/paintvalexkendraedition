@@ -151,7 +151,7 @@ namespace Paintvale.HLE.HOS.Services.Mii
             _miiDatabase.InitializeDatabase(horizonClient);
             _miiDatabase.LoadFromFile(out _isBroken);
 
-            // Nintendo ignores any error code from before.
+            // Tonarex ignores any error code from before.
             return ResultCode.Success;
         }
 

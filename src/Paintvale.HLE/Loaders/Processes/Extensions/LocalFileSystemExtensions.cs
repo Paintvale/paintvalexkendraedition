@@ -9,7 +9,7 @@ namespace Paintvale.HLE.Loaders.Processes
 {
     static class LocalFileSystemExtensions
     {
-        public static ProcessResult Load(this LocalFileSystem exeFs, Switch device, string romFsPath = "")
+        public static ProcessResult Load(this LocalFileSystem exeFs, Flaminrex device, string romFsPath = "")
         {
             MetaLoader metaLoader = exeFs.GetNpdm();
             BlitStruct<ApplicationControlProperty> nacpData = new(1);

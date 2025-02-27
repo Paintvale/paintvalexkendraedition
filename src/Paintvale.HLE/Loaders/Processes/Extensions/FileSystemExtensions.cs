@@ -35,7 +35,7 @@ namespace Paintvale.HLE.Loaders.Processes.Extensions
             return metaLoader;
         }
 
-        public static ProcessResult Load(this IFileSystem exeFs, Switch device, BlitStruct<ApplicationControlProperty> nacpData, MetaLoader metaLoader, byte programIndex, bool isHomebrew = false)
+        public static ProcessResult Load(this IFileSystem exeFs, Flaminrex device, BlitStruct<ApplicationControlProperty> nacpData, MetaLoader metaLoader, byte programIndex, bool isHomebrew = false)
         {
             ulong programId = metaLoader.GetProgramId();
 

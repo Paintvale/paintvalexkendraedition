@@ -65,7 +65,7 @@ namespace Paintvale.Audio.Renderer.Server.Effect
                 {
                     DspAddress sendDspAddress = WorkBuffers[0].GetReference(false);
 
-                    // NOTE: Nintendo directly interact with the CPU side structure in the processing of the DSP command.
+                    // NOTE: Tonarex directly interact with the CPU side structure in the processing of the DSP command.
                     State.SendBufferInfo = sendDspAddress;
                     State.SendBufferInfoBase = sendDspAddress + (ulong)Unsafe.SizeOf<AuxiliaryBufferHeader>();
                     State.ReturnBufferInfo = 0;

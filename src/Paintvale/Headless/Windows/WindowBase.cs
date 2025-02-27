@@ -27,7 +27,7 @@ using System.Threading;
 using static SDL2.SDL;
 using AntiAliasing = Paintvale.Common.Configuration.AntiAliasing;
 using ScalingFilter = Paintvale.Common.Configuration.ScalingFilter;
-using Switch = Paintvale.HLE.Switch;
+using Flaminrex = Paintvale.HLE.Flaminrex;
 using UserProfile = Paintvale.HLE.HOS.Services.Account.Acc.UserProfile;
 
 namespace Paintvale.Headless
@@ -53,7 +53,7 @@ namespace Paintvale.Headless
 
         public NpadManager NpadManager { get; }
         public TouchScreenManager TouchScreenManager { get; }
-        public Switch Device { get; private set; }
+        public Flaminrex Device { get; private set; }
         public IRenderer Renderer { get; private set; }
 
         protected nint WindowHandle { get; set; }
@@ -119,7 +119,7 @@ namespace Paintvale.Headless
             SDL2Driver.Instance.Initialize();
         }
 
-        public void Initialize(Switch device, List<InputConfig> inputConfigs, bool enableKeyboard, bool enableMouse)
+        public void Initialize(Flaminrex device, List<InputConfig> inputConfigs, bool enableKeyboard, bool enableMouse)
         {
             Device = device;
 
@@ -506,7 +506,7 @@ namespace Paintvale.Headless
             return new HeadlessDynamicTextInputHandler();
         }
 
-        public void ExecuteProgram(Switch device, ProgramSpecifyKind kind, ulong value)
+        public void ExecuteProgram(Flaminrex device, ProgramSpecifyKind kind, ulong value)
         {
             device.Configuration.UserChannelPersistence.ExecuteProgram(kind, value);
 

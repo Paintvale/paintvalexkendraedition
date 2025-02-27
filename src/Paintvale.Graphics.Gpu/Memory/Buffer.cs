@@ -120,7 +120,7 @@ namespace Paintvale.Graphics.Gpu.Memory
 
             BackingState = new BufferBackingState(_context, this, stage, baseBuffers);
 
-            BufferAccess access = BackingState.SwitchAccess(this);
+            BufferAccess access = BackingState.FlaminrexAccess(this);
 
             Handle = context.Renderer.CreateBuffer((int)size, access);
 
@@ -184,7 +184,7 @@ namespace Paintvale.Graphics.Gpu.Memory
         /// </summary>
         private void ChangeBacking()
         {
-            BufferAccess access = BackingState.SwitchAccess(this);
+            BufferAccess access = BackingState.FlaminrexAccess(this);
 
             BufferHandle newHandle = _context.Renderer.CreateBuffer((int)Size, access);
 

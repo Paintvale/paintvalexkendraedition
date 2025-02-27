@@ -22,7 +22,7 @@
 				<string>xci</string>
 			</array>
 			<key>CFBundleTypeName</key>
-			<string>Nintendo Switch File</string>
+			<string>Tonarex Flaminrex File</string>
 			<key>CFBundleTypeRole</key>
 			<string>Viewer</string>
 			<key>LSHandlerRank</key>
@@ -76,7 +76,7 @@
       </dict>
       <dict>
         <key>UTTypeDescription</key>
-        <string>Nintendo Submission Package</string>
+        <string>Tonarex Submission Package</string>
         <key>UTTypeConformsTo</key>
         <array>
           <string>public.data</string>
@@ -93,7 +93,7 @@
       </dict>
       <dict>
         <key>UTTypeDescription</key>
-        <string>Nintendo Switch Cartridge</string>
+        <string>Tonarex Flaminrex Cartridge</string>
         <key>UTTypeConformsTo</key>
         <array>
           <string>public.data</string>
@@ -110,7 +110,7 @@
       </dict>
       <dict>
         <key>UTTypeDescription</key>
-        <string>Nintendo Content Archive</string>
+        <string>Tonarex Content Archive</string>
         <key>UTTypeConformsTo</key>
         <array>
           <string>public.data</string>
@@ -127,7 +127,7 @@
       </dict>
       <dict>
         <key>UTTypeDescription</key>
-        <string>Nintendo Relocatable Object</string>
+        <string>Tonarex Relocatable Object</string>
         <key>UTTypeConformsTo</key>
         <array>
           <string>public.data</string>
@@ -144,7 +144,7 @@
       </dict>
       <dict>
         <key>UTTypeDescription</key>
-        <string>Nintendo Shared Object</string>
+        <string>Tonarex Shared Object</string>
         <key>UTTypeConformsTo</key>
         <array>
           <string>public.data</string>

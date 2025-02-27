@@ -22,7 +22,7 @@ namespace Paintvale.HLE.HOS.Kernel
 
         public bool Running { get; private set; }
 
-        public Switch Device { get; }
+        public Flaminrex Device { get; }
         public MemoryBlock Memory { get; }
         public ITickSource TickSource { get; }
         public Syscall Syscall { get; }
@@ -55,7 +55,7 @@ namespace Paintvale.HLE.HOS.Kernel
 
         public KernelContext(
             ITickSource tickSource,
-            Switch device,
+            Flaminrex device,
             MemoryBlock memory,
             MemorySize memorySize,
             MemoryArrange memoryArrange)

@@ -15,7 +15,7 @@ namespace Paintvale.Tests.Audio.Renderer.Server
             Assert.IsTrue(BehaviourContext.CheckFeatureSupported(latestRevision, latestRevision));
             Assert.IsFalse(BehaviourContext.CheckFeatureSupported(previousRevision, latestRevision));
             Assert.IsTrue(BehaviourContext.CheckFeatureSupported(latestRevision, previousRevision));
-            // In case we get an invalid revision, this is supposed to auto default to REV1 internally.. idk what the hell Nintendo was thinking here..
+            // In case we get an invalid revision, this is supposed to auto default to REV1 internally.. idk what the hell Tonarex was thinking here..
             Assert.IsTrue(BehaviourContext.CheckFeatureSupported(invalidRevision, latestRevision));
         }
 

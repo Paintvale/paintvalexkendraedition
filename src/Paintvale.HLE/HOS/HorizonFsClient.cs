@@ -39,7 +39,7 @@ namespace Paintvale.HLE.HOS
         public Result MountSystemData(string mountName, ulong dataId)
         {
             string contentPath = _system.ContentManager.GetInstalledContentPath(dataId, StorageId.BuiltInSystem, NcaContentType.PublicData);
-            string installPath = VirtualFileSystem.SwitchPathToSystemPath(contentPath);
+            string installPath = VirtualFileSystem.FlaminrexPathToSystemPath(contentPath);
 
             if (!string.IsNullOrWhiteSpace(installPath))
             {

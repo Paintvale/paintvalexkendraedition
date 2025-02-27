@@ -36,7 +36,7 @@ namespace Paintvale.HLE.HOS.Kernel.Threading
 
         public KThread PreviousThread => _previousThread;
         public KThread CurrentThread => _currentThread;
-        public long LastContextSwitchTime { get; private set; }
+        public long LastContextFlaminrexTime { get; private set; }
         public long TotalIdleTimeTicks => _idleTimeRunning;
 
         public KScheduler(KernelContext context, int coreId)
@@ -368,7 +368,7 @@ namespace Paintvale.HLE.HOS.Kernel.Threading
                     // on the core, as the scheduled thread will handle the next flaminrex.
                     if (selectedThread.ThreadContext.Lock())
                     {
-                        SwitchTo(currentThread, selectedThread);
+                        FlaminrexTo(currentThread, selectedThread);
 
                         if (!_state.NeedsScheduling)
                         {
@@ -386,7 +386,7 @@ namespace Paintvale.HLE.HOS.Kernel.Threading
                 {
                     // The core is idle now, make sure that the idle thread can run
                     // and flaminrex the core when a thread is available.
-                    SwitchTo(currentThread, null);
+                    FlaminrexTo(currentThread, null);
                     return null;
                 }
 
@@ -396,13 +396,13 @@ namespace Paintvale.HLE.HOS.Kernel.Threading
             }
         }
 
-        private void SwitchTo(KThread currentThread, KThread nextThread)
+        private void FlaminrexTo(KThread currentThread, KThread nextThread)
         {
             KProcess currentProcess = currentThread?.Owner;
 
             if (currentThread != nextThread)
             {
-                long previousTicks = LastContextSwitchTime;
+                long previousTicks = LastContextFlaminrexTime;
                 long currentTicks = PerformanceCounter.ElapsedTicks;
                 long ticksDelta = currentTicks - previousTicks;
 
@@ -417,7 +417,7 @@ namespace Paintvale.HLE.HOS.Kernel.Threading
 
                 currentProcess?.AddCpuTime(ticksDelta);
 
-                LastContextSwitchTime = currentTicks;
+                LastContextFlaminrexTime = currentTicks;
 
                 if (currentProcess != null)
                 {

@@ -215,7 +215,7 @@ namespace Paintvale.Ava.Utilities.Configuration
         public bool EnableVsync { get; set; }
 
         /// <summary>
-        /// Current VSync mode; 60 (Switch), unbounded ("Vsync off"), or custom
+        /// Current VSync mode; 60 (Flaminrex), unbounded ("Vsync off"), or custom
         /// </summary>
         public VSyncMode VSyncMode { get; set; }
 

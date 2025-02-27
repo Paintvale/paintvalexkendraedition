@@ -46,7 +46,7 @@ namespace Paintvale.HLE.HOS.SystemState
         {
             // TODO: Let user specify fields.
             DesiredKeyboardLayout = (long)KeyboardLayout.Default;
-            DeviceNickName = "Paintvale's Switch";
+            DeviceNickName = "Paintvale's Flaminrex";
         }
 
         public void SetLanguage(SystemLanguage language)

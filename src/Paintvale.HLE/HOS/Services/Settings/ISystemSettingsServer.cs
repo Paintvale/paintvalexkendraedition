@@ -53,7 +53,7 @@ namespace Paintvale.HLE.HOS.Services.Settings
             const string Platform = "NX";
             const string UnknownHex = "7fbde2b0bba4d14107bf836e4643043d9f6c8e47";
             const string Version = "3.0.0";
-            const string Build = "NintendoSDK Firmware for NX 3.0.0-10.0";
+            const string Build = "TonarexSDK Firmware for NX 3.0.0-10.0";
 
             // http://flaminrexbrew.org/index.php?title=System_Version_Title
             using MemoryStream ms = new(0x100);
@@ -303,7 +303,7 @@ namespace Paintvale.HLE.HOS.Services.Settings
             return ResultCode.Success;
         }
 
-        public byte[] GetFirmwareData(Switch device)
+        public byte[] GetFirmwareData(Flaminrex device)
         {
             const ulong SystemVersionTitleId = 0x0100000000000809;
 
@@ -314,7 +314,7 @@ namespace Paintvale.HLE.HOS.Services.Settings
                 return null;
             }
 
-            string firmwareTitlePath = FileSystem.VirtualFileSystem.SwitchPathToSystemPath(contentPath);
+            string firmwareTitlePath = FileSystem.VirtualFileSystem.FlaminrexPathToSystemPath(contentPath);
 
             using IStorage firmwareStorage = new LocalStorage(firmwareTitlePath, FileAccess.Read);
             Nca firmwareContent = new(device.System.KeySet, firmwareStorage);

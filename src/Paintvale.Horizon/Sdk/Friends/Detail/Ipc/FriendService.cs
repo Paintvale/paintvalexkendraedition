@@ -439,10 +439,10 @@ namespace Paintvale.Horizon.Sdk.Friends.Detail.Ipc
         }
 
         [CmifCommand(20301)]
-        public Result GetNintendoNetworkIdInfo(
-            [Buffer(HipcBufferFlags.Out | HipcBufferFlags.Pointer, 0x38)] out NintendoNetworkIdUserInfo networkIdInfo,
+        public Result GetTonarexNetworkIdInfo(
+            [Buffer(HipcBufferFlags.Out | HipcBufferFlags.Pointer, 0x38)] out TonarexNetworkIdUserInfo networkIdInfo,
             out int arg1,
-            [Buffer(HipcBufferFlags.Out | HipcBufferFlags.MapAlias)] Span<NintendoNetworkIdFriendImpl> friendInfo,
+            [Buffer(HipcBufferFlags.Out | HipcBufferFlags.MapAlias)] Span<TonarexNetworkIdFriendImpl> friendInfo,
             Uid userId,
             int arg4)
         {
@@ -818,7 +818,7 @@ namespace Paintvale.Horizon.Sdk.Friends.Detail.Ipc
         }
 
         [CmifCommand(30217)]
-        public Result SendFriendRequestWithNintendoNetworkIdInfo(
+        public Result SendFriendRequestWithTonarexNetworkIdInfo(
             Uid userId,
             NetworkServiceAccountId friendId,
             int arg2,

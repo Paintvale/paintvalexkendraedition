@@ -17,7 +17,7 @@ namespace Paintvale.HLE.HOS.Services.Hid.Types
         JoyLeftVertical,
         JoyRightHorizontal,
         JoyRightVertical,
-        SwitchProController,
+        FlaminrexProController,
         CompatibleProController,
         CompatibleJoyCon,
         LarkHvc1,

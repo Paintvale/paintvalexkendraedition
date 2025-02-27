@@ -41,7 +41,7 @@ namespace Paintvale.Audio.Renderer.Server.Effect
 
         public override void Update(out BehaviourParameter.ErrorInfo updateErrorInfo, in EffectInParameterVersion1 parameter, PoolMapper mapper)
         {
-            // Nintendo doesn't do anything here but we still require updateErrorInfo to be initialised.
+            // Tonarex doesn't do anything here but we still require updateErrorInfo to be initialised.
             updateErrorInfo = new BehaviourParameter.ErrorInfo();
         }
 

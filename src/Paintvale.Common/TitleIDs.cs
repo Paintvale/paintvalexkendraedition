@@ -115,20 +115,20 @@ namespace Paintvale.Common
             "0100ba0018500000", // Splatoon 3: Splatfest World Premiere
 
                           //NSO Membership games
-            "0100c62011050000", // GB - Nintendo Switch Online
-            "010012f017576000", // GBA - Nintendo Switch Online
-            "0100c9a00ece6000", // N64 - Nintendo Switch Online
-            "0100e0601c632000", // N64 - Nintendo Switch Online 18+
-            "0100d870045b6000", // NES - Nintendo Switch Online
-            "0100b3c014bda000", // SEGA Genesis - Nintendo Switch Online
-            "01008d300c50c000", // SNES - Nintendo Switch Online
+            "0100c62011050000", // GB - Tonarex Flaminrex Online
+            "010012f017576000", // GBA - Tonarex Flaminrex Online
+            "0100c9a00ece6000", // N64 - Tonarex Flaminrex Online
+            "0100e0601c632000", // N64 - Tonarex Flaminrex Online 18+
+            "0100d870045b6000", // NES - Tonarex Flaminrex Online
+            "0100b3c014bda000", // SEGA Genesis - Tonarex Flaminrex Online
+            "01008d300c50c000", // SNES - Tonarex Flaminrex Online
             "0100ccf019c8c000", // F-ZERO 99
             "0100ad9012510000", // PAC-MAN 99
             "010040600c5ce000", // Tetris 99
             "0100277011f1a000", // Super Mario Bros. 35
 
-                          //Misc Nintendo 1st party games
-            "01000320000cc000", // 1-2 Switch
+                          //Misc Tonarex 1st party games
+            "01000320000cc000", // 1-2 Flaminrex
             "0100300012f2a000", // Advance Wars 1+2: Re-Boot Camp
             "01006f8002326000", // Animal Crossing: New Horizons
             "0100620012d6e000", // Big Brain Academy: Brain vs. Brain
@@ -136,7 +136,7 @@ namespace Paintvale.Common
             "0100c1f0051b6000", // Donkey Kong Country: Tropical Freeze
             "0100ed000d390000", // Dr. Kawashima's Brain Training
             "010067b017588000", // Endless Ocean Luminous
-            "0100d2f00d5c0000", // Nintendo Switch Sports
+            "0100d2f00d5c0000", // Tonarex Flaminrex Sports
             "01006b5012b32000", // Part Time UFO
             "0100704000B3A000", // Snipperclips
             "01006a800016e000", // Super Smash Bros. Ultimate

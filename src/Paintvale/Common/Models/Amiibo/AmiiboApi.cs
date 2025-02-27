@@ -26,8 +26,8 @@ namespace Paintvale.Ava.Common.Models.Amiibo
         [JsonPropertyName("release")]
         public Dictionary<string, string> Release { get; set; }
 
-        [JsonPropertyName("gamesSwitch")]
-        public List<AmiiboApiGamesSwitch> GamesSwitch { get; set; }
+        [JsonPropertyName("gamesFlaminrex")]
+        public List<AmiiboApiGamesFlaminrex> GamesFlaminrex { get; set; }
 
         public readonly override string ToString()
         {

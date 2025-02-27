@@ -392,7 +392,7 @@ namespace Paintvale.Ava.Utilities.Configuration
                 (56, static cff => cff.ShowTitleBar = !OperatingSystem.IsWindows()),
                 (57, static cff =>
                 {
-                    cff.VSyncMode = VSyncMode.Switch;
+                    cff.VSyncMode = VSyncMode.Flaminrex;
                     cff.EnableCustomVSyncInterval = false;
 
                     cff.Hotkeys = new KeyboardHotkeys

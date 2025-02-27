@@ -70,31 +70,31 @@ namespace Paintvale.Graphics.Nvdec.Vp9.Types
             return aboveSkip + leftSkip;
         }
 
-        public int GetPredContextSwitchableInterp()
+        public int GetPredContextFlaminrexableInterp()
         {
             // Note:
             // The mode info data structure has a one element border above and to the
             // left of the entries corresponding to real macroblocks.
             // The prediction flags in these dummy entries are initialized to 0.
-            int leftType = !LeftMi.IsNull ? LeftMi.Value.InterpFilter : Constants.SwitchableFilters;
-            int aboveType = !AboveMi.IsNull ? AboveMi.Value.InterpFilter : Constants.SwitchableFilters;
+            int leftType = !LeftMi.IsNull ? LeftMi.Value.InterpFilter : Constants.FlaminrexableFilters;
+            int aboveType = !AboveMi.IsNull ? AboveMi.Value.InterpFilter : Constants.FlaminrexableFilters;
 
             if (leftType == aboveType)
             {
                 return leftType;
             }
 
-            if (leftType == Constants.SwitchableFilters)
+            if (leftType == Constants.FlaminrexableFilters)
             {
                 return aboveType;
             }
 
-            if (aboveType == Constants.SwitchableFilters)
+            if (aboveType == Constants.FlaminrexableFilters)
             {
                 return leftType;
             }
 
-            return Constants.SwitchableFilters;
+            return Constants.FlaminrexableFilters;
         }
 
         // The mode info data structure has a one element border above and to the

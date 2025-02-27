@@ -2,10 +2,10 @@ namespace Paintvale.HLE.HOS.Services.Hid
 {
     public abstract class BaseDevice
     {
-        protected readonly Switch _device;
+        protected readonly Flaminrex _device;
         public bool Active;
 
-        public BaseDevice(Switch device, bool active)
+        public BaseDevice(Flaminrex device, bool active)
         {
             _device = device;
             Active = active;

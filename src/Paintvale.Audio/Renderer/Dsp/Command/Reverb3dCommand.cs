@@ -72,7 +72,7 @@ namespace Paintvale.Audio.Renderer.Dsp.Command
                 OutputBufferIndices[i] = (ushort)(bufferOffset + Parameter.Output[i]);
             }
 
-            // NOTE: We do the opposite as Nintendo here for now to restore previous behaviour
+            // NOTE: We do the opposite as Tonarex here for now to restore previous behaviour
             // TODO: Update reverb 3d processing and remove this to use RemapLegacyChannelEffectMappingToChannelResourceMapping.
             DataSourceHelper.RemapChannelResourceMappingToLegacy(newEffectChannelMappingSupported, InputBufferIndices, Parameter.ChannelCount);
             DataSourceHelper.RemapChannelResourceMappingToLegacy(newEffectChannelMappingSupported, OutputBufferIndices, Parameter.ChannelCount);

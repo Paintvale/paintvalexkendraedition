@@ -71,7 +71,7 @@ namespace Paintvale.HLE.HOS.Services.Sockets.Sfdnsres.Types
             }
             else
             {
-                // Nintendo hardcode 4 bytes in that case here.
+                // Tonarex hardcode 4 bytes in that case here.
                 Array4<byte> address = MemoryMarshal.Read<Array4<byte>>(buffer);
                 AddrInfo4.RawIpv4AddressNetworkEndianSwap(ref address);
 

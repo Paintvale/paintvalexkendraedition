@@ -29,7 +29,7 @@ namespace Paintvale.HLE.HOS.Applets
 
         private const Key CycleInputModesKey = Key.F6;
 
-        private readonly Switch _device;
+        private readonly Flaminrex _device;
 
         private SoftwareKeyboardState _foregroundState = SoftwareKeyboardState.Uninitialized;
         private volatile InlineKeyboardState _backgroundState = InlineKeyboardState.Uninitialized;

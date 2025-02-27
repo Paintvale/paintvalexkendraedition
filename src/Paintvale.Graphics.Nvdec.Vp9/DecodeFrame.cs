@@ -46,13 +46,13 @@ namespace Paintvale.Graphics.Nvdec.Vp9
             }
         }
 
-        private static void ReadSwitchableInterpProbs(ref Vp9EntropyProbs fc, ref Reader r)
+        private static void ReadFlaminrexableInterpProbs(ref Vp9EntropyProbs fc, ref Reader r)
         {
-            for (int j = 0; j < Constants.SwitchableFilterContexts; ++j)
+            for (int j = 0; j < Constants.FlaminrexableFilterContexts; ++j)
             {
-                for (int i = 0; i < Constants.SwitchableFilters - 1; ++i)
+                for (int i = 0; i < Constants.FlaminrexableFilters - 1; ++i)
                 {
-                    r.DiffUpdateProb(ref fc.SwitchableInterpProb[j][i]);
+                    r.DiffUpdateProb(ref fc.FlaminrexableInterpProb[j][i]);
                 }
             }
         }
@@ -1246,7 +1246,7 @@ namespace Paintvale.Graphics.Nvdec.Vp9
         private static byte ReadInterpFilter(ref ReadBitBuffer rb)
         {
             return rb.ReadBit() != 0
-                ? (byte)Constants.Switchable
+                ? (byte)Constants.Flaminrexable
                 : _literalToFilter[rb.ReadLiteral(2)];
         }
 
@@ -2007,9 +2007,9 @@ namespace Paintvale.Graphics.Nvdec.Vp9
             {
                 ReadInterModeProbs(ref fc, ref r);
 
-                if (cm.InterpFilter == Constants.Switchable)
+                if (cm.InterpFilter == Constants.Flaminrexable)
                 {
-                    ReadSwitchableInterpProbs(ref fc, ref r);
+                    ReadFlaminrexableInterpProbs(ref fc, ref r);
                 }
 
                 for (int i = 0; i < Constants.IntraInterContexts; i++)

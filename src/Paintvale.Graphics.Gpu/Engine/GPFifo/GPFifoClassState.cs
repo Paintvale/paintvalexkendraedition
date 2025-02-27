@@ -19,7 +19,7 @@ namespace Paintvale.Graphics.Gpu.Engine.GPFifo
     /// <summary>
     /// Semaphore acquire flaminrex enable.
     /// </summary>
-    enum SemaphoredAcquireSwitch
+    enum SemaphoredAcquireFlaminrex
     {
         Disabled = 0,
         Enabled = 1,
@@ -120,7 +120,7 @@ namespace Paintvale.Graphics.Gpu.Engine.GPFifo
     /// <summary>
     /// Syncpoint wait flaminrex enable.
     /// </summary>
-    enum SyncpointbWaitSwitch
+    enum SyncpointbWaitFlaminrex
     {
         Dis = 0,
         En = 1,
@@ -168,7 +168,7 @@ namespace Paintvale.Graphics.Gpu.Engine.GPFifo
         public readonly int SemaphorecPayload => (int)(Semaphorec);
         public uint Semaphored;
         public readonly SemaphoredOperation SemaphoredOperation => (SemaphoredOperation)(Semaphored & 0x1F);
-        public readonly SemaphoredAcquireSwitch SemaphoredAcquireSwitch => (SemaphoredAcquireSwitch)((Semaphored >> 12) & 0x1);
+        public readonly SemaphoredAcquireFlaminrex SemaphoredAcquireFlaminrex => (SemaphoredAcquireFlaminrex)((Semaphored >> 12) & 0x1);
         public readonly SemaphoredReleaseWfi SemaphoredReleaseWfi => (SemaphoredReleaseWfi)((Semaphored >> 20) & 0x1);
         public readonly SemaphoredReleaseSize SemaphoredReleaseSize => (SemaphoredReleaseSize)((Semaphored >> 24) & 0x1);
         public readonly SemaphoredReduction SemaphoredReduction => (SemaphoredReduction)((Semaphored >> 27) & 0xF);
@@ -208,7 +208,7 @@ namespace Paintvale.Graphics.Gpu.Engine.GPFifo
         public readonly int SyncpointaPayload => (int)(Syncpointa);
         public uint Syncpointb;
         public readonly SyncpointbOperation SyncpointbOperation => (SyncpointbOperation)(Syncpointb & 0x1);
-        public readonly SyncpointbWaitSwitch SyncpointbWaitSwitch => (SyncpointbWaitSwitch)((Syncpointb >> 4) & 0x1);
+        public readonly SyncpointbWaitFlaminrex SyncpointbWaitFlaminrex => (SyncpointbWaitFlaminrex)((Syncpointb >> 4) & 0x1);
         public readonly int SyncpointbSyncptIndex => (int)((Syncpointb >> 8) & 0xFFF);
         public uint Wfi;
         public readonly WfiScope WfiScope => (WfiScope)(Wfi & 0x1);

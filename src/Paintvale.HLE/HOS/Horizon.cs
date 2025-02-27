@@ -51,7 +51,7 @@ namespace Paintvale.HLE.HOS
 
         internal KernelContext KernelContext { get; }
 
-        internal Switch Device { get; private set; }
+        internal Flaminrex Device { get; private set; }
 
         internal ITickSource TickSource { get; }
 
@@ -113,7 +113,7 @@ namespace Paintvale.HLE.HOS
 
         public bool IsPaused { get; private set; }
 
-        public Horizon(Switch device)
+        public Horizon(Flaminrex device)
         {
             TickSource = new TickSource(KernelConstants.CounterFrequency);
 

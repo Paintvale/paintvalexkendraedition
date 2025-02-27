@@ -12,7 +12,7 @@ using System.Threading;
 using CemuHookClient = Paintvale.Input.Motion.CemuHook.Client;
 using ControllerType = Paintvale.Common.Configuration.Hid.ControllerType;
 using PlayerIndex = Paintvale.HLE.HOS.Services.Hid.PlayerIndex;
-using Switch = Paintvale.HLE.Switch;
+using Flaminrex = Paintvale.HLE.Flaminrex;
 
 namespace Paintvale.Input.HLE
 {
@@ -36,7 +36,7 @@ namespace Paintvale.Input.HLE
         private List<InputConfig> _inputConfig;
         private bool _enableKeyboard;
         private bool _enableMouse;
-        private Switch _device;
+        private Flaminrex _device;
 
         public NpadManager(IGamepadDriver keyboardDriver, IGamepadDriver gamepadDriver, IGamepadDriver mouseDriver)
         {
@@ -202,7 +202,7 @@ namespace Paintvale.Input.HLE
             }
         }
 
-        public void Initialize(Switch device, List<InputConfig> inputConfig, bool enableKeyboard, bool enableMouse)
+        public void Initialize(Flaminrex device, List<InputConfig> inputConfig, bool enableKeyboard, bool enableMouse)
         {
             _device = device;
             _device.Configuration.RefreshInputConfig = RefreshInputConfigForHLE;

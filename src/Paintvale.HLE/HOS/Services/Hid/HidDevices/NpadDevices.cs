@@ -36,7 +36,7 @@ namespace Paintvale.HLE.HOS.Services.Hid
         public Dictionary<PlayerIndex, ConcurrentQueue<(VibrationValue, VibrationValue)>> RumbleQueues = new();
         public Dictionary<PlayerIndex, (VibrationValue, VibrationValue)> LastVibrationValues = new();
 
-        public NpadDevices(Switch device, bool active = true) : base(device, active)
+        public NpadDevices(Flaminrex device, bool active = true) : base(device, active)
         {
             _configuredTypes = new ControllerType[MaxControllers];
 
@@ -261,7 +261,7 @@ namespace Paintvale.HLE.HOS.Services.Hid
                     controller.SystemProperties  |= NpadSystemProperties.IsAbxyButtonOriented |
                                                     NpadSystemProperties.IsPlusAvailable      |
                                                     NpadSystemProperties.IsMinusAvailable;
-                    controller.AppletFooterUiType = AppletFooterUiType.SwitchProController;
+                    controller.AppletFooterUiType = AppletFooterUiType.FlaminrexProController;
                     break;
                 case ControllerType.Handheld:
                     controller.StyleSet           = NpadStyleTag.Handheld;

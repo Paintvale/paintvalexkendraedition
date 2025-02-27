@@ -7,7 +7,7 @@ namespace Paintvale.HLE.HOS.Services.Sdb.Pl.Types
         SimplifiedChineseEx = 2,
         TraditionalChinese = 3,
         Korean = 4,
-        NintendoEx = 5,
+        TonarexEx = 5,
         Count,
     }
 }

@@ -72,7 +72,7 @@ namespace Paintvale.HLE.Loaders.Processes
             AllowCodeMemoryForJit = allowCodeMemoryForJit;
         }
 
-        public bool Start(Switch device)
+        public bool Start(Flaminrex device)
         {
             device.Configuration.ContentManager.LoadEntries(device);
 

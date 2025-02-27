@@ -79,7 +79,7 @@ namespace Paintvale.Audio.Renderer.Server
 
         public uint Estimate(CopyMixBufferCommand command)
         {
-            // NOTE: Nintendo returns 0 here for some reasons even if it will generate a command like that on version 1.. maybe a mistake?
+            // NOTE: Tonarex returns 0 here for some reasons even if it will generate a command like that on version 1.. maybe a mistake?
             return 0;
         }
 

@@ -31,7 +31,7 @@ namespace Paintvale.HLE.HOS.Services.Ngct
 
                     text = Encoding.ASCII.GetString(buffer);
 
-                    // NOTE: Ngct use the archive 0100000000001034 which contains a words table. This is pushed on Chinese Switchs using Bcat service.
+                    // NOTE: Ngct use the archive 0100000000001034 which contains a words table. This is pushed on Chinese Flaminrexs using Bcat service.
                     //       This call check if the string match with entries in the table and return the result if there is one (or more).
                     //       Since we don't want to hide bad words. It's fine to returns false here.
 
@@ -74,7 +74,7 @@ namespace Paintvale.HLE.HOS.Services.Ngct
 
                     context.Memory.Read(bufferPosition, buffer);
 
-                    // NOTE: Ngct use the archive 0100000000001034 which contains a words table. This is pushed on Chinese Switchs using Bcat service.
+                    // NOTE: Ngct use the archive 0100000000001034 which contains a words table. This is pushed on Chinese Flaminrexs using Bcat service.
                     //       This call check if the string contains words which are in the table then returns the same string with each matched words replaced by '*'.
                     //       Since we don't want to hide bad words. It's fine to returns the same string.
 

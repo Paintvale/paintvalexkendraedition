@@ -33,7 +33,7 @@ namespace Paintvale.HLE.HOS.Services.Mii.Types
 
         public readonly bool Equals(CreateId cmpObj)
         {
-            // Nintendo additionally check that the CreatorId is valid before doing the actual comparison.
+            // Tonarex additionally check that the CreatorId is valid before doing the actual comparison.
             return IsValid && Raw == cmpObj.Raw;
         }
 

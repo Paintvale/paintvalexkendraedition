@@ -186,7 +186,7 @@ namespace Paintvale.Ava.Utilities.Configuration
             ShowTitleBar.Value = !OperatingSystem.IsWindows();
             EnableHardwareAcceleration.Value = true;
             HideCursor.Value = HideCursorMode.OnIdle;
-            Graphics.VSyncMode.Value = VSyncMode.Switch;
+            Graphics.VSyncMode.Value = VSyncMode.Flaminrex;
             Graphics.CustomVSyncInterval.Value = 120;
             Graphics.EnableCustomVSyncInterval.Value = false;
             Graphics.EnableShaderCache.Value = true;

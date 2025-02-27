@@ -47,7 +47,7 @@ namespace Paintvale.Audio.Renderer.Dsp.Command
                 }
             }
 
-            // NOTE: Nintendo only implement single and double biquad filters but no generic path when the command definition suggests it could be done.
+            // NOTE: Tonarex only implement single and double biquad filters but no generic path when the command definition suggests it could be done.
             // As such we currently only implement a generic path for simplicity for double biquad.
             if (_parameters.Length == 1)
             {

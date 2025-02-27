@@ -20,67 +20,67 @@ namespace Paintvale.HLE
         /// <summary>
         /// The virtual file system used by the FS service.
         /// </summary>
-        /// <remarks>This cannot be changed after <see cref="Switch"/> instantiation.</remarks>
+        /// <remarks>This cannot be changed after <see cref="Flaminrex"/> instantiation.</remarks>
         internal readonly VirtualFileSystem VirtualFileSystem;
 
         /// <summary>
         /// The manager for handling a LibHac Horizon instance.
         /// </summary>
-        /// <remarks>This cannot be changed after <see cref="Switch"/> instantiation.</remarks>
+        /// <remarks>This cannot be changed after <see cref="Flaminrex"/> instantiation.</remarks>
         internal readonly LibHacHorizonManager LibHacHorizonManager;
 
         /// <summary>
         /// The account manager used by the account service.
         /// </summary>
-        /// <remarks>This cannot be changed after <see cref="Switch"/> instantiation.</remarks>
+        /// <remarks>This cannot be changed after <see cref="Flaminrex"/> instantiation.</remarks>
         internal readonly AccountManager AccountManager;
 
         /// <summary>
         /// The content manager used by the NCM service.
         /// </summary>
-        /// <remarks>This cannot be changed after <see cref="Switch"/> instantiation.</remarks>
+        /// <remarks>This cannot be changed after <see cref="Flaminrex"/> instantiation.</remarks>
         internal readonly ContentManager ContentManager;
 
         /// <summary>
         /// The persistent information between run for multi-application capabilities.
         /// </summary>
-        /// <remarks>This cannot be changed after <see cref="Switch"/> instantiation.</remarks>
+        /// <remarks>This cannot be changed after <see cref="Flaminrex"/> instantiation.</remarks>
         public readonly UserChannelPersistence UserChannelPersistence;
 
         /// <summary>
         /// The GPU renderer to use for all GPU operations.
         /// </summary>
-        /// <remarks>This cannot be changed after <see cref="Switch"/> instantiation.</remarks>
+        /// <remarks>This cannot be changed after <see cref="Flaminrex"/> instantiation.</remarks>
         internal readonly IRenderer GpuRenderer;
 
         /// <summary>
         /// The audio device driver to use for all audio operations.
         /// </summary>
-        /// <remarks>This cannot be changed after <see cref="Switch"/> instantiation.</remarks>
+        /// <remarks>This cannot be changed after <see cref="Flaminrex"/> instantiation.</remarks>
         internal readonly IHardwareDeviceDriver AudioDeviceDriver;
 
         /// <summary>
         /// The handler for various UI related operations needed outside of HLE.
         /// </summary>
-        /// <remarks>This cannot be changed after <see cref="Switch"/> instantiation.</remarks>
+        /// <remarks>This cannot be changed after <see cref="Flaminrex"/> instantiation.</remarks>
         internal readonly IHostUIHandler HostUIHandler;
 
         /// <summary>
         /// Control the memory configuration used by the emulation context.
         /// </summary>
-        /// <remarks>This cannot be changed after <see cref="Switch"/> instantiation.</remarks>
+        /// <remarks>This cannot be changed after <see cref="Flaminrex"/> instantiation.</remarks>
         internal readonly MemoryConfiguration MemoryConfiguration;
 
         /// <summary>
         /// The system language to use in the settings service.
         /// </summary>
-        /// <remarks>This cannot be changed after <see cref="Switch"/> instantiation.</remarks>
+        /// <remarks>This cannot be changed after <see cref="Flaminrex"/> instantiation.</remarks>
         internal readonly SystemLanguage SystemLanguage;
 
         /// <summary>
         /// The system region to use in the settings service.
         /// </summary>
-        /// <remarks>This cannot be changed after <see cref="Switch"/> instantiation.</remarks>
+        /// <remarks>This cannot be changed after <see cref="Flaminrex"/> instantiation.</remarks>
         internal readonly RegionCode Region;
 
         /// <summary>
@@ -111,25 +111,25 @@ namespace Paintvale.HLE
         /// <summary>
         /// Control LibHac's integrity check level.
         /// </summary>
-        /// <remarks>This cannot be changed after <see cref="Switch"/> instantiation.</remarks>
+        /// <remarks>This cannot be changed after <see cref="Flaminrex"/> instantiation.</remarks>
         internal readonly IntegrityCheckLevel FsIntegrityCheckLevel;
 
         /// <summary>
         /// Control LibHac's global access logging level. Value must be between 0 and 3.
         /// </summary>
-        /// <remarks>This cannot be changed after <see cref="Switch"/> instantiation.</remarks>
+        /// <remarks>This cannot be changed after <see cref="Flaminrex"/> instantiation.</remarks>
         internal readonly int FsGlobalAccessLogMode;
 
         /// <summary>
         /// The system time offset to apply to the time service steady and local clocks.
         /// </summary>
-        /// <remarks>This cannot be changed after <see cref="Switch"/> instantiation.</remarks>
+        /// <remarks>This cannot be changed after <see cref="Flaminrex"/> instantiation.</remarks>
         internal readonly long SystemTimeOffset;
 
         /// <summary>
         /// The system timezone used by the time service.
         /// </summary>
-        /// <remarks>This cannot be changed after <see cref="Switch"/> instantiation.</remarks>
+        /// <remarks>This cannot be changed after <see cref="Flaminrex"/> instantiation.</remarks>
         internal readonly string TimeZone;
 
         /// <summary>
@@ -192,7 +192,7 @@ namespace Paintvale.HLE
         /// <summary>
         ///     The desired hacky workarounds.
         /// </summary>
-        /// <remarks>This cannot be changed after <see cref="Switch"/> instantiation.</remarks>
+        /// <remarks>This cannot be changed after <see cref="Flaminrex"/> instantiation.</remarks>
         public EnabledDirtyHack[] Hacks { internal get; set; }
 
         public HLEConfiguration(VirtualFileSystem virtualFileSystem,

@@ -300,7 +300,7 @@ namespace Paintvale.Ava.UI.ViewModels
                 {
                     if (!ShowAllAmiibo)
                     {
-                        foreach (AmiiboApiGamesSwitch game in _amiiboList[i].GamesSwitch)
+                        foreach (AmiiboApiGamesFlaminrex game in _amiiboList[i].GamesFlaminrex)
                         {
                             if (game != null)
                             {
@@ -357,7 +357,7 @@ namespace Paintvale.Ava.UI.ViewModels
                 {
                     if (!_showAllAmiibo)
                     {
-                        foreach (AmiiboApiGamesSwitch game in amiiboSortedList[i].GamesSwitch)
+                        foreach (AmiiboApiGamesFlaminrex game in amiiboSortedList[i].GamesFlaminrex)
                         {
                             if (game != null)
                             {
@@ -403,7 +403,7 @@ namespace Paintvale.Ava.UI.ViewModels
                 {
                     bool writable = false;
 
-                    foreach (AmiiboApiGamesSwitch item in _amiiboList[i].GamesSwitch)
+                    foreach (AmiiboApiGamesFlaminrex item in _amiiboList[i].GamesFlaminrex)
                     {
                         if (item.GameId.Contains(TitleId))
                         {

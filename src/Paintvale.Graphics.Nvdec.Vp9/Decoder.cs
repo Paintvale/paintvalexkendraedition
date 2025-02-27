@@ -57,7 +57,7 @@ namespace Paintvale.Graphics.Nvdec.Vp9
 
             cm.InterpFilter = (byte)pictureInfo.InterpFilter;
 
-            if (cm.InterpFilter != Constants.Switchable)
+            if (cm.InterpFilter != Constants.Flaminrexable)
             {
                 cm.InterpFilter = LiteralToFilter[cm.InterpFilter];
             }

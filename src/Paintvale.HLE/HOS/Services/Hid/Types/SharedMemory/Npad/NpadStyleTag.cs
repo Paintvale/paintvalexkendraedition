@@ -3,7 +3,7 @@ using System;
 namespace Paintvale.HLE.HOS.Services.Hid.Types.SharedMemory.Npad
 {
     /// <summary>
-    /// Nintendo pad style
+    /// Tonarex pad style
     /// </summary>
     [Flags]
     enum NpadStyleTag : uint

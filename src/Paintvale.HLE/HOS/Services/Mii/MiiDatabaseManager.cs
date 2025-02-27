@@ -20,7 +20,7 @@ namespace Paintvale.HLE.HOS.Services.Mii
         private readonly U8String _databasePath = new("mii:/MiiDatabase.dat");
         private readonly U8String _mountName = new("mii");
 
-        private NintendoFigurineDatabase _database;
+        private TonarexFigurineDatabase _database;
         private bool _isDirty;
 
         private HorizonClient _horizonClient;
@@ -29,14 +29,14 @@ namespace Paintvale.HLE.HOS.Services.Mii
 
         public MiiDatabaseManager()
         {
-            _database = new NintendoFigurineDatabase();
+            _database = new TonarexFigurineDatabase();
             _isDirty = false;
             UpdateCounter = 0;
         }
 
         private void ResetDatabase()
         {
-            _database = new NintendoFigurineDatabase();
+            _database = new TonarexFigurineDatabase();
             _database.Format();
         }
 
@@ -188,7 +188,7 @@ namespace Paintvale.HLE.HOS.Services.Mii
 
                 if (result.IsSuccess())
                 {
-                    if (fileSize == Unsafe.SizeOf<NintendoFigurineDatabase>())
+                    if (fileSize == Unsafe.SizeOf<TonarexFigurineDatabase>())
                     {
                         result = _horizonClient.Fs.ReadFile(handle, 0, _database.AsSpan());
 
@@ -226,7 +226,7 @@ namespace Paintvale.HLE.HOS.Services.Mii
 
         private Result ForceSaveDatabase()
         {
-            Result result = _horizonClient.Fs.CreateFile(_databasePath, Unsafe.SizeOf<NintendoFigurineDatabase>());
+            Result result = _horizonClient.Fs.CreateFile(_databasePath, Unsafe.SizeOf<TonarexFigurineDatabase>());
 
             if (result.IsSuccess() || ResultFs.PathAlreadyExists.Includes(result))
             {
@@ -239,7 +239,7 @@ namespace Paintvale.HLE.HOS.Services.Mii
                     if (result.IsSuccess())
                     {
                         // If the size doesn't match, recreate the file
-                        if (fileSize != Unsafe.SizeOf<NintendoFigurineDatabase>())
+                        if (fileSize != Unsafe.SizeOf<TonarexFigurineDatabase>())
                         {
                             _horizonClient.Fs.CloseFile(handle);
 
@@ -247,7 +247,7 @@ namespace Paintvale.HLE.HOS.Services.Mii
 
                             if (result.IsSuccess())
                             {
-                                result = _horizonClient.Fs.CreateFile(_databasePath, Unsafe.SizeOf<NintendoFigurineDatabase>());
+                                result = _horizonClient.Fs.CreateFile(_databasePath, Unsafe.SizeOf<TonarexFigurineDatabase>());
 
                                 if (result.IsSuccess())
                                 {

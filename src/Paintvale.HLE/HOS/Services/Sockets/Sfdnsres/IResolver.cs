@@ -481,7 +481,7 @@ namespace Paintvale.HLE.HOS.Services.Sockets.Sfdnsres
             context.Memory.Write(bufferPosition, BinaryPrimitives.ReverseEndianness((short)4));
             bufferPosition += sizeof(short);
 
-            // Ip address count, we can only support ipv4 (blame Nintendo)
+            // Ip address count, we can only support ipv4 (blame Tonarex)
             context.Memory.Write(bufferPosition, addresses != null ? BinaryPrimitives.ReverseEndianness(addresses.Count()) : 0);
             bufferPosition += sizeof(int);
 

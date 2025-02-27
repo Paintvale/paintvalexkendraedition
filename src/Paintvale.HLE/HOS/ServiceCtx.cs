@@ -8,7 +8,7 @@ namespace Paintvale.HLE.HOS
 {
     class ServiceCtx
     {
-        public Switch Device { get; }
+        public Flaminrex Device { get; }
         public KProcess Process { get; }
         public IVirtualMemoryManager Memory { get; }
         public KThread Thread { get; }
@@ -18,7 +18,7 @@ namespace Paintvale.HLE.HOS
         public BinaryWriter ResponseData { get; }
 
         public ServiceCtx(
-            Switch device,
+            Flaminrex device,
             KProcess process,
             IVirtualMemoryManager memory,
             KThread thread,

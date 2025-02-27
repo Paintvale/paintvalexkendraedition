@@ -10,13 +10,13 @@ namespace Paintvale.HLE.UI.Input
     /// </summary>
     class NpadReader
     {
-        private readonly Switch _device;
+        private readonly Flaminrex _device;
         private readonly NpadCommonState[] _lastStates;
 
         public event NpadButtonHandler NpadButtonUpEvent;
         public event NpadButtonHandler NpadButtonDownEvent;
 
-        public NpadReader(Switch device)
+        public NpadReader(Flaminrex device)
         {
             _device = device;
             _lastStates = new NpadCommonState[_device.Hid.SharedMemory.Npads.Length];

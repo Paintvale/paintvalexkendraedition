@@ -9,7 +9,7 @@ namespace Paintvale.Graphics.Nvdec.Types.Vp9
         public Array4<Array10<uint>> YModeCounts;
         public Array10<Array10<uint>> UvModeCounts;
         public Array16<Array4<uint>> PartitionCounts;
-        public Array4<Array3<uint>> SwitchableInterpsCount;
+        public Array4<Array3<uint>> FlaminrexableInterpsCount;
         public Array4<Array2<uint>> IntraInterCount;
         public Array5<Array2<uint>> CompInterCount;
         public Array5<Array2<Array2<uint>>> SingleRefCount;
@@ -47,7 +47,7 @@ namespace Paintvale.Graphics.Nvdec.Types.Vp9
             YModeCounts = counts.YMode;
             UvModeCounts = counts.UvMode;
             PartitionCounts = counts.Partition;
-            SwitchableInterpsCount = counts.SwitchableInterp;
+            FlaminrexableInterpsCount = counts.FlaminrexableInterp;
             IntraInterCount = counts.IntraInter;
             CompInterCount = counts.CompInter;
             SingleRefCount = counts.SingleRef;

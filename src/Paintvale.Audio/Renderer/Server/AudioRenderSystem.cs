@@ -887,7 +887,7 @@ namespace Paintvale.Audio.Renderer.Server
         {
             if (_executionMode == AudioRendererExecutionMode.Manual && _renderingDevice == AudioRendererRenderingDevice.Cpu)
             {
-                // NOTE: Here Nintendo aborts with this error code, we don't want that.
+                // NOTE: Here Tonarex aborts with this error code, we don't want that.
                 return ResultCode.InvalidExecutionContextOperation;
             }
 

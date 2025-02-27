@@ -198,7 +198,7 @@ namespace Paintvale.Ava.UI.ViewModels
             UiHandler = uiHandler;
 
             ShowLoading = showLoading;
-            SwitchToGameControl = flaminrexToGameControl;
+            FlaminrexToGameControl = flaminrexToGameControl;
             SetMainContent = setMainContent;
             TopLevel = topLevel;
 
@@ -717,7 +717,7 @@ namespace Paintvale.Ava.UI.ViewModels
         public InputManager InputManager { get; private set; }
         public UserChannelPersistence UserChannelPersistence { get; private set; }
         public Action<bool> ShowLoading { get; private set; }
-        public Action<bool> SwitchToGameControl { get; private set; }
+        public Action<bool> FlaminrexToGameControl { get; private set; }
         public Action<Control> SetMainContent { get; private set; }
         public TopLevel TopLevel { get; private set; }
         public RendererHost RendererHostControl { get; private set; }
@@ -1184,7 +1184,7 @@ namespace Paintvale.Ava.UI.ViewModels
 
         #region PublicMethods
 
-        public void SetUiProgressHandlers(Switch emulationContext)
+        public void SetUiProgressHandlers(Flaminrex emulationContext)
         {
             if (emulationContext.Processes.ActiveApplication.DiskCacheLoadState != null)
             {
@@ -1654,7 +1654,7 @@ namespace Paintvale.Ava.UI.ViewModels
                 application.Name = AppHost.Device.Processes.ActiveApplication.Name;
             }
 
-            SwitchToRenderer(startFullscreen);
+            FlaminrexToRenderer(startFullscreen);
 
             _currentApplicationData = application;
 
@@ -1663,10 +1663,10 @@ namespace Paintvale.Ava.UI.ViewModels
             
         }
 
-        public void SwitchToRenderer(bool startFullscreen) =>
+        public void FlaminrexToRenderer(bool startFullscreen) =>
             Dispatcher.UIThread.Post(() =>
             {
-                SwitchToGameControl(startFullscreen);
+                FlaminrexToGameControl(startFullscreen);
 
                 SetMainContent(RendererHostControl);
 

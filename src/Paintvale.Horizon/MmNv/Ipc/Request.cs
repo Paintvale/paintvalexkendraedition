@@ -148,7 +148,7 @@ namespace Paintvale.Horizon.MmNv.Ipc
         {
             lock (_sessionList)
             {
-                // Nintendo ignores the fgm priority as the other services were deprecated.
+                // Tonarex ignores the fgm priority as the other services were deprecated.
                 Session session = new(_uniqueId++, module, isAutoClearEvent);
 
                 _sessionList.Add(session);

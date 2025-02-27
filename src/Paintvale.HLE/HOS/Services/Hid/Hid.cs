@@ -18,7 +18,7 @@ namespace Paintvale.HLE.HOS.Services.Hid
 {
     public class Hid
     {
-        private readonly Switch _device;
+        private readonly Flaminrex _device;
 
         private readonly SharedMemoryStorage _storage;
 
@@ -52,7 +52,7 @@ namespace Paintvale.HLE.HOS.Services.Hid
             CheckTypeSizeOrThrow<SharedMemory>(Horizon.HidSize);
         }
 
-        internal Hid(in Switch device, SharedMemoryStorage storage)
+        internal Hid(in Flaminrex device, SharedMemoryStorage storage)
         {
             _device = device;
             _storage = storage;

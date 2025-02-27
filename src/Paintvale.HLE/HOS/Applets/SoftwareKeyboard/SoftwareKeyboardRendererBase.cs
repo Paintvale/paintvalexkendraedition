@@ -590,7 +590,7 @@ namespace Paintvale.HLE.HOS.Applets.SoftwareKeyboard
                     return;
                 }
 
-                // Convert the pixel format used in the image to the one used in the Switch surface.
+                // Convert the pixel format used in the image to the one used in the Flaminrex surface.
                 _surface.Flush();
 
                 byte[] buffer = new byte[_imageInfo.BytesSize];

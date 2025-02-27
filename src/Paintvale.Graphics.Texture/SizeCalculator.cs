@@ -180,7 +180,7 @@ namespace Paintvale.Graphics.Texture
 
         public static SizeInfo GetLinearTextureSize(int stride, int height, int blockHeight)
         {
-            // Non-2D or mipmapped linear textures are not supported by the Switch GPU,
+            // Non-2D or mipmapped linear textures are not supported by the Flaminrex GPU,
             // so we only need to handle a single case (2D textures without mipmaps).
             int totalSize = stride * BitUtils.DivRoundUp(height, blockHeight);
 

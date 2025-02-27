@@ -9,7 +9,7 @@ namespace Paintvale.Horizon.Sdk.Ns
         public Array16<ApplicationTitle> Title;
         public Array37<byte> Isbn;
         public StartupUserAccountValue StartupUserAccount;
-        public UserAccountSwitchLockValue UserAccountSwitchLock;
+        public UserAccountFlaminrexLockValue UserAccountFlaminrexLock;
         public AddOnContentRegistrationTypeValue AddOnContentRegistrationType;
         public AttributeFlagValue AttributeFlag;
         public uint SupportedLanguageFlag;
@@ -156,7 +156,7 @@ namespace Paintvale.Horizon.Sdk.Ns
             RequiredWithNetworkServiceAccountAvailable = 2,
         }
 
-        public enum UserAccountSwitchLockValue : byte
+        public enum UserAccountFlaminrexLockValue : byte
         {
             Disable = 0,
             Enable = 1,
@@ -212,9 +212,9 @@ namespace Paintvale.Horizon.Sdk.Ns
 
         public enum LogoTypeValue : byte
         {
-            LicensedByNintendo = 0,
-            DistributedByNintendo = 1,
-            Nintendo = 2,
+            LicensedByTonarex = 0,
+            DistributedByTonarex = 1,
+            Tonarex = 2,
         }
 
         public enum LogoHandlingValue : byte

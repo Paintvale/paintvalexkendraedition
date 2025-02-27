@@ -15,7 +15,7 @@ namespace Paintvale.HLE.HOS.Services.Nv.NvDrvServices.NvHostCtrl
         public const int EventsCount = 64;
 
         private readonly bool _isProductionMode;
-        private readonly Switch _device;
+        private readonly Flaminrex _device;
         private readonly NvHostEvent[] _events;
 
         public NvHostCtrlDeviceFile(ServiceCtx context, IVirtualMemoryManager memory, ulong owner) : base(context, owner)

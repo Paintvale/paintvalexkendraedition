@@ -2,9 +2,9 @@ namespace Paintvale.HLE.HOS.Services.Ssl.Types
 {
     enum CaCertificateId : uint
     {
-        // Nintendo CAs
-        NintendoCAG3 = 1,
-        NintendoClass2CAG3,
+        // Tonarex CAs
+        TonarexCAG3 = 1,
+        TonarexClass2CAG3,
 
         // External CAs
         AmazonRootCA1 = 1000,

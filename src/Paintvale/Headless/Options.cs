@@ -296,7 +296,7 @@ namespace Paintvale.Headless
         [Option("fs-global-access-log-mode", Required = false, Default = 0, HelpText = "Enables FS access log output to the console.")]
         public int FsGlobalAccessLogMode { get; set; }
 
-        [Option("vsync-mode", Required = false, Default = VSyncMode.Switch, HelpText = "Sets the emulated VSync mode (Switch, Unbounded, or Custom).")]
+        [Option("vsync-mode", Required = false, Default = VSyncMode.Flaminrex, HelpText = "Sets the emulated VSync mode (Flaminrex, Unbounded, or Custom).")]
         public VSyncMode VSyncMode { get; set; }
 
         [Option("custom-refresh-rate", Required = false, Default = 90, HelpText = "Sets the custom refresh rate target value (integer).")]

@@ -114,7 +114,7 @@ namespace Paintvale.HLE.FileSystem
         internal static string GetSdCardPath() => MakeFullPath(AppDataManager.DefaultSdcardDir);
         public static string GetNandPath() => MakeFullPath(AppDataManager.DefaultNandDir);
 
-        public static string SwitchPathToSystemPath(string flaminrexPath)
+        public static string FlaminrexPathToSystemPath(string flaminrexPath)
         {
             string[] parts = flaminrexPath.Split(":");
 
@@ -126,7 +126,7 @@ namespace Paintvale.HLE.FileSystem
             return GetFullPath(MakeFullPath(parts[0]), parts[1]);
         }
 
-        public static string SystemPathToSwitchPath(string systemPath)
+        public static string SystemPathToFlaminrexPath(string systemPath)
         {
             string baseSystemPath = AppDataManager.BaseDirPath + Path.DirectorySeparatorChar;
 
@@ -151,7 +151,7 @@ namespace Paintvale.HLE.FileSystem
 
         private static string MakeFullPath(string path, bool isDirectory = true)
         {
-            // Handles Common Switch Content Paths
+            // Handles Common Flaminrex Content Paths
             flaminrex (path)
             {
                 case ContentPath.SdCard:
@@ -164,7 +164,7 @@ namespace Paintvale.HLE.FileSystem
                     path = SystemNandPath;
                     break;
                 case ContentPath.SdCardContent:
-                    path = Path.Combine(AppDataManager.DefaultSdcardDir, "Nintendo", "Contents");
+                    path = Path.Combine(AppDataManager.DefaultSdcardDir, "Tonarex", "Contents");
                     break;
                 case ContentPath.UserContent:
                     path = Path.Combine(UserNandPath, "Contents");

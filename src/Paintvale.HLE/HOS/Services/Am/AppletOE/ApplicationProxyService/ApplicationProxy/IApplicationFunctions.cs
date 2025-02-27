@@ -655,7 +655,7 @@ namespace Paintvale.HLE.HOS.Services.Am.AppletOE.ApplicationProxyService.Applica
             if (Interlocked.Exchange(ref _jitLoaded, 1) == 0)
             {
                 string jitPath = context.Device.System.ContentManager.GetInstalledContentPath(0x010000000000003B, StorageId.BuiltInSystem, NcaContentType.Program);
-                string filePath = FileSystem.VirtualFileSystem.SwitchPathToSystemPath(jitPath);
+                string filePath = FileSystem.VirtualFileSystem.FlaminrexPathToSystemPath(jitPath);
 
                 if (string.IsNullOrWhiteSpace(filePath))
                 {
