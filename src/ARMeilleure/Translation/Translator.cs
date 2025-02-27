@@ -8,7 +8,7 @@ using ARMeilleure.Memory;
 using ARMeilleure.State;
 using ARMeilleure.Translation.Cache;
 using ARMeilleure.Translation.PTC;
-using Ryujinx.Common;
+using Paintvale.Common;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;

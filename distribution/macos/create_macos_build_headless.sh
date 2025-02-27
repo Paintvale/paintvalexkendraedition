@@ -21,17 +21,17 @@ CONFIGURATION=$7
 CANARY=$8
 
 if [ "$CANARY" == "1" ]; then
-  RELEASE_TAR_FILE_NAME=nogui-ryujinx-canary-$VERSION-macos_universal.tar
+  RELEASE_TAR_FILE_NAME=nogui-paintvale-canary-$VERSION-macos_universal.tar
 elif [ "$VERSION" == "1.1.0" ]; then
-  RELEASE_TAR_FILE_NAME=nogui-ryujinx-$CONFIGURATION-$VERSION+$SOURCE_REVISION_ID-macos_universal.tar
+  RELEASE_TAR_FILE_NAME=nogui-paintvale-$CONFIGURATION-$VERSION+$SOURCE_REVISION_ID-macos_universal.tar
 else
-  RELEASE_TAR_FILE_NAME=nogui-ryujinx-$VERSION-macos_universal.tar
+  RELEASE_TAR_FILE_NAME=nogui-paintvale-$VERSION-macos_universal.tar
 fi
 
 ARM64_OUTPUT="$TEMP_DIRECTORY/publish_arm64"
 X64_OUTPUT="$TEMP_DIRECTORY/publish_x64"
 UNIVERSAL_OUTPUT="$OUTPUT_DIRECTORY/publish"
-EXECUTABLE_SUB_PATH=Ryujinx.Headless.SDL2
+EXECUTABLE_SUB_PATH=Paintvale.Headless.SDL2
 
 rm -rf "$TEMP_DIRECTORY"
 mkdir -p "$TEMP_DIRECTORY"
@@ -39,9 +39,9 @@ mkdir -p "$TEMP_DIRECTORY"
 DOTNET_COMMON_ARGS=(-p:DebugType=embedded -p:Version="$VERSION" -p:SourceRevisionId="$SOURCE_REVISION_ID" --self-contained true $EXTRA_ARGS)
 
 dotnet restore
-dotnet build -c "$CONFIGURATION" src/Ryujinx.Headless.SDL2
-dotnet publish -c "$CONFIGURATION" -r osx-arm64 -o "$TEMP_DIRECTORY/publish_arm64" "${DOTNET_COMMON_ARGS[@]}" src/Ryujinx.Headless.SDL2
-dotnet publish -c "$CONFIGURATION" -r osx-x64 -o "$TEMP_DIRECTORY/publish_x64" "${DOTNET_COMMON_ARGS[@]}" src/Ryujinx.Headless.SDL2
+dotnet build -c "$CONFIGURATION" src/Paintvale.Headless.SDL2
+dotnet publish -c "$CONFIGURATION" -r osx-arm64 -o "$TEMP_DIRECTORY/publish_arm64" "${DOTNET_COMMON_ARGS[@]}" src/Paintvale.Headless.SDL2
+dotnet publish -c "$CONFIGURATION" -r osx-x64 -o "$TEMP_DIRECTORY/publish_x64" "${DOTNET_COMMON_ARGS[@]}" src/Paintvale.Headless.SDL2
 
 # Get rid of the support library for ARMeilleure for x64 (that's only for arm64)
 rm -rf "$TEMP_DIRECTORY/publish_x64/libarmeilleure-jitsupport.dylib"
@@ -103,8 +103,8 @@ fi
 
 echo "Creating archive"
 pushd "$OUTPUT_DIRECTORY"
-tar --exclude "publish/Ryujinx.Headless.SDL2" -cvf "$RELEASE_TAR_FILE_NAME" publish 1> /dev/null
-python3 "$BASE_DIR/distribution/misc/add_tar_exec.py" "$RELEASE_TAR_FILE_NAME" "publish/Ryujinx.Headless.SDL2" "publish/Ryujinx.Headless.SDL2"
+tar --exclude "publish/Paintvale.Headless.SDL2" -cvf "$RELEASE_TAR_FILE_NAME" publish 1> /dev/null
+python3 "$BASE_DIR/distribution/misc/add_tar_exec.py" "$RELEASE_TAR_FILE_NAME" "publish/Paintvale.Headless.SDL2" "publish/Paintvale.Headless.SDL2"
 gzip -9 < "$RELEASE_TAR_FILE_NAME" > "$RELEASE_TAR_FILE_NAME.gz"
 rm "$RELEASE_TAR_FILE_NAME"
 popd

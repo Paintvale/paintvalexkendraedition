@@ -1,8 +1,8 @@
 using ARMeilleure.State;
 using Humanizer;
-using Ryujinx.Common;
-using Ryujinx.Common.Logging;
-using Ryujinx.Common.Memory;
+using Paintvale.Common;
+using Paintvale.Common.Logging;
+using Paintvale.Common.Memory;
 using System;
 using System.Buffers.Binary;
 using System.Collections.Concurrent;

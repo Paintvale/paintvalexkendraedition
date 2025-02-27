@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefaultItemExcludes>$(DefaultItemExcludes);._*</DefaultItemExcludes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Paintvale.Common\Paintvale.Common.csproj" />
+    <ProjectReference Include="..\Paintvale.Graphics.Video\Paintvale.Graphics.Video.csproj" />
+  </ItemGroup>
+
+</Project>

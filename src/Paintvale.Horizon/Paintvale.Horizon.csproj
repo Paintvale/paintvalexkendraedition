@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <DefaultItemExcludes>$(DefaultItemExcludes);._*</DefaultItemExcludes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Paintvale.Audio\Paintvale.Audio.csproj" />
+    <ProjectReference Include="..\Paintvale.Common\Paintvale.Common.csproj" />
+    <ProjectReference Include="..\Paintvale.Horizon.Common\Paintvale.Horizon.Common.csproj" />
+    <ProjectReference Include="..\Paintvale.Horizon.Generators\Paintvale.Horizon.Generators.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+    <ProjectReference Include="..\Paintvale.Memory\Paintvale.Memory.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Concentus" />
+    <PackageReference Include="LibHac" />
+  </ItemGroup>
+</Project>

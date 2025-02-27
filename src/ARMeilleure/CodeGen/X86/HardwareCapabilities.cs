@@ -1,4 +1,4 @@
-using Ryujinx.Memory;
+using Paintvale.Memory;
 using System;
 using System.Runtime.InteropServices;
 using System.Runtime.Intrinsics.X86;

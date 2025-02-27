@@ -43,22 +43,22 @@ An [EditorConfig](https://editorconfig.org "EditorConfig homepage") file (`.edit
 ``ShaderCache.cs:``
 
 ```C#
-using Ryujinx.Common.Configuration;
-using Ryujinx.Common.Logging;
-using Ryujinx.Graphics.GAL;
-using Ryujinx.Graphics.Gpu.Engine.Threed;
-using Ryujinx.Graphics.Gpu.Engine.Types;
-using Ryujinx.Graphics.Gpu.Image;
-using Ryujinx.Graphics.Gpu.Memory;
-using Ryujinx.Graphics.Gpu.Shader.DiskCache;
-using Ryujinx.Graphics.Shader;
-using Ryujinx.Graphics.Shader.Translation;
+using Paintvale.Common.Configuration;
+using Paintvale.Common.Logging;
+using Paintvale.Graphics.GAL;
+using Paintvale.Graphics.Gpu.Engine.Threed;
+using Paintvale.Graphics.Gpu.Engine.Types;
+using Paintvale.Graphics.Gpu.Image;
+using Paintvale.Graphics.Gpu.Memory;
+using Paintvale.Graphics.Gpu.Shader.DiskCache;
+using Paintvale.Graphics.Shader;
+using Paintvale.Graphics.Shader.Translation;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading;
 
-namespace Ryujinx.Graphics.Gpu.Shader
+namespace Paintvale.Graphics.Gpu.Shader
 {
     /// <summary>
     /// Memory cache of shader code.

@@ -40,12 +40,12 @@ jobs:
         shell: bash
 
       - name: Change config filename
-        run: sed -r --in-place 's/\%\%RYUJINX_CONFIG_FILE_NAME\%\%/PRConfig\.json/g;' src/Ryujinx.Common/ReleaseInformation.cs
+        run: sed -r --in-place 's/\%\%RYUJINX_CONFIG_FILE_NAME\%\%/PRConfig\.json/g;' src/Paintvale.Common/ReleaseInformation.cs
         shell: bash
         if: github.event_name == 'pull_request' && matrix.platform.os != 'macos-13'
 
       - name: Change config filename for macOS
-        run: sed -r -i '' 's/\%\%RYUJINX_CONFIG_FILE_NAME\%\%/PRConfig\.json/g;' src/Ryujinx.Common/ReleaseInformation.cs
+        run: sed -r -i '' 's/\%\%RYUJINX_CONFIG_FILE_NAME\%\%/PRConfig\.json/g;' src/Paintvale.Common/ReleaseInformation.cs
         shell: bash
         if: github.event_name == 'pull_request' && matrix.platform.os == 'macos-13'
 
@@ -60,13 +60,13 @@ jobs:
           retry-codes: 139
         if: matrix.platform.name != 'linux-arm64'
 
-      - name: Publish Ryujinx
-        run: dotnet publish -c "${{ matrix.configuration }}" -r "${{ matrix.platform.name }}" -o ./publish -p:Version="${{ env.RYUJINX_BASE_VERSION }}" -p:DebugType=embedded -p:SourceRevisionId="${{ steps.git_short_hash.outputs.result }}" -p:ExtraDefineConstants=DISABLE_UPDATER src/Ryujinx --self-contained 
+      - name: Publish Paintvale
+        run: dotnet publish -c "${{ matrix.configuration }}" -r "${{ matrix.platform.name }}" -o ./publish -p:Version="${{ env.RYUJINX_BASE_VERSION }}" -p:DebugType=embedded -p:SourceRevisionId="${{ steps.git_short_hash.outputs.result }}" -p:ExtraDefineConstants=DISABLE_UPDATER src/Paintvale --self-contained 
         if: github.event_name == 'pull_request' && matrix.platform.os != 'macos-13'
 
       - name: Set executable bit
         run: |
-          chmod +x ./publish/Ryujinx ./publish/Ryujinx.sh
+          chmod +x ./publish/Paintvale ./publish/Paintvale.sh
         if: github.event_name == 'pull_request' && matrix.platform.os == 'ubuntu-latest'
 
       - name: Build AppImage
@@ -100,18 +100,18 @@ jobs:
           BUILDDIR=publish OUTDIR=publish_appimage distribution/linux/appimage/build-appimage.sh
         shell: bash
 
-      - name: Upload Ryujinx artifact
+      - name: Upload Paintvale artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ryujinx-${{ matrix.configuration }}-${{ env.RYUJINX_BASE_VERSION }}+${{ steps.git_short_hash.outputs.result }}-${{ matrix.platform.zip_os_name }}
+          name: paintvale-${{ matrix.configuration }}-${{ env.RYUJINX_BASE_VERSION }}+${{ steps.git_short_hash.outputs.result }}-${{ matrix.platform.zip_os_name }}
           path: publish
         if: github.event_name == 'pull_request' && matrix.platform.os != 'macos-13'
 
-      - name: Upload Ryujinx (AppImage) artifact
+      - name: Upload Paintvale (AppImage) artifact
         uses: actions/upload-artifact@v4
         if: github.event_name == 'pull_request' && matrix.platform.os == 'ubuntu-latest'
         with:
-          name: ryujinx-${{ matrix.configuration }}-${{ env.RYUJINX_BASE_VERSION }}+${{ steps.git_short_hash.outputs.result }}-${{ matrix.platform.zip_os_name }}-AppImage
+          name: paintvale-${{ matrix.configuration }}-${{ env.RYUJINX_BASE_VERSION }}+${{ steps.git_short_hash.outputs.result }}-${{ matrix.platform.zip_os_name }}-AppImage
           path: publish_appimage
 
   build_macos:
@@ -151,17 +151,17 @@ jobs:
         run: echo "result=$(git rev-parse --short "${{ github.sha }}")" >> $GITHUB_OUTPUT
 
       - name: Change config filename
-        run: sed -r --in-place 's/\%\%RYUJINX_CONFIG_FILE_NAME\%\%/PRConfig\.json/g;' src/Ryujinx.Common/ReleaseInformation.cs
+        run: sed -r --in-place 's/\%\%RYUJINX_CONFIG_FILE_NAME\%\%/PRConfig\.json/g;' src/Paintvale.Common/ReleaseInformation.cs
         shell: bash
         if: github.event_name == 'pull_request'
 
-      - name: Publish macOS Ryujinx
+      - name: Publish macOS Paintvale
         run: |
           ./distribution/macos/create_macos_build_ava.sh . publish_tmp publish ./distribution/macos/entitlements.xml "${{ env.RYUJINX_BASE_VERSION }}" "${{ steps.git_short_hash.outputs.result }}" "${{ matrix.configuration }}" "-p:ExtraDefineConstants=DISABLE_UPDATER"
 
-      - name: Upload Ryujinx artifact
+      - name: Upload Paintvale artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ryujinx-${{ matrix.configuration }}-${{ env.RYUJINX_BASE_VERSION }}+${{ steps.git_short_hash.outputs.result }}-macos_universal
+          name: paintvale-${{ matrix.configuration }}-${{ env.RYUJINX_BASE_VERSION }}+${{ steps.git_short_hash.outputs.result }}-macos_universal
           path: "publish/*.tar.gz"
         if: github.event_name == 'pull_request'

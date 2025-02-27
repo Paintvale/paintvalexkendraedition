@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefaultItemExcludes>$(DefaultItemExcludes);._*</DefaultItemExcludes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Paintvale.Common\Paintvale.Common.csproj" />
+    <ProjectReference Include="..\Paintvale.Cpu\Paintvale.Cpu.csproj" />
+    <ProjectReference Include="..\Paintvale.Memory\Paintvale.Memory.csproj" />
+  </ItemGroup>
+
+</Project>

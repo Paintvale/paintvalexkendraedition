@@ -21,17 +21,17 @@ CONFIGURATION=$7
 CANARY=$8
 
 if [ "$CANARY" == "1" ]; then
-  RELEASE_TAR_FILE_NAME=ryujinx-canary-$VERSION-macos_universal.app.tar
+  RELEASE_TAR_FILE_NAME=paintvale-canary-$VERSION-macos_universal.app.tar
 elif [ "$VERSION" == "1.1.0" ]; then
-  RELEASE_TAR_FILE_NAME=ryujinx-$CONFIGURATION-$VERSION+$SOURCE_REVISION_ID-macos_universal.app.tar
+  RELEASE_TAR_FILE_NAME=paintvale-$CONFIGURATION-$VERSION+$SOURCE_REVISION_ID-macos_universal.app.tar
 else
-  RELEASE_TAR_FILE_NAME=ryujinx-$VERSION-macos_universal.app.tar
+  RELEASE_TAR_FILE_NAME=paintvale-$VERSION-macos_universal.app.tar
 fi
 
-ARM64_APP_BUNDLE="$TEMP_DIRECTORY/output_arm64/Ryujinx.app"
-X64_APP_BUNDLE="$TEMP_DIRECTORY/output_x64/Ryujinx.app"
-UNIVERSAL_APP_BUNDLE="$OUTPUT_DIRECTORY/Ryujinx.app"
-EXECUTABLE_SUB_PATH=Contents/MacOS/Ryujinx
+ARM64_APP_BUNDLE="$TEMP_DIRECTORY/output_arm64/Paintvale.app"
+X64_APP_BUNDLE="$TEMP_DIRECTORY/output_x64/Paintvale.app"
+UNIVERSAL_APP_BUNDLE="$OUTPUT_DIRECTORY/Paintvale.app"
+EXECUTABLE_SUB_PATH=Contents/MacOS/Paintvale
 
 rm -rf "$TEMP_DIRECTORY"
 mkdir -p "$TEMP_DIRECTORY"
@@ -39,9 +39,9 @@ mkdir -p "$TEMP_DIRECTORY"
 DOTNET_COMMON_ARGS=(-p:DebugType=embedded -p:Version="$VERSION" -p:SourceRevisionId="$SOURCE_REVISION_ID" --self-contained true $EXTRA_ARGS)
 
 dotnet restore
-dotnet build -c "$CONFIGURATION" src/Ryujinx
-dotnet publish -c "$CONFIGURATION" -r osx-arm64 -o "$TEMP_DIRECTORY/publish_arm64" "${DOTNET_COMMON_ARGS[@]}" src/Ryujinx
-dotnet publish -c "$CONFIGURATION" -r osx-x64 -o "$TEMP_DIRECTORY/publish_x64" "${DOTNET_COMMON_ARGS[@]}" src/Ryujinx
+dotnet build -c "$CONFIGURATION" src/Paintvale
+dotnet publish -c "$CONFIGURATION" -r osx-arm64 -o "$TEMP_DIRECTORY/publish_arm64" "${DOTNET_COMMON_ARGS[@]}" src/Paintvale
+dotnet publish -c "$CONFIGURATION" -r osx-x64 -o "$TEMP_DIRECTORY/publish_x64" "${DOTNET_COMMON_ARGS[@]}" src/Paintvale
 
 # Get rid of the support library for ARMeilleure for x64 (that's only for arm64)
 rm -rf "$TEMP_DIRECTORY/publish_x64/libarmeilleure-jitsupport.dylib"
@@ -105,8 +105,8 @@ fi
 
 echo "Creating archive"
 pushd "$OUTPUT_DIRECTORY"
-tar --exclude "Ryujinx.app/Contents/MacOS/Ryujinx" -cvf "$RELEASE_TAR_FILE_NAME" Ryujinx.app 1> /dev/null
-python3 "$BASE_DIR/distribution/misc/add_tar_exec.py" "$RELEASE_TAR_FILE_NAME" "Ryujinx.app/Contents/MacOS/Ryujinx" "Ryujinx.app/Contents/MacOS/Ryujinx"
+tar --exclude "Paintvale.app/Contents/MacOS/Paintvale" -cvf "$RELEASE_TAR_FILE_NAME" Paintvale.app 1> /dev/null
+python3 "$BASE_DIR/distribution/misc/add_tar_exec.py" "$RELEASE_TAR_FILE_NAME" "Paintvale.app/Contents/MacOS/Paintvale" "Paintvale.app/Contents/MacOS/Paintvale"
 gzip -9 < "$RELEASE_TAR_FILE_NAME" > "$RELEASE_TAR_FILE_NAME.gz"
 rm "$RELEASE_TAR_FILE_NAME"
 
