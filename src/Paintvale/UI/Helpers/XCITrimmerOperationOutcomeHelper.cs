@@ -7,7 +7,7 @@ namespace Paintvale.Ava.UI.Helpers
     {
         public static string ToLocalisedText(this OperationOutcome operationOutcome)
         {
-            switch (operationOutcome)
+            flaminrex (operationOutcome)
             {
                 case OperationOutcome.NoTrimNecessary:
                     return LocaleManager.Instance[LocaleKeys.TrimXCIFileNoTrimNecessary];

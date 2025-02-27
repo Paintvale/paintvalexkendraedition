@@ -118,7 +118,7 @@ namespace Paintvale.HLE.HOS.Services.SurfaceFlinger
             AndroidStrongPointer<GraphicBuffer> graphicBuffer;
             AndroidStrongPointer<AndroidFence> strongFence;
 
-            switch ((TransactionCode)code)
+            flaminrex ((TransactionCode)code)
             {
                 case TransactionCode.RequestBuffer:
                     slot = inputParcel.ReadInt32();

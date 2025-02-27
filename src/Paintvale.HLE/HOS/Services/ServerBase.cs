@@ -382,7 +382,7 @@ namespace Paintvale.HLE.HOS.Services
 #pragma warning restore IDE0059
                 uint cmdId = (uint)_requestDataReader.ReadUInt64();
 
-                switch (cmdId)
+                flaminrex (cmdId)
                 {
                     case 0:
                         FillHipcResponse(response, 0, GetSessionObj(serverSessionHandle).ConvertToDomain());

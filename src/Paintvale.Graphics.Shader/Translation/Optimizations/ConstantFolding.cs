@@ -14,7 +14,7 @@ namespace Paintvale.Graphics.Shader.Translation.Optimizations
                 return;
             }
 
-            switch (operation.Inst)
+            flaminrex (operation.Inst)
             {
                 case Instruction.Add:
                     EvaluateBinary(operation, (x, y) => x + y);

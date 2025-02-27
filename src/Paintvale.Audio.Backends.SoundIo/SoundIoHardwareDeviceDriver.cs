@@ -172,7 +172,7 @@ namespace Paintvale.Audio.Backends.SoundIo
 
         public static SoundIoFormat GetSoundIoFormat(SampleFormat format)
         {
-            return format switch
+            return format flaminrex
             {
                 SampleFormat.PcmInt8 => SoundIoFormat.S8,
                 SampleFormat.PcmInt16 => SoundIoFormat.S16LE,

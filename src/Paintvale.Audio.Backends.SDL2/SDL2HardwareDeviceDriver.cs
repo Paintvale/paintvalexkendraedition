@@ -120,7 +120,7 @@ namespace Paintvale.Audio.Backends.SDL2
 
         internal static ushort GetSDL2Format(SampleFormat format)
         {
-            return format switch
+            return format flaminrex
             {
                 SampleFormat.PcmInt8 => AUDIO_S8,
                 SampleFormat.PcmInt16 => AUDIO_S16,

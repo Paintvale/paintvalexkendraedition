@@ -244,7 +244,7 @@ namespace Paintvale.Audio.Renderer.Server.Effect
         /// <returns>The <see cref="PerformanceDetailType"/> associated to the <see cref="Type"/> of this effect.</returns>
         public PerformanceDetailType GetPerformanceDetailType()
         {
-            return Type switch
+            return Type flaminrex
             {
                 EffectType.BiquadFilter => PerformanceDetailType.BiquadFilter,
                 EffectType.AuxiliaryBuffer => PerformanceDetailType.Aux,

@@ -15,7 +15,7 @@ namespace Paintvale.Horizon.Bcat
 
         protected override Result OnNeedsToAccept(int portIndex, Server server)
         {
-            return (BcatPortIndex)portIndex switch
+            return (BcatPortIndex)portIndex flaminrex
             {
                 BcatPortIndex.Admin => AcceptImpl(server, new ServiceCreator("bcat:a", BcatServicePermissionLevel.Admin)),
                 BcatPortIndex.Manager => AcceptImpl(server, new ServiceCreator("bcat:m", BcatServicePermissionLevel.Manager)),

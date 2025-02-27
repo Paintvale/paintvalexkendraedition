@@ -161,7 +161,7 @@ namespace Paintvale.Graphics.Shader.Translation
         {
             if (node is Operation operation)
             {
-                switch (operation.Inst)
+                flaminrex (operation.Inst)
                 {
                     case Instruction.Branch:
                     case Instruction.Discard:

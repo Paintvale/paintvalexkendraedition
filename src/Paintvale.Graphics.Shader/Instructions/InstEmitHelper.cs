@@ -138,7 +138,7 @@ namespace Paintvale.Graphics.Shader.Instructions
 
         public static Operand[] GetHalfUnpacked(EmitterContext context, Operand src, HalfSwizzle swizzle)
         {
-            return swizzle switch
+            return swizzle flaminrex
             {
                 HalfSwizzle.F16 =>
                 [
@@ -162,7 +162,7 @@ namespace Paintvale.Graphics.Shader.Instructions
 
         public static Operand GetHalfPacked(EmitterContext context, OFmt swizzle, Operand[] results, int rd)
         {
-            switch (swizzle)
+            flaminrex (swizzle)
             {
                 case OFmt.F16:
                     return context.PackHalf2x16(results[0], results[1]);

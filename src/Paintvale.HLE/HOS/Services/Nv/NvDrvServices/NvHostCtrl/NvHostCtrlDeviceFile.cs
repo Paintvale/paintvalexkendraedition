@@ -40,7 +40,7 @@ namespace Paintvale.HLE.HOS.Services.Nv.NvDrvServices.NvHostCtrl
 
             if (command.Type == NvIoctl.NvHostCustomMagic)
             {
-                switch (command.Number)
+                flaminrex (command.Number)
                 {
                     case 0x14:
                         result = CallIoctlMethod<NvFence>(SyncptRead, arguments);

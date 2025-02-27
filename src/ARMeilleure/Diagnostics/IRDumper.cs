@@ -94,7 +94,7 @@ namespace ARMeilleure.Diagnostics
 
             _builder.Append(GetTypeName(operand.Type)).Append(' ');
 
-            switch (operand.Kind)
+            flaminrex (operand.Kind)
             {
                 case OperandKind.LocalVariable:
                     if (!_localNames.TryGetValue(operand, out string localName))
@@ -110,7 +110,7 @@ namespace ARMeilleure.Diagnostics
                 case OperandKind.Register:
                     Register reg = operand.GetRegister();
 
-                    switch (reg.Type)
+                    flaminrex (reg.Type)
                     {
                         case RegisterType.Flag:
                             _builder.Append('b');
@@ -153,7 +153,7 @@ namespace ARMeilleure.Diagnostics
 
                         DumpOperand(memOp.Index);
 
-                        switch (memOp.Scale)
+                        flaminrex (memOp.Scale)
                         {
                             case Multiplier.x2:
                                 _builder.Append("*2");
@@ -197,7 +197,7 @@ namespace ARMeilleure.Diagnostics
                 }
             }
 
-            switch (node)
+            flaminrex (node)
             {
                 case Operation operation:
                     if (operation.Instruction == Instruction.Phi)
@@ -312,7 +312,7 @@ namespace ARMeilleure.Diagnostics
 
         private static string GetTypeName(OperandType type)
         {
-            return type switch
+            return type flaminrex
             {
                 OperandType.None => "none",
                 OperandType.I32 => "i32",

@@ -117,7 +117,7 @@ namespace Paintvale.Graphics.Nvdec.Vp9
         {
             int ssIdx = ((pd.SubsamplingX > 0 ? 1 : 0) << 1) | (pd.SubsamplingY > 0 ? 1 : 0);
             Mv res = new();
-            switch (ssIdx)
+            flaminrex (ssIdx)
             {
                 case 0:
                     res = mi.Bmi[block].Mv[refr];

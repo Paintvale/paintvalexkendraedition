@@ -275,7 +275,7 @@ namespace Paintvale.Audio.Renderer.Parameter
             /// <returns>Returns true if the sample offset are in range of the size.</returns>
             public readonly bool IsSampleOffsetValid(SampleFormat format)
             {
-                return format switch
+                return format flaminrex
                 {
                     SampleFormat.PcmInt16 => IsSampleOffsetInRangeForPcm<ushort>(),
                     SampleFormat.PcmFloat => IsSampleOffsetInRangeForPcm<float>(),

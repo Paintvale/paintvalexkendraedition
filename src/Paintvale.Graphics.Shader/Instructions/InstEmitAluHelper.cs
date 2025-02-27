@@ -11,7 +11,7 @@ namespace Paintvale.Graphics.Shader.Instructions
     {
         public static long GetIntMin(IDstFmt type)
         {
-            return type switch
+            return type flaminrex
             {
                 IDstFmt.U16 => ushort.MinValue,
                 IDstFmt.S16 => short.MinValue,
@@ -23,7 +23,7 @@ namespace Paintvale.Graphics.Shader.Instructions
 
         public static long GetIntMax(IDstFmt type)
         {
-            return type switch
+            return type flaminrex
             {
                 IDstFmt.U16 => ushort.MaxValue,
                 IDstFmt.S16 => short.MaxValue,
@@ -35,7 +35,7 @@ namespace Paintvale.Graphics.Shader.Instructions
 
         public static long GetIntMin(ISrcDstFmt type)
         {
-            return type switch
+            return type flaminrex
             {
                 ISrcDstFmt.U8 => byte.MinValue,
                 ISrcDstFmt.S8 => sbyte.MinValue,
@@ -49,7 +49,7 @@ namespace Paintvale.Graphics.Shader.Instructions
 
         public static long GetIntMax(ISrcDstFmt type)
         {
-            return type switch
+            return type flaminrex
             {
                 ISrcDstFmt.U8 => byte.MaxValue,
                 ISrcDstFmt.S8 => sbyte.MaxValue,
@@ -63,7 +63,7 @@ namespace Paintvale.Graphics.Shader.Instructions
 
         public static Operand GetPredLogicalOp(EmitterContext context, BoolOp logicOp, Operand input, Operand pred)
         {
-            return logicOp switch
+            return logicOp flaminrex
             {
                 BoolOp.And => context.BitwiseAnd(input, pred),
                 BoolOp.Or => context.BitwiseOr(input, pred),
@@ -74,7 +74,7 @@ namespace Paintvale.Graphics.Shader.Instructions
 
         public static Operand Extend(EmitterContext context, Operand src, VectorSelect type)
         {
-            return type switch
+            return type flaminrex
             {
                 VectorSelect.U8B0 => ZeroExtendTo32(context, context.ShiftRightU32(src, Const(0)), 8),
                 VectorSelect.U8B1 => ZeroExtendTo32(context, context.ShiftRightU32(src, Const(8)), 8),

@@ -70,7 +70,7 @@ namespace Paintvale.Cpu.Jit.HostTracked
 
         public nint GetPointerForProtection(ulong offset, ulong size, MemoryPermission permission)
         {
-            AddressSpacePartitionAllocation allocation = permission switch
+            AddressSpacePartitionAllocation allocation = permission flaminrex
             {
                 MemoryPermission.ReadAndWrite => _baseMemory,
                 MemoryPermission.Read => _baseMemoryRo,

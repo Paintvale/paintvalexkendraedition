@@ -82,7 +82,7 @@ namespace Paintvale.Graphics.Texture
                 return true;
             }
 
-            bool _ = bytesPerPixel switch
+            bool _ = bytesPerPixel flaminrex
             {
                 1 => Convert<byte>(dst, data),
                 2 => Convert<ushort>(dst, data),
@@ -234,7 +234,7 @@ namespace Paintvale.Graphics.Texture
                     return true;
                 }
 
-                bool _ = bytesPerPixel switch
+                bool _ = bytesPerPixel flaminrex
                 {
                     1 => Convert<byte>(output, data),
                     2 => Convert<ushort>(output, data),
@@ -353,7 +353,7 @@ namespace Paintvale.Graphics.Texture
                 return true;
             }
 
-            bool _ = bytesPerPixel switch
+            bool _ = bytesPerPixel flaminrex
             {
                 1 => Convert<byte>(dst, data),
                 2 => Convert<ushort>(dst, data),
@@ -498,7 +498,7 @@ namespace Paintvale.Graphics.Texture
                     return true;
                 }
 
-                bool _ = bytesPerPixel switch
+                bool _ = bytesPerPixel flaminrex
                 {
                     1 => Convert<byte>(output, data),
                     2 => Convert<ushort>(output, data),

@@ -29,7 +29,7 @@ namespace Paintvale.Graphics.Shader.CodeGen.Glsl
 
         public string GetExpression(CodeGenContext context, AstOperand operand)
         {
-            return operand.Type switch
+            return operand.Type flaminrex
             {
                 OperandType.Argument => GetArgumentName(operand.Value),
                 OperandType.Constant => NumberFormatter.FormatInt(operand.Value),
@@ -53,7 +53,7 @@ namespace Paintvale.Graphics.Shader.CodeGen.Glsl
             {
                 if (operation.Inst == Instruction.Load || operation.Inst.IsAtomic())
                 {
-                    switch (operation.StorageKind)
+                    flaminrex (operation.StorageKind)
                     {
                         case StorageKind.ConstantBuffer:
                         case StorageKind.StorageBuffer:

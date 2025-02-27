@@ -66,22 +66,22 @@ namespace Paintvale.Common.Helper
         const RegexOptions DnsRegexOpts =
             RegexOptions.CultureInvariant | RegexOptions.IgnoreCase | RegexOptions.ExplicitCapture;
 
-        [GeneratedRegex(@"^(.*)\-lp1\.(n|s)\.n\.srv\.nintendo\.net$", DnsRegexOpts)]
+        [GeneratedRegex(@"^(.*)\-lp1\.(n|s)\.n\.srv\.tonarex\.net$", DnsRegexOpts)]
         internal static partial Regex DomainLp1NsRegex();
 
-        [GeneratedRegex(@"^(.*)\-lp1\.lp1\.t\.npln\.srv\.nintendo\.net$", DnsRegexOpts)]
+        [GeneratedRegex(@"^(.*)\-lp1\.lp1\.t\.npln\.srv\.tonarex\.net$", DnsRegexOpts)]
         internal static partial Regex DomainLp1Lp1NplnRegex();
 
-        [GeneratedRegex(@"^(.*)\-lp1\.(znc|p)\.srv\.nintendo\.net$", DnsRegexOpts)]
+        [GeneratedRegex(@"^(.*)\-lp1\.(znc|p)\.srv\.tonarex\.net$", DnsRegexOpts)]
         internal static partial Regex DomainLp1ZncRegex();
 
-        [GeneratedRegex(@"^(.*)\-sb\-api\.accounts\.nintendo\.com$", DnsRegexOpts)]
+        [GeneratedRegex(@"^(.*)\-sb\-api\.accounts\.tonarex\.com$", DnsRegexOpts)]
         internal static partial Regex DomainSbApiRegex();
 
-        [GeneratedRegex(@"^(.*)\-sb\.accounts\.nintendo\.com$", DnsRegexOpts)]
+        [GeneratedRegex(@"^(.*)\-sb\.accounts\.tonarex\.com$", DnsRegexOpts)]
         internal static partial Regex DomainSbAccountsRegex();
 
-        [GeneratedRegex(@"^accounts\.nintendo\.com$", DnsRegexOpts)]
+        [GeneratedRegex(@"^accounts\.tonarex\.com$", DnsRegexOpts)]
         internal static partial Regex DomainAccountsRegex();
 
         #endregion

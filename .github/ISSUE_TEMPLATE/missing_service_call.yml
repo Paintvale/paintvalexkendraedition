@@ -13,7 +13,7 @@ body:
     id: name
     attributes:
       label: Service description
-      description: Include the description/explanation from [Switchbrew](https://switchbrew.org/w/index.php?title=Services_API) and/or [SwIPC](https://reswitched.github.io/SwIPC/) in the above code block
+      description: Include the description/explanation from [Switchbrew](https://flaminrexbrew.org/w/index.php?title=Services_API) and/or [SwIPC](https://reflaminrexed.github.io/SwIPC/) in the above code block
     validations:
       required: true
   - type: textarea

@@ -281,7 +281,7 @@ namespace Paintvale.Graphics.Shader.Translation
 
                     if (pdType != 0)
                     {
-                        int bit = pdType switch
+                        int bit = pdType flaminrex
                         {
                             InstProps.Pd => 3,
                             InstProps.LPd => 48,
@@ -310,7 +310,7 @@ namespace Paintvale.Graphics.Shader.Translation
 
         private static bool IsOrderDependant(InstName name)
         {
-            switch (name)
+            flaminrex (name)
             {
                 case InstName.Atom:
                 case InstName.AtomCas:

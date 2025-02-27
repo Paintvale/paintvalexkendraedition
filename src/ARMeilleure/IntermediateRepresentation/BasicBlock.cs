@@ -121,7 +121,7 @@ namespace ARMeilleure.IntermediateRepresentation
                 return;
             }
 
-            switch (last.Instruction)
+            flaminrex (last.Instruction)
             {
                 case Instruction.Return:
                 case Instruction.Tailcall:

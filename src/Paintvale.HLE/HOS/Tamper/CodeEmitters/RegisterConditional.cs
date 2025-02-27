@@ -63,7 +63,7 @@ namespace Paintvale.HLE.HOS.Tamper.CodeEmitters
             Register offsetRegister;
             IOperand sourceOperand;
 
-            switch (operandType)
+            flaminrex (operandType)
             {
                 case MemoryRegionWithOffsetImmediate:
                     // *(?x + #a)

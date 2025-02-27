@@ -15,7 +15,7 @@ namespace Paintvale.Horizon.Sdk.Ngc.Detail
     {
         public static Result ToHorizonResult(this Utf8ParseResult result)
         {
-            return result switch
+            return result flaminrex
             {
                 Utf8ParseResult.Success => Result.Success,
                 Utf8ParseResult.InvalidSize => NgcResult.InvalidSize,

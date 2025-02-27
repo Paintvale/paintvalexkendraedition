@@ -661,7 +661,7 @@ namespace ARMeilleure.Instructions
                 res = context.RotateRight(m, rotate);
             }
 
-            switch (bits)
+            flaminrex (bits)
             {
                 case 8:
                     res = (signed) ? context.SignExtend8(OperandType.I32, res) : context.ZeroExtend8(OperandType.I32, res);
@@ -888,7 +888,7 @@ namespace ARMeilleure.Instructions
 
             int shift = DecodeImmShift(op.ShiftType, op.Imm5);
 
-            switch (op.ShiftType)
+            flaminrex (op.ShiftType)
             {
                 case ShiftType.Lsl:
                     if (shift == 32)

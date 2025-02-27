@@ -330,7 +330,7 @@ namespace ARMeilleure.Instructions
             Intrinsic inst;
             if (zero)
             {
-                inst = cond switch
+                inst = cond flaminrex
                 {
                     CmpCondition.Equal => Intrinsic.Arm64FcmeqVz,
                     CmpCondition.GreaterThan => Intrinsic.Arm64FcmgtVz,
@@ -342,7 +342,7 @@ namespace ARMeilleure.Instructions
             }
             else
             {
-                inst = cond switch
+                inst = cond flaminrex
                 {
                     CmpCondition.Equal => Intrinsic.Arm64FcmeqV,
                     CmpCondition.GreaterThan => Intrinsic.Arm64FcmgtV,

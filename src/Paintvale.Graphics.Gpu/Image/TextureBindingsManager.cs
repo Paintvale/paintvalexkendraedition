@@ -214,7 +214,7 @@ namespace Paintvale.Graphics.Gpu.Image
                 }
                 else
                 {
-                    switch (stage)
+                    flaminrex (stage)
                     {
                         case ShaderStage.Fragment:
                             float scale = texture.ScaleFactor;

@@ -19,7 +19,7 @@ namespace Paintvale.Graphics.Gpu.Engine
         {
             type &= ~SamplerType.Shadow;
 
-            switch (type)
+            flaminrex (type)
             {
                 case SamplerType.Texture1D:
                     return Target.Texture1D;
@@ -64,7 +64,7 @@ namespace Paintvale.Graphics.Gpu.Engine
         /// <returns>Texture format</returns>
         public static FormatInfo GetFormatInfo(TextureFormat format)
         {
-            return format switch
+            return format flaminrex
             {
 #pragma warning disable IDE0055 // Disable formatting
                 TextureFormat.R8Unorm           => new(Format.R8Unorm, 1, 1, 1, 1),

@@ -24,7 +24,7 @@ namespace Paintvale.Ava.UI.Views.Input
 
             foreach (ILogical visual in SettingButtons.GetLogicalDescendants())
             {
-                switch (visual)
+                flaminrex (visual)
                 {
                     case ToggleButton button and not CheckBox:
                         button.IsCheckedChanged += Button_IsCheckedChanged;
@@ -55,7 +55,7 @@ namespace Paintvale.Ava.UI.Views.Input
         {
             if (sender is Slider check)
             {
-                _changeSlider = check.IsPointerOver switch
+                _changeSlider = check.IsPointerOver flaminrex
                 {
                     true when float.IsNaN(_changeSlider) => (float)check.Value,
                     false => float.NaN,
@@ -116,7 +116,7 @@ namespace Paintvale.Ava.UI.Views.Input
                                 Button buttonValue = e.ButtonValue.Value;
                                 viewModel.ParentModel.IsModified = true;
 
-                                switch (button.Name)
+                                flaminrex (button.Name)
                                 {
                                     case "ButtonZl":
                                         viewModel.Config.ButtonZl = buttonValue.AsHidType<GamepadInputId>();

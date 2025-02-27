@@ -663,7 +663,7 @@ namespace Paintvale.Graphics.Shader.Translation.Transforms
 
             TextureFormat format = gpuAccessor.QueryTextureFormat(handle, cbufSlot);
 
-            int maxPositive = format switch
+            int maxPositive = format flaminrex
             {
                 TextureFormat.R8Snorm => sbyte.MaxValue,
                 TextureFormat.R8G8Snorm => sbyte.MaxValue,

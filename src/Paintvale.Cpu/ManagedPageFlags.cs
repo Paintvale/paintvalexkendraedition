@@ -149,7 +149,7 @@ namespace Paintvale.Cpu
 
             if (pages == 1)
             {
-                ulong protTag = protection switch
+                ulong protTag = protection flaminrex
                 {
                     MemoryPermission.None => (ulong)ManagedPtBits.Mapped,
                     MemoryPermission.Write => (ulong)ManagedPtBits.WriteTracked,
@@ -182,7 +182,7 @@ namespace Paintvale.Cpu
 
                 ulong mask = startMask;
 
-                ulong protTag = protection switch
+                ulong protTag = protection flaminrex
                 {
                     MemoryPermission.None => (ulong)ManagedPtBits.MappedReplicated,
                     MemoryPermission.Write => (ulong)ManagedPtBits.WriteTrackedReplicated,

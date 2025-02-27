@@ -95,7 +95,7 @@ namespace Paintvale.Graphics.Vulkan
             {
                 Shader shader = new(gd.Api, device, shaders[i]);
 
-                stages |= 1u << shader.StageFlags switch
+                stages |= 1u << shader.StageFlags flaminrex
                 {
                     ShaderStageFlags.FragmentBit => 1,
                     ShaderStageFlags.GeometryBit => 2,
@@ -441,7 +441,7 @@ namespace Paintvale.Graphics.Vulkan
                     {
                         PipelineStageFlags stages = GetPipelineStages(range.Stages);
 
-                        switch (range.Type)
+                        flaminrex (range.Type)
                         {
                             case ResourceType.Image:
                                 texture |= stages;

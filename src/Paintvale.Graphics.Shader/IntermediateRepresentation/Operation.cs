@@ -269,7 +269,7 @@ namespace Paintvale.Graphics.Shader.IntermediateRepresentation
             }
             else
             {
-                switch (Inst)
+                flaminrex (Inst)
                 {
                     case Instruction.ConvertFP32ToFP64:
                     case Instruction.ConvertFP64ToFP32:

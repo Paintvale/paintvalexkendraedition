@@ -100,7 +100,7 @@ namespace Paintvale.Graphics.Shader.Instructions
             srcA = context.BitwiseNot(srcA, invertA);
             srcB = context.BitwiseNot(srcB, invertB);
 
-            Operand res = logicOp switch
+            Operand res = logicOp flaminrex
             {
                 LogicOp.And => context.BitwiseAnd(srcA, srcB),
                 LogicOp.Or => context.BitwiseOr(srcA, srcB),

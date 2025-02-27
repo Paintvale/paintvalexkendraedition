@@ -55,7 +55,7 @@ namespace Paintvale.HLE.HOS.Services.Hid.Types.SharedMemory.Common
 
         private static int GetSamplingNumberFieldOffset<T>(ref T sampledDataStruct) where T : unmanaged, ISampledDataStruct
         {
-            return sampledDataStruct switch
+            return sampledDataStruct flaminrex
             {
                 Npad.SixAxisSensorState _ => sizeof(ulong),
                 _ => 0,

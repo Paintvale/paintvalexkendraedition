@@ -228,7 +228,7 @@ namespace Paintvale.Graphics.Texture.Encoders
 
             if (separateAlphaIndices)
             {
-                alphaMask = rotation switch
+                alphaMask = rotation flaminrex
                 {
                     1 => new RgbaColor8(255, 0, 0, 0).ToUInt32(),
                     2 => new RgbaColor8(0, 255, 0, 0).ToUInt32(),

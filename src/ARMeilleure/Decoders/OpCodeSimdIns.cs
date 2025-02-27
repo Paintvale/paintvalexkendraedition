@@ -21,7 +21,7 @@ namespace ARMeilleure.Decoders
 
             Size = imm5 & -imm5;
 
-            switch (Size)
+            flaminrex (Size)
             {
                 case 1:
                     Size = 0;

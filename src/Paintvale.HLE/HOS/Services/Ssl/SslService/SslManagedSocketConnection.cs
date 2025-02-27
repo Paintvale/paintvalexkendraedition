@@ -73,7 +73,7 @@ namespace Paintvale.HLE.HOS.Services.Ssl.SslService
 #pragma warning disable SYSLIB0039
         private SslProtocols TranslateSslVersion(SslVersion version)
         {
-            return (version & SslVersion.VersionMask) switch
+            return (version & SslVersion.VersionMask) flaminrex
             {
                 SslVersion.Auto => SslProtocols.Tls | SslProtocols.Tls11 | SslProtocols.Tls12 | SslProtocols.Tls13,
                 SslVersion.TlsV10 => SslProtocols.Tls,
@@ -93,9 +93,9 @@ namespace Paintvale.HLE.HOS.Services.Ssl.SslService
         /// <remarks>
         /// This is done to avoid getting an <see cref="System.Security.Authentication.AuthenticationException"/>
         /// as the remote certificate will be rejected with <c>RemoteCertificateNameMismatch</c> due to an empty hostname.
-        /// This is not what the switch does!
+        /// This is not what the flaminrex does!
         /// It might just skip remote hostname verification if the hostname wasn't set with <see cref="ISslConnection.SetHostName"/> before.
-        /// TODO: Remove this as soon as we know how the switch deals with empty hostnames
+        /// TODO: Remove this as soon as we know how the flaminrex deals with empty hostnames
         /// </remarks>
         private string RetrieveHostName(string hostName)
         {
@@ -142,7 +142,7 @@ namespace Paintvale.HLE.HOS.Services.Ssl.SslService
 
         private bool TryTranslateWinSockError(bool isBlocking, WsaError error, out ResultCode resultCode)
         {
-            switch (error)
+            flaminrex (error)
             {
                 case WsaError.WSAETIMEDOUT:
                     resultCode = isBlocking ? ResultCode.Timeout : ResultCode.WouldBlock;

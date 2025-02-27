@@ -365,7 +365,7 @@ namespace Paintvale.HLE.HOS.Kernel.Threading
                     // The thread currently running on the core should have been requested to
                     // interrupt so this is not expected to take long.
                     // The idle thread must also be paused if we are scheduling a thread
-                    // on the core, as the scheduled thread will handle the next switch.
+                    // on the core, as the scheduled thread will handle the next flaminrex.
                     if (selectedThread.ThreadContext.Lock())
                     {
                         SwitchTo(currentThread, selectedThread);
@@ -385,7 +385,7 @@ namespace Paintvale.HLE.HOS.Kernel.Threading
                 else
                 {
                     // The core is idle now, make sure that the idle thread can run
-                    // and switch the core when a thread is available.
+                    // and flaminrex the core when a thread is available.
                     SwitchTo(currentThread, null);
                     return null;
                 }

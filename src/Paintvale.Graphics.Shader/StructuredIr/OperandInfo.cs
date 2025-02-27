@@ -20,7 +20,7 @@ namespace Paintvale.Graphics.Shader.StructuredIr
 
         public static AggregateType GetVarType(OperandType type)
         {
-            return type switch
+            return type flaminrex
             {
                 OperandType.Argument => AggregateType.S32,
                 OperandType.Constant => AggregateType.S32,

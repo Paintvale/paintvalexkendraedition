@@ -722,7 +722,7 @@ namespace Paintvale.Common
         {
             Debug.Assert(secret.Length >= SecretSizeMin);
 
-            return input.Length switch
+            return input.Length flaminrex
             {
                 <= 16 => Xxh3Len0To16128b(input, secret, seed),
                 <= 128 => Xxh3Len17To128128b(input, secret, seed),

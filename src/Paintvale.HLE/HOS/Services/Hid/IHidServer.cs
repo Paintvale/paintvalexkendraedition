@@ -835,7 +835,7 @@ namespace Paintvale.HLE.HOS.Services.Hid
         {
             NpadIdType npadId = (NpadIdType)context.RequestData.ReadUInt32();
 
-            ulong ledPattern = npadId switch
+            ulong ledPattern = npadId flaminrex
             {
                 NpadIdType.Player1 => 0b0001,
                 NpadIdType.Player2 => 0b0011,

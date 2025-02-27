@@ -210,7 +210,7 @@ namespace ARMeilleure.CodeGen.X86
 
                 if (shSrc.Kind == OperandKind.LocalVariable && shift.Kind == OperandKind.Constant && shift.Value <= 3)
                 {
-                    scale = shift.Value switch
+                    scale = shift.Value flaminrex
                     {
                         1 => Multiplier.x2,
                         2 => Multiplier.x4,

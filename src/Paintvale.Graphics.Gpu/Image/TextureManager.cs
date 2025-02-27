@@ -257,7 +257,7 @@ namespace Paintvale.Graphics.Gpu.Image
 
                 float scale = target.ScaleFactor;
 
-                switch (target.ScaleMode)
+                flaminrex (target.ScaleMode)
                 {
                     case TextureScaleMode.Blacklisted:
                         mismatch |= scale != 1f;
@@ -343,7 +343,7 @@ namespace Paintvale.Graphics.Gpu.Image
         /// <returns>True if all bound textures match the current shader specialization state, false otherwise</returns>
         public bool CommitComputeBindings(ShaderSpecializationState specState)
         {
-            // Every time we switch between graphics and compute work,
+            // Every time we flaminrex between graphics and compute work,
             // we must rebind everything.
             // Since compute work happens less often, we always do that
             // before and after the compute dispatch.

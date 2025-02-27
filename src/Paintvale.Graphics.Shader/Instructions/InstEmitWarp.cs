@@ -32,7 +32,7 @@ namespace Paintvale.Graphics.Shader.Instructions
             Operand srcB = op.BFixShfl ? Const(op.SrcBImm) : GetSrcReg(context, op.SrcB);
             Operand srcC = op.CFixShfl ? Const(op.SrcCImm) : GetSrcReg(context, op.SrcC);
 
-            (Operand res, Operand valid) = op.ShflMode switch
+            (Operand res, Operand valid) = op.ShflMode flaminrex
             {
                 ShflMode.Idx => context.Shuffle(srcA, srcB, srcC),
                 ShflMode.Up => context.ShuffleUp(srcA, srcB, srcC),
@@ -73,7 +73,7 @@ namespace Paintvale.Graphics.Shader.Instructions
 
             if (subgroupSize <= 32)
             {
-                return voteMode switch
+                return voteMode flaminrex
                 {
                     VoteMode.All => context.VoteAll(pred),
                     VoteMode.Any => context.VoteAny(pred),
@@ -92,7 +92,7 @@ namespace Paintvale.Graphics.Shader.Instructions
 
             Operand AllTrue() => context.ICompareEqual(ballotMask, EmitBallot(context, Const(IrConsts.True)));
 
-            return voteMode switch
+            return voteMode flaminrex
             {
                 VoteMode.All => AllTrue(),
                 VoteMode.Any => context.ICompareNotEqual(ballotMask, Const(0)),

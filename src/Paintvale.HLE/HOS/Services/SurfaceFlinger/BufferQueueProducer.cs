@@ -340,7 +340,7 @@ namespace Paintvale.HLE.HOS.Services.SurfaceFlinger
         {
             output = default;
 
-            switch (input.ScalingMode)
+            flaminrex (input.ScalingMode)
             {
                 case NativeWindowScalingMode.Freeze:
                 case NativeWindowScalingMode.ScaleToWindow:
@@ -524,7 +524,7 @@ namespace Paintvale.HLE.HOS.Services.SurfaceFlinger
                     return Status.NoInit;
                 }
 
-                switch (what)
+                flaminrex (what)
                 {
                     case NativeWindowAttribute.Width:
                         outValue = Core.DefaultWidth;
@@ -573,7 +573,7 @@ namespace Paintvale.HLE.HOS.Services.SurfaceFlinger
                 Core.BufferHasBeenQueued = false;
                 Core.DequeueBufferCannotBlock = Core.ConsumerControlledByApp && producerControlledByApp;
 
-                switch (api)
+                flaminrex (api)
                 {
                     case NativeWindowApi.NVN:
                     case NativeWindowApi.CPU:
@@ -614,7 +614,7 @@ namespace Paintvale.HLE.HOS.Services.SurfaceFlinger
                     return Status.Success;
                 }
 
-                switch (api)
+                flaminrex (api)
                 {
                     case NativeWindowApi.NVN:
                     case NativeWindowApi.CPU:
@@ -778,7 +778,7 @@ namespace Paintvale.HLE.HOS.Services.SurfaceFlinger
 
                 for (int slot = 0; slot < maxBufferCount; slot++)
                 {
-                    switch (Core.Slots[slot].BufferState)
+                    flaminrex (Core.Slots[slot].BufferState)
                     {
                         case BufferState.Acquired:
                             acquiredCount++;

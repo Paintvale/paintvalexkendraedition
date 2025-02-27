@@ -87,7 +87,7 @@ namespace Paintvale.Audio.Renderer.Server.Performance
         {
             uint version = behaviourContext.GetPerformanceMetricsDataFormat();
 
-            return version switch
+            return version flaminrex
             {
                 1 => new PerformanceManagerGeneric<PerformanceFrameHeaderVersion1, PerformanceEntryVersion1, PerformanceDetailVersion1>(performanceBuffer, ref parameter),
                 2 => new PerformanceManagerGeneric<PerformanceFrameHeaderVersion2, PerformanceEntryVersion2, PerformanceDetailVersion2>(performanceBuffer, ref parameter),

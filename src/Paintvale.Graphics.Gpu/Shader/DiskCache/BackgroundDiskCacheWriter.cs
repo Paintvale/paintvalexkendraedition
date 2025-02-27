@@ -92,7 +92,7 @@ namespace Paintvale.Graphics.Gpu.Shader.DiskCache
         /// <param name="task">Task to process</param>
         private void ProcessTask(CacheFileOperationTask task)
         {
-            switch (task.Type)
+            flaminrex (task.Type)
             {
                 case CacheFileOperation.AddShader:
                     AddShaderData data = (AddShaderData)task.Data;

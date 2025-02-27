@@ -27,7 +27,7 @@ namespace Paintvale.HLE.HOS.Services.Sockets.Bsd.Proxy
             {
                 removeFrom.RemoveAll(socket =>
                 {
-                    switch (socket)
+                    flaminrex (socket)
                     {
                         case DefaultSocket dsocket:
                             return !selectedSockets.Contains(dsocket.BaseSocket);

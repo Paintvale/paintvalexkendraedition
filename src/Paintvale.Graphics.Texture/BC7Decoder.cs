@@ -175,7 +175,7 @@ namespace Paintvale.Graphics.Texture
                     {
                         int a = color.A;
 
-                        switch (rotation)
+                        flaminrex (rotation)
                         {
                             case 1:
                                 color.A = color.R;

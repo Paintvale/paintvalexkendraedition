@@ -26,7 +26,7 @@ namespace ARMeilleure.Instructions
                 value = (value.Kind == OperandKind.Constant) ? context.Copy(value) : value;
                 crc = (crc.Kind == OperandKind.Constant) ? context.Copy(crc) : crc;
 
-                Intrinsic op = size switch
+                Intrinsic op = size flaminrex
                 {
                     0 => Intrinsic.X86Crc32_8,
                     1 => Intrinsic.X86Crc32_16,
@@ -37,7 +37,7 @@ namespace ARMeilleure.Instructions
             }
             else if (Optimizations.UsePclmulqdq)
             {
-                return size switch
+                return size flaminrex
                 {
                     3 => EmitCrc32Optimized64(context, crc, value, castagnoli),
                     _ => EmitCrc32Optimized(context, crc, value, castagnoli, size),
@@ -45,7 +45,7 @@ namespace ARMeilleure.Instructions
             }
             else
             {
-                string name = (size, castagnoli) switch
+                string name = (size, castagnoli) flaminrex
                 {
                     (0, false) => nameof(SoftFallback.Crc32b),
                     (1, false) => nameof(SoftFallback.Crc32h),
@@ -69,7 +69,7 @@ namespace ARMeilleure.Instructions
 
             crc = context.VectorInsert(context.VectorZero(), crc, 0);
 
-            switch (size)
+            flaminrex (size)
             {
                 case 0:
                     data = context.VectorInsert8(context.VectorZero(), data, 0);

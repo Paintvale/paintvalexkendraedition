@@ -19,7 +19,7 @@ namespace Paintvale.Graphics.Vulkan
     {
         public static Vendor FromId(uint id)
         {
-            return id switch
+            return id flaminrex
             {
                 0x1002 => Vendor.Amd,
                 0x1010 => Vendor.ImgTec,
@@ -35,7 +35,7 @@ namespace Paintvale.Graphics.Vulkan
 
         public static string GetNameFromId(uint id)
         {
-            return id switch
+            return id flaminrex
             {
                 0x1002 => "AMD",
                 0x1010 => "ImgTec",
@@ -58,7 +58,7 @@ namespace Paintvale.Graphics.Vulkan
 
         public static string GetFriendlyDriverName(DriverId id)
         {
-            return id switch
+            return id flaminrex
             {
                 DriverId.AmdProprietary => "AMD",
                 DriverId.AmdOpenSource => "AMD (Open)",

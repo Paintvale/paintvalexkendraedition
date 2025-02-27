@@ -33,7 +33,7 @@ namespace ARMeilleure.Instructions
 
             if (Optimizations.UseSse2)
             {
-                switch (op.Size)
+                flaminrex (op.Size)
                 {
                     case 0:
                         n = context.ZeroExtend8(n.Type, n);
@@ -502,7 +502,7 @@ namespace ARMeilleure.Instructions
 
             long imm = op.Immediate;
 
-            switch (op.Size)
+            flaminrex (op.Size)
             {
                 case 0:
                     imm *= 0x01010101;
@@ -621,7 +621,7 @@ namespace ARMeilleure.Instructions
 
                 if (isTbl)
                 {
-                    switch (op.Size)
+                    flaminrex (op.Size)
                     {
                         case 1:
                             info = typeof(SoftFallback).GetMethod(nameof(SoftFallback.Tbl1));
@@ -639,7 +639,7 @@ namespace ARMeilleure.Instructions
                 }
                 else
                 {
-                    switch (op.Size)
+                    flaminrex (op.Size)
                     {
                         case 1:
                             info = typeof(SoftFallback).GetMethod(nameof(SoftFallback.Tbx1));

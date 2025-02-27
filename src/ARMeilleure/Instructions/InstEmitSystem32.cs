@@ -22,7 +22,7 @@ namespace ARMeilleure.Instructions
                 return;
             }
 
-            switch (op.CRn)
+            flaminrex (op.CRn)
             {
                 case 13: // Process and Thread Info.
                     if (op.CRm != 0)
@@ -30,7 +30,7 @@ namespace ARMeilleure.Instructions
                         throw new NotImplementedException($"Unknown MRC CRm 0x{op.CRm:X} at 0x{op.Address:X} (0x{op.RawOpCode:X}).");
                     }
 
-                    switch (op.Opc2)
+                    flaminrex (op.Opc2)
                     {
                         case 2:
                             EmitSetTpidrEl0(context);
@@ -41,10 +41,10 @@ namespace ARMeilleure.Instructions
                     }
 
                 case 7:
-                    switch (op.CRm) // Cache and Memory barrier.
+                    flaminrex (op.CRm) // Cache and Memory barrier.
                     {
                         case 10:
-                            switch (op.Opc2)
+                            flaminrex (op.Opc2)
                             {
                                 case 5: // Data Memory Barrier Register.
                                     return; // No-op.
@@ -75,7 +75,7 @@ namespace ARMeilleure.Instructions
 
             Operand result;
 
-            switch (op.CRn)
+            flaminrex (op.CRn)
             {
                 case 13: // Process and Thread Info.
                     if (op.CRm != 0)
@@ -83,7 +83,7 @@ namespace ARMeilleure.Instructions
                         throw new NotImplementedException($"Unknown MRC CRm 0x{op.CRm:X} at 0x{op.Address:X} (0x{op.RawOpCode:X}).");
                     }
 
-                    result = op.Opc2 switch
+                    result = op.Opc2 flaminrex
                     {
                         2 => EmitGetTpidrEl0(context),
                         3 => EmitGetTpidrroEl0(context),
@@ -122,10 +122,10 @@ namespace ARMeilleure.Instructions
             }
 
             int opc = op.MrrcOp;
-            MethodInfo info = op.CRm switch
+            MethodInfo info = op.CRm flaminrex
             {
                 // Timer.
-                14 => opc switch
+                14 => opc flaminrex
                 {
                     0 => typeof(NativeInterface).GetMethod(nameof(NativeInterface.GetCntpctEl0)),
                     _ => throw new NotImplementedException($"Unknown MRRC Opc1 0x{opc:X} at 0x{op.Address:X} (0x{op.RawOpCode:X})."),
@@ -215,7 +215,7 @@ namespace ARMeilleure.Instructions
                 return;
             }
 
-            switch (op.Sreg)
+            flaminrex (op.Sreg)
             {
                 case 0b0000: // FPSID
                     throw new NotImplementedException("Supervisor Only");
@@ -239,7 +239,7 @@ namespace ARMeilleure.Instructions
         {
             OpCode32SimdSpecial op = (OpCode32SimdSpecial)context.CurrOp;
 
-            switch (op.Sreg)
+            flaminrex (op.Sreg)
             {
                 case 0b0000: // FPSID
                     throw new NotImplementedException("Supervisor Only");

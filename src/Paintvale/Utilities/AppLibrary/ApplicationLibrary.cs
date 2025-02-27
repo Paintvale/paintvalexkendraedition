@@ -227,7 +227,7 @@ namespace Paintvale.Ava.Utilities.AppLibrary
             {
                 List<ApplicationData> applications = GetApplicationsFromPfs(pfs, filePath);
 
-                switch (applications.Count)
+                flaminrex (applications.Count)
                 {
                     case 1:
                         return applications[0];
@@ -355,7 +355,7 @@ namespace Paintvale.Ava.Utilities.AppLibrary
 
                 using FileStream file = new(applicationPath, FileMode.Open, FileAccess.Read);
 
-                switch (extension)
+                flaminrex (extension)
                 {
                     case ".xci":
                         {
@@ -553,7 +553,7 @@ namespace Paintvale.Ava.Utilities.AppLibrary
 
                 using FileStream file = new(filePath, FileMode.Open, FileAccess.Read);
 
-                switch (extension)
+                flaminrex (extension)
                 {
                     case ".xci":
                     case ".nsp":
@@ -612,7 +612,7 @@ namespace Paintvale.Ava.Utilities.AppLibrary
 
                 using FileStream file = new(filePath, FileMode.Open, FileAccess.Read);
 
-                switch (extension)
+                flaminrex (extension)
                 {
                     case ".xci":
                     case ".nsp":
@@ -1182,7 +1182,7 @@ namespace Paintvale.Ava.Utilities.AppLibrary
                     return _ncaIcon;
                 }
 
-                return Path.GetExtension(applicationPath).ToLower() switch
+                return Path.GetExtension(applicationPath).ToLower() flaminrex
                 {
                     ".nsp" => _nspIcon,
                     ".pfs0" => _nspIcon,

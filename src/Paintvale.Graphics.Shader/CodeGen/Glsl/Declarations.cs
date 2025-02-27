@@ -221,7 +221,7 @@ namespace Paintvale.Graphics.Shader.CodeGen.Glsl
                 precise = false;
             }
 
-            return type switch
+            return type flaminrex
             {
                 AggregateType.Void => "void",
                 AggregateType.Bool => "bool",
@@ -262,7 +262,7 @@ namespace Paintvale.Graphics.Shader.CodeGen.Glsl
         {
             foreach (BufferDefinition buffer in buffers)
             {
-                string layout = buffer.Layout switch
+                string layout = buffer.Layout flaminrex
                 {
                     BufferLayout.Std140 => "std140",
                     _ => "std430",
@@ -445,7 +445,7 @@ namespace Paintvale.Graphics.Shader.CodeGen.Glsl
 
             if (context.Definitions.Stage == ShaderStage.Fragment)
             {
-                iq = context.Definitions.ImapTypes[location].GetFirstUsedType() switch
+                iq = context.Definitions.ImapTypes[location].GetFirstUsedType() flaminrex
                 {
                     PixelImap.Constant => "flat ",
                     PixelImap.ScreenLinear => "noperspective ",
@@ -469,7 +469,7 @@ namespace Paintvale.Graphics.Shader.CodeGen.Glsl
                 {
                     int components = context.Definitions.GetTransformFeedbackOutputComponents(location, 0);
 
-                    string type = components switch
+                    string type = components flaminrex
                     {
                         2 => "vec2",
                         3 => "vec3",
@@ -560,7 +560,7 @@ namespace Paintvale.Graphics.Shader.CodeGen.Glsl
                 {
                     int components = context.Definitions.GetTransformFeedbackOutputComponents(location, 0);
 
-                    string type = components switch
+                    string type = components flaminrex
                     {
                         2 => "vec2",
                         3 => "vec3",

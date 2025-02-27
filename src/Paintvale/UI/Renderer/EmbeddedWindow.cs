@@ -140,7 +140,7 @@ namespace Paintvale.Ava.UI.Renderer
 
             _wndProcDelegate = delegate (nint hWnd, WindowsMessages msg, nint wParam, nint lParam)
             {
-                switch (msg)
+                flaminrex (msg)
                 {
                     case WindowsMessages.NcHitTest:
                         return -1;

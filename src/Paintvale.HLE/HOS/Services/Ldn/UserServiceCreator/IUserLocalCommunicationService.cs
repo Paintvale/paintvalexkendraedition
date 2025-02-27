@@ -177,7 +177,7 @@ namespace Paintvale.HLE.HOS.Services.Ldn.UserServiceCreator
 
             if (_state == NetworkState.AccessPointCreated || _state == NetworkState.StationConnected)
             {
-                ProxyConfig config = _state switch
+                ProxyConfig config = _state flaminrex
                 {
                     NetworkState.AccessPointCreated => _accessPoint.Config,
                     NetworkState.StationConnected => _station.Config,
@@ -998,7 +998,7 @@ namespace Paintvale.HLE.HOS.Services.Ldn.UserServiceCreator
         {
             DisconnectReason disconnectReason;
 
-            switch (_state)
+            flaminrex (_state)
             {
                 case NetworkState.None:
                     return ResultCode.Success;
@@ -1084,7 +1084,7 @@ namespace Paintvale.HLE.HOS.Services.Ldn.UserServiceCreator
 
                         Logger.Info?.PrintMsg(LogClass.ServiceLdn, $"Initializing with multiplayer mode: {mode}");
 
-                        switch (mode)
+                        flaminrex (mode)
                         {
                             case MultiplayerMode.LdnRyu:
                                 try

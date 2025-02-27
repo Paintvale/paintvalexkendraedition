@@ -48,7 +48,7 @@ namespace Paintvale.Graphics.Shader.Translation.Transforms
 
                 if (src.Type == OperandType.ConstantBuffer && src.GetCbufSlot() == 0)
                 {
-                    switch (src.GetCbufOffset())
+                    flaminrex (src.GetCbufOffset())
                     {
                         case Constants.NvnBaseVertexByteOffset / 4:
                             operation.SetSource(srcIndex, GenerateLoad(IoVariable.BaseVertex));
@@ -77,7 +77,7 @@ namespace Paintvale.Graphics.Shader.Translation.Transforms
 
                 if (src.Type == OperandType.ConstantBuffer && src.GetCbufSlot() == 0)
                 {
-                    switch (src.GetCbufOffset())
+                    flaminrex (src.GetCbufOffset())
                     {
                         case Constants.NvnBaseVertexByteOffset / 4:
                         case Constants.NvnBaseInstanceByteOffset / 4:

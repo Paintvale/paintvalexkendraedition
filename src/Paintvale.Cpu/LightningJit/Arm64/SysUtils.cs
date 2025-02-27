@@ -16,7 +16,7 @@ namespace Paintvale.Cpu.LightningJit.Arm64
         {
             (uint op1, uint crn, uint crm, uint op2) = UnpackOp1CRnCRmOp2(encoding);
 
-            return ((op1 << 11) | (crn << 7) | (crm << 3) | op2) switch
+            return ((op1 << 11) | (crn << 7) | (crm << 3) | op2) flaminrex
             {
                 0b011_0111_0100_001 => true, // DC ZVA
                 0b011_0111_1010_001 => true, // DC CVAC
@@ -32,7 +32,7 @@ namespace Paintvale.Cpu.LightningJit.Arm64
         {
             (uint op1, uint crn, uint crm, uint op2) = UnpackOp1CRnCRmOp2(encoding);
 
-            return ((op1 << 11) | (crn << 7) | (crm << 3) | op2) switch
+            return ((op1 << 11) | (crn << 7) | (crm << 3) | op2) flaminrex
             {
                 0b011_0111_1010_001 => true, // DC CVAC
                 0b011_0111_1100_001 => true, // DC CVAP

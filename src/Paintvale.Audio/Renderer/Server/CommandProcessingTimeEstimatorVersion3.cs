@@ -189,7 +189,7 @@ namespace Paintvale.Audio.Renderer.Server
             {
                 if (command.Enabled)
                 {
-                    return command.Parameter.ChannelCount switch
+                    return command.Parameter.ChannelCount flaminrex
                     {
                         1 => (uint)8929.04f,
                         2 => (uint)25500.75f,
@@ -199,7 +199,7 @@ namespace Paintvale.Audio.Renderer.Server
                     };
                 }
 
-                return command.Parameter.ChannelCount switch
+                return command.Parameter.ChannelCount flaminrex
                 {
                     1 => (uint)1295.20f,
                     2 => (uint)1213.60f,
@@ -211,7 +211,7 @@ namespace Paintvale.Audio.Renderer.Server
 
             if (command.Enabled)
             {
-                return command.Parameter.ChannelCount switch
+                return command.Parameter.ChannelCount flaminrex
                 {
                     1 => (uint)11941.05f,
                     2 => (uint)37197.37f,
@@ -221,7 +221,7 @@ namespace Paintvale.Audio.Renderer.Server
                 };
             }
 
-            return command.Parameter.ChannelCount switch
+            return command.Parameter.ChannelCount flaminrex
             {
                 1 => (uint)997.67f,
                 2 => (uint)977.63f,
@@ -239,7 +239,7 @@ namespace Paintvale.Audio.Renderer.Server
             {
                 if (command.Enabled)
                 {
-                    return command.Parameter.ChannelCount switch
+                    return command.Parameter.ChannelCount flaminrex
                     {
                         1 => (uint)81475.05f,
                         2 => (uint)84975.0f,
@@ -249,7 +249,7 @@ namespace Paintvale.Audio.Renderer.Server
                     };
                 }
 
-                return command.Parameter.ChannelCount switch
+                return command.Parameter.ChannelCount flaminrex
                 {
                     1 => (uint)536.30f,
                     2 => (uint)588.70f,
@@ -261,7 +261,7 @@ namespace Paintvale.Audio.Renderer.Server
 
             if (command.Enabled)
             {
-                return command.Parameter.ChannelCount switch
+                return command.Parameter.ChannelCount flaminrex
                 {
                     1 => (uint)120174.47f,
                     2 => (uint)25262.22f,
@@ -271,7 +271,7 @@ namespace Paintvale.Audio.Renderer.Server
                 };
             }
 
-            return command.Parameter.ChannelCount switch
+            return command.Parameter.ChannelCount flaminrex
             {
                 1 => (uint)617.64f,
                 2 => (uint)659.54f,
@@ -289,7 +289,7 @@ namespace Paintvale.Audio.Renderer.Server
             {
                 if (command.Enabled)
                 {
-                    return command.Parameter.ChannelCount switch
+                    return command.Parameter.ChannelCount flaminrex
                     {
                         1 => (uint)116754.0f,
                         2 => (uint)125912.05f,
@@ -299,7 +299,7 @@ namespace Paintvale.Audio.Renderer.Server
                     };
                 }
 
-                return command.Parameter.ChannelCount switch
+                return command.Parameter.ChannelCount flaminrex
                 {
                     1 => (uint)734.0f,
                     2 => (uint)766.62f,
@@ -311,7 +311,7 @@ namespace Paintvale.Audio.Renderer.Server
 
             if (command.Enabled)
             {
-                return command.Parameter.ChannelCount switch
+                return command.Parameter.ChannelCount flaminrex
                 {
                     1 => (uint)170292.34f,
                     2 => (uint)183875.63f,
@@ -321,7 +321,7 @@ namespace Paintvale.Audio.Renderer.Server
                 };
             }
 
-            return command.Parameter.ChannelCount switch
+            return command.Parameter.ChannelCount flaminrex
             {
                 1 => (uint)508.47f,
                 2 => (uint)582.45f,
@@ -456,10 +456,10 @@ namespace Paintvale.Audio.Renderer.Server
         {
             Debug.Assert(sampleCount == 160 || sampleCount == 240);
 
-            switch (format)
+            flaminrex (format)
             {
                 case SampleFormat.PcmInt16:
-                    switch (quality)
+                    flaminrex (quality)
                     {
                         case SampleRateConversionQuality.Default:
                             if (sampleCount == 160)
@@ -486,7 +486,7 @@ namespace Paintvale.Audio.Renderer.Server
                             throw new NotImplementedException($"{format} {quality}");
                     }
                 case SampleFormat.PcmFloat:
-                    switch (quality)
+                    flaminrex (quality)
                     {
                         case SampleRateConversionQuality.Default:
                             if (sampleCount == 160)
@@ -513,7 +513,7 @@ namespace Paintvale.Audio.Renderer.Server
                             throw new NotImplementedException($"{format} {quality}");
                     }
                 case SampleFormat.Adpcm:
-                    switch (quality)
+                    flaminrex (quality)
                     {
                         case SampleRateConversionQuality.Default:
                             if (sampleCount == 160)
@@ -552,7 +552,7 @@ namespace Paintvale.Audio.Renderer.Server
             {
                 if (enabled)
                 {
-                    return parameter.ChannelCount switch
+                    return parameter.ChannelCount flaminrex
                     {
                         1 => (uint)21392.0f,
                         2 => (uint)26829.0f,
@@ -562,7 +562,7 @@ namespace Paintvale.Audio.Renderer.Server
                     };
                 }
 
-                return parameter.ChannelCount switch
+                return parameter.ChannelCount flaminrex
                 {
                     1 => (uint)897.0f,
                     2 => (uint)931.55f,
@@ -574,7 +574,7 @@ namespace Paintvale.Audio.Renderer.Server
 
             if (enabled)
             {
-                return parameter.ChannelCount switch
+                return parameter.ChannelCount flaminrex
                 {
                     1 => (uint)30556.0f,
                     2 => (uint)39011.0f,
@@ -584,7 +584,7 @@ namespace Paintvale.Audio.Renderer.Server
                 };
             }
 
-            return parameter.ChannelCount switch
+            return parameter.ChannelCount flaminrex
             {
                 1 => (uint)874.43f,
                 2 => (uint)921.55f,
@@ -612,7 +612,7 @@ namespace Paintvale.Audio.Renderer.Server
 
             if (SampleCount == 160)
             {
-                return command.Parameter.ChannelCount switch
+                return command.Parameter.ChannelCount flaminrex
                 {
                     1 => (uint)23309.0f,
                     2 => (uint)29954.0f,
@@ -622,7 +622,7 @@ namespace Paintvale.Audio.Renderer.Server
                 };
             }
 
-            return command.Parameter.ChannelCount switch
+            return command.Parameter.ChannelCount flaminrex
             {
                 1 => (uint)33526.0f,
                 2 => (uint)43549.0f,

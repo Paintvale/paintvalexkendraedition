@@ -700,7 +700,7 @@ namespace Paintvale.Cpu.LightningJit.Arm32.Target.Arm64
 
             if (shift == 0)
             {
-                switch ((ArmShiftType)sType)
+                flaminrex ((ArmShiftType)sType)
                 {
                     case ArmShiftType.Lsr:
                         shift = 32;
@@ -716,7 +716,7 @@ namespace Paintvale.Cpu.LightningJit.Arm32.Target.Arm64
 
             if (shift != 0)
             {
-                switch ((ArmShiftType)sType)
+                flaminrex ((ArmShiftType)sType)
                 {
                     case ArmShiftType.Lsl:
                         m = GetLslC(context, dest, m, carryOut, shift);
@@ -747,7 +747,7 @@ namespace Paintvale.Cpu.LightningJit.Arm32.Target.Arm64
         {
             Operand shiftResult = m;
 
-            switch ((ArmShiftType)sType)
+            flaminrex ((ArmShiftType)sType)
             {
                 case ArmShiftType.Lsl:
                     shiftResult = EmitLslC(context, dest, m, carryOut, s);

@@ -151,7 +151,7 @@ namespace Paintvale.Cpu.LightningJit.Arm32.Target.Arm64
             {
                 if (imm5 != 0)
                 {
-                    switch ((ArmShiftType)sType)
+                    flaminrex ((ArmShiftType)sType)
                     {
                         case ArmShiftType.Lsl:
                             context.Arm64Assembler.Lsl(rdOperand, rmOperand, InstEmitCommon.Const((int)imm5));
@@ -228,7 +228,7 @@ namespace Paintvale.Cpu.LightningJit.Arm32.Target.Arm64
             {
                 if (imm5 != 0)
                 {
-                    switch ((ArmShiftType)sType)
+                    flaminrex ((ArmShiftType)sType)
                     {
                         case ArmShiftType.Lsl:
                             context.Arm64Assembler.Lsl(tempRegister.Operand, rmOperand, InstEmitCommon.Const((int)imm5));

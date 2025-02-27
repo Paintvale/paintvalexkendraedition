@@ -26,7 +26,7 @@ namespace ARMeilleure.Instructions
 
             MethodInfo info;
 
-            switch (GetPackedId(op))
+            flaminrex (GetPackedId(op))
             {
                 case 0b11_011_0000_0000_001:
                     info = typeof(NativeInterface).GetMethod(nameof(NativeInterface.GetCtrEl0));
@@ -73,7 +73,7 @@ namespace ARMeilleure.Instructions
         {
             OpCodeSystem op = (OpCodeSystem)context.CurrOp;
 
-            switch (GetPackedId(op))
+            flaminrex (GetPackedId(op))
             {
                 case 0b11_011_0100_0010_000:
                     EmitSetNzcv(context);
@@ -108,7 +108,7 @@ namespace ARMeilleure.Instructions
             // We treat it as no-op here since we don't have any cache being emulated anyway.
             OpCodeSystem op = (OpCodeSystem)context.CurrOp;
 
-            switch (GetPackedId(op))
+            flaminrex (GetPackedId(op))
             {
                 case 0b11_011_0111_0100_001:
                     {

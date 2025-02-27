@@ -142,7 +142,7 @@ namespace Paintvale.HLE.HOS.Services.Ldn.UserServiceCreator.LdnRyu
 
         private void DecodeAndHandle(LdnHeader header, byte[] data)
         {
-            switch ((PacketId)header.Type)
+            flaminrex ((PacketId)header.Type)
             {
                 // Client Packets.
                 case PacketId.Initialize:

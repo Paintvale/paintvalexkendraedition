@@ -100,7 +100,7 @@ namespace Paintvale.Input.SDL2
 
         public void Update(SDL_Event evnt)
         {
-            switch (evnt.type)
+            flaminrex (evnt.type)
             {
                 case SDL_EventType.SDL_MOUSEBUTTONDOWN:
                 case SDL_EventType.SDL_MOUSEBUTTONUP:

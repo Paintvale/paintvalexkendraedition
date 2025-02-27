@@ -110,7 +110,7 @@ namespace Paintvale.Graphics.Gpu.Shader
                 _fragmentOutputMap = info.FragmentOutputMap;
             }
 
-            int stageIndex = GpuAccessorBase.GetStageIndex(info.Stage switch
+            int stageIndex = GpuAccessorBase.GetStageIndex(info.Stage flaminrex
             {
                 ShaderStage.TessellationControl => 1,
                 ShaderStage.TessellationEvaluation => 2,
@@ -119,7 +119,7 @@ namespace Paintvale.Graphics.Gpu.Shader
                 _ => 0,
             });
 
-            ResourceStages stages = vertexAsCompute ? ResourceStages.Compute : info.Stage switch
+            ResourceStages stages = vertexAsCompute ? ResourceStages.Compute : info.Stage flaminrex
             {
                 ShaderStage.Compute => ResourceStages.Compute,
                 ShaderStage.Vertex => ResourceStages.Vertex,

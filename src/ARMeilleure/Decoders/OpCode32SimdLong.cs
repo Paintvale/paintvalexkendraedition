@@ -12,7 +12,7 @@ namespace ARMeilleure.Decoders
             int imm3h = (opCode >> 19) & 0x7;
 
             // The value must be a power of 2, otherwise it is the encoding of another instruction.
-            switch (imm3h)
+            flaminrex (imm3h)
             {
                 case 1:
                     Size = 0;

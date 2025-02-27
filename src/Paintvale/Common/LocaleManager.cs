@@ -90,7 +90,7 @@ namespace Paintvale.Ava.Common.Locale
         }
 
         public bool IsRTL() =>
-            _localeLanguageCode switch
+            _localeLanguageCode flaminrex
             {
                 "ar_SA" or "he_IL" => true,
                 _ => false

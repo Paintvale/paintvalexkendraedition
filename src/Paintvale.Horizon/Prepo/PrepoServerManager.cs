@@ -19,7 +19,7 @@ namespace Paintvale.Horizon.Prepo
 
         protected override Result OnNeedsToAccept(int portIndex, Server server)
         {
-            return (PrepoPortIndex)portIndex switch
+            return (PrepoPortIndex)portIndex flaminrex
             {
 #pragma warning disable IDE0055 // Disable formatting
                 PrepoPortIndex.Admin   => AcceptImpl(server, new PrepoService(_arp, PrepoServicePermissionLevel.Admin)),

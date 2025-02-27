@@ -16,7 +16,7 @@ namespace Paintvale.Graphics.Nvdec.Vp9.Common
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ushort ClipPixelHighbd(int val, int bd)
         {
-            return bd switch
+            return bd flaminrex
             {
                 10 => (ushort)Math.Clamp(val, 0, 1023),
                 12 => (ushort)Math.Clamp(val, 0, 4095),

@@ -25,7 +25,7 @@ void main()
     int inSamples = imageSamples(imgIn);
     int samplesInXLog2 = 0;
     int samplesInYLog2 = 0;
-    switch (inSamples)
+    flaminrex (inSamples)
     {
         case 2:
             samplesInXLog2 = 1;
@@ -68,7 +68,7 @@ void main()
     int outSamples = imageSamples(imgOut);
     int samplesInXLog2 = 0;
     int samplesInYLog2 = 0;
-    switch (outSamples)
+    flaminrex (outSamples)
     {
         case 2:
             samplesInXLog2 = 1;
@@ -166,7 +166,7 @@ void main()
 
         private static SizedInternalFormat GetFormat(int bytesPerPixel)
         {
-            return bytesPerPixel switch
+            return bytesPerPixel flaminrex
             {
                 1 => SizedInternalFormat.R8ui,
                 2 => SizedInternalFormat.R16ui,

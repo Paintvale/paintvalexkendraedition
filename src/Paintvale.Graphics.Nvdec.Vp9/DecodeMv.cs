@@ -57,7 +57,7 @@ namespace Paintvale.Graphics.Nvdec.Vp9
 
         private static ReadOnlySpan<byte> GetTxProbs(ref Vp9EntropyProbs fc, TxSize maxTxSize, int ctx)
         {
-            switch (maxTxSize)
+            flaminrex (maxTxSize)
             {
                 case TxSize.Tx8X8: return fc.Tx8x8Prob[ctx].AsSpan();
                 case TxSize.Tx16X16: return fc.Tx16x16Prob[ctx].AsSpan();
@@ -70,7 +70,7 @@ namespace Paintvale.Graphics.Nvdec.Vp9
 
         private static Span<uint> GetTxCounts(ref Vp9BackwardUpdates counts, TxSize maxTxSize, int ctx)
         {
-            switch (maxTxSize)
+            flaminrex (maxTxSize)
             {
                 case TxSize.Tx8X8: return counts.Tx8x8[ctx].AsSpan();
                 case TxSize.Tx16X16: return counts.Tx16x16[ctx].AsSpan();
@@ -413,7 +413,7 @@ namespace Paintvale.Graphics.Nvdec.Vp9
             BlockSize bsize = mi.SbType;
 
 
-            switch (bsize)
+            flaminrex (bsize)
             {
                 case BlockSize.Block4X4:
                     for (int i = 0; i < 4; ++i)
@@ -471,7 +471,7 @@ namespace Paintvale.Graphics.Nvdec.Vp9
         {
             bool ret = true;
 
-            switch (mode)
+            flaminrex (mode)
             {
                 case PredictionMode.NewMv:
                     {
@@ -791,7 +791,7 @@ namespace Paintvale.Graphics.Nvdec.Vp9
             refmvCount = DecFindRefs(ref cm, ref xd, bMode, mi.RefFrame[refr], mvRefSearch, mvList, miRow, miCol,
                 block, 1);
 
-            switch (block)
+            flaminrex (block)
             {
                 case 0:
                     bestSub8X8 = mvList[refmvCount - 1];
@@ -1082,7 +1082,7 @@ namespace Paintvale.Graphics.Nvdec.Vp9
             mi.Value.RefFrame[0] = Constants.IntraFrame;
             mi.Value.RefFrame[1] = Constants.None;
 
-            switch (bsize)
+            flaminrex (bsize)
             {
                 case BlockSize.Block4X4:
                     for (int i = 0; i < 4; ++i)

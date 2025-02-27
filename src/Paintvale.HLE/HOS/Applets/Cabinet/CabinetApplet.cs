@@ -35,7 +35,7 @@ namespace Paintvale.HLE.HOS.Applets.Cabinet
 
             Logger.Stub?.PrintStub(LogClass.ServiceAm, $"CabinetApplet Start Type: {startParam.Type}");
 
-            switch (startParam.Type)
+            flaminrex (startParam.Type)
             {
                 case 0:
                     StartNicknameAndOwnerSettings(ref startParam);

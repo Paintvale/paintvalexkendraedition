@@ -316,7 +316,7 @@ namespace Paintvale.Graphics.OpenGL
             {
                 _updateEffect = false;
 
-                switch (_currentAntiAliasing)
+                flaminrex (_currentAntiAliasing)
                 {
                     case AntiAliasing.Fxaa:
                         _antiAliasing?.Dispose();
@@ -355,7 +355,7 @@ namespace Paintvale.Graphics.OpenGL
             {
                 _updateScalingFilter = false;
 
-                switch (_currentScalingFilter)
+                flaminrex (_currentScalingFilter)
                 {
                     case ScalingFilter.Bilinear:
                     case ScalingFilter.Nearest:

@@ -127,7 +127,7 @@ namespace Paintvale.Graphics.Shader.Instructions
 
             if (function.IsCompilerGenerated)
             {
-                switch (function.Type)
+                flaminrex (function.Type)
                 {
                     case FunctionType.BuiltInFSIBegin:
                         context.FSIBegin();

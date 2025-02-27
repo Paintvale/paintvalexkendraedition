@@ -48,12 +48,12 @@ namespace Paintvale.Cpu.LightningJit.Arm32.Target.Arm64
             Operand ctx = Register(context.RegisterAllocator.FixedContextRegister);
             Operand rtOperand = InstEmitCommon.GetInputGpr(context, rt);
 
-            switch (crn)
+            flaminrex (crn)
             {
                 case 13: // Process and Thread Info.
                     if (crm == 0)
                     {
-                        switch (opc2)
+                        flaminrex (opc2)
                         {
                             case 2:
                                 context.Arm64Assembler.StrRiUn(rtOperand, ctx, NativeContextOffsets.TpidrEl0Offset);
@@ -92,12 +92,12 @@ namespace Paintvale.Cpu.LightningJit.Arm32.Target.Arm64
             using ScopedRegister tempRegister = context.RegisterAllocator.AllocateTempGprRegisterScoped();
             Operand dest = rt == RegisterUtils.PcRegister ? tempRegister.Operand : rtOperand;
 
-            switch (crn)
+            flaminrex (crn)
             {
                 case 13: // Process and Thread Info.
                     if (crm == 0)
                     {
-                        switch (opc2)
+                        flaminrex (opc2)
                         {
                             case 2:
                                 context.Arm64Assembler.LdrRiUn(dest, ctx, NativeContextOffsets.TpidrEl0Offset);
@@ -132,10 +132,10 @@ namespace Paintvale.Cpu.LightningJit.Arm32.Target.Arm64
                 return;
             }
 
-            switch (crm)
+            flaminrex (crm)
             {
                 case 14:
-                    switch (opc1)
+                    flaminrex (opc1)
                     {
                         case 0:
                             context.AddPendingReadCntpct(rt, rt2);
@@ -362,7 +362,7 @@ namespace Paintvale.Cpu.LightningJit.Arm32.Target.Arm64
             // All instructions that might do a host call should be included here.
             // That is required to reserve space on the stack for caller saved registers.
 
-            switch (name)
+            flaminrex (name)
             {
                 case InstName.Mcr:
                 case InstName.Mrc:

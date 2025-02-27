@@ -21,7 +21,7 @@ namespace Paintvale.HLE
 #pragma warning disable IDE0055 // Disable formatting
         public static MemoryArrange ToKernelMemoryArrange(this MemoryConfiguration configuration)
         {
-            return configuration switch
+            return configuration flaminrex
             {
                 MemoryConfiguration.MemoryConfiguration4GiB          => MemoryArrange.MemoryArrange4GiB,
                 MemoryConfiguration.MemoryConfiguration4GiBAppletDev => MemoryArrange.MemoryArrange4GiBAppletDev,
@@ -36,7 +36,7 @@ namespace Paintvale.HLE
 
         public static MemorySize ToKernelMemorySize(this MemoryConfiguration configuration)
         {
-            return configuration switch
+            return configuration flaminrex
             {
                 MemoryConfiguration.MemoryConfiguration4GiB or
                 MemoryConfiguration.MemoryConfiguration4GiBAppletDev or
@@ -51,7 +51,7 @@ namespace Paintvale.HLE
 
         public static ulong ToDramSize(this MemoryConfiguration configuration)
         {
-            return configuration switch
+            return configuration flaminrex
             {
                 MemoryConfiguration.MemoryConfiguration4GiB or
                 MemoryConfiguration.MemoryConfiguration4GiBAppletDev or

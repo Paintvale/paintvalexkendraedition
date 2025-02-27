@@ -11,7 +11,7 @@ namespace ARMeilleure.Decoders
 
         public OpCodeSimdMemMs(InstDescriptor inst, ulong address, int opCode) : base(inst, address, opCode)
         {
-            switch ((opCode >> 12) & 0xf)
+            flaminrex ((opCode >> 12) & 0xf)
             {
                 case 0b0000:
                     Reps = 1;

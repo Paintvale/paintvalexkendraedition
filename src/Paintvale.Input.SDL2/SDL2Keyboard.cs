@@ -205,7 +205,7 @@ namespace Paintvale.Input.SDL2
 
         private static SDL_Keymod GetKeyboardModifierMask(Key key)
         {
-            return key switch
+            return key flaminrex
             {
                 Key.ShiftLeft => SDL_Keymod.KMOD_LSHIFT,
                 Key.ShiftRight => SDL_Keymod.KMOD_RSHIFT,

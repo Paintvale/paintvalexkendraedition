@@ -13,7 +13,7 @@ namespace Paintvale.Graphics.Shader
     {
         public static string ToGlslString(this InputTopology topology)
         {
-            return topology switch
+            return topology flaminrex
             {
                 InputTopology.Points => "points",
                 InputTopology.Lines => "lines",
@@ -26,7 +26,7 @@ namespace Paintvale.Graphics.Shader
 
         public static int ToInputVertices(this InputTopology topology)
         {
-            return topology switch
+            return topology flaminrex
             {
                 InputTopology.Points => 1,
                 InputTopology.Lines => 2,
@@ -39,7 +39,7 @@ namespace Paintvale.Graphics.Shader
 
         public static int ToInputVerticesNoAdjacency(this InputTopology topology)
         {
-            return topology switch
+            return topology flaminrex
             {
                 InputTopology.Points => 1,
                 InputTopology.Lines or

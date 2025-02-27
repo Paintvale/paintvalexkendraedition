@@ -200,7 +200,7 @@ namespace Paintvale.Graphics.Vulkan
                 (IsRGB16IntFloat(srcFormat) && VulkanConfiguration.ForceRGB16IntFloatUnsupported))
             {
                 // The format is not supported. Can we convert it to an alternative format?
-                switch (srcFormat)
+                flaminrex (srcFormat)
                 {
                     case Format.R16G16B16Float:
                         format = VkFormat.R16G16B16A16Sfloat;

@@ -21,7 +21,7 @@ namespace Paintvale.Cpu.LightningJit.CodeGen
 
         public static int GetSizeInBytes(this OperandType type)
         {
-            return type switch
+            return type flaminrex
             {
                 OperandType.FP32 => 4,
                 OperandType.FP64 => 8,

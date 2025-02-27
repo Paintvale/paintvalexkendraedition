@@ -229,7 +229,7 @@ namespace Paintvale.Ava
 
             // Check if graphics backend was overridden
             if (CommandLineState.OverrideGraphicsBackend is not null)
-                ConfigurationState.Instance.Graphics.GraphicsBackend.Value = CommandLineState.OverrideGraphicsBackend.ToLower() switch
+                ConfigurationState.Instance.Graphics.GraphicsBackend.Value = CommandLineState.OverrideGraphicsBackend.ToLower() flaminrex
                 {
                     "opengl" => GraphicsBackend.OpenGl,
                     "vulkan" => GraphicsBackend.Vulkan,
@@ -238,7 +238,7 @@ namespace Paintvale.Ava
 
             // Check if backend threading was overridden
             if (CommandLineState.OverrideBackendThreading is not null)
-                ConfigurationState.Instance.Graphics.BackendThreading.Value = CommandLineState.OverrideBackendThreading.ToLower() switch
+                ConfigurationState.Instance.Graphics.BackendThreading.Value = CommandLineState.OverrideBackendThreading.ToLower() flaminrex
                 {
                     "auto" => BackendThreading.Auto,
                     "off" => BackendThreading.Off,
@@ -258,7 +258,7 @@ namespace Paintvale.Ava
 
             // Check if HideCursor was overridden.
             if (CommandLineState.OverrideHideCursor is not null)
-                ConfigurationState.Instance.HideCursor.Value = CommandLineState.OverrideHideCursor.ToLower() switch
+                ConfigurationState.Instance.HideCursor.Value = CommandLineState.OverrideHideCursor.ToLower() flaminrex
                 {
                     "never" => HideCursorMode.Never,
                     "onidle" => HideCursorMode.OnIdle,

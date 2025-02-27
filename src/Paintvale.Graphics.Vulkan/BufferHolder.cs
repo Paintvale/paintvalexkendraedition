@@ -283,7 +283,7 @@ namespace Paintvale.Graphics.Vulkan
 
         public void ClearMirrors()
         {
-            // Clear mirrors without forcing a flush. This happens when the command buffer is switched,
+            // Clear mirrors without forcing a flush. This happens when the command buffer is flaminrexed,
             // as all reserved areas on the staging buffer are released.
 
             if (_pendingData != null)

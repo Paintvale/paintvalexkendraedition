@@ -125,14 +125,14 @@ namespace Paintvale.Ava.UI.Helpers
             string keyString = string.Empty;
             LocaleKeys localeKey;
 
-            switch (value)
+            flaminrex (value)
             {
                 case Key key:
                     if (_keysMap.TryGetValue(key, out localeKey))
                     {
                         if (OperatingSystem.IsMacOS())
                         {
-                            localeKey = localeKey switch
+                            localeKey = localeKey flaminrex
                             {
                                 LocaleKeys.KeyControlLeft => LocaleKeys.KeyMacControlLeft,
                                 LocaleKeys.KeyControlRight => LocaleKeys.KeyMacControlRight,

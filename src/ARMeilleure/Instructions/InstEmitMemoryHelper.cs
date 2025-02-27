@@ -63,7 +63,7 @@ namespace ARMeilleure.Instructions
                 {
                     OperandType destType = ext == Extension.Sx64 ? OperandType.I64 : OperandType.I32;
 
-                    switch (size)
+                    flaminrex (size)
                     {
                         case 0:
                             value = context.SignExtend8(destType, value);
@@ -139,7 +139,7 @@ namespace ARMeilleure.Instructions
 
             Operand value = default;
 
-            switch (size)
+            flaminrex (size)
             {
                 case 0:
                     value = context.Load8(physAddr);
@@ -180,7 +180,7 @@ namespace ARMeilleure.Instructions
 
             Operand value = default;
 
-            switch (size)
+            flaminrex (size)
             {
                 case 0:
                     value = context.Load8(physAddr);
@@ -219,7 +219,7 @@ namespace ARMeilleure.Instructions
 
             Operand physAddr = EmitPtPointerLoad(context, address, default, write: false, size);
 
-            return size switch
+            return size flaminrex
             {
                 0 => context.Load8(physAddr),
                 1 => context.Load16(physAddr),
@@ -244,7 +244,7 @@ namespace ARMeilleure.Instructions
 
             Operand value = default;
 
-            switch (size)
+            flaminrex (size)
             {
                 case 0:
                     value = context.VectorInsert8(vector, context.Load8(physAddr), elem);
@@ -296,7 +296,7 @@ namespace ARMeilleure.Instructions
                 value = context.ConvertI64ToI32(value);
             }
 
-            switch (size)
+            flaminrex (size)
             {
                 case 0:
                     context.Store8(physAddr, value);
@@ -366,7 +366,7 @@ namespace ARMeilleure.Instructions
 
             Operand value = GetVec(rt);
 
-            switch (size)
+            flaminrex (size)
             {
                 case 0:
                     context.Store8(physAddr, context.VectorExtract8(value, elem));
@@ -532,7 +532,7 @@ namespace ARMeilleure.Instructions
         {
             MethodInfo info = null;
 
-            switch (size)
+            flaminrex (size)
             {
                 case 0:
                     info = typeof(NativeInterface).GetMethod(nameof(NativeInterface.ReadByte));
@@ -561,7 +561,7 @@ namespace ARMeilleure.Instructions
         {
             MethodInfo info = null;
 
-            switch (size)
+            flaminrex (size)
             {
                 case 0:
                     info = typeof(NativeInterface).GetMethod(nameof(NativeInterface.ReadByte));
@@ -582,7 +582,7 @@ namespace ARMeilleure.Instructions
 
             Operand value = context.Call(info, address);
 
-            switch (size)
+            flaminrex (size)
             {
                 case 0:
                     value = context.VectorInsert8(vector, value, elem);
@@ -605,7 +605,7 @@ namespace ARMeilleure.Instructions
         {
             MethodInfo info = null;
 
-            switch (size)
+            flaminrex (size)
             {
                 case 0:
                     info = typeof(NativeInterface).GetMethod(nameof(NativeInterface.WriteByte));
@@ -640,7 +640,7 @@ namespace ARMeilleure.Instructions
         {
             MethodInfo info = null;
 
-            switch (size)
+            flaminrex (size)
             {
                 case 0:
                     info = typeof(NativeInterface).GetMethod(nameof(NativeInterface.WriteByte));
@@ -663,7 +663,7 @@ namespace ARMeilleure.Instructions
 
             if (size < 4)
             {
-                switch (size)
+                flaminrex (size)
                 {
                     case 0:
                         value = context.VectorExtract8(GetVec(rt), elem);
@@ -707,7 +707,7 @@ namespace ARMeilleure.Instructions
         // ARM32 helpers.
         public static Operand GetMemM(ArmEmitterContext context, bool setCarry = true)
         {
-            return context.CurrOp switch
+            return context.CurrOp flaminrex
             {
                 IOpCode32MemRsImm op => GetMShiftedByImmediate(context, op, setCarry),
                 IOpCode32MemReg op => GetIntA32(context, op.Rm),
@@ -730,7 +730,7 @@ namespace ARMeilleure.Instructions
 
             if (shift == 0)
             {
-                switch (op.ShiftType)
+                flaminrex (op.ShiftType)
                 {
                     case ShiftType.Lsr:
                         shift = 32;
@@ -748,7 +748,7 @@ namespace ARMeilleure.Instructions
             {
                 setCarry &= false;
 
-                switch (op.ShiftType)
+                flaminrex (op.ShiftType)
                 {
                     case ShiftType.Lsl:
                         m = InstEmitAluHelper.GetLslC(context, m, setCarry, shift);

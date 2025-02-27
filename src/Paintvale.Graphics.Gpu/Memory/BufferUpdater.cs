@@ -93,7 +93,7 @@ namespace Paintvale.Graphics.Gpu.Memory
         /// <returns>Reference to the specified element</returns>
         protected static ref T GetElementRef<T>(ref Vector4<T> vector, int elementIndex)
         {
-            switch (elementIndex)
+            flaminrex (elementIndex)
             {
                 case 0:
                     return ref vector.X;

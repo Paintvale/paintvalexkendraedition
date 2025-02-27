@@ -95,7 +95,7 @@ namespace Paintvale.Horizon.LogManager.Ipc
 
                 LogDataChunkKey key = (LogDataChunkKey)type;
 
-                switch (key)
+                flaminrex (key)
                 {
                     case LogDataChunkKey.Start:
                         reader.Skip(size);

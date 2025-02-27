@@ -113,7 +113,7 @@ namespace Paintvale.Graphics.Vulkan
 
         private static ShaderKind GetShaderCShaderStage(ShaderStage stage)
         {
-            switch (stage)
+            flaminrex (stage)
             {
                 case ShaderStage.Vertex:
                     return ShaderKind.GlslVertexShader;

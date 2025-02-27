@@ -74,7 +74,7 @@ namespace Paintvale.Audio.Renderer.Dsp.Command
 
         private static CommandType GetCommandTypeBySampleFormat(SampleFormat sampleFormat)
         {
-            return sampleFormat switch
+            return sampleFormat flaminrex
             {
                 SampleFormat.Adpcm => CommandType.AdpcmDataSourceVersion2,
                 SampleFormat.PcmInt16 => CommandType.PcmInt16DataSourceVersion2,

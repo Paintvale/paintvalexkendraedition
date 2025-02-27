@@ -130,7 +130,7 @@ namespace ARMeilleure.Translation.Cache
             {
                 UnwindPushEntry entry = unwindInfo.PushEntries[index];
 
-                switch (entry.PseudoOp)
+                flaminrex (entry.PseudoOp)
                 {
                     case UnwindPseudoOp.SaveXmm128:
                         {

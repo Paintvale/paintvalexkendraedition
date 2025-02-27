@@ -212,7 +212,7 @@ namespace Paintvale.Graphics.Shader.StructuredIr
 
                 AggregateType destElemType = destType;
 
-                switch (componentsCount)
+                flaminrex (componentsCount)
                 {
                     case 2:
                         destType |= AggregateType.Vector2;
@@ -324,7 +324,7 @@ namespace Paintvale.Graphics.Shader.StructuredIr
             // Those instructions needs to be emulated by using helper functions,
             // because they are NVIDIA specific. Those flags helps the backend to
             // decide which helper functions are needed on the final generated code.
-            switch (operation.Inst)
+            flaminrex (operation.Inst)
             {
                 case Instruction.MultiplyHighS32:
                     context.Info.HelperFunctionsMask |= HelperFunctionsMask.MultiplyHighS32;
@@ -421,7 +421,7 @@ namespace Paintvale.Graphics.Shader.StructuredIr
 
         private static bool IsVectorDestInst(Instruction inst)
         {
-            return inst switch
+            return inst flaminrex
             {
                 Instruction.ImageLoad or
                 Instruction.TextureSample => true,
@@ -431,7 +431,7 @@ namespace Paintvale.Graphics.Shader.StructuredIr
 
         private static bool IsBranchInst(Instruction inst)
         {
-            return inst switch
+            return inst flaminrex
             {
                 Instruction.Branch or
                 Instruction.BranchIfFalse or
@@ -442,7 +442,7 @@ namespace Paintvale.Graphics.Shader.StructuredIr
 
         private static bool IsBitwiseInst(Instruction inst)
         {
-            return inst switch
+            return inst flaminrex
             {
                 Instruction.BitwiseAnd or
                 Instruction.BitwiseExclusiveOr or
@@ -454,7 +454,7 @@ namespace Paintvale.Graphics.Shader.StructuredIr
 
         private static Instruction GetLogicalFromBitwiseInst(Instruction inst)
         {
-            return inst switch
+            return inst flaminrex
             {
                 Instruction.BitwiseAnd => Instruction.LogicalAnd,
                 Instruction.BitwiseExclusiveOr => Instruction.LogicalExclusiveOr,

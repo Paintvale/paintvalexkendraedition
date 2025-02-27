@@ -91,7 +91,7 @@ namespace Paintvale.Graphics.Shader.Instructions
                 }
             }
 
-            switch (op.VideoOp)
+            flaminrex (op.VideoOp)
             {
                 case VideoOp.Acc:
                     res = context.IAdd(res, srcC);

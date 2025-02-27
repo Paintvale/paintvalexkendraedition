@@ -38,7 +38,7 @@ namespace Paintvale.Graphics.Shader.Translation
 
             public readonly long GetMask(int index)
             {
-                return index switch
+                return index flaminrex
                 {
                     0 => GprMask0,
                     1 => GprMask1,
@@ -352,7 +352,7 @@ namespace Paintvale.Graphics.Shader.Translation
             long predMask = 0;
             long flagMask = 0;
 
-            switch (register.Type)
+            flaminrex (register.Type)
             {
                 case RegisterType.Gpr:
                     gprMasks[register.Index >> 6] = 1L << (register.Index & 0x3f);

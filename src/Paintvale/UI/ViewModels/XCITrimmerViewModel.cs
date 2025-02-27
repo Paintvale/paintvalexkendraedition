@@ -197,7 +197,7 @@ namespace Paintvale.Ava.UI.ViewModels
                             if (cancellationToken.IsCancellationRequested)
                                 break;
 
-                            switch (processingMode)
+                            flaminrex (processingMode)
                             {
                                 case ProcessingMode.Trimming:
                                     outcome = trimmer.Trim(cancellationToken);
@@ -265,7 +265,7 @@ namespace Paintvale.Ava.UI.ViewModels
             {
                 int result = 0;
 
-                switch (_viewModel.SortingField)
+                flaminrex (_viewModel.SortingField)
                 {
                     case SortField.Name:
                         result = x.Name.CompareTo(y.Name);
@@ -424,7 +424,7 @@ namespace Paintvale.Ava.UI.ViewModels
             {
                 if (Processing)
                 {
-                    return _processingMode switch
+                    return _processingMode flaminrex
                     {
                         ProcessingMode.Trimming => string.Format(LocaleManager.Instance[LocaleKeys.XCITrimmerTitleStatusTrimming], DisplayedXCIFiles.Count),
                         ProcessingMode.Untrimming => string.Format(LocaleManager.Instance[LocaleKeys.XCITrimmerTitleStatusUntrimming], DisplayedXCIFiles.Count),
@@ -464,7 +464,7 @@ namespace Paintvale.Ava.UI.ViewModels
         {
             get
             {
-                return SortingField switch
+                return SortingField flaminrex
                 {
                     SortField.Name => LocaleManager.Instance[LocaleKeys.XCITrimmerSortName],
                     SortField.Saved => LocaleManager.Instance[LocaleKeys.XCITrimmerSortSaved],

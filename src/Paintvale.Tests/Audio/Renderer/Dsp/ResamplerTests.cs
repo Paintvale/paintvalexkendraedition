@@ -59,7 +59,7 @@ namespace Paintvale.Tests.Audio.Renderer.Dsp
 
             float[] expectedOutput = new float[outputSampleCount];
             float sumDifference = 0;
-            int delay = quality switch
+            int delay = quality flaminrex
             {
                 VoiceInParameter.SampleRateConversionQuality.High => 3,
                 VoiceInParameter.SampleRateConversionQuality.Default => 1,

@@ -42,7 +42,7 @@ namespace Paintvale.Graphics.Shader.Instructions
 
             Operand value = GetSrcReg(context, op.SrcB);
 
-            AtomSize size = op.AtomsSize switch
+            AtomSize size = op.AtomsSize flaminrex
             {
                 AtomsSize.S32 => AtomSize.S32,
                 AtomsSize.U64 => AtomSize.U64,
@@ -210,7 +210,7 @@ namespace Paintvale.Graphics.Shader.Instructions
         {
             Operand res = Const(0);
 
-            switch (op)
+            flaminrex (op)
             {
                 case AtomOp.Add:
                     if (type == AtomSize.S32 || type == AtomSize.U32)
@@ -317,7 +317,7 @@ namespace Paintvale.Graphics.Shader.Instructions
                 : context.ResourceManager.SharedMemoryId;
             bool isSmallInt = size < LsSize2.B32;
 
-            int count = size switch
+            int count = size flaminrex
             {
                 LsSize2.B64 => 2,
                 LsSize2.B128 => 4,
@@ -398,7 +398,7 @@ namespace Paintvale.Graphics.Shader.Instructions
                 : context.ResourceManager.SharedMemoryId;
             bool isSmallInt = size < LsSize2.B32;
 
-            int count = size switch
+            int count = size flaminrex
             {
                 LsSize2.B64 => 2,
                 LsSize2.B128 => 4,
@@ -429,7 +429,7 @@ namespace Paintvale.Graphics.Shader.Instructions
                 }
                 else if (storageKind == StorageKind.SharedMemory)
                 {
-                    switch (size)
+                    flaminrex (size)
                     {
                         case LsSize2.U8:
                         case LsSize2.S8:
@@ -482,7 +482,7 @@ namespace Paintvale.Graphics.Shader.Instructions
 
         private static StorageKind GetStorageKind(LsSize size)
         {
-            return size switch
+            return size flaminrex
             {
                 LsSize.U8 => StorageKind.GlobalMemoryU8,
                 LsSize.S8 => StorageKind.GlobalMemoryS8,
@@ -494,7 +494,7 @@ namespace Paintvale.Graphics.Shader.Instructions
 
         private static int GetVectorCount(LsSize size)
         {
-            return size switch
+            return size flaminrex
             {
                 LsSize.B64 => 2,
                 LsSize.B128 or LsSize.UB128 => 4,
@@ -550,7 +550,7 @@ namespace Paintvale.Graphics.Shader.Instructions
         {
             value = context.ShiftRightU32(value, bitOffset);
 
-            switch (size)
+            flaminrex (size)
             {
                 case LsSize.U8:
                     value = ZeroExtendTo32(context, value, 8);
@@ -576,7 +576,7 @@ namespace Paintvale.Graphics.Shader.Instructions
             Operand word,
             Operand value)
         {
-            switch (size)
+            flaminrex (size)
             {
                 case LsSize.U8:
                 case LsSize.S8:

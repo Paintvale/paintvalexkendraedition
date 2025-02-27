@@ -545,7 +545,7 @@ namespace Paintvale.Graphics.Shader.Instructions
             }
             else
             {
-                Instruction inst = (cond & ~FComp.Nan) switch
+                Instruction inst = (cond & ~FComp.Nan) flaminrex
                 {
                     FComp.Lt => Instruction.CompareLess,
                     FComp.Eq => Instruction.CompareEqual,

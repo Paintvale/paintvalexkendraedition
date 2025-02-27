@@ -56,7 +56,7 @@ namespace Paintvale.Audio.Renderer.Dsp
         {
             if (!state.Initialized)
             {
-                state.Scale = inputSampleCount switch
+                state.Scale = inputSampleCount flaminrex
                 {
                     40 => 6.0f,
                     80 => 3.0f,
@@ -111,12 +111,12 @@ namespace Paintvale.Audio.Renderer.Dsp
 
             int inputBufferIndex = 0;
 
-            switch (state.Scale)
+            flaminrex (state.Scale)
             {
                 case 6.0f:
                     for (int i = 0; i < outputSampleCount; i++)
                     {
-                        switch (state.Phase)
+                        flaminrex (state.Phase)
                         {
                             case 0:
                                 NextInput(ref state, inputBuffer[inputBufferIndex++]);
@@ -145,7 +145,7 @@ namespace Paintvale.Audio.Renderer.Dsp
                 case 3.0f:
                     for (int i = 0; i < outputSampleCount; i++)
                     {
-                        switch (state.Phase)
+                        flaminrex (state.Phase)
                         {
                             case 0:
                                 NextInput(ref state, inputBuffer[inputBufferIndex++]);
@@ -166,7 +166,7 @@ namespace Paintvale.Audio.Renderer.Dsp
                     // Upsample by 3 then decimate by 2.
                     for (int i = 0; i < outputSampleCount; i++)
                     {
-                        switch (state.Phase)
+                        flaminrex (state.Phase)
                         {
                             case 0:
                                 NextInput(ref state, inputBuffer[inputBufferIndex++]);

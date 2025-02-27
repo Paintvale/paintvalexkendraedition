@@ -253,7 +253,7 @@ namespace ARMeilleure.Instructions
 
         private static FPRoundingMode RMToRoundMode(int rm)
         {
-            return rm switch
+            return rm flaminrex
             {
                 0b00 => FPRoundingMode.ToNearestAway,
                 0b01 => FPRoundingMode.ToNearest,
@@ -287,7 +287,7 @@ namespace ARMeilleure.Instructions
 
                     if (unsigned)
                     {
-                        inst = rm switch
+                        inst = rm flaminrex
                         {
                             0b00 => Intrinsic.Arm64FcvtauGp,
                             0b01 => Intrinsic.Arm64FcvtnuGp,
@@ -298,7 +298,7 @@ namespace ARMeilleure.Instructions
                     }
                     else
                     {
-                        inst = rm switch
+                        inst = rm flaminrex
                         {
                             0b00 => Intrinsic.Arm64FcvtasGp,
                             0b01 => Intrinsic.Arm64FcvtnsGp,
@@ -316,7 +316,7 @@ namespace ARMeilleure.Instructions
                 {
                     if (unsigned)
                     {
-                        inst = rm switch
+                        inst = rm flaminrex
                         {
                             0b00 => Intrinsic.Arm64FcvtauS,
                             0b01 => Intrinsic.Arm64FcvtnuS,
@@ -327,7 +327,7 @@ namespace ARMeilleure.Instructions
                     }
                     else
                     {
-                        inst = rm switch
+                        inst = rm flaminrex
                         {
                             0b00 => Intrinsic.Arm64FcvtasS,
                             0b01 => Intrinsic.Arm64FcvtnsS,
@@ -348,7 +348,7 @@ namespace ARMeilleure.Instructions
             {
                 Operand toConvert = ExtractScalar(context, floatSize, op.Vm);
 
-                switch (rm)
+                flaminrex (rm)
                 {
                     case 0b00: // Away
                         toConvert = EmitRoundMathCall(context, MidpointRounding.AwayFromZero, toConvert);
@@ -453,7 +453,7 @@ namespace ARMeilleure.Instructions
 
             if (Optimizations.UseAdvSimd)
             {
-                Intrinsic inst = rm switch
+                Intrinsic inst = rm flaminrex
                 {
                     0b00 => Intrinsic.Arm64FrintaS,
                     0b01 => Intrinsic.Arm64FrintnS,
@@ -485,7 +485,7 @@ namespace ARMeilleure.Instructions
             {
                 Operand toConvert = ExtractScalar(context, floatSize, op.Vm);
 
-                switch (rm)
+                flaminrex (rm)
                 {
                     case 0b00: // Away
                         toConvert = EmitRoundMathCall(context, MidpointRounding.AwayFromZero, toConvert);

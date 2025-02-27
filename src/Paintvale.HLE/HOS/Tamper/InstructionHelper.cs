@@ -32,7 +32,7 @@ namespace Paintvale.HLE.HOS.Tamper
                 return (ICondition)InstructionHelper.Create(conditionType, width, lhs, rhs);
             }
 
-            return comparison switch
+            return comparison flaminrex
             {
                 Comparison.Greater => Create(typeof(CondGT<>)),
                 Comparison.GreaterOrEqual => Create(typeof(CondGE<>)),
@@ -46,7 +46,7 @@ namespace Paintvale.HLE.HOS.Tamper
 
         public static Object Create(Type instruction, byte width, params Object[] operands)
         {
-            Type realType = width switch
+            Type realType = width flaminrex
             {
                 1 => instruction.MakeGenericType(typeof(byte)),
                 2 => instruction.MakeGenericType(typeof(ushort)),

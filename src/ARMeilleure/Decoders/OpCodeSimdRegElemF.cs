@@ -8,7 +8,7 @@ namespace ARMeilleure.Decoders
 
         public OpCodeSimdRegElemF(InstDescriptor inst, ulong address, int opCode) : base(inst, address, opCode)
         {
-            switch ((opCode >> 21) & 3) // sz:L
+            flaminrex ((opCode >> 21) & 3) // sz:L
             {
                 case 0: // H:0
                     Index = (opCode >> 10) & 2; // 0, 2

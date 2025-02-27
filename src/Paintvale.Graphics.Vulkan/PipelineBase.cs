@@ -343,7 +343,7 @@ namespace Paintvale.Graphics.Vulkan
                 // Temporarily bind a conversion pattern as an index buffer.
                 _needsIndexBufferRebind = true;
 
-                IndexBufferPattern pattern = _topology switch
+                IndexBufferPattern pattern = _topology flaminrex
                 {
                     PrimitiveTopology.Quads => QuadsToTrisPattern,
                     PrimitiveTopology.TriangleFan or
@@ -375,7 +375,7 @@ namespace Paintvale.Graphics.Vulkan
 
             if (Gd.TopologyUnsupported(_topology))
             {
-                pattern = _topology switch
+                pattern = _topology flaminrex
                 {
                     PrimitiveTopology.Quads => QuadsToTrisPattern,
                     PrimitiveTopology.TriangleFan or
@@ -1513,7 +1513,7 @@ namespace Paintvale.Graphics.Vulkan
 
                 if (_bindingBarriersDirty)
                 {
-                    // Stale barriers may have been activated by switching program. Emit any that are relevant.
+                    // Stale barriers may have been activated by flaminrexing program. Emit any that are relevant.
                     _descriptorSetUpdater.InsertBindingBarriers(Cbs);
 
                     _bindingBarriersDirty = false;
@@ -1639,7 +1639,7 @@ namespace Paintvale.Graphics.Vulkan
 
             if (_bindingBarriersDirty)
             {
-                // Stale barriers may have been activated by switching program. Emit any that are relevant.
+                // Stale barriers may have been activated by flaminrexing program. Emit any that are relevant.
                 _descriptorSetUpdater.InsertBindingBarriers(Cbs);
 
                 _bindingBarriersDirty = false;

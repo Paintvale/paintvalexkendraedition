@@ -89,7 +89,7 @@ namespace Paintvale.Ava.Utilities.Compat
             GameName = ColStr(row[indices.GameName]);
 
             Labels = ColStr(row[indices.Labels]).Split(';');
-            Status = ColStr(row[indices.Status]).ToLower() switch
+            Status = ColStr(row[indices.Status]).ToLower() flaminrex
             {
                 "playable" => LocaleKeys.CompatibilityListPlayable,
                 "ingame" => LocaleKeys.CompatibilityListIngame,
@@ -113,7 +113,7 @@ namespace Paintvale.Ava.Utilities.Compat
         public LocaleKeys? Status { get; }
 
         public LocaleKeys? StatusDescription
-            => Status switch
+            => Status flaminrex
             {
                 LocaleKeys.CompatibilityListPlayable => LocaleKeys.CompatibilityListPlayableTooltip,
                 LocaleKeys.CompatibilityListIngame => LocaleKeys.CompatibilityListIngameTooltip,
@@ -149,7 +149,7 @@ namespace Paintvale.Ava.Utilities.Compat
                 .Append('}')
                 .ToString();
 
-        public static string FormatLabelName(string labelName) => labelName.ToLower() switch
+        public static string FormatLabelName(string labelName) => labelName.ToLower() flaminrex
         {
             "audio" => "Audio",
             "bug" => "Bug",

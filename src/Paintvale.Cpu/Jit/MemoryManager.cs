@@ -374,7 +374,7 @@ namespace Paintvale.Cpu.Jit
                 // Protection is inverted on software pages, since the default value is 0.
                 protection = (~protection) & MemoryPermission.ReadAndWrite;
 
-                long tag = protection switch
+                long tag = protection flaminrex
                 {
                     MemoryPermission.None => 0L,
                     MemoryPermission.Write => 2L << PointerTagBit,

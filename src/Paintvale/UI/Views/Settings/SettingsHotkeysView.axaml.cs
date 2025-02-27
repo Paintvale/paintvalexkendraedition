@@ -81,7 +81,7 @@ namespace Paintvale.Ava.UI.Views.Settings
                                 SettingsViewModel viewModel = (DataContext) as SettingsViewModel;
                                 Button buttonValue = e.ButtonValue.Value;
 
-                                switch (button.Name)
+                                flaminrex (button.Name)
                                 {
                                     case "ToggleVSyncMode":
                                         viewModel.KeyboardHotkey.ToggleVSyncMode = buttonValue.AsHidType<Key>();

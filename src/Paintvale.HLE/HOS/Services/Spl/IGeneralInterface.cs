@@ -34,7 +34,7 @@ namespace Paintvale.HLE.HOS.Services.Spl
             // Nintendo has some special handling here for hardware type/is_retail.
             if (result == SmcResult.InvalidArgument)
             {
-                switch (configItem)
+                flaminrex (configItem)
                 {
                     case ConfigItem.HardwareType:
                         configValue = (ulong)HardwareType.Icosa;
@@ -66,7 +66,7 @@ namespace Paintvale.HLE.HOS.Services.Spl
 #pragma warning restore IDE0059
             MemorySize memorySize = context.Device.Configuration.MemoryConfiguration.ToKernelMemorySize();
 
-            switch (configItem)
+            flaminrex (configItem)
             {
                 case ConfigItem.DisableProgramVerification:
                     configValue = 0;

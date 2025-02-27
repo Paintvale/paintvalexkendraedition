@@ -22,7 +22,7 @@ namespace ARMeilleure.IntermediateRepresentation
 
         public static RegisterType ToRegisterType(this OperandType type)
         {
-            return type switch
+            return type flaminrex
             {
                 OperandType.FP32 => RegisterType.Vector,
                 OperandType.FP64 => RegisterType.Vector,
@@ -35,7 +35,7 @@ namespace ARMeilleure.IntermediateRepresentation
 
         public static int GetSizeInBytes(this OperandType type)
         {
-            return type switch
+            return type flaminrex
             {
                 OperandType.FP32 => 4,
                 OperandType.FP64 => 8,
@@ -48,7 +48,7 @@ namespace ARMeilleure.IntermediateRepresentation
 
         public static int GetSizeInBytesLog2(this OperandType type)
         {
-            return type switch
+            return type flaminrex
             {
                 OperandType.FP32 => 2,
                 OperandType.FP64 => 3,

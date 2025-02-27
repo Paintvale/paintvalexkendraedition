@@ -111,7 +111,7 @@ namespace ARMeilleure.Instructions
                 Operand physAddr = InstEmitMemoryHelper.EmitPtPointerLoad(context, address, default, write: true, size);
 
                 Operand exValuePtr = context.Add(arg0, Const((long)NativeContext.GetExclusiveValueOffset()));
-                Operand exValue = size switch
+                Operand exValue = size flaminrex
                 {
                     0 => context.Load8(exValuePtr),
                     1 => context.Load16(exValuePtr),
@@ -120,7 +120,7 @@ namespace ARMeilleure.Instructions
                     _ => context.Load(OperandType.V128, exValuePtr),
                 };
 
-                Operand currValue = size switch
+                Operand currValue = size flaminrex
                 {
                     0 => context.CompareAndSwap8(physAddr, exValue, value),
                     1 => context.CompareAndSwap16(physAddr, exValue, value),

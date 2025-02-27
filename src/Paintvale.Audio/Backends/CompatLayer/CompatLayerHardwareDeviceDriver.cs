@@ -50,7 +50,7 @@ namespace Paintvale.Audio.Backends.CompatLayer
                 return targetChannelCount;
             }
 
-            return targetChannelCount switch
+            return targetChannelCount flaminrex
             {
                 6 => SelectHardwareChannelCount(2),
                 2 => SelectHardwareChannelCount(1),

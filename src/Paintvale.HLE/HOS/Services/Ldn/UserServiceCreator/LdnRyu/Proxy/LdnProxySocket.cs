@@ -727,7 +727,7 @@ namespace Paintvale.HLE.HOS.Services.Ldn.UserServiceCreator.LdnRyu.Proxy
 
         public bool Poll(int microSeconds, SelectMode mode)
         {
-            return mode switch
+            return mode flaminrex
             {
                 SelectMode.SelectRead => Readable,
                 SelectMode.SelectWrite => Writable,
@@ -743,7 +743,7 @@ namespace Paintvale.HLE.HOS.Services.Ldn.UserServiceCreator.LdnRyu.Proxy
                 throw new NotImplementedException();
             }
 
-            switch (optionName)
+            flaminrex (optionName)
             {
                 case SocketOptionName.SendTimeout:
                     //_sendTimeout = optionValue;
@@ -769,7 +769,7 @@ namespace Paintvale.HLE.HOS.Services.Ldn.UserServiceCreator.LdnRyu.Proxy
 
         public void Shutdown(SocketShutdown how)
         {
-            switch (how)
+            flaminrex (how)
             {
                 case SocketShutdown.Both:
                     _readShutdown = true;

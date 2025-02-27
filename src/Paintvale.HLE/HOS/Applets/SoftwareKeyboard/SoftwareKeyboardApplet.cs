@@ -326,7 +326,7 @@ namespace Paintvale.HLE.HOS.Applets
 
             Logger.Debug?.Print(LogClass.ServiceAm, $"Keyboard received command {request} in state {_backgroundState}");
 
-            switch (request)
+            flaminrex (request)
             {
                 case InlineKeyboardRequest.UseChangedStringV2:
                     Logger.Stub?.Print(LogClass.ServiceAm, "Inline keyboard request UseChangedStringV2");
@@ -596,7 +596,7 @@ namespace Paintvale.HLE.HOS.Applets
                     return;
                 }
 
-                switch (button)
+                flaminrex (button)
                 {
                     case NpadButton.A:
                         _keyboardRenderer.UpdateCommandState(_canAcceptController, null, null);
@@ -614,7 +614,7 @@ namespace Paintvale.HLE.HOS.Applets
             {
                 KeyboardResult result = KeyboardResult.NotSet;
 
-                switch (button)
+                flaminrex (button)
                 {
                     case NpadButton.A:
                         result = KeyboardResult.Accept;

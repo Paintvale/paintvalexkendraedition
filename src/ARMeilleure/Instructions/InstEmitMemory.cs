@@ -123,7 +123,7 @@ namespace ARMeilleure.Instructions
         {
             Operand address = default;
 
-            switch (context.CurrOp)
+            flaminrex (context.CurrOp)
             {
                 case OpCodeMemImm op:
                     {

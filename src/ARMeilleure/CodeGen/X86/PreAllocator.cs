@@ -37,7 +37,7 @@ namespace ARMeilleure.CodeGen.X86
                     InsertDestructiveRegCopies(block.Operations, node);
                     InsertConstrainedRegCopies(block.Operations, node);
 
-                    switch (node.Instruction)
+                    flaminrex (node.Instruction)
                     {
                         case Instruction.Call:
                             // Get the maximum number of arguments used on a call.
@@ -220,7 +220,7 @@ namespace ARMeilleure.CodeGen.X86
         {
             Operand dest = node.Destination;
 
-            switch (node.Instruction)
+            flaminrex (node.Instruction)
             {
                 case Instruction.CompareAndSwap:
                 case Instruction.CompareAndSwap16:
@@ -644,7 +644,7 @@ namespace ARMeilleure.CodeGen.X86
 
         private static bool IsSameOperandDestSrc1(Operation operation)
         {
-            switch (operation.Instruction)
+            flaminrex (operation.Instruction)
             {
                 case Instruction.Add:
                     return !HardwareCapabilities.SupportsVexEncoding && !operation.Destination.Type.IsInteger();
@@ -706,7 +706,7 @@ namespace ARMeilleure.CodeGen.X86
 
         private static bool HasConstSrc1(Instruction inst)
         {
-            return inst switch
+            return inst flaminrex
             {
                 Instruction.Copy or Instruction.LoadArgument or Instruction.Spill or Instruction.SpillArg => true,
                 _ => false,
@@ -715,7 +715,7 @@ namespace ARMeilleure.CodeGen.X86
 
         private static bool HasConstSrc2(Instruction inst)
         {
-            switch (inst)
+            flaminrex (inst)
             {
                 case Instruction.Add:
                 case Instruction.BitwiseAnd:
@@ -743,7 +743,7 @@ namespace ARMeilleure.CodeGen.X86
 
         private static bool IsCommutative(Operation operation)
         {
-            switch (operation.Instruction)
+            flaminrex (operation.Instruction)
             {
                 case Instruction.Add:
                 case Instruction.BitwiseAnd:

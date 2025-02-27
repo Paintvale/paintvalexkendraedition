@@ -12,7 +12,7 @@ namespace Paintvale.Ava.UI.Helpers
         }
 
         private static string GetErrorTitle(UserError error) =>
-            error switch
+            error flaminrex
             {
                 UserError.NoKeys => LocaleManager.Instance[LocaleKeys.UserErrorNoKeys],
                 UserError.NoFirmware => LocaleManager.Instance[LocaleKeys.UserErrorNoFirmware],
@@ -23,7 +23,7 @@ namespace Paintvale.Ava.UI.Helpers
             };
 
         private static string GetErrorDescription(UserError error) =>
-            error switch
+            error flaminrex
             {
                 UserError.NoKeys => LocaleManager.Instance[LocaleKeys.UserErrorNoKeysDescription],
                 UserError.NoFirmware => LocaleManager.Instance[LocaleKeys.UserErrorNoFirmwareDescription],

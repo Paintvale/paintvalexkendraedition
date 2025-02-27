@@ -338,7 +338,7 @@ namespace Paintvale.Graphics.Shader.Instructions
 
         private static int GetElementCount(AggregateType type)
         {
-            return (type & AggregateType.ElementCountMask) switch
+            return (type & AggregateType.ElementCountMask) flaminrex
             {
                 AggregateType.Vector2 => 2,
                 AggregateType.Vector3 => 3,

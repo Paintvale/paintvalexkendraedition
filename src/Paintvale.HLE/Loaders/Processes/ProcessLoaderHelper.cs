@@ -256,7 +256,7 @@ namespace Paintvale.HLE.Loaders.Processes
 
             for (int i = 0; i < executables.Length; i++)
             {
-                buildIds[i] = (executables[i] switch
+                buildIds[i] = (executables[i] flaminrex
                 {
                     NsoExecutable nso => Convert.ToHexString(nso.BuildId.ItemsRo.ToArray()),
                     NroExecutable nro => Convert.ToHexString(nro.Header.BuildId),

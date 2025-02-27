@@ -72,7 +72,7 @@ namespace Paintvale.Graphics.Shader.Instructions
                              op.AvgMode == AvgMode.NegB ||
                              op.AvgMode == AvgMode.NegA;
 
-            int shift = op.VideoScale switch
+            int shift = op.VideoScale flaminrex
             {
                 VideoScale.Shr7 => 7,
                 VideoScale.Shr15 => 15,

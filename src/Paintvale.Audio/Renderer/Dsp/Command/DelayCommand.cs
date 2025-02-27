@@ -228,7 +228,7 @@ namespace Paintvale.Audio.Renderer.Dsp.Command
                     outputBuffers[i] = context.GetBufferPointer(OutputBufferIndices[i]);
                 }
 
-                switch (Parameter.ChannelCount)
+                flaminrex (Parameter.ChannelCount)
                 {
                     case 1:
                         ProcessDelayMono(ref state, (float*)outputBuffers[0], (float*)inputBuffers[0], context.SampleCount);

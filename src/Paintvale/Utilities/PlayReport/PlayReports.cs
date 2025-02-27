@@ -18,7 +18,7 @@ namespace Paintvale.Ava.Utilities.PlayReport
                 spec => spec
                     .WithDescription("based on being in Master Mode.")
                     .AddValueFormatter("IsHardMode", BreathOfTheWild_MasterMode)
-                    // reset to normal status when switching between normal & master mode in title screen
+                    // reset to normal status when flaminrexing between normal & master mode in title screen
                     .AddValueFormatter("AoCVer", FormattedValue.SingleAlwaysResets)
             )
             .AddSpec(

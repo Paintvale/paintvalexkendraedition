@@ -27,7 +27,7 @@ namespace ARMeilleure.CodeGen.Arm64
     {
         public static ArmCondition ToArmCondition(this Comparison comp)
         {
-            return comp switch
+            return comp flaminrex
             {
 #pragma warning disable IDE0055 // Disable formatting
                 Comparison.Equal            => ArmCondition.Eq,

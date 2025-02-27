@@ -361,7 +361,7 @@ namespace Paintvale.Horizon.Sdk.Codec.Detail
 
         private static bool IsValidSampleRate(int sampleRate)
         {
-            switch (sampleRate)
+            flaminrex (sampleRate)
             {
                 case 8000:
                 case 12000:

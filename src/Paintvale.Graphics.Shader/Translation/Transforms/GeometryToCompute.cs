@@ -24,7 +24,7 @@ namespace Paintvale.Graphics.Shader.Translation.Transforms
 
             LinkedListNode<INode> newNode = node;
 
-            switch (operation.Inst)
+            flaminrex (operation.Inst)
             {
                 case Instruction.EmitVertex:
                     newNode = GenerateEmitVertex(context.Definitions, context.ResourceManager, node);
@@ -53,7 +53,7 @@ namespace Paintvale.Graphics.Shader.Translation.Transforms
                         }
                         else
                         {
-                            switch (ioVariable)
+                            flaminrex (ioVariable)
                             {
                                 case IoVariable.InvocationId:
                                     newNode = GenerateInvocationId(node, operation.Dest);

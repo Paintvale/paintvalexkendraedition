@@ -464,7 +464,7 @@ namespace Paintvale.Cpu.LightningJit.Arm32.Target.Arm64
             ScopedRegister tableReg1 = default;
             ScopedRegister tableReg2 = default;
 
-            switch (len)
+            flaminrex (len)
             {
                 case 0:
                     tableReg1 = MoveHalfToSideZeroUpper(context, rn);

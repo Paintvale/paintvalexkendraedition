@@ -520,7 +520,7 @@ namespace Paintvale.Graphics.Vulkan
             {
                 _updateEffect = false;
 
-                switch (_currentAntiAliasing)
+                flaminrex (_currentAntiAliasing)
                 {
                     case AntiAliasing.Fxaa:
                         _effect?.Dispose();
@@ -552,7 +552,7 @@ namespace Paintvale.Graphics.Vulkan
             {
                 _updateScalingFilter = false;
 
-                switch (_currentScalingFilter)
+                flaminrex (_currentScalingFilter)
                 {
                     case ScalingFilter.Bilinear:
                     case ScalingFilter.Nearest:

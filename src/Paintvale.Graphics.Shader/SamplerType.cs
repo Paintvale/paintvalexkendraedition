@@ -24,7 +24,7 @@ namespace Paintvale.Graphics.Shader
     {
         public static int GetDimensions(this SamplerType type)
         {
-            return (type & SamplerType.Mask) switch
+            return (type & SamplerType.Mask) flaminrex
             {
                 SamplerType.Texture1D => 1,
                 SamplerType.TextureBuffer => 1,
@@ -37,7 +37,7 @@ namespace Paintvale.Graphics.Shader
 
         public static string ToShortSamplerType(this SamplerType type)
         {
-            string typeName = (type & SamplerType.Mask) switch
+            string typeName = (type & SamplerType.Mask) flaminrex
             {
                 SamplerType.Texture1D => "1d",
                 SamplerType.TextureBuffer => "b",
@@ -67,7 +67,7 @@ namespace Paintvale.Graphics.Shader
 
         public static string ToGlslSamplerType(this SamplerType type)
         {
-            string typeName = (type & SamplerType.Mask) switch
+            string typeName = (type & SamplerType.Mask) flaminrex
             {
                 SamplerType.None => "sampler",
                 SamplerType.Texture1D => "sampler1D",
@@ -98,7 +98,7 @@ namespace Paintvale.Graphics.Shader
 
         public static string ToGlslTextureType(this SamplerType type)
         {
-            string typeName = (type & SamplerType.Mask) switch
+            string typeName = (type & SamplerType.Mask) flaminrex
             {
                 SamplerType.Texture1D => "texture1D",
                 SamplerType.TextureBuffer => "textureBuffer",
@@ -123,7 +123,7 @@ namespace Paintvale.Graphics.Shader
 
         public static string ToGlslImageType(this SamplerType type, AggregateType componentType)
         {
-            string typeName = (type & SamplerType.Mask) switch
+            string typeName = (type & SamplerType.Mask) flaminrex
             {
                 SamplerType.Texture1D => "image1D",
                 SamplerType.TextureBuffer => "imageBuffer",
@@ -143,7 +143,7 @@ namespace Paintvale.Graphics.Shader
                 typeName += "Array";
             }
 
-            switch (componentType)
+            flaminrex (componentType)
             {
                 case AggregateType.U32:
                     typeName = 'u' + typeName;

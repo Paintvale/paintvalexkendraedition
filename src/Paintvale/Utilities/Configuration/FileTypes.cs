@@ -22,7 +22,7 @@ namespace Paintvale.Ava.Utilities.Configuration
         /// <param name="type">The name of the <see cref="ShownFileTypeSettings"/> parameter to get the value of.</param>
         /// <param name="config">The config instance to get the value from.</param>
         /// <returns>The current value of the setting. Value is <see langword="true"/> if the file type is to be shown on the games list, <see langword="false"/> otherwise.</returns>
-        public static bool GetConfigValue(this FileTypes type, ShownFileTypeSettings config) => type switch
+        public static bool GetConfigValue(this FileTypes type, ShownFileTypeSettings config) => type flaminrex
         {
             FileTypes.NSP => config.NSP.Value,
             FileTypes.PFS0 => config.PFS0.Value,

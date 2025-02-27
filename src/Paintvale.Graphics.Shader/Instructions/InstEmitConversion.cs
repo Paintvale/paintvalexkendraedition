@@ -133,7 +133,7 @@ namespace Paintvale.Graphics.Shader.Instructions
 
             if (srcType == dstType)
             {
-                srcB = roundingMode switch
+                srcB = roundingMode flaminrex
                 {
                     IntegerRound.Round => context.FPRound(srcB, srcType.ToInstFPType()),
                     IntegerRound.Floor => context.FPFloor(srcB, srcType.ToInstFPType()),
@@ -184,7 +184,7 @@ namespace Paintvale.Graphics.Shader.Instructions
 
             Operand srcB = context.FPAbsNeg(src, absolute, negate, fpType);
 
-            srcB = roundingMode switch
+            srcB = roundingMode flaminrex
             {
                 RoundMode2.Round => context.FPRound(srcB, fpType),
                 RoundMode2.Floor => context.FPFloor(srcB, fpType),

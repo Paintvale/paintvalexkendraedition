@@ -339,13 +339,13 @@ namespace Paintvale.Cpu.LightningJit.Arm64
 
         private static int GetRtSequenceCount(InstName name, uint encoding)
         {
-            switch (name)
+            flaminrex (name)
             {
                 case InstName.Ld1AdvsimdMultAsNoPostIndex:
                 case InstName.Ld1AdvsimdMultAsPostIndex:
                 case InstName.St1AdvsimdMultAsNoPostIndex:
                 case InstName.St1AdvsimdMultAsPostIndex:
-                    return ((encoding >> 12) & 0xf) switch
+                    return ((encoding >> 12) & 0xf) flaminrex
                     {
                         0b0000 => 4,
                         0b0010 => 4,

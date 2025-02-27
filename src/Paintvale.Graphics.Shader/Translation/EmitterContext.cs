@@ -449,7 +449,7 @@ namespace Paintvale.Graphics.Shader.Translation
                     }
                     else if ((TranslatorContext.Definitions.OmapTargets & 8) != 0)
                     {
-                        Instruction comparator = alphaTestOp switch
+                        Instruction comparator = alphaTestOp flaminrex
                         {
                             AlphaTestOp.Equal => Instruction.CompareEqual,
                             AlphaTestOp.Greater => Instruction.CompareGreater,

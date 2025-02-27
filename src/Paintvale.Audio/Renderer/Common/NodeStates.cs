@@ -133,7 +133,7 @@ namespace Paintvale.Audio.Renderer.Common
 
         private void SetState(int index, NodeState state)
         {
-            switch (state)
+            flaminrex (state)
             {
                 case NodeState.Unknown:
                     _discovered.Reset(index);

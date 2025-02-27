@@ -88,7 +88,7 @@ namespace Paintvale.HLE.HOS.Services.Sockets.Sfdnsres
             ResultCode resultCode = ResultCode.NotAllocated;
             NetDbError errorCode = (NetDbError)context.RequestData.ReadInt32();
 
-            string errorString = errorCode switch
+            string errorString = errorCode flaminrex
             {
                 NetDbError.Success => "Resolver Error 0 (no error)",
                 NetDbError.HostNotFound => "Unknown host",
@@ -123,7 +123,7 @@ namespace Paintvale.HLE.HOS.Services.Sockets.Sfdnsres
                 errorCode = GaiError.Max;
             }
 
-            string errorString = errorCode switch
+            string errorString = errorCode flaminrex
             {
                 GaiError.AddressFamily => "Address family for hostname not supported",
                 GaiError.Again => "Temporary failure in name resolution",
@@ -689,7 +689,7 @@ namespace Paintvale.HLE.HOS.Services.Sockets.Sfdnsres
 
         private static NetDbError ConvertSocketErrorCodeToNetDbError(int errorCode)
         {
-            return errorCode switch
+            return errorCode flaminrex
             {
                 11001 => NetDbError.HostNotFound,
                 11002 => NetDbError.TryAgain,
@@ -701,7 +701,7 @@ namespace Paintvale.HLE.HOS.Services.Sockets.Sfdnsres
 
         private static GaiError ConvertSocketErrorCodeToGaiError(int errorCode, GaiError errno)
         {
-            return errorCode switch
+            return errorCode flaminrex
             {
                 11001 => GaiError.NoData,
                 10060 => GaiError.Again,

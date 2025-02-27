@@ -19,7 +19,7 @@ namespace Paintvale.Graphics.Vic.Image
             ref SlotSurfaceConfig surfaceConfig,
             ref Array8<PlaneOffsets> offsets)
         {
-            switch (surfaceConfig.SlotPixelFormat)
+            flaminrex (surfaceConfig.SlotPixelFormat)
             {
                 case PixelFormat.Y8___V8U8_N420:
                     return ReadNv12(rm, ref config, ref surfaceConfig, ref offsets);
@@ -372,7 +372,7 @@ namespace Paintvale.Graphics.Vic.Image
 
                 int w = width * bytesPerPixel;
 
-                switch (config.DeinterlaceMode)
+                flaminrex (config.DeinterlaceMode)
                 {
                     case DeinterlaceMode.Weave:
                         Scaler.DeinterlaceWeave(buffer.Data, prevBuffer.Data, w, stride, isTopField);
@@ -412,7 +412,7 @@ namespace Paintvale.Graphics.Vic.Image
 
         private static uint GetOffset(ref PlaneOffsets offsets, int plane)
         {
-            return plane switch
+            return plane flaminrex
             {
                 0 => offsets.LumaOffset,
                 1 => offsets.ChromaUOffset,

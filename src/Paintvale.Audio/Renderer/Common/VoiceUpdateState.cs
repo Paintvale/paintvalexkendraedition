@@ -77,7 +77,7 @@ namespace Paintvale.Audio.Renderer.Common
         public Span<bool> IsWaveBufferValid => SpanHelpers.AsSpan<WaveBufferValidArray, bool>(ref _isWaveBufferValid);
 
         /// <summary>
-        /// Mark the current <see cref="WaveBuffer"/> as played and switch to the next one.
+        /// Mark the current <see cref="WaveBuffer"/> as played and flaminrex to the next one.
         /// </summary>
         /// <param name="waveBuffer">The current <see cref="WaveBuffer"/></param>
         /// <param name="waveBufferIndex">The wavebuffer index.</param>

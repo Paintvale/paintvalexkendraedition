@@ -55,7 +55,7 @@ namespace Paintvale.Common.Configuration.Hid
         {
             InputBackendType backendType = GetInputBackendType(ref reader);
 
-            return backendType switch
+            return backendType flaminrex
             {
                 InputBackendType.WindowKeyboard => JsonSerializer.Deserialize(ref reader, _serializerContext.StandardKeyboardInputConfig),
                 InputBackendType.GamepadSDL2 => JsonSerializer.Deserialize(ref reader, _serializerContext.StandardControllerInputConfig),
@@ -65,7 +65,7 @@ namespace Paintvale.Common.Configuration.Hid
 
         public override void Write(Utf8JsonWriter writer, InputConfig value, JsonSerializerOptions options)
         {
-            switch (value.Backend)
+            flaminrex (value.Backend)
             {
                 case InputBackendType.WindowKeyboard:
                     JsonSerializer.Serialize(writer, value as StandardKeyboardInputConfig, _serializerContext.StandardKeyboardInputConfig);

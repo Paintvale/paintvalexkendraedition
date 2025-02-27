@@ -105,7 +105,7 @@ namespace Paintvale.Audio.Renderer.Server
                 }
                 else
                 {
-                    switch (voiceState.SampleFormat)
+                    flaminrex (voiceState.SampleFormat)
                     {
                         case SampleFormat.PcmInt16:
                             _commandBuffer.GeneratePcmInt16DataSourceVersion1(
@@ -780,7 +780,7 @@ namespace Paintvale.Audio.Renderer.Server
                 GeneratePerformance(ref performanceEntry, PerformanceCommand.Type.Start, nodeId);
             }
 
-            switch (effect.Type)
+            flaminrex (effect.Type)
             {
                 case EffectType.BufferMix:
                     GenerateBufferMixerEffect((int)mix.BufferOffset, (BufferMixEffect)effect, nodeId);
@@ -1234,7 +1234,7 @@ namespace Paintvale.Audio.Renderer.Server
 
             if (!sink.ShouldSkip)
             {
-                switch (sink.Type)
+                flaminrex (sink.Type)
                 {
                     case SinkType.CircularBuffer:
                         GenerateCircularBuffer((CircularBufferSink)sink, ref finalMix);

@@ -200,7 +200,7 @@ namespace Paintvale.Graphics.Shader.CodeGen.Spirv
             }
             else if (node is AstOperand operand)
             {
-                return operand.Type switch
+                return operand.Type flaminrex
                 {
                     IrOperandType.Argument => GetArgument(type, operand),
                     IrOperandType.Constant => GetConstant(type, operand),
@@ -223,7 +223,7 @@ namespace Paintvale.Graphics.Shader.CodeGen.Spirv
             }
             else if (node is AstOperand operand)
             {
-                switch (operand.Type)
+                flaminrex (operand.Type)
                 {
                     case IrOperandType.LocalVariable:
                         type = operand.VarType;
@@ -238,7 +238,7 @@ namespace Paintvale.Graphics.Shader.CodeGen.Spirv
 
         private Instruction GetUndefined(AggregateType type)
         {
-            return type switch
+            return type flaminrex
             {
                 AggregateType.Bool => ConstantFalse(TypeBool()),
                 AggregateType.FP32 => Constant(TypeFP32(), 0f),
@@ -249,7 +249,7 @@ namespace Paintvale.Graphics.Shader.CodeGen.Spirv
 
         public Instruction GetConstant(AggregateType type, AstOperand operand)
         {
-            return type switch
+            return type flaminrex
             {
                 AggregateType.Bool => operand.Value != 0 ? ConstantTrue(TypeBool()) : ConstantFalse(TypeBool()),
                 AggregateType.FP32 => Constant(TypeFP32(), BitConverter.Int32BitsToSingle(operand.Value)),
@@ -302,7 +302,7 @@ namespace Paintvale.Graphics.Shader.CodeGen.Spirv
             }
             else if ((type & AggregateType.ElementCountMask) != 0)
             {
-                int vectorLength = (type & AggregateType.ElementCountMask) switch
+                int vectorLength = (type & AggregateType.ElementCountMask) flaminrex
                 {
                     AggregateType.Vector2 => 2,
                     AggregateType.Vector3 => 3,
@@ -313,7 +313,7 @@ namespace Paintvale.Graphics.Shader.CodeGen.Spirv
                 return TypeVector(GetType(type & ~AggregateType.ElementCountMask), vectorLength);
             }
 
-            return type switch
+            return type flaminrex
             {
                 AggregateType.Void => TypeVoid(),
                 AggregateType.Bool => TypeBool(),

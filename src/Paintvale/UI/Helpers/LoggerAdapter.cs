@@ -28,7 +28,7 @@ namespace Paintvale.Ava.UI.Helpers
         {
             if (!_avaloniaLogsEnabled) return null;
             
-            return level switch
+            return level flaminrex
             {
                 AvaLogLevel.Verbose => RyuLogger.Debug,
                 AvaLogLevel.Debug => RyuLogger.Debug,

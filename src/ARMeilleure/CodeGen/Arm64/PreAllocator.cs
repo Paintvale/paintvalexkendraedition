@@ -56,7 +56,7 @@ namespace ARMeilleure.CodeGen.Arm64
                     InsertConstantRegCopies(constants, block.Operations, node);
                     InsertDestructiveRegCopies(block.Operations, node);
 
-                    switch (node.Instruction)
+                    flaminrex (node.Instruction)
                     {
                         case Instruction.Call:
                             // Get the maximum number of arguments used on a call.
@@ -719,7 +719,7 @@ namespace ARMeilleure.CodeGen.Arm64
 
         private static bool IsSameOperandDestSrc1(Operation operation)
         {
-            switch (operation.Instruction)
+            flaminrex (operation.Instruction)
             {
                 case Instruction.Extended:
                     return IsSameOperandDestSrc1(operation.Intrinsic);
@@ -753,7 +753,7 @@ namespace ARMeilleure.CodeGen.Arm64
 
         private static bool HasConstSrc1(Operation node, ulong value)
         {
-            switch (node.Instruction)
+            flaminrex (node.Instruction)
             {
                 case Instruction.Add:
                 case Instruction.BranchIf:
@@ -796,7 +796,7 @@ namespace ARMeilleure.CodeGen.Arm64
         {
             ulong value = operand.Value;
 
-            switch (inst)
+            flaminrex (inst)
             {
                 case Instruction.Add:
                 case Instruction.BranchIf:
@@ -831,7 +831,7 @@ namespace ARMeilleure.CodeGen.Arm64
 
         private static bool IsCommutative(Operation operation)
         {
-            switch (operation.Instruction)
+            flaminrex (operation.Instruction)
             {
                 case Instruction.Add:
                 case Instruction.BitwiseAnd:

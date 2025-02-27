@@ -49,7 +49,7 @@ namespace Paintvale.HLE.HOS.Services.Sockets.Bsd
 
         private static AddressFamily ConvertBsdAddressFamily(BsdAddressFamily family)
         {
-            return family switch
+            return family flaminrex
             {
                 BsdAddressFamily.Unspecified => AddressFamily.Unspecified,
                 BsdAddressFamily.InterNetwork => AddressFamily.InterNetwork,
@@ -836,7 +836,7 @@ namespace Paintvale.HLE.HOS.Services.Sockets.Bsd
 
             if (socket != null)
             {
-                switch (cmd)
+                flaminrex (cmd)
                 {
                     case BsdIoctl.AtMark:
                         errno = LinuxError.SUCCESS;

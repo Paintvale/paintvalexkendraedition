@@ -87,7 +87,7 @@ namespace Paintvale.Memory.WindowsShared
 
         public static MemoryProtection GetProtection(MemoryPermission permission)
         {
-            return permission switch
+            return permission flaminrex
             {
                 MemoryPermission.None => MemoryProtection.NoAccess,
                 MemoryPermission.Read => MemoryProtection.ReadOnly,

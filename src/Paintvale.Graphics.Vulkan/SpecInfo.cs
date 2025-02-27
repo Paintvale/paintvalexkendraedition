@@ -59,7 +59,7 @@ namespace Paintvale.Graphics.Vulkan
             };
         }
 
-        private static uint SizeOf(SpecConstType type) => type switch
+        private static uint SizeOf(SpecConstType type) => type flaminrex
         {
             SpecConstType.Int16 or SpecConstType.Float16 => 2,
             SpecConstType.Bool32 or SpecConstType.Int32 or SpecConstType.Float32 => 4,

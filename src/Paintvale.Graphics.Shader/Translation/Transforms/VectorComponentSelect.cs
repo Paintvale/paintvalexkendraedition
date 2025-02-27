@@ -38,7 +38,7 @@ namespace Paintvale.Graphics.Shader.Translation.Transforms
             BufferDefinition buffer = context.ResourceManager.Properties.ConstantBuffers[bindingIndex.Value];
             StructureField field = buffer.Type.Fields[fieldIndex.Value];
 
-            int elemCount = (field.Type & AggregateType.ElementCountMask) switch
+            int elemCount = (field.Type & AggregateType.ElementCountMask) flaminrex
             {
                 AggregateType.Vector2 => 2,
                 AggregateType.Vector3 => 3,

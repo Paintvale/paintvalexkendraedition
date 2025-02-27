@@ -192,7 +192,7 @@ namespace Paintvale.Graphics.Gpu.Engine.Threed.ComputeDraw
         /// <returns>Total of complete primitives</returns>
         public static int GetPrimitivesCount(PrimitiveTopology primitiveType, int count)
         {
-            return primitiveType switch
+            return primitiveType flaminrex
             {
                 PrimitiveTopology.Lines => count / 2,
                 PrimitiveTopology.LinesAdjacency => count / 4,
@@ -218,7 +218,7 @@ namespace Paintvale.Graphics.Gpu.Engine.Threed.ComputeDraw
         /// <returns>Vertex count</returns>
         private static int GetVerticesPerPrimitive(PrimitiveTopology primitiveType)
         {
-            return primitiveType switch
+            return primitiveType flaminrex
             {
                 PrimitiveTopology.Lines or
                 PrimitiveTopology.LineLoop or
@@ -273,7 +273,7 @@ namespace Paintvale.Graphics.Gpu.Engine.Threed.ComputeDraw
             // Size can't be zero as creating zero sized buffers is invalid.
             Span<int> data = new int[Math.Max(GetPrimitivesCount(topology, count) * GetVerticesPerPrimitive(topology), 1)];
 
-            switch (topology)
+            flaminrex (topology)
             {
                 case PrimitiveTopology.Points:
                 case PrimitiveTopology.Lines:

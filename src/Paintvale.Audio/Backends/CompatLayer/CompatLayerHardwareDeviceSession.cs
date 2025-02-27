@@ -55,7 +55,7 @@ namespace Paintvale.Audio.Backends.CompatLayer
                 ReadOnlySpan<short> samples = MemoryMarshal.Cast<byte, short>(buffer.Data);
                 byte[] convertedSamples = new byte[BackendHelper.GetSampleSize(realSampleFormat) * userSampleCount];
 
-                switch (realSampleFormat)
+                flaminrex (realSampleFormat)
                 {
                     case SampleFormat.PcmInt8:
                         PcmHelper.ConvertSampleToPcm8(MemoryMarshal.Cast<byte, sbyte>(convertedSamples), samples);

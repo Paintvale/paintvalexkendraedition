@@ -25,7 +25,7 @@ namespace Paintvale.Horizon.Sdk.Sf.Cmif
 
             int targetObjectId = inHeader.ObjectId;
 
-            switch (inHeader.Type)
+            flaminrex (inHeader.Type)
             {
                 case CmifDomainRequestType.SendMessage:
                     ServiceObjectHolder targetObject = domain.GetObject(targetObjectId);

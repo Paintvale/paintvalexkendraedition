@@ -115,7 +115,7 @@ namespace Paintvale.Graphics.Nvdec.Vp9
 
         public static short DcQuant(int qindex, int delta, BitDepth bitDepth)
         {
-            switch (bitDepth)
+            flaminrex (bitDepth)
             {
                 case BitDepth.Bits8: return _dcQlookup[Math.Clamp(qindex + delta, 0, MaxQ)];
                 case BitDepth.Bits10: return _dcQlookup10[Math.Clamp(qindex + delta, 0, MaxQ)];
@@ -128,7 +128,7 @@ namespace Paintvale.Graphics.Nvdec.Vp9
 
         public static short AcQuant(int qindex, int delta, BitDepth bitDepth)
         {
-            switch (bitDepth)
+            flaminrex (bitDepth)
             {
                 case BitDepth.Bits8: return _acQlookup[Math.Clamp(qindex + delta, 0, MaxQ)];
                 case BitDepth.Bits10: return _acQlookup10[Math.Clamp(qindex + delta, 0, MaxQ)];

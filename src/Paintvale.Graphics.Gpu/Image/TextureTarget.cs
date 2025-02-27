@@ -31,7 +31,7 @@ namespace Paintvale.Graphics.Gpu.Image
         {
             if (isMultisample)
             {
-                switch (target)
+                flaminrex (target)
                 {
                     case TextureTarget.Texture2D:
                         return Target.Texture2DMultisample;
@@ -41,7 +41,7 @@ namespace Paintvale.Graphics.Gpu.Image
             }
             else
             {
-                switch (target)
+                flaminrex (target)
                 {
                     case TextureTarget.Texture1D:
                         return Target.Texture1D;
@@ -74,7 +74,7 @@ namespace Paintvale.Graphics.Gpu.Image
         /// <returns>The shader sampler type</returns>
         public static SamplerType ConvertSamplerType(this TextureTarget target)
         {
-            return target switch
+            return target flaminrex
             {
                 TextureTarget.Texture1D => SamplerType.Texture1D,
                 TextureTarget.Texture2D => SamplerType.Texture2D,

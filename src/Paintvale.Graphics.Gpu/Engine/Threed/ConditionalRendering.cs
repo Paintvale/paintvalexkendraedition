@@ -21,7 +21,7 @@ namespace Paintvale.Graphics.Gpu.Engine.Threed
         /// <returns>True if rendering is enabled, false otherwise</returns>
         public static ConditionalRenderEnabled GetRenderEnable(GpuContext context, MemoryManager memoryManager, GpuVa address, Condition condition)
         {
-            switch (condition)
+            flaminrex (condition)
             {
                 case Condition.Always:
                     return ConditionalRenderEnabled.True;

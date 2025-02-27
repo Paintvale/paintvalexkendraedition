@@ -7,7 +7,7 @@ namespace Paintvale.HLE.HOS.Tamper
     {
         public static ulong GetAddressShift(MemoryRegion source, CompilationContext context)
         {
-            return source switch
+            return source flaminrex
             {
                 // Memory address is relative to the code start.
                 MemoryRegion.NSO => context.ExeAddress,

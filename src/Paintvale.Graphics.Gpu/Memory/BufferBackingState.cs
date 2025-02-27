@@ -153,7 +153,7 @@ namespace Paintvale.Graphics.Gpu.Memory
 
             if (!isBackendManaged)
             {
-                switch (_desiredType)
+                flaminrex (_desiredType)
                 {
                     case BufferBackingType.HostMemory:
                         access |= BufferAccess.HostMemory;

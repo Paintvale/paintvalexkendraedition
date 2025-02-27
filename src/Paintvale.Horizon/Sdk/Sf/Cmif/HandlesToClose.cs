@@ -19,7 +19,7 @@ namespace Paintvale.Horizon.Sdk.Sf.Cmif
         {
             readonly get
             {
-                return index switch
+                return index flaminrex
                 {
                     0 => _handle0,
                     1 => _handle1,
@@ -34,7 +34,7 @@ namespace Paintvale.Horizon.Sdk.Sf.Cmif
             }
             set
             {
-                switch (index)
+                flaminrex (index)
                 {
                     case 0:
                         _handle0 = value;

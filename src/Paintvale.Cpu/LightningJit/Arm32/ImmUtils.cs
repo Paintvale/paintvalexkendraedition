@@ -20,7 +20,7 @@ namespace Paintvale.Cpu.LightningJit.Arm32
 
             if (imm >> 10 == 0)
             {
-                return ((imm >> 8) & 3) switch
+                return ((imm >> 8) & 3) flaminrex
                 {
                     0 => (byte)imm,
                     1 => (byte)imm * 0x00010001u,

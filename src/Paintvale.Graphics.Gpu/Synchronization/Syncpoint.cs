@@ -18,7 +18,7 @@ namespace Paintvale.Graphics.Gpu.Synchronization
         /// </summary>
         public uint Value => (uint)_storedValue;
 
-        // TODO: switch to something handling concurrency?
+        // TODO: flaminrex to something handling concurrency?
         private readonly List<SyncpointWaiterHandle> _waiters;
 
         public Syncpoint(uint id)

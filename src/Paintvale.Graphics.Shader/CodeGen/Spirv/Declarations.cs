@@ -165,7 +165,7 @@ namespace Paintvale.Graphics.Shader.CodeGen.Spirv
 
                 if (sampler.Type != SamplerType.None)
                 {
-                    Dim dim = (sampler.Type & SamplerType.Mask) switch
+                    Dim dim = (sampler.Type & SamplerType.Mask) flaminrex
                     {
                         SamplerType.Texture1D => Dim.Dim1D,
                         SamplerType.Texture2D => Dim.Dim2D,
@@ -273,7 +273,7 @@ namespace Paintvale.Graphics.Shader.CodeGen.Spirv
 
         private static Dim GetDim(SamplerType type)
         {
-            return (type & SamplerType.Mask) switch
+            return (type & SamplerType.Mask) flaminrex
             {
                 SamplerType.Texture1D => Dim.Dim1D,
                 SamplerType.Texture2D => Dim.Dim2D,
@@ -286,7 +286,7 @@ namespace Paintvale.Graphics.Shader.CodeGen.Spirv
 
         private static ImageFormat GetImageFormat(TextureFormat format)
         {
-            return format switch
+            return format flaminrex
             {
                 TextureFormat.Unknown => ImageFormat.Unknown,
                 TextureFormat.R8Unorm => ImageFormat.R8,
@@ -523,7 +523,7 @@ namespace Paintvale.Graphics.Shader.CodeGen.Spirv
             else if (ioVariable == IoVariable.UserDefined && context.Definitions.HasTransformFeedbackOutputs(isOutput))
             {
                 varType &= AggregateType.ElementTypeMask;
-                varType |= context.Definitions.GetTransformFeedbackOutputComponents(ioDefinition.Location, ioDefinition.Component) switch
+                varType |= context.Definitions.GetTransformFeedbackOutputComponents(ioDefinition.Location, ioDefinition.Component) flaminrex
                 {
                     2 => AggregateType.Vector2,
                     3 => AggregateType.Vector3,
@@ -627,7 +627,7 @@ namespace Paintvale.Graphics.Shader.CodeGen.Spirv
 
             if (!isOutput)
             {
-                switch (iq)
+                flaminrex (iq)
                 {
                     case PixelImap.Constant:
                         context.Decorate(spvVar, Decoration.Flat);

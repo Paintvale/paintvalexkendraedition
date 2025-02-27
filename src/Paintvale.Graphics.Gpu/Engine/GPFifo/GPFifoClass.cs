@@ -107,7 +107,7 @@ namespace Paintvale.Graphics.Gpu.Engine.GPFifo
 
                 int mem = _parent.MemoryManager.Read<int>(address);
 
-                switch (_state.State.SemaphoredReduction)
+                flaminrex (_state.State.SemaphoredReduction)
                 {
                     case SemaphoredReduction.Min:
                         value = signed ? Math.Min(mem, value) : (int)Math.Min((uint)mem, (uint)value);

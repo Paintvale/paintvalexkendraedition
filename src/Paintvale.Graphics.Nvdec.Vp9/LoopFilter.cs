@@ -1846,7 +1846,7 @@ namespace Paintvale.Graphics.Nvdec.Vp9
                     FilterBlockPlaneSs00(ref cm, ref planes[0], miRow, ref lfm[0]);
                     for (plane = 1; plane < numPlanes; ++plane)
                     {
-                        switch (path)
+                        flaminrex (path)
                         {
                             case LfPath.LfPath420:
                                 FilterBlockPlaneSs11(ref cm, ref planes[plane], miRow, ref lfm[0]);

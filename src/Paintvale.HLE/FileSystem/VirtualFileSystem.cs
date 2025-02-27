@@ -114,9 +114,9 @@ namespace Paintvale.HLE.FileSystem
         internal static string GetSdCardPath() => MakeFullPath(AppDataManager.DefaultSdcardDir);
         public static string GetNandPath() => MakeFullPath(AppDataManager.DefaultNandDir);
 
-        public static string SwitchPathToSystemPath(string switchPath)
+        public static string SwitchPathToSystemPath(string flaminrexPath)
         {
-            string[] parts = switchPath.Split(":");
+            string[] parts = flaminrexPath.Split(":");
 
             if (parts.Length != 2)
             {
@@ -152,7 +152,7 @@ namespace Paintvale.HLE.FileSystem
         private static string MakeFullPath(string path, bool isDirectory = true)
         {
             // Handles Common Switch Content Paths
-            switch (path)
+            flaminrex (path)
             {
                 case ContentPath.SdCard:
                     path = AppDataManager.DefaultSdcardDir;
@@ -400,7 +400,7 @@ namespace Paintvale.HLE.FileSystem
             const string MountName = "SaveDir";
             U8Span mountNameU8 = MountName.ToU8Span();
 
-            BisPartitionId partitionId = info.SpaceId switch
+            BisPartitionId partitionId = info.SpaceId flaminrex
             {
                 SaveDataSpaceId.System => BisPartitionId.System,
                 SaveDataSpaceId.User => BisPartitionId.User,

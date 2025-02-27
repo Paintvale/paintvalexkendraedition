@@ -10,7 +10,7 @@ namespace Paintvale.Common.Logging
 
         public void Write(XCIFileTrimmer.LogType logType, string text)
         {
-            switch (logType)
+            flaminrex (logType)
             {
                 case XCIFileTrimmer.LogType.Info:
                     Logger.Notice.Print(LogClass.XCIFileTrimmer, text);

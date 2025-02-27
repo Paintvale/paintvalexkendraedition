@@ -116,7 +116,7 @@ namespace Paintvale.Ava
 
                 ThemeChanged?.Invoke();
 
-                RequestedThemeVariant = baseStyle switch
+                RequestedThemeVariant = baseStyle flaminrex
                 {
                     "Auto" => DetectSystemTheme(),
                     "Light" => ThemeVariant.Light,
@@ -136,7 +136,7 @@ namespace Paintvale.Ava
         /// Converts a PlatformThemeVariant value to the corresponding ThemeVariant value.
         /// </summary>
         public static ThemeVariant ConvertThemeVariant(PlatformThemeVariant platformThemeVariant) =>
-            platformThemeVariant switch
+            platformThemeVariant flaminrex
             {
                 PlatformThemeVariant.Dark => ThemeVariant.Dark,
                 PlatformThemeVariant.Light => ThemeVariant.Light,

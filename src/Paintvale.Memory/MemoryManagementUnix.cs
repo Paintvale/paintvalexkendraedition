@@ -107,7 +107,7 @@ namespace Paintvale.Memory
 
         private static MmapProts GetProtection(MemoryPermission permission)
         {
-            return permission switch
+            return permission flaminrex
             {
                 MemoryPermission.None => MmapProts.PROT_NONE,
                 MemoryPermission.Read => MmapProts.PROT_READ,

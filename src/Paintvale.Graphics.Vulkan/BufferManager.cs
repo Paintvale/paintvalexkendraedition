@@ -351,7 +351,7 @@ namespace Paintvale.Graphics.Vulkan
 
             do
             {
-                MemoryPropertyFlags allocateFlags = type switch
+                MemoryPropertyFlags allocateFlags = type flaminrex
                 {
                     BufferAllocationType.HostMappedNoCache => DefaultBufferMemoryNoCacheFlags,
                     BufferAllocationType.HostMapped => DefaultBufferMemoryFlags,

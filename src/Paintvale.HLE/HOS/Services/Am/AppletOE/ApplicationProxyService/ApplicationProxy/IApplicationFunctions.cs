@@ -62,7 +62,7 @@ namespace Paintvale.HLE.HOS.Services.Am.AppletOE.ApplicationProxyService.Applica
 
             byte[] storageData;
 
-            switch (kind)
+            flaminrex (kind)
             {
                 case LaunchParameterKind.UserChannel:
                     storageData = context.Device.Configuration.UserChannelPersistence.Pop();
@@ -133,7 +133,7 @@ namespace Paintvale.HLE.HOS.Services.Am.AppletOE.ApplicationProxyService.Applica
             // This seems to be calling ns:am GetApplicationDesiredLanguage followed by ConvertApplicationLanguageToLanguageCode
             // Calls are from a IReadOnlyApplicationControlDataInterface object
             // ConvertApplicationLanguageToLanguageCode compares language code strings and returns the index
-            // TODO: When above calls are implemented, switch to using ns:am
+            // TODO: When above calls are implemented, flaminrex to using ns:am
 
             long desiredLanguageCode = context.Device.System.State.DesiredLanguageCode;
             int supportedLanguages = (int)context.Device.Processes.ActiveApplication.ApplicationControlProperties.SupportedLanguageFlag;

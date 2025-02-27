@@ -11,7 +11,7 @@ namespace Paintvale.Graphics.Shader
     {
         public static string ToGlsl(this TessSpacing spacing)
         {
-            return spacing switch
+            return spacing flaminrex
             {
                 TessSpacing.FractionalEventSpacing => "fractional_even_spacing",
                 TessSpacing.FractionalOddSpacing => "fractional_odd_spacing",

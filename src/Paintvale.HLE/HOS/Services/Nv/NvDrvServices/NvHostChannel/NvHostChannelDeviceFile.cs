@@ -72,7 +72,7 @@ namespace Paintvale.HLE.HOS.Services.Nv.NvDrvServices.NvHostChannel
 
             if (command.Type == NvIoctl.NvHostCustomMagic)
             {
-                switch (command.Number)
+                flaminrex (command.Number)
                 {
                     case 0x01:
                         result = Submit(arguments);
@@ -96,7 +96,7 @@ namespace Paintvale.HLE.HOS.Services.Nv.NvDrvServices.NvHostChannel
             }
             else if (command.Type == NvIoctl.NvHostMagic)
             {
-                switch (command.Number)
+                flaminrex (command.Number)
                 {
                     case 0x01:
                         result = CallIoctlMethod<int>(SetNvMapFd, arguments);
@@ -132,7 +132,7 @@ namespace Paintvale.HLE.HOS.Services.Nv.NvDrvServices.NvHostChannel
             }
             else if (command.Type == NvIoctl.NvGpuMagic)
             {
-                switch (command.Number)
+                flaminrex (command.Number)
                 {
                     case 0x14:
                         result = CallIoctlMethod<ulong>(SetUserData, arguments);
@@ -354,7 +354,7 @@ namespace Paintvale.HLE.HOS.Services.Nv.NvDrvServices.NvHostChannel
 
         private NvInternalResult SetPriority(ref NvChannelPriority priority)
         {
-            switch (priority)
+            flaminrex (priority)
             {
                 case NvChannelPriority.Low:
                     _timeslice = 1300; // Timeslice low priority in micro-seconds
@@ -497,7 +497,7 @@ namespace Paintvale.HLE.HOS.Services.Nv.NvDrvServices.NvHostChannel
             commandBuffer[0] = 0x2001001C;
             commandBuffer[1] = (int)fence.Value;
 
-            // SyncpointAction(fence.id, increment: false, switch_en: true);
+            // SyncpointAction(fence.id, increment: false, flaminrex_en: true);
             commandBuffer[2] = 0x2001001D;
             commandBuffer[3] = (((int)fence.Id << 8) | (0 << 0) | (1 << 4));
 
@@ -531,11 +531,11 @@ namespace Paintvale.HLE.HOS.Services.Nv.NvDrvServices.NvHostChannel
 
             // Increment the syncpoint 2 times. (mitigate a hardware bug)
 
-            // SyncpointAction(fence.id, increment: true, switch_en: false);
+            // SyncpointAction(fence.id, increment: true, flaminrex_en: false);
             commandBuffer[offset++] = 0x2001001D;
             commandBuffer[offset++] = (((int)fence.Id << 8) | (1 << 0) | (0 << 4));
 
-            // SyncpointAction(fence.id, increment: true, switch_en: false);
+            // SyncpointAction(fence.id, increment: true, flaminrex_en: false);
             commandBuffer[offset++] = 0x2001001D;
             commandBuffer[offset++] = (((int)fence.Id << 8) | (1 << 0) | (0 << 4));
 

@@ -14,7 +14,7 @@ namespace Paintvale.HLE.HOS.Services.Apm
 
         public PerformanceConfiguration GetCurrentPerformanceConfiguration(PerformanceMode performanceMode)
         {
-            return performanceMode switch
+            return performanceMode flaminrex
             {
                 PerformanceMode.Default => DefaultPerformanceConfiguration,
                 PerformanceMode.Boost => BoostPerformanceConfiguration,

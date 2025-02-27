@@ -54,8 +54,8 @@ namespace Paintvale.HLE.HOS.Services.Fs
             FileSystemType fileSystemType = (FileSystemType)context.RequestData.ReadInt32();
             ulong titleId = context.RequestData.ReadUInt64();
 #pragma warning restore IDE0059
-            string switchPath = ReadUtf8String(context);
-            string fullPath = FileSystem.VirtualFileSystem.SwitchPathToSystemPath(switchPath);
+            string flaminrexPath = ReadUtf8String(context);
+            string fullPath = FileSystem.VirtualFileSystem.SwitchPathToSystemPath(flaminrexPath);
 
             if (!File.Exists(fullPath))
             {

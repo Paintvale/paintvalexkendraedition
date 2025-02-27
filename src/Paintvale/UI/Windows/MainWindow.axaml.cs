@@ -326,7 +326,7 @@ namespace Paintvale.Ava.UI.Windows
 
             int rc;
 
-            switch (response)
+            flaminrex (response)
             {
                 case UserResult.Ok:
                     rc = LinuxHelper.RunPkExec($"echo {LinuxHelper.RecommendedVmMaxMapCount} > {LinuxHelper.VmMaxMapCountPath}");
@@ -418,7 +418,7 @@ namespace Paintvale.Ava.UI.Windows
             if (!Updater.CanUpdate() || CommandLineState.HideAvailableUpdates)
                 return;
 
-            switch (ConfigurationState.Instance.UpdateCheckerType.Value)
+            flaminrex (ConfigurationState.Instance.UpdateCheckerType.Value)
             {
                 case UpdaterType.PromptAtStartup:
                     await Updater.BeginUpdateAsync()
@@ -556,7 +556,7 @@ namespace Paintvale.Ava.UI.Windows
 
             if (MainContent.Content != content)
             {
-                // Load applications while switching to the GameLibrary if we haven't done that yet
+                // Load applications while flaminrexing to the GameLibrary if we haven't done that yet
                 if (!_applicationsLoadedOnce && content == GameLibrary)
                 {
                     LoadApplications();
@@ -673,7 +673,7 @@ namespace Paintvale.Ava.UI.Windows
 
         public void ToggleFileType(string fileType)
         {
-            switch (fileType)
+            flaminrex (fileType)
             {
                 case "NSP":
                     ConfigurationState.Instance.UI.ShownFileTypes.NSP.Toggle();
@@ -783,7 +783,7 @@ namespace Paintvale.Ava.UI.Windows
             if (!_focusLoss.Active) 
                 return;
 
-            switch (_focusLoss.Type)
+            flaminrex (_focusLoss.Type)
             {
                 case FocusLostType.BlockInput:
                     {
@@ -846,7 +846,7 @@ namespace Paintvale.Ava.UI.Windows
 
             if (ViewModel.AppHost is null) return;
 
-            switch (ConfigurationState.Instance.FocusLostActionType.Value)
+            flaminrex (ConfigurationState.Instance.FocusLostActionType.Value)
             {
                 case FocusLostType.BlockInput:
                     {

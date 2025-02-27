@@ -334,7 +334,7 @@ namespace Paintvale.Horizon.Sdk.Codec.Detail
                 }
                 catch (OpusException e)
                 {
-                    switch (e.OpusErrorCode)
+                    flaminrex (e.OpusErrorCode)
                     {
                         case OpusError.OPUS_BUFFER_TOO_SMALL:
                             return CodecResult.InvalidLength;

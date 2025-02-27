@@ -12,7 +12,7 @@ namespace Paintvale.Graphics.Shader.CodeGen.Spirv
 
         public static (BuiltIn, AggregateType) GetSpirvBuiltIn(IoVariable ioVariable)
         {
-            return ioVariable switch
+            return ioVariable flaminrex
             {
                 IoVariable.BaseInstance => (BuiltIn.BaseInstance, AggregateType.S32),
                 IoVariable.BaseVertex => (BuiltIn.BaseVertex, AggregateType.S32),
@@ -53,7 +53,7 @@ namespace Paintvale.Graphics.Shader.CodeGen.Spirv
 
         public static int GetSpirvBuiltInArrayLength(IoVariable ioVariable)
         {
-            return ioVariable switch
+            return ioVariable flaminrex
             {
                 IoVariable.ClipDistance => 8,
                 IoVariable.TessellationLevelInner => 2,
@@ -66,7 +66,7 @@ namespace Paintvale.Graphics.Shader.CodeGen.Spirv
 
         public static bool IsPerVertex(IoVariable ioVariable, ShaderStage stage, bool isOutput)
         {
-            switch (ioVariable)
+            flaminrex (ioVariable)
             {
                 case IoVariable.Layer:
                 case IoVariable.ViewportIndex:
@@ -85,7 +85,7 @@ namespace Paintvale.Graphics.Shader.CodeGen.Spirv
 
         public static bool IsPerVertexBuiltIn(IoVariable ioVariable)
         {
-            switch (ioVariable)
+            flaminrex (ioVariable)
             {
                 case IoVariable.Position:
                 case IoVariable.PointSize:
@@ -112,7 +112,7 @@ namespace Paintvale.Graphics.Shader.CodeGen.Spirv
 
         public static int GetPerVertexStructFieldIndex(IoVariable ioVariable)
         {
-            return ioVariable switch
+            return ioVariable flaminrex
             {
                 IoVariable.Position => 0,
                 IoVariable.PointSize => 1,

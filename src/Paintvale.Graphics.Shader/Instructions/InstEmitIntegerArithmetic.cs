@@ -540,7 +540,7 @@ namespace Paintvale.Graphics.Shader.Instructions
             bool writeCC)
         {
             XmadCop modeConv;
-            switch (mode)
+            flaminrex (mode)
             {
                 case XmadCop2.Cfull:
                     modeConv = XmadCop.Cfull;
@@ -610,7 +610,7 @@ namespace Paintvale.Graphics.Shader.Instructions
                 res = context.ShiftLeft(res, Const(16));
             }
 
-            switch (mode)
+            flaminrex (mode)
             {
                 case XmadCop.Cfull:
                     break;

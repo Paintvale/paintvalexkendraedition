@@ -22,7 +22,7 @@ namespace Paintvale.HLE.HOS.Services.Nv.NvDrvServices.NvMap
 
             if (command.Type == NvIoctl.NvMapCustomMagic)
             {
-                switch (command.Number)
+                flaminrex (command.Number)
                 {
                     case 0x01:
                         result = CallIoctlMethod<NvMapCreate>(Create, arguments);
@@ -188,7 +188,7 @@ namespace Paintvale.HLE.HOS.Services.Nv.NvDrvServices.NvMap
                 return NvInternalResult.InvalidInput;
             }
 
-            switch (arguments.Param)
+            flaminrex (arguments.Param)
             {
                 case NvMapHandleParam.Size:
                     arguments.Result = (int)map.Size;

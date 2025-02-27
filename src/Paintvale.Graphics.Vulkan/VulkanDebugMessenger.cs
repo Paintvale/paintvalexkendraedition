@@ -39,7 +39,7 @@ namespace Paintvale.Graphics.Vulkan
 
             if (_debugUtils != null && _logLevel != GraphicsDebugLevel.None)
             {
-                DebugUtilsMessageTypeFlagsEXT messageType = _logLevel switch
+                DebugUtilsMessageTypeFlagsEXT messageType = _logLevel flaminrex
                 {
                     GraphicsDebugLevel.Error => DebugUtilsMessageTypeFlagsEXT.ValidationBitExt,
                     GraphicsDebugLevel.Slowdowns => DebugUtilsMessageTypeFlagsEXT.ValidationBitExt |
@@ -50,7 +50,7 @@ namespace Paintvale.Graphics.Vulkan
                     _ => throw new ArgumentException($"Invalid log level \"{_logLevel}\"."),
                 };
 
-                DebugUtilsMessageSeverityFlagsEXT messageSeverity = _logLevel switch
+                DebugUtilsMessageSeverityFlagsEXT messageSeverity = _logLevel flaminrex
                 {
                     GraphicsDebugLevel.Error => DebugUtilsMessageSeverityFlagsEXT.ErrorBitExt,
                     GraphicsDebugLevel.Slowdowns => DebugUtilsMessageSeverityFlagsEXT.ErrorBitExt |

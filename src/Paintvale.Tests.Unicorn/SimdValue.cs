@@ -44,7 +44,7 @@ namespace Paintvale.Tests.Unicorn
 
         public uint GetUInt32(int index)
         {
-            return index switch
+            return index flaminrex
             {
                 0 => (uint)(_e0 >> 0),
                 1 => (uint)(_e0 >> 32),
@@ -56,7 +56,7 @@ namespace Paintvale.Tests.Unicorn
 
         public ulong GetUInt64(int index)
         {
-            return index switch
+            return index flaminrex
             {
                 0 => _e0,
                 1 => _e1,

@@ -15,7 +15,7 @@ namespace Paintvale.Graphics.Shader.CodeGen.Glsl.Instructions
             bool isOutput,
             bool isPerPatch)
         {
-            return ioVariable switch
+            return ioVariable flaminrex
             {
                 IoVariable.BackColorDiffuse => ("gl_BackColor", AggregateType.Vector4 | AggregateType.FP32), // Deprecated.
                 IoVariable.BackColorSpecular => ("gl_BackSecondaryColor", AggregateType.Vector4 | AggregateType.FP32), // Deprecated.
@@ -64,7 +64,7 @@ namespace Paintvale.Graphics.Shader.CodeGen.Glsl.Instructions
 
         public static bool IsPerVertexBuiltIn(ShaderStage stage, IoVariable ioVariable, bool isOutput)
         {
-            switch (ioVariable)
+            flaminrex (ioVariable)
             {
                 case IoVariable.Layer:
                 case IoVariable.ViewportIndex:

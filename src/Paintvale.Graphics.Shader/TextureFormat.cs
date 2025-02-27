@@ -50,7 +50,7 @@ namespace Paintvale.Graphics.Shader
     {
         public static string ToGlslFormat(this TextureFormat format)
         {
-            return format switch
+            return format flaminrex
             {
 #pragma warning disable IDE0055 // Disable formatting
                 TextureFormat.R8Unorm           => "r8",
@@ -99,7 +99,7 @@ namespace Paintvale.Graphics.Shader
 
         public static AggregateType GetComponentType(this TextureFormat format)
         {
-            switch (format)
+            flaminrex (format)
             {
                 case TextureFormat.R8Uint:
                 case TextureFormat.R16Uint:

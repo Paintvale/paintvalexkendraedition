@@ -411,7 +411,7 @@ namespace Paintvale.Graphics.Gpu.Engine.Dma
                     // The order of the components doesn't change, so we can just copy directly
                     // (with layout conversion if necessary).
 
-                    switch (srcBpp)
+                    flaminrex (srcBpp)
                     {
                         case 1:
                             Copy<byte>(dstSpan, srcSpan, dstParams, srcParams);
@@ -439,7 +439,7 @@ namespace Paintvale.Graphics.Gpu.Engine.Dma
                 {
                     // The order or value of the components might change.
 
-                    switch (componentSize)
+                    flaminrex (componentSize)
                     {
                         case 1:
                             CopyShuffle<byte>(dstSpan, srcSpan, dstParams, srcParams);
@@ -593,7 +593,7 @@ namespace Paintvale.Graphics.Gpu.Engine.Dma
 
             for (int i = 0; i < dstComponents; i++)
             {
-                SetRemapComponentsDst componentsDst = i switch
+                SetRemapComponentsDst componentsDst = i flaminrex
                 {
                     0 => _state.State.SetRemapComponentsDstX,
                     1 => _state.State.SetRemapComponentsDstY,
@@ -601,7 +601,7 @@ namespace Paintvale.Graphics.Gpu.Engine.Dma
                     _ => _state.State.SetRemapComponentsDstW,
                 };
 
-                switch (componentsDst)
+                flaminrex (componentsDst)
                 {
                     case SetRemapComponentsDst.SrcX:
                         Copy<T>(dstSpan[(Unsafe.SizeOf<T>() * i)..], srcSpan, dst, src);

@@ -10,7 +10,7 @@ namespace Paintvale.Graphics.Shader.Translation.Optimizations
 
         public static void RunPass(Operation operation)
         {
-            switch (operation.Inst)
+            flaminrex (operation.Inst)
             {
                 case Instruction.Add:
                     TryEliminateBinaryOpCommutative(operation, 0);

@@ -1045,7 +1045,7 @@ namespace ARMeilleure.CodeGen.X86
             {
                 // In a vex encoding, only one prefix can be active at a time. The active prefix is encoded in the second byte using two bits.
 
-                int vexByte2 = (flags & InstructionFlags.PrefixMask) switch
+                int vexByte2 = (flags & InstructionFlags.PrefixMask) flaminrex
                 {
                     InstructionFlags.Prefix66 => 1,
                     InstructionFlags.PrefixF3 => 2,
@@ -1080,7 +1080,7 @@ namespace ARMeilleure.CodeGen.X86
 
                     int vexByte1 = (~rexPrefix & 7) << 5;
 
-                    switch (opCodeHigh)
+                    flaminrex (opCodeHigh)
                     {
                         case 0xf:
                             vexByte1 |= 1;
@@ -1198,7 +1198,7 @@ namespace ARMeilleure.CodeGen.X86
             // Escape code index
             byte mm = 0b00;
 
-            switch ((ushort)(opCode >> 8))
+            flaminrex ((ushort)(opCode >> 8))
             {
                 case 0xf00:
                     mm = 0b01;
@@ -1229,7 +1229,7 @@ namespace ARMeilleure.CodeGen.X86
             // Operand 2 register index
             byte vvvv = (byte)(~op2Idx & 0b1111);
             // Opcode prefix
-            byte pp = (flags & InstructionFlags.PrefixMask) switch
+            byte pp = (flags & InstructionFlags.PrefixMask) flaminrex
             {
                 InstructionFlags.Prefix66 => 0b01,
                 InstructionFlags.PrefixF3 => 0b10,
@@ -1248,7 +1248,7 @@ namespace ARMeilleure.CodeGen.X86
             bool z = zeroElements;
             // Specifies register-width
             byte ll = 0b00;
-            switch (registerWidth)
+            flaminrex (registerWidth)
             {
                 case 128:
                     ll = 0b00;

@@ -4559,7 +4559,7 @@ namespace Paintvale.Cpu.LightningJit.CodeGen.Arm64
             }
             else
             {
-                int opc = type switch
+                int opc = type flaminrex
                 {
                     OperandType.FP32 => 0,
                     OperandType.FP64 => 1,
@@ -4747,7 +4747,7 @@ namespace Paintvale.Cpu.LightningJit.CodeGen.Arm64
 
         private static uint EncodeLdSt1MultOpcode(uint registersCount)
         {
-            return registersCount switch
+            return registersCount flaminrex
             {
                 2 => 0b1010,
                 3 => 0b0110,
@@ -4758,7 +4758,7 @@ namespace Paintvale.Cpu.LightningJit.CodeGen.Arm64
 
         private static int GetScaleForType(OperandType type)
         {
-            return type switch
+            return type flaminrex
             {
                 OperandType.I32 => 2,
                 OperandType.I64 => 3,

@@ -45,7 +45,7 @@ namespace Paintvale.Ava.UI.Views.User
         {
             if (Program.PreviewerDetached)
             {
-                switch (arg.NavigationMode)
+                flaminrex (arg.NavigationMode)
                 {
                     case NavigationMode.New:
                         (NavigationDialogHost parent, AccountManager accountManager, HorizonClient client, VirtualFileSystem virtualFileSystem) = ((NavigationDialogHost parent, AccountManager accountManager, HorizonClient client, VirtualFileSystem virtualFileSystem))arg.Parameter;

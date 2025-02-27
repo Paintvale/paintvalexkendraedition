@@ -13,7 +13,7 @@ namespace Paintvale.Graphics.Vic.Image
     {
         public static void Write(ResourceManager rm, Surface input, ref OutputSurfaceConfig config, ref PlaneOffsets offsets)
         {
-            switch (config.OutPixelFormat)
+            flaminrex (config.OutPixelFormat)
             {
                 case PixelFormat.A8B8G8R8:
                 case PixelFormat.X8B8G8R8:

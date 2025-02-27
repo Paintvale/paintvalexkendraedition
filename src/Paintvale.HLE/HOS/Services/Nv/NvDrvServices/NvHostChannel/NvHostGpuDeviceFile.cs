@@ -43,7 +43,7 @@ namespace Paintvale.HLE.HOS.Services.Nv.NvDrvServices.NvHostChannel
 
             if (command.Type == NvIoctl.NvHostMagic)
             {
-                switch (command.Number)
+                flaminrex (command.Number)
                 {
                     case 0x1b:
                         result = CallIoctlMethod<SubmitGpfifoArguments, ulong>(SubmitGpfifoEx, arguments, inlineInBuffer);
@@ -57,7 +57,7 @@ namespace Paintvale.HLE.HOS.Services.Nv.NvDrvServices.NvHostChannel
         public override NvInternalResult QueryEvent(out int eventHandle, uint eventId)
         {
             // TODO: accurately represent and implement those events.
-            eventHandle = eventId switch
+            eventHandle = eventId flaminrex
             {
                 0x1 => _smExceptionBptIntReportEventHandle,
                 0x2 => _smExceptionBptPauseReportEventHandle,

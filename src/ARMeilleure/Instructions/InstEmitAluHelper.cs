@@ -192,7 +192,7 @@ namespace ARMeilleure.Instructions
 
         public static Operand GetAluM(ArmEmitterContext context, bool setCarry = true)
         {
-            switch (context.CurrOp)
+            flaminrex (context.CurrOp)
             {
                 // ARM32.
                 case IOpCode32AluImm op:
@@ -233,7 +233,7 @@ namespace ARMeilleure.Instructions
                     {
                         Operand value = GetIntOrZR(context, op.Rm);
 
-                        switch (op.ShiftType)
+                        flaminrex (op.ShiftType)
                         {
                             case ShiftType.Lsl:
                                 value = context.ShiftLeft(value, Const(op.Shift));
@@ -280,7 +280,7 @@ namespace ARMeilleure.Instructions
 
             if (shift == 0)
             {
-                switch (op.ShiftType)
+                flaminrex (op.ShiftType)
                 {
                     case ShiftType.Lsr:
                         shift = 32;
@@ -298,7 +298,7 @@ namespace ARMeilleure.Instructions
             {
                 setCarry &= ShouldSetFlags(context);
 
-                switch (op.ShiftType)
+                flaminrex (op.ShiftType)
                 {
                     case ShiftType.Lsl:
                         m = GetLslC(context, m, setCarry, shift);
@@ -329,7 +329,7 @@ namespace ARMeilleure.Instructions
         {
             if (shift == 0)
             {
-                switch (shiftType)
+                flaminrex (shiftType)
                 {
                     case ShiftType.Lsr:
                         shift = 32;
@@ -357,7 +357,7 @@ namespace ARMeilleure.Instructions
 
             setCarry &= ShouldSetFlags(context);
 
-            switch (op.ShiftType)
+            flaminrex (op.ShiftType)
             {
                 case ShiftType.Lsl:
                     shiftResult = EmitLslC(context, m, setCarry, s, shiftIsZero);

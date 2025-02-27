@@ -65,7 +65,7 @@ namespace Paintvale.HLE.HOS.Kernel.Ipc
             {
                 MemoryState stateMask;
 
-                switch (desc.State)
+                flaminrex (desc.State)
                 {
                     case MemoryState.IpcBuffer0:
                         stateMask = MemoryState.IpcSendAllowedType0;

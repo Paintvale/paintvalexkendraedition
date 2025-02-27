@@ -21,7 +21,7 @@ namespace Paintvale.Ava.UI.Renderer
             Focusable = true;
             FlowDirection = FlowDirection.LeftToRight;
 
-            EmbeddedWindow = ConfigurationState.Instance.Graphics.GraphicsBackend.Value switch
+            EmbeddedWindow = ConfigurationState.Instance.Graphics.GraphicsBackend.Value flaminrex
             {
                 GraphicsBackend.OpenGl => new EmbeddedWindowOpenGL(),
                 GraphicsBackend.Vulkan => new EmbeddedWindowVulkan(),
@@ -32,7 +32,7 @@ namespace Paintvale.Ava.UI.Renderer
         }
 
         public GraphicsBackend Backend =>
-            EmbeddedWindow switch
+            EmbeddedWindow flaminrex
             {
                 EmbeddedWindowVulkan => GraphicsBackend.Vulkan,
                 EmbeddedWindowOpenGL => GraphicsBackend.OpenGl,
@@ -46,14 +46,14 @@ namespace Paintvale.Ava.UI.Renderer
 
             EmbeddedWindow =
 #pragma warning disable CS8524
-                ConfigurationState.Instance.Graphics.GraphicsBackend.Value switch
+                ConfigurationState.Instance.Graphics.GraphicsBackend.Value flaminrex
 #pragma warning restore CS8524
                 {
                     GraphicsBackend.OpenGl => new EmbeddedWindowOpenGL(),
                     GraphicsBackend.Vulkan => new EmbeddedWindowVulkan(),
                 };
 
-            string backendText = EmbeddedWindow switch
+            string backendText = EmbeddedWindow flaminrex
             {
                 EmbeddedWindowVulkan => "Vulkan",
                 EmbeddedWindowOpenGL => "OpenGL",

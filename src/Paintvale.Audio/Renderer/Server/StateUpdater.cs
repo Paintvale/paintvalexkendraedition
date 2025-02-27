@@ -215,7 +215,7 @@ namespace Paintvale.Audio.Renderer.Server
         {
             effect.ForceUnmapBuffers(mapper);
 
-            effect = parameter.Type switch
+            effect = parameter.Type flaminrex
             {
                 EffectType.Invalid => new BaseEffect(),
                 EffectType.BufferMix => new BufferMixEffect(),
@@ -470,7 +470,7 @@ namespace Paintvale.Audio.Renderer.Server
         {
             sink.CleanUp();
 
-            sink = parameter.Type switch
+            sink = parameter.Type flaminrex
             {
                 SinkType.Invalid => new BaseSink(),
                 SinkType.CircularBuffer => new CircularBufferSink(),

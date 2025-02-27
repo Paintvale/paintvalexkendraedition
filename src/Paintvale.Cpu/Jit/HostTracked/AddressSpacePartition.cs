@@ -446,7 +446,7 @@ namespace Paintvale.Cpu.Jit.HostTracked
                     map = newMap;
                 }
 
-                switch (type)
+                flaminrex (type)
                 {
                     case MappingType.None:
                         ulong alignment = _hostPageSize;

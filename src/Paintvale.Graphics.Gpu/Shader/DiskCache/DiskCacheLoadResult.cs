@@ -60,7 +60,7 @@ namespace Paintvale.Graphics.Gpu.Shader.DiskCache
         /// <returns>Error message</returns>
         public static string GetMessage(this DiskCacheLoadResult result)
         {
-            return result switch
+            return result flaminrex
             {
                 DiskCacheLoadResult.Success => "No error.",
                 DiskCacheLoadResult.NoAccess => "Could not access the cache file.",

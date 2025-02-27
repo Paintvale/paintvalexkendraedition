@@ -21,7 +21,7 @@ namespace Paintvale.Graphics.Shader
     {
         public static AggregateType ToAggregateType(this AttributeType type)
         {
-            return (type & ~AttributeType.AnyPacked) switch
+            return (type & ~AttributeType.AnyPacked) flaminrex
             {
                 AttributeType.Float => AggregateType.FP32,
                 AttributeType.Sint => AggregateType.S32,
@@ -32,7 +32,7 @@ namespace Paintvale.Graphics.Shader
 
         public static AggregateType ToAggregateType(this AttributeType type, bool supportsScaledFormats)
         {
-            return (type & ~AttributeType.AnyPacked) switch
+            return (type & ~AttributeType.AnyPacked) flaminrex
             {
                 AttributeType.Float => AggregateType.FP32,
                 AttributeType.Sint => AggregateType.S32,

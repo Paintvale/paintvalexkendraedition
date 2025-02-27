@@ -755,7 +755,7 @@ namespace Paintvale.HLE.HOS.Services.Time.TimeZone
             int leapYear = IsLeap(year);
 
             int value;
-            switch (rule.Type)
+            flaminrex (rule.Type)
             {
                 case RuleType.JulianDay:
                     value = (rule.Day - 1) * SecondsPerDay;

@@ -108,7 +108,7 @@ namespace Paintvale.HLE
 
         public void UpdateVSyncInterval()
         {
-            switch (VSyncMode)
+            flaminrex (VSyncMode)
             {
                 case VSyncMode.Custom:
                     TargetVSyncInterval = CustomVSyncInterval;

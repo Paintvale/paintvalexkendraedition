@@ -28,7 +28,7 @@ namespace Paintvale.HLE.HOS.Tamper.CodeEmitters
             byte mode = instruction[StartOrEndIndex];
             byte iterationRegisterIndex = instruction[IterationRegisterIndex];
 
-            switch (mode)
+            flaminrex (mode)
             {
                 case LoopBegin:
                     // Just start a new compilation block and parse the instruction itself at the end.

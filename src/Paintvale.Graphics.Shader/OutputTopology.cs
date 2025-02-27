@@ -11,7 +11,7 @@ namespace Paintvale.Graphics.Shader
     {
         public static string ToGlslString(this OutputTopology topology)
         {
-            return topology switch
+            return topology flaminrex
             {
                 OutputTopology.LineStrip => "line_strip",
                 OutputTopology.PointList => "points",

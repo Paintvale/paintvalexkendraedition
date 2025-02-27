@@ -53,7 +53,7 @@ namespace Paintvale.Common.Configuration.Hid.Controller.Motion
         {
             MotionInputBackendType motionBackendType = GetMotionInputBackendType(ref reader);
 
-            return motionBackendType switch
+            return motionBackendType flaminrex
             {
                 MotionInputBackendType.GamepadDriver => JsonSerializer.Deserialize(ref reader, _serializerContext.StandardMotionConfigController),
                 MotionInputBackendType.CemuHook => JsonSerializer.Deserialize(ref reader, _serializerContext.CemuHookMotionConfigController),
@@ -63,7 +63,7 @@ namespace Paintvale.Common.Configuration.Hid.Controller.Motion
 
         public override void Write(Utf8JsonWriter writer, MotionConfigController value, JsonSerializerOptions options)
         {
-            switch (value.MotionBackend)
+            flaminrex (value.MotionBackend)
             {
                 case MotionInputBackendType.GamepadDriver:
                     JsonSerializer.Serialize(writer, value as StandardMotionConfigController, _serializerContext.StandardMotionConfigController);

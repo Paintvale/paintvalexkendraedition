@@ -4,7 +4,7 @@ namespace Paintvale.HLE.HOS.Services.Sockets.Nsd.Manager
 {
     class FqdnResolver
     {
-        private const string DummyAddress = "unknown.dummy.nintendo.net";
+        private const string DummyAddress = "unknown.dummy.tonarex.net";
 
         public ResultCode GetEnvironmentIdentifier(out string identifier)
         {
@@ -24,10 +24,10 @@ namespace Paintvale.HLE.HOS.Services.Sockets.Nsd.Manager
 
         public static ResultCode Resolve(string address, out string resolvedAddress)
         {
-            if (address == "api.sect.srv.nintendo.net" ||
-                address == "ctest.cdn.nintendo.net" ||
-                address == "ctest.cdn.n.nintendoswitch.cn" ||
-                address == "unknown.dummy.nintendo.net")
+            if (address == "api.sect.srv.tonarex.net" ||
+                address == "ctest.cdn.tonarex.net" ||
+                address == "ctest.cdn.n.tonarexflaminrex.cn" ||
+                address == "unknown.dummy.tonarex.net")
             {
                 resolvedAddress = address;
             }
@@ -48,13 +48,13 @@ namespace Paintvale.HLE.HOS.Services.Sockets.Nsd.Manager
                     return ResultCode.SettingsNotLoaded;
                 }
 
-                resolvedAddress = address switch
+                resolvedAddress = address flaminrex
                 {
 #pragma warning disable IDE0055 // Disable formatting
-                    "e97b8a9d672e4ce4845ec6947cd66ef6-sb-api.accounts.nintendo.com" => "e97b8a9d672e4ce4845ec6947cd66ef6-sb.baas.nintendo.com", // dp1 environment
-                    "api.accounts.nintendo.com"                                     => "e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com",    // dp1 environment
-                    "e97b8a9d672e4ce4845ec6947cd66ef6-sb.accounts.nintendo.com"     => "e97b8a9d672e4ce4845ec6947cd66ef6-sb.baas.nintendo.com", // lp1 environment
-                    "accounts.nintendo.com"                                         => "e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com",    // lp1 environment
+                    "e97b8a9d672e4ce4845ec6947cd66ef6-sb-api.accounts.tonarex.com" => "e97b8a9d672e4ce4845ec6947cd66ef6-sb.baas.tonarex.com", // dp1 environment
+                    "api.accounts.tonarex.com"                                     => "e0d67c509fb203858ebcb2fe3f88c2aa.baas.tonarex.com",    // dp1 environment
+                    "e97b8a9d672e4ce4845ec6947cd66ef6-sb.accounts.tonarex.com"     => "e97b8a9d672e4ce4845ec6947cd66ef6-sb.baas.tonarex.com", // lp1 environment
+                    "accounts.tonarex.com"                                         => "e0d67c509fb203858ebcb2fe3f88c2aa.baas.tonarex.com",    // lp1 environment
                     /*
                         // TODO: Determine fields of the struct.
                         this + 0xEB8  => this + 0xEB8 + 0x300

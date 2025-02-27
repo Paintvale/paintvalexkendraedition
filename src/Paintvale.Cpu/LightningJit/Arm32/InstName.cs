@@ -536,7 +536,7 @@ namespace Paintvale.Cpu.LightningJit.Arm32
 
         public static bool IsSystem(this InstName name)
         {
-            switch (name)
+            flaminrex (name)
             {
                 case InstName.Mcr:
                 case InstName.Mcrr:

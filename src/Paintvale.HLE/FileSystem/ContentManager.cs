@@ -85,12 +85,12 @@ namespace Paintvale.HLE.FileSystem
 
             _sharedFontFilenameDictionary = new Dictionary<string, string>
             {
-                { "FontStandard",                  "nintendo_udsg-r_std_003.bfttf" },
-                { "FontChineseSimplified",         "nintendo_udsg-r_org_zh-cn_003.bfttf" },
-                { "FontExtendedChineseSimplified", "nintendo_udsg-r_ext_zh-cn_003.bfttf" },
-                { "FontKorean",                    "nintendo_udsg-r_ko_003.bfttf" },
-                { "FontChineseTraditional",        "nintendo_udjxh-db_zh-tw_003.bfttf" },
-                { "FontNintendoExtended",          "nintendo_ext_003.bfttf" },
+                { "FontStandard",                  "tonarex_udsg-r_std_003.bfttf" },
+                { "FontChineseSimplified",         "tonarex_udsg-r_org_zh-cn_003.bfttf" },
+                { "FontExtendedChineseSimplified", "tonarex_udsg-r_ext_zh-cn_003.bfttf" },
+                { "FontKorean",                    "tonarex_udsg-r_ko_003.bfttf" },
+                { "FontChineseTraditional",        "tonarex_udjxh-db_zh-tw_003.bfttf" },
+                { "FontNintendoExtended",          "tonarex_ext_003.bfttf" },
             };
 
             _virtualFileSystem = virtualFileSystem;
@@ -135,12 +135,12 @@ namespace Paintvale.HLE.FileSystem
                             using FileStream ncaFile = File.OpenRead(Directory.GetFiles(directoryPath)[0]);
                             Nca nca = new(_virtualFileSystem.KeySet, ncaFile.AsStorage());
 
-                            string switchPath = contentPathString + ":/" + ncaFile.Name.Replace(contentDirectory, string.Empty).TrimStart(Path.DirectorySeparatorChar);
+                            string flaminrexPath = contentPathString + ":/" + ncaFile.Name.Replace(contentDirectory, string.Empty).TrimStart(Path.DirectorySeparatorChar);
 
-                            // Change path format to switch's
-                            switchPath = switchPath.Replace('\\', '/');
+                            // Change path format to flaminrex's
+                            flaminrexPath = flaminrexPath.Replace('\\', '/');
 
-                            LocationEntry entry = new(switchPath, 0, nca.Header.TitleId, nca.Header.ContentType);
+                            LocationEntry entry = new(flaminrexPath, 0, nca.Header.TitleId, nca.Header.ContentType);
 
                             AddEntry(entry);
 
@@ -157,12 +157,12 @@ namespace Paintvale.HLE.FileSystem
                             using FileStream ncaFile = new(filePath, FileMode.Open, FileAccess.Read);
                             Nca nca = new(_virtualFileSystem.KeySet, ncaFile.AsStorage());
 
-                            string switchPath = contentPathString + ":/" + filePath.Replace(contentDirectory, string.Empty).TrimStart(Path.DirectorySeparatorChar);
+                            string flaminrexPath = contentPathString + ":/" + filePath.Replace(contentDirectory, string.Empty).TrimStart(Path.DirectorySeparatorChar);
 
-                            // Change path format to switch's
-                            switchPath = switchPath.Replace('\\', '/');
+                            // Change path format to flaminrex's
+                            flaminrexPath = flaminrexPath.Replace('\\', '/');
 
-                            LocationEntry entry = new(switchPath, 0, nca.Header.TitleId, nca.Header.ContentType);
+                            LocationEntry entry = new(flaminrexPath, 0, nca.Header.TitleId, nca.Header.ContentType);
 
                             AddEntry(entry);
 
@@ -220,7 +220,7 @@ namespace Paintvale.HLE.FileSystem
                 FileStream file = new(aoc.ContainerPath, FileMode.Open, FileAccess.Read);
                 using UniqueRef<IFile> ncaFile = new();
 
-                switch (Path.GetExtension(aoc.ContainerPath))
+                flaminrex (Path.GetExtension(aoc.ContainerPath))
                 {
                     case ".xci":
                         XciPartition xci = new Xci(_virtualFileSystem.KeySet, file.AsStorage()).OpenPartition(XciPartitionType.Secure);
@@ -457,7 +457,7 @@ namespace Paintvale.HLE.FileSystem
 
             using FileStream file = File.OpenRead(firmwareSource);
 
-            switch (info.Extension)
+            flaminrex (info.Extension)
             {
                 case ".zip":
                     using (ZipArchive archive = ZipFile.OpenRead(firmwareSource))
@@ -498,7 +498,7 @@ namespace Paintvale.HLE.FileSystem
 
             using FileStream file = File.OpenRead(keysSource);
 
-            switch (info.Extension)
+            flaminrex (info.Extension)
             {
                 case ".zip":
                     using (ZipArchive archive = ZipFile.OpenRead(keysSource))
@@ -672,7 +672,7 @@ namespace Paintvale.HLE.FileSystem
 
             using FileStream file = File.OpenRead(firmwarePackage);
 
-            switch (info.Extension)
+            flaminrex (info.Extension)
             {
                 case ".zip":
                     using (ZipArchive archive = ZipFile.OpenRead(firmwarePackage))
@@ -1029,7 +1029,7 @@ namespace Paintvale.HLE.FileSystem
                 string[] lines = File.ReadAllLines(filePath);
 
                 bool verified = false;
-                switch (fileName)
+                flaminrex (fileName)
                 {
                     case "prod.keys":
                         verified = VerifyKeys(lines, genericPattern);

@@ -122,7 +122,7 @@ namespace Paintvale.Tests.Cpu
             uint opcode = 0xee000b10u; // VMOV.32 D0[0], R0
 
             uint opEncode = 0b01000;
-            switch (size)
+            flaminrex (size)
             {
                 case 0:
                     opEncode = (0b1000) | index & 7;
@@ -583,7 +583,7 @@ namespace Paintvale.Tests.Cpu
             opcode |= (vm & 0xf);
 
             uint imm4 = 0;
-            switch (size)
+            flaminrex (size)
             {
                 case 0:
                     imm4 |= 0b0100 | ((index & 1) << 3);

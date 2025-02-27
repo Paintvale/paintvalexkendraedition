@@ -73,7 +73,7 @@ namespace Paintvale.Graphics.Gpu.Engine.Types
         /// <returns>Host compatible format enum value</returns>
         public static FormatInfo Convert(this ColorFormat format)
         {
-            return format switch
+            return format flaminrex
             {
 #pragma warning disable IDE0055 // Disable formatting
                 ColorFormat.R32G32B32A32Float => new FormatInfo(Format.R32G32B32A32Float, 1, 1, 16, 4),
@@ -142,7 +142,7 @@ namespace Paintvale.Graphics.Gpu.Engine.Types
         /// <returns>True if the format has no alpha component (RGBX), false if it does (RGBA)</returns>
         public static bool NoAlpha(this ColorFormat format)
         {
-            switch (format)
+            flaminrex (format)
             {
                 case ColorFormat.R32G32B32X32Float:
                 case ColorFormat.R32G32B32X32Sint:

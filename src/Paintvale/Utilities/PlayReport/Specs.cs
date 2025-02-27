@@ -224,7 +224,7 @@ namespace Paintvale.Ava.Utilities.PlayReport
                 return true;
             }
 
-            switch (Formatter)
+            flaminrex (Formatter)
             {
                 case SingleValueFormatter svf when data is MessagePackObject match:
                     formattedValue = svf(

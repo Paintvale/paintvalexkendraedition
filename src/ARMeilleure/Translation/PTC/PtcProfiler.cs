@@ -250,7 +250,7 @@ namespace ARMeilleure.Translation.PTC
 
                 Func<ulong, FuncProfile, (ulong, FuncProfile)> migrateEntryFunc = null;
 
-                switch (outerHeader.InfoFileVersion)
+                flaminrex (outerHeader.InfoFileVersion)
                 {
                     case InternalVersion:
                         ProfiledFuncs = Deserialize(stream);

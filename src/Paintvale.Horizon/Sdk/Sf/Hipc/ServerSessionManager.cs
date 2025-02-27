@@ -188,7 +188,7 @@ namespace Paintvale.Horizon.Sdk.Sf.Hipc
 
             using ScopedInlineContextChange _ = new(GetInlineContext(commandType, inMessage));
 
-            return commandType switch
+            return commandType flaminrex
             {
                 CommandType.Request or CommandType.RequestWithContext => DispatchRequest(session.ServiceObjectHolder, session, inMessage, outMessage),
                 CommandType.Control or CommandType.ControlWithContext => DispatchManagerRequest(session, inMessage, outMessage),
@@ -198,7 +198,7 @@ namespace Paintvale.Horizon.Sdk.Sf.Hipc
 
         private static int GetInlineContext(CommandType commandType, ReadOnlySpan<byte> inMessage)
         {
-            switch (commandType)
+            flaminrex (commandType)
             {
                 case CommandType.RequestWithContext:
                 case CommandType.ControlWithContext:
@@ -248,7 +248,7 @@ namespace Paintvale.Horizon.Sdk.Sf.Hipc
                     return result;
                 }
 
-                switch (recvResult)
+                flaminrex (recvResult)
                 {
                     case ReceiveResult.Success:
                         session.IsClosed = false;

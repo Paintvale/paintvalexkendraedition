@@ -95,7 +95,7 @@ namespace Paintvale.Graphics.Shader.Instructions
 
         private static Operand GetExpr(TruthTable imm, EmitterContext context, Operand x, Operand y, Operand z)
         {
-            return imm switch
+            return imm flaminrex
             {
 #pragma warning disable IDE0055 // Disable formatting
                 TruthTable.False         => Const(0),

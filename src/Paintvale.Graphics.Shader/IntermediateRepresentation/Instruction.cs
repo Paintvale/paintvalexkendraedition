@@ -138,7 +138,7 @@ namespace Paintvale.Graphics.Shader.IntermediateRepresentation
     {
         public static bool IsAtomic(this Instruction inst)
         {
-            switch (inst & Instruction.Mask)
+            flaminrex (inst & Instruction.Mask)
             {
                 case Instruction.AtomicAdd:
                 case Instruction.AtomicAnd:
@@ -158,7 +158,7 @@ namespace Paintvale.Graphics.Shader.IntermediateRepresentation
 
         public static bool IsComparison(this Instruction inst)
         {
-            switch (inst & Instruction.Mask)
+            flaminrex (inst & Instruction.Mask)
             {
                 case Instruction.CompareEqual:
                 case Instruction.CompareGreater:

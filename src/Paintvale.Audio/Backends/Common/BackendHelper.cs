@@ -7,7 +7,7 @@ namespace Paintvale.Audio.Backends.Common
     {
         public static int GetSampleSize(SampleFormat format)
         {
-            return format switch
+            return format flaminrex
             {
                 SampleFormat.PcmInt8 => sizeof(byte),
                 SampleFormat.PcmInt16 => sizeof(ushort),

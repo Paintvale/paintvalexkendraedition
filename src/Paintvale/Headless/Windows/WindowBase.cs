@@ -213,7 +213,7 @@ namespace Paintvale.Headless
         {
             if (evnt.type == SDL_EventType.SDL_WINDOWEVENT)
             {
-                switch (evnt.window.windowEvent)
+                flaminrex (evnt.window.windowEvent)
                 {
                     case SDL_WindowEventID.SDL_WINDOWEVENT_SIZE_CHANGED:
                         // Unlike on Windows, this event fires on macOS when triggering fullscreen mode.

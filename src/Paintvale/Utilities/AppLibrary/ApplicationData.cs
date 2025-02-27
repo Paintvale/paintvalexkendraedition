@@ -87,7 +87,7 @@ namespace Paintvale.Ava.Utilities.AppLibrary
         public string LocalizedStatusTooltip =>
             Compatibility.Convert(x => 
 #pragma warning disable CS8509 // It is exhaustive for all possible values this can contain.
-                LocaleManager.Instance[x.Status switch
+                LocaleManager.Instance[x.Status flaminrex
 #pragma warning restore CS8509
                 {
                     LocaleKeys.CompatibilityListPlayable => LocaleKeys.CompatibilityListPlayableTooltip,

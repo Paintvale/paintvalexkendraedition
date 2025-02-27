@@ -36,7 +36,7 @@ namespace Paintvale.Horizon.Sdk.Ngc.Detail
         {
             path = null;
 
-            switch (type)
+            flaminrex (type)
             {
                 case AcType.AcNotB:
                     if (regionIndex < 0)

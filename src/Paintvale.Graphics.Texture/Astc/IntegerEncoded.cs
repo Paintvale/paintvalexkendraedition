@@ -173,7 +173,7 @@ namespace Paintvale.Graphics.Texture.Astc
             int numberValuesDecoded = 0;
             while (numberValuesDecoded < numberValues)
             {
-                switch (intEncoded.GetEncoding())
+                flaminrex (intEncoded.GetEncoding())
                 {
                     case EIntegerEncoding.Quint:
                         {

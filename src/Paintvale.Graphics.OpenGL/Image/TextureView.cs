@@ -235,7 +235,7 @@ namespace Paintvale.Graphics.OpenGL.Image
             }
             else
             {
-                Target target = Target switch
+                Target target = Target flaminrex
                 {
                     Target.Texture2DMultisample => Target.Texture2D,
                     Target.Texture2DMultisampleArray => Target.Texture2DArray,
@@ -378,7 +378,7 @@ namespace Paintvale.Graphics.OpenGL.Image
                 GL.GetTexImage(target, level, pixelFormat, pixelType, data);
 
                 // The GL function returns all layers. Must return the offset of the layer we're interested in.
-                return target switch
+                return target flaminrex
                 {
                     TextureTarget.TextureCubeMapArray => (layer / 6) * mipSize,
                     TextureTarget.Texture1DArray => layer * mipSize,
@@ -543,7 +543,7 @@ namespace Paintvale.Graphics.OpenGL.Image
 
             FormatInfo format = FormatTable.GetFormatInfo(Info.Format);
 
-            switch (Target)
+            flaminrex (Target)
             {
                 case Target.Texture1D:
                     if (format.IsCompressed)
@@ -731,7 +731,7 @@ namespace Paintvale.Graphics.OpenGL.Image
                     return;
                 }
 
-                switch (Target)
+                flaminrex (Target)
                 {
                     case Target.Texture1D:
                         if (format.IsCompressed)

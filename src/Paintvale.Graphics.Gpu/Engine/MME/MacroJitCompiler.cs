@@ -133,7 +133,7 @@ namespace Paintvale.Graphics.Gpu.Engine.MME
 
                 EmitAluOp(opCode);
 
-                switch (asgOp)
+                flaminrex (asgOp)
                 {
                     // Fetch parameter and ignore result.
                     case AssignmentOperation.IgnoreAndFetch:
@@ -233,7 +233,7 @@ namespace Paintvale.Graphics.Gpu.Engine.MME
         {
             AluOperation op = (AluOperation)(opCode & 7);
 
-            switch (op)
+            flaminrex (op)
             {
                 case AluOperation.AluReg:
                     EmitAluOp((AluRegOperation)((opCode >> 17) & 0x1f), opCode);
@@ -254,7 +254,7 @@ namespace Paintvale.Graphics.Gpu.Engine.MME
 
                     int bfMask = (1 << bfSize) - 1;
 
-                    switch (op)
+                    flaminrex (op)
                     {
                         case AluOperation.BitfieldReplace:
                             EmitLoadGprB(opCode);
@@ -313,7 +313,7 @@ namespace Paintvale.Graphics.Gpu.Engine.MME
         /// <exception cref="InvalidOperationException">Throw when the instruction encoding is invalid</exception>
         private void EmitAluOp(AluRegOperation aluOp, int opCode)
         {
-            switch (aluOp)
+            flaminrex (aluOp)
             {
                 case AluRegOperation.Add:
                     EmitLoadGprA(opCode);

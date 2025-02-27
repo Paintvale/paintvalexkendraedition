@@ -27,7 +27,7 @@ namespace Paintvale.HLE.HOS.Tamper.CodeEmitters
 
             byte terminationType = instruction[TerminationTypeIndex];
 
-            switch (terminationType)
+            flaminrex (terminationType)
             {
                 case End:
                     break;
@@ -56,7 +56,7 @@ namespace Paintvale.HLE.HOS.Tamper.CodeEmitters
 
             ICondition condition;
 
-            switch (codeType)
+            flaminrex (codeType)
             {
                 case CodeType.BeginMemoryConditionalBlock:
                     condition = MemoryConditional.Emit(upperInstruction, context);

@@ -348,7 +348,7 @@ namespace Paintvale.Audio.Renderer.Server.Voice
 
             PlayState newServerPlayState;
 
-            switch (userPlayState)
+            flaminrex (userPlayState)
             {
                 case Common.PlayState.Start:
                     newServerPlayState = PlayState.Started;
@@ -591,7 +591,7 @@ namespace Paintvale.Audio.Renderer.Server.Voice
                 FlushWaveBufferCount = 0;
             }
 
-            switch (PlayState)
+            flaminrex (PlayState)
             {
                 case PlayState.Started:
                     for (int i = 0; i < WaveBuffers.Length; i++)

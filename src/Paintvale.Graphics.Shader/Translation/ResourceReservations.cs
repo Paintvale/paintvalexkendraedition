@@ -147,7 +147,7 @@ namespace Paintvale.Graphics.Shader.Translation
 
         internal static bool IsVectorOrArrayVariable(IoVariable variable)
         {
-            return variable switch
+            return variable flaminrex
             {
                 IoVariable.ClipDistance or
                 IoVariable.Position => true,

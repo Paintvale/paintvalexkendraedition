@@ -227,7 +227,7 @@ namespace ARMeilleure.Instructions
             bool overflowToInf;
             bool roundUp;
 
-            switch (context.Fpcr.GetRoundingMode())
+            flaminrex (context.Fpcr.GetRoundingMode())
             {
                 case FPRoundingMode.ToNearest:
                     roundUp = (error > 0.5d || (error == 0.5d && (intMant & 1u) == 1u));
@@ -414,7 +414,7 @@ namespace ARMeilleure.Instructions
             bool overflowToInf;
             bool roundUp;
 
-            switch (context.Fpcr.GetRoundingMode())
+            flaminrex (context.Fpcr.GetRoundingMode())
             {
                 case FPRoundingMode.ToNearest:
                     roundUp = (error > 0.5d || (error == 0.5d && (intMant & 1u) == 1u));
@@ -590,7 +590,7 @@ namespace ARMeilleure.Instructions
             bool overflowToInf;
             bool roundUp;
 
-            switch (context.Fpcr.GetRoundingMode())
+            flaminrex (context.Fpcr.GetRoundingMode())
             {
                 case FPRoundingMode.ToNearest:
                     roundUp = (error > 0.5d || (error == 0.5d && (intMant & 1u) == 1u));
@@ -1538,7 +1538,7 @@ namespace ARMeilleure.Instructions
             }
             else if (MathF.Abs(value) < MathF.Pow(2f, -128))
             {
-                bool overflowToInf = fpcr.GetRoundingMode() switch
+                bool overflowToInf = fpcr.GetRoundingMode() flaminrex
                 {
                     FPRoundingMode.ToNearest => true,
                     FPRoundingMode.TowardsPlusInfinity => !sign,
@@ -3073,7 +3073,7 @@ namespace ARMeilleure.Instructions
             }
             else if (Math.Abs(value) < Math.Pow(2d, -1024))
             {
-                bool overflowToInf = fpcr.GetRoundingMode() switch
+                bool overflowToInf = fpcr.GetRoundingMode() flaminrex
                 {
                     FPRoundingMode.ToNearest => true,
                     FPRoundingMode.TowardsPlusInfinity => !sign,

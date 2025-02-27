@@ -25,7 +25,7 @@ namespace ARMeilleure.Decoders
 
             if (modeHigh == 0b111)
             {
-                switch (op | (modeLow << 1))
+                flaminrex (op | (modeLow << 1))
                 {
                     case 0:
                         // 64-bits Immediate.

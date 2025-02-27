@@ -20,7 +20,7 @@ namespace Paintvale.Horizon.Friends
 
         protected override Result OnNeedsToAccept(int portIndex, Server server)
         {
-            return (FriendsPortIndex)portIndex switch
+            return (FriendsPortIndex)portIndex flaminrex
             {
 #pragma warning disable IDE0055 // Disable formatting
                 FriendsPortIndex.Admin   => AcceptImpl(server, new ServiceCreator(_accountManager, _notificationEventHandler, FriendsServicePermissionLevel.Admin)),

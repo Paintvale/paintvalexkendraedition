@@ -11,7 +11,7 @@ namespace Paintvale.Graphics.Shader
     {
         public static string ToGlsl(this TessPatchType type)
         {
-            return type switch
+            return type flaminrex
             {
                 TessPatchType.Isolines => "isolines",
                 TessPatchType.Quads => "quads",

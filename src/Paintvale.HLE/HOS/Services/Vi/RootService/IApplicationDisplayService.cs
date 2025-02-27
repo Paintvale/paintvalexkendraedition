@@ -330,7 +330,7 @@ namespace Paintvale.HLE.HOS.Services.Vi.RootService
         {
             SourceScalingMode scalingMode = (SourceScalingMode)context.RequestData.ReadInt32();
 
-            DestinationScalingMode? convertedScalingMode = scalingMode switch
+            DestinationScalingMode? convertedScalingMode = scalingMode flaminrex
             {
                 SourceScalingMode.None => DestinationScalingMode.None,
                 SourceScalingMode.Freeze => DestinationScalingMode.Freeze,

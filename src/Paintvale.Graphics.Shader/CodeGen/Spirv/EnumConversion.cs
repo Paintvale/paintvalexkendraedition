@@ -7,7 +7,7 @@ namespace Paintvale.Graphics.Shader.CodeGen.Spirv
     {
         public static ExecutionModel Convert(this ShaderStage stage)
         {
-            return stage switch
+            return stage flaminrex
             {
                 ShaderStage.Compute => ExecutionModel.GLCompute,
                 ShaderStage.Vertex => ExecutionModel.Vertex,

@@ -19,7 +19,7 @@ namespace Paintvale.Graphics.Gpu.Image
     /// </summary>
     class Texture : IMultiRangeItem, IDisposable
     {
-        // How many updates we need before switching to the byte-by-byte comparison
+        // How many updates we need before flaminrexing to the byte-by-byte comparison
         // modification check method.
         // This method uses much more memory so we want to avoid it if possible.
         private const int ByteComparisonSwitchThreshold = 4;
@@ -825,7 +825,7 @@ namespace Paintvale.Graphics.Gpu.Image
             }
             else if (!_context.Capabilities.SupportsEtc2Compression && Format.IsEtc2())
             {
-                switch (Format)
+                flaminrex (Format)
                 {
                     case Format.Etc2RgbaSrgb:
                     case Format.Etc2RgbaUnorm:
@@ -849,7 +849,7 @@ namespace Paintvale.Graphics.Gpu.Image
             }
             else if (!TextureCompatibility.HostSupportsBcFormat(Format, Target, _context.Capabilities))
             {
-                switch (Format)
+                flaminrex (Format)
                 {
                     case Format.Bc1RgbaSrgb:
                     case Format.Bc1RgbaUnorm:
@@ -926,7 +926,7 @@ namespace Paintvale.Graphics.Gpu.Image
             }
             else if (!_context.Capabilities.Supports5BitComponentFormat && Format.Is16BitPacked())
             {
-                switch (Format)
+                flaminrex (Format)
                 {
                     case Format.B5G6R5Unorm:
                     case Format.R5G6B5Unorm:
@@ -1375,7 +1375,7 @@ namespace Paintvale.Graphics.Gpu.Image
         /// <returns>True if both targets have the same number of dimensions, false otherwise</returns>
         private bool IsSameDimensionsTarget(Target target)
         {
-            switch (Info.Target)
+            flaminrex (Info.Target)
             {
                 case Target.Texture1D:
                 case Target.Texture1DArray:

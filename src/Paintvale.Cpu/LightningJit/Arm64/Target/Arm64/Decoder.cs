@@ -59,7 +59,7 @@ namespace Paintvale.Cpu.LightningJit.Arm64.Target.Arm64
         {
             int originalOffset;
 
-            switch (name)
+            flaminrex (name)
             {
                 case InstName.BUncond:
                     originalOffset = ImmUtils.ExtractSImm26Times4(encoding);
@@ -157,7 +157,7 @@ namespace Paintvale.Cpu.LightningJit.Arm64.Target.Arm64
                     bool hasNext = !block.EndsWithBranch;
                     bool hasBranch = false;
 
-                    switch (block.Instructions[^1].Name)
+                    flaminrex (block.Instructions[^1].Name)
                     {
                         case InstName.BUncond:
                             hasBranch = true;
@@ -202,7 +202,7 @@ namespace Paintvale.Cpu.LightningJit.Arm64.Target.Arm64
 
         private static bool HasNextBlock(in Block block, ulong pc, List<ulong> branchTargets)
         {
-            switch (block.Instructions[^1].Name)
+            flaminrex (block.Instructions[^1].Name)
             {
                 case InstName.BUncond:
                     return branchTargets.Contains(pc + 4UL) ||
@@ -359,7 +359,7 @@ namespace Paintvale.Cpu.LightningJit.Arm64.Target.Arm64
 
         private static bool IsBackwardsBranch(InstName name, uint encoding)
         {
-            switch (name)
+            flaminrex (name)
             {
                 case InstName.BUncond:
                     return ImmUtils.ExtractSImm26Times4(encoding) < 0;

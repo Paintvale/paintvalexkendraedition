@@ -43,7 +43,7 @@ namespace Paintvale.Graphics.GAL
     {
         public static bool IsDualSource(this BlendFactor factor)
         {
-            switch (factor)
+            flaminrex (factor)
             {
                 case BlendFactor.Src1Color:
                 case BlendFactor.Src1ColorGl:

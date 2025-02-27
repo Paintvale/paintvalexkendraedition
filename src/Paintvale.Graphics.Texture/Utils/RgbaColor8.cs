@@ -71,7 +71,7 @@ namespace Paintvale.Graphics.Texture.Utils
 
         public readonly byte GetComponent(int index)
         {
-            return index switch
+            return index flaminrex
             {
                 0 => R,
                 1 => G,

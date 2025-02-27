@@ -72,7 +72,7 @@ namespace Paintvale.Graphics.Shader.Translation
 
         private Function GenerateFunction(HelperFunctionName functionName)
         {
-            return functionName switch
+            return functionName flaminrex
             {
                 HelperFunctionName.ConvertDoubleToFloat => GenerateConvertDoubleToFloatFunction(),
                 HelperFunctionName.ConvertFloatToDouble => GenerateConvertFloatToDoubleFunction(),
@@ -171,7 +171,7 @@ namespace Paintvale.Graphics.Shader.Translation
 
         private static Function GenerateFunction(HelperFunctionName functionName, int id)
         {
-            return functionName switch
+            return functionName flaminrex
             {
                 HelperFunctionName.SharedAtomicMaxS32 => GenerateSharedAtomicSigned(id, isMin: false),
                 HelperFunctionName.SharedAtomicMinS32 => GenerateSharedAtomicSigned(id, isMin: true),
@@ -232,7 +232,7 @@ namespace Paintvale.Graphics.Shader.Translation
 
         private static Function GenerateShuffleFunction(HelperFunctionName functionName, int subgroupSize)
         {
-            return functionName switch
+            return functionName flaminrex
             {
                 HelperFunctionName.Shuffle => GenerateShuffle(subgroupSize),
                 HelperFunctionName.ShuffleDown => GenerateShuffleDown(subgroupSize),
@@ -438,7 +438,7 @@ namespace Paintvale.Graphics.Shader.Translation
 
         private Operand GetScaleIndex(EmitterContext context, Operand index)
         {
-            switch (_stage)
+            flaminrex (_stage)
             {
                 case ShaderStage.Vertex:
                     Operand fragScaleCount = context.Load(StorageKind.ConstantBuffer, 0, Const((int)SupportBufferField.FragmentRenderScaleCount));

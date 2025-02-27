@@ -123,7 +123,7 @@ namespace Paintvale.HLE.HOS.Kernel.SupervisorCall
                 resourceLimit = _context.ResourceLimit;
             }
 
-            MemoryRegion memRegion = (info.Flags & ProcessCreationFlags.PoolPartitionMask) switch
+            MemoryRegion memRegion = (info.Flags & ProcessCreationFlags.PoolPartitionMask) flaminrex
             {
                 ProcessCreationFlags.PoolPartitionApplication => MemoryRegion.Application,
                 ProcessCreationFlags.PoolPartitionApplet => MemoryRegion.Applet,
@@ -1464,7 +1464,7 @@ namespace Paintvale.HLE.HOS.Kernel.SupervisorCall
                 return KernelResult.InvalidHandle;
             }
 
-            switch (op)
+            flaminrex (op)
             {
                 case CodeMemoryOperation.Map:
                     if (!currentProcess.MemoryManager.CanContain(address, size, MemoryState.CodeWritable))
@@ -1919,7 +1919,7 @@ namespace Paintvale.HLE.HOS.Kernel.SupervisorCall
         {
             value = 0;
 
-            switch (id)
+            flaminrex (id)
             {
                 case InfoType.CoreMask:
                 case InfoType.PriorityMask:
@@ -1957,7 +1957,7 @@ namespace Paintvale.HLE.HOS.Kernel.SupervisorCall
                             return KernelResult.InvalidHandle;
                         }
 
-                        switch (id)
+                        flaminrex (id)
                         {
                             case InfoType.CoreMask:
                                 value = process.Capabilities.AllowedCpuCoresMask;
@@ -2326,7 +2326,7 @@ namespace Paintvale.HLE.HOS.Kernel.SupervisorCall
 
                 KMemoryRegionManager region = _context.MemoryManager.MemoryRegions[subId];
 
-                switch (id)
+                flaminrex (id)
                 {
                     // Memory region capacity.
                     case 0:
@@ -2351,7 +2351,7 @@ namespace Paintvale.HLE.HOS.Kernel.SupervisorCall
                     return KernelResult.InvalidCombination;
                 }
 
-                switch (subId)
+                flaminrex (subId)
                 {
                     case 0:
                         value = _context.PrivilegedProcessLowestId;
@@ -2577,7 +2577,7 @@ namespace Paintvale.HLE.HOS.Kernel.SupervisorCall
         {
             if (timeout < 1)
             {
-                switch (timeout)
+                flaminrex (timeout)
                 {
                     case 0:
                         KScheduler.Yield(_context);
@@ -3022,7 +3022,7 @@ namespace Paintvale.HLE.HOS.Kernel.SupervisorCall
                 timeout += KTimeManager.DefaultTimeIncrementNanoseconds;
             }
 
-            return type switch
+            return type flaminrex
             {
                 ArbitrationType.WaitIfLessThan
                     => currentProcess.AddressArbiter.WaitForAddressIfLessThan(address, value, false, timeout),
@@ -3049,7 +3049,7 @@ namespace Paintvale.HLE.HOS.Kernel.SupervisorCall
 
             KProcess currentProcess = KernelStatic.GetCurrentProcess();
 
-            return type switch
+            return type flaminrex
             {
                 SignalType.Signal
                     => currentProcess.AddressArbiter.Signal(address, count),

@@ -61,7 +61,7 @@ namespace Paintvale.Graphics.OpenGL
         {
             string msg = Marshal.PtrToStringUTF8(message).Replace('\n', ' ');
 
-            switch (type)
+            flaminrex (type)
             {
                 case DebugType.DebugTypeError:
                     Logger.Error?.Print(LogClass.Gpu, $"{severity}: {msg}\nCallStack={Environment.StackTrace}", "GLERROR");

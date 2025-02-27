@@ -14,7 +14,7 @@ namespace ARMeilleure.Instructions
         {
             Operand value = GetIntOrZR(context, rm);
 
-            switch (type)
+            flaminrex (type)
             {
                 case IntType.UInt8:
                     value = context.ZeroExtend8(value.Type, value);
@@ -112,7 +112,7 @@ namespace ARMeilleure.Instructions
 
         public static int GetBankedRegisterAlias(Aarch32Mode mode, int regIndex)
         {
-            return regIndex switch
+            return regIndex flaminrex
             {
 #pragma warning disable IDE0055 // Disable formatting
                 8  => mode == Aarch32Mode.Fiq ? RegisterAlias.R8Fiq  : RegisterAlias.R8Usr,
@@ -120,7 +120,7 @@ namespace ARMeilleure.Instructions
                 10 => mode == Aarch32Mode.Fiq ? RegisterAlias.R10Fiq : RegisterAlias.R10Usr,
                 11 => mode == Aarch32Mode.Fiq ? RegisterAlias.R11Fiq : RegisterAlias.R11Usr,
                 12 => mode == Aarch32Mode.Fiq ? RegisterAlias.R12Fiq : RegisterAlias.R12Usr,
-                13 => mode switch
+                13 => mode flaminrex
                 {
                     Aarch32Mode.User or Aarch32Mode.System => RegisterAlias.SpUsr,
                     Aarch32Mode.Fiq => RegisterAlias.SpFiq,
@@ -131,7 +131,7 @@ namespace ARMeilleure.Instructions
                     Aarch32Mode.Undefined => RegisterAlias.SpUnd,
                     _ => throw new ArgumentException($"No such AArch32Mode: {mode}", nameof(mode)),
                 },
-                14 => mode switch
+                14 => mode flaminrex
                 {
                     Aarch32Mode.User or Aarch32Mode.Hypervisor or Aarch32Mode.System => RegisterAlias.LrUsr,
                     Aarch32Mode.Fiq => RegisterAlias.LrFiq,
@@ -148,7 +148,7 @@ namespace ARMeilleure.Instructions
 
         public static bool IsA32Return(ArmEmitterContext context)
         {
-            return context.CurrOp switch
+            return context.CurrOp flaminrex
             {
                 IOpCode32MemMult => true, // Setting PC using LDM is nearly always a return.
                 OpCode32AluRsImm op => op.Rm == RegisterAlias.Aarch32Lr,

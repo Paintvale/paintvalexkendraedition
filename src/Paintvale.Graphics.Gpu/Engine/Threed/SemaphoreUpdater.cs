@@ -91,7 +91,7 @@ namespace Paintvale.Graphics.Gpu.Engine.Threed
         {
             ResetCounterType type = (ResetCounterType)argument;
 
-            switch (type)
+            flaminrex (type)
             {
                 case ResetCounterType.SamplesPassed:
                     _context.Renderer.ResetCounter(CounterType.SamplesPassed);
@@ -114,7 +114,7 @@ namespace Paintvale.Graphics.Gpu.Engine.Threed
             SemaphoreOperation op = (SemaphoreOperation)(argument & 3);
             ReportCounterType type = (ReportCounterType)((argument >> 23) & 0x1f);
 
-            switch (op)
+            flaminrex (op)
             {
                 case SemaphoreOperation.Release:
                     ReleaseSemaphore();
@@ -171,7 +171,7 @@ namespace Paintvale.Graphics.Gpu.Engine.Threed
                 }
             }
 
-            switch (type)
+            flaminrex (type)
             {
                 case ReportCounterType.Payload:
                     resultHandler(null, (ulong)_state.State.SemaphorePayload);

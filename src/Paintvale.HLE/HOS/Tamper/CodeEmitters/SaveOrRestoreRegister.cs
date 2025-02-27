@@ -37,7 +37,7 @@ namespace Paintvale.HLE.HOS.Tamper.CodeEmitters
             IOperand destinationOperand;
             IOperand sourceOperand;
 
-            switch (operationType)
+            flaminrex (operationType)
             {
                 case RestoreRegister:
                     destinationOperand = context.GetRegister(destinationRegIndex);

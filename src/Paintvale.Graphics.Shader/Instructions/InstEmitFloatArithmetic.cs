@@ -449,7 +449,7 @@ namespace Paintvale.Graphics.Shader.Instructions
 
             if (scale != MultiplyScale.NoScale)
             {
-                Operand scaleConst = scale switch
+                Operand scaleConst = scale flaminrex
                 {
                     MultiplyScale.D2 => ConstF(0.5f),
                     MultiplyScale.D4 => ConstF(0.25f),

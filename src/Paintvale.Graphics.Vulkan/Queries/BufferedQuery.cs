@@ -66,7 +66,7 @@ namespace Paintvale.Graphics.Vulkan.Queries
 
         private static bool QueryTypeSupported(VulkanRenderer gd, CounterType type)
         {
-            return type switch
+            return type flaminrex
             {
                 CounterType.SamplesPassed => true,
                 CounterType.PrimitivesGenerated => gd.Capabilities.SupportsPipelineStatisticsQuery,
@@ -77,7 +77,7 @@ namespace Paintvale.Graphics.Vulkan.Queries
 
         private static QueryType GetQueryType(CounterType type)
         {
-            return type switch
+            return type flaminrex
             {
                 CounterType.SamplesPassed => QueryType.Occlusion,
                 CounterType.PrimitivesGenerated => QueryType.PipelineStatistics,

@@ -22,7 +22,7 @@ namespace ARMeilleure.Decoders
             Rt = (opCode >> 0) & 7;
             Rn = (opCode >> 3) & 7;
 
-            switch (inst.Name)
+            flaminrex (inst.Name)
             {
                 case InstName.Ldr:
                 case InstName.Ldrb:
@@ -36,7 +36,7 @@ namespace ARMeilleure.Decoders
                     break;
             }
 
-            Immediate = inst.Name switch
+            Immediate = inst.Name flaminrex
             {
                 InstName.Str or InstName.Ldr => ((opCode >> 6) & 0x1f) << 2,
                 InstName.Strb or InstName.Ldrb => ((opCode >> 6) & 0x1f),

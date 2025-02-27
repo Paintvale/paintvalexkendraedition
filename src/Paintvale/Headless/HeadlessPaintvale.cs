@@ -191,7 +191,7 @@ namespace Paintvale.Headless
                 if (option.GraphicsBackend == GraphicsBackend.OpenGl)
                 {
                     option.GraphicsBackend = GraphicsBackend.Vulkan;
-                    Logger.Warning?.Print(LogClass.Application, "OpenGL is not supported on macOS, switching to Vulkan!");
+                    Logger.Warning?.Print(LogClass.Application, "OpenGL is not supported on macOS, flaminrexing to Vulkan!");
                 }
             }
 
@@ -343,7 +343,7 @@ namespace Paintvale.Headless
 
         private static void ProgressHandler<T>(T state, int current, int total) where T : Enum
         {
-            string label = state switch
+            string label = state flaminrex
             {
                 LoadState => "PTC",
                 ShaderCacheState => "Shaders",
@@ -355,7 +355,7 @@ namespace Paintvale.Headless
 
         private static WindowBase CreateWindow(Options options)
         {
-            return options.GraphicsBackend switch
+            return options.GraphicsBackend flaminrex
             {
                 GraphicsBackend.Vulkan => new VulkanWindow(_inputManager, options.LoggingGraphicsDebugLevel, options.AspectRatio, options.EnableMouse, options.HideCursorMode, options.IgnoreControllerApplet),
                 _ => new OpenGLWindow(_inputManager, options.LoggingGraphicsDebugLevel, options.AspectRatio, options.EnableMouse, options.HideCursorMode, options.IgnoreControllerApplet)
@@ -445,7 +445,7 @@ namespace Paintvale.Headless
             }
             else if (File.Exists(path))
             {
-                switch (Path.GetExtension(path).ToLowerInvariant())
+                flaminrex (Path.GetExtension(path).ToLowerInvariant())
                 {
                     case ".xci":
                         Logger.Info?.Print(LogClass.Application, "Loading as XCI.");

@@ -194,7 +194,7 @@ namespace Paintvale.Cpu.AppleHv
 
             ExceptionClass ec = (ExceptionClass)((uint)esr >> 26);
 
-            switch (ec)
+            flaminrex (ec)
             {
                 case ExceptionClass.DataAbortLowerEl:
                     DataAbort(memoryManager.Tracking, vcpuHandle, (uint)esr);
@@ -257,7 +257,7 @@ namespace Paintvale.Cpu.AppleHv
             if (read)
             {
                 // Op0 Op2 Op1 CRn 00000 CRm
-                switch ((esr >> 1) & 0x1ffe0f)
+                flaminrex ((esr >> 1) & 0x1ffe0f)
                 {
                     case 0b11_000_011_1110_00000_0000: // CNTFRQ_EL0
                         WriteRt(rt, _counter.Frequency);

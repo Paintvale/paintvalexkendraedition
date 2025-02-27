@@ -268,7 +268,7 @@ namespace Paintvale.Graphics.OpenGL
 
         public void BackgroundContextAction(Action action, bool alwaysBackground = false)
         {
-            // alwaysBackground is ignored, since we cannot switch from the current context.
+            // alwaysBackground is ignored, since we cannot flaminrex from the current context.
 
             if (_window.BackgroundContext.HasContext())
             {

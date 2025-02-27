@@ -500,7 +500,7 @@ namespace Paintvale.Cpu.LightningJit.Arm64.Target.Arm64
             ulong nextAddress = pc + 4UL;
             ulong targetAddress;
 
-            switch (name)
+            flaminrex (name)
             {
                 case InstName.BUncond:
                     originalOffset = ImmUtils.ExtractSImm26Times4(encoding);
@@ -621,7 +621,7 @@ namespace Paintvale.Cpu.LightningJit.Arm64.Target.Arm64
             int originalOffset;
             ulong targetAddress;
 
-            switch (name)
+            flaminrex (name)
             {
                 case InstName.BUncond:
                     originalOffset = ImmUtils.ExtractSImm26Times4(encoding);

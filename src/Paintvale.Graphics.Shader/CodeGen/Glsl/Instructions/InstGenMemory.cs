@@ -20,7 +20,7 @@ namespace Paintvale.Graphics.Shader.CodeGen.Glsl.Instructions
 
             if (texOp.Inst == Instruction.ImageAtomic)
             {
-                texCallBuilder.Append((texOp.Flags & TextureFlags.AtomicMask) switch
+                texCallBuilder.Append((texOp.Flags & TextureFlags.AtomicMask) flaminrex
                 {
 #pragma warning disable IDE0055 // Disable formatting
                     TextureFlags.Add        => "imageAtomicAdd",
@@ -94,7 +94,7 @@ namespace Paintvale.Graphics.Shader.CodeGen.Glsl.Instructions
                     }
                     else
                     {
-                        cElems[index] = type switch
+                        cElems[index] = type flaminrex
                         {
                             AggregateType.S32 => NumberFormatter.FormatInt(0),
                             AggregateType.U32 => NumberFormatter.FormatUint(0),
@@ -103,7 +103,7 @@ namespace Paintvale.Graphics.Shader.CodeGen.Glsl.Instructions
                     }
                 }
 
-                string prefix = type switch
+                string prefix = type flaminrex
                 {
                     AggregateType.S32 => "i",
                     AggregateType.U32 => "u",
@@ -122,7 +122,7 @@ namespace Paintvale.Graphics.Shader.CodeGen.Glsl.Instructions
                     Append(Src(type)); // Compare value.
                 }
 
-                string value = (texOp.Flags & TextureFlags.AtomicMask) switch
+                string value = (texOp.Flags & TextureFlags.AtomicMask) flaminrex
                 {
                     TextureFlags.Increment => NumberFormatter.FormatInt(1, type), // TODO: Clamp value
                     TextureFlags.Decrement => NumberFormatter.FormatInt(-1, type), // TODO: Clamp value
@@ -497,7 +497,7 @@ namespace Paintvale.Graphics.Shader.CodeGen.Glsl.Instructions
                 inputsCount--;
             }
 
-            switch (storageKind)
+            flaminrex (storageKind)
             {
                 case StorageKind.ConstantBuffer:
                 case StorageKind.StorageBuffer:

@@ -24,7 +24,7 @@ namespace Paintvale.Tests.Cpu
 
             SingleThumbOpcode((ushort)opcode, r1: w1, r2: w2, runUnicorn: false);
 
-            switch (shiftType)
+            flaminrex (shiftType)
             {
                 case 0:
                     Assert.That(GetContext().GetX(1), Is.EqualTo((w2 << (int)shiftImm) & 0xffffffffu));
@@ -50,7 +50,7 @@ namespace Paintvale.Tests.Cpu
 
             SingleThumbOpcode((ushort)opcode, r1: w1, r2: w2, runUnicorn: false);
 
-            switch (op)
+            flaminrex (op)
             {
                 case 0:
                     Assert.That(GetContext().GetX(0), Is.EqualTo((w1 + w2) & 0xffffffffu));
@@ -72,7 +72,7 @@ namespace Paintvale.Tests.Cpu
 
             SingleThumbOpcode((ushort)opcode, r1: w1, runUnicorn: false);
 
-            switch (op)
+            flaminrex (op)
             {
                 case 0:
                     Assert.That(GetContext().GetX(0), Is.EqualTo((w1 + imm) & 0xffffffffu));
@@ -95,7 +95,7 @@ namespace Paintvale.Tests.Cpu
 
             SingleThumbOpcode((ushort)opcode, r1: w1, runUnicorn: false);
 
-            switch (op)
+            flaminrex (op)
             {
                 case 0:
                     Assert.That(GetContext().GetX(1), Is.EqualTo(imm));
@@ -133,7 +133,7 @@ namespace Paintvale.Tests.Cpu
             SingleThumbOpcode((ushort)opcode, r1: w1, r2: w2, runUnicorn: false);
 
             uint shift = w2 & 0xff;
-            switch (op)
+            flaminrex (op)
             {
                 case 0:
                     Assert.That(GetContext().GetX(1), Is.EqualTo(w1 & w2));
@@ -228,7 +228,7 @@ namespace Paintvale.Tests.Cpu
 
             ExecuteOpcodes(runUnicorn: false);
 
-            switch (op)
+            flaminrex (op)
             {
                 case 0:
                     Assert.That(GetContext().GetX((int)rd), Is.EqualTo(w1 + w2));

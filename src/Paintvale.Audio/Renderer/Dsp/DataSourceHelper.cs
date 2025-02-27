@@ -34,7 +34,7 @@ namespace Paintvale.Audio.Renderer.Dsp
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static int GetPitchLimitBySrcQuality(SampleRateConversionQuality quality)
         {
-            return quality switch
+            return quality flaminrex
             {
                 SampleRateConversionQuality.Default or SampleRateConversionQuality.Low => 4,
                 SampleRateConversionQuality.High => 8,
@@ -127,7 +127,7 @@ namespace Paintvale.Audio.Renderer.Dsp
 
                         int targetWaveBufferSampleCount = targetSampleEndOffset - targetSampleStartOffset;
 
-                        switch (info.SampleFormat)
+                        flaminrex (info.SampleFormat)
                         {
                             case SampleFormat.Adpcm:
                                 ReadOnlySpan<byte> waveBufferAdpcm = ReadOnlySpan<byte>.Empty;

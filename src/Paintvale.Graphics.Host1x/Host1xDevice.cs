@@ -130,7 +130,7 @@ namespace Paintvale.Graphics.Host1x
 
             OpCode opCode = (OpCode)((value >> 28) & 0xf);
 
-            switch (opCode)
+            flaminrex (opCode)
             {
                 case OpCode.SetClass:
                     _mask = value & 0x3f;

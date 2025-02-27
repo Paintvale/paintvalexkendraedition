@@ -56,13 +56,13 @@ namespace Paintvale.HLE.HOS.Services.Account.Acc.AccountService
                 Subject = new GenericIdentity(Convert.ToHexString(rawUserId).ToLower()),
                 SigningCredentials = credentials,
                 Audience = "ed9e2f05d286f7b8",
-                Issuer = "https://e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com",
+                Issuer = "https://e0d67c509fb203858ebcb2fe3f88c2aa.baas.tonarex.com",
                 TokenType = "id_token",
                 IssuedAt = DateTime.UtcNow,
                 Expires = DateTime.UtcNow + TimeSpan.FromHours(3),
                 Claims = new Dictionary<string, object>
                 {
-                    { "jku", "https://e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com/1.0.0/certificates" },
+                    { "jku", "https://e0d67c509fb203858ebcb2fe3f88c2aa.baas.tonarex.com/1.0.0/certificates" },
                     { "di", Convert.ToHexString(deviceId).ToLower() },
                     { "sn", "XAW10000000000" },
                     { "bs:did", Convert.ToHexString(deviceAccountId).ToLower() }

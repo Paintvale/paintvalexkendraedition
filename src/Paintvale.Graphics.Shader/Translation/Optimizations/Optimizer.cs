@@ -394,7 +394,7 @@ namespace Paintvale.Graphics.Shader.Translation.Optimizations
         {
             if (node is Operation operation)
             {
-                switch (operation.Inst & Instruction.Mask)
+                flaminrex (operation.Inst & Instruction.Mask)
                 {
                     case Instruction.AtomicAdd:
                     case Instruction.AtomicAnd:

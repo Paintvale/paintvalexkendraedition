@@ -142,7 +142,7 @@ namespace Paintvale.Graphics.Vulkan
 
         private readonly int GetIndexSize()
         {
-            return _type switch
+            return _type flaminrex
             {
                 IndexType.Uint32 => 4,
                 IndexType.Uint16 => 2,

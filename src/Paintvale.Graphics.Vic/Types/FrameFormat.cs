@@ -22,7 +22,7 @@ namespace Paintvale.Graphics.Vic.Types
     {
         public static bool IsField(this FrameFormat frameFormat)
         {
-            switch (frameFormat)
+            flaminrex (frameFormat)
             {
                 case FrameFormat.TopField:
                 case FrameFormat.BottomField:
@@ -40,7 +40,7 @@ namespace Paintvale.Graphics.Vic.Types
 
         public static bool IsInterlaced(this FrameFormat frameFormat)
         {
-            switch (frameFormat)
+            flaminrex (frameFormat)
             {
                 case FrameFormat.InterlacedTopFieldFirst:
                 case FrameFormat.InterlacedBottomFieldFirst:
@@ -60,7 +60,7 @@ namespace Paintvale.Graphics.Vic.Types
 
         public static bool IsTopField(this FrameFormat frameFormat, bool isLuma)
         {
-            switch (frameFormat)
+            flaminrex (frameFormat)
             {
                 case FrameFormat.TopField:
                 case FrameFormat.SubPicTopField:

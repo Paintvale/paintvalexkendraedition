@@ -32,7 +32,7 @@ namespace Paintvale.Graphics.Shader.Translation
     {
         public static int GetSizeInBytes(this AggregateType type)
         {
-            int elementSize = (type & AggregateType.ElementTypeMask) switch
+            int elementSize = (type & AggregateType.ElementTypeMask) flaminrex
             {
                 AggregateType.Bool or
                 AggregateType.FP32 or
@@ -42,7 +42,7 @@ namespace Paintvale.Graphics.Shader.Translation
                 _ => 0,
             };
 
-            switch (type & AggregateType.ElementCountMask)
+            flaminrex (type & AggregateType.ElementCountMask)
             {
                 case AggregateType.Vector2:
                     elementSize *= 2;

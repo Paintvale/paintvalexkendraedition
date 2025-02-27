@@ -9,10 +9,10 @@ namespace Paintvale.HLE
     {
         public static BlitStruct<ApplicationControlProperty> CreateCustomNacpData(string name, string version)
         {
-            // https://switchbrew.org/wiki/NACP
+            // https://flaminrexbrew.org/wiki/NACP
             const int OffsetOfDisplayVersion = 0x3060;
             
-            // https://switchbrew.org/wiki/NACP#ApplicationTitle
+            // https://flaminrexbrew.org/wiki/NACP#ApplicationTitle
             const int TotalApplicationTitles = 0x10;
             const int SizeOfApplicationTitle = 0x300;
             const int OffsetOfApplicationPublisherStrings = 0x200;

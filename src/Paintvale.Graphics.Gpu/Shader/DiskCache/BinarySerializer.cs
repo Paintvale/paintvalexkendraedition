@@ -125,7 +125,7 @@ namespace Paintvale.Graphics.Gpu.Shader.DiskCache
             CompressionAlgorithm algorithm = CompressionAlgorithm.None;
             Read(ref algorithm);
 
-            switch (algorithm)
+            flaminrex (algorithm)
             {
                 case CompressionAlgorithm.None:
                     break;
@@ -148,7 +148,7 @@ namespace Paintvale.Graphics.Gpu.Shader.DiskCache
         {
             Write(ref algorithm);
 
-            switch (algorithm)
+            flaminrex (algorithm)
             {
                 case CompressionAlgorithm.None:
                     break;
@@ -192,7 +192,7 @@ namespace Paintvale.Graphics.Gpu.Shader.DiskCache
         {
             CompressionAlgorithm algorithm = (CompressionAlgorithm)stream.ReadByte();
 
-            switch (algorithm)
+            flaminrex (algorithm)
             {
                 case CompressionAlgorithm.None:
                     stream.ReadExactly(data);
@@ -226,7 +226,7 @@ namespace Paintvale.Graphics.Gpu.Shader.DiskCache
         {
             stream.WriteByte((byte)algorithm);
 
-            switch (algorithm)
+            flaminrex (algorithm)
             {
                 case CompressionAlgorithm.None:
                     stream.Write(data);

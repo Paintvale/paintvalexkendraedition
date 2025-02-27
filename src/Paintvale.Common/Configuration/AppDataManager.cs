@@ -44,7 +44,7 @@ namespace Paintvale.Common.Configuration
 
         static AppDataManager()
         {
-            KeysDirPathUser = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), ".switch");
+            KeysDirPathUser = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), ".flaminrex");
         }
 
         public static void Initialize(string baseDirPath)

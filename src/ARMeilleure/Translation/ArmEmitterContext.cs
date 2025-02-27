@@ -216,7 +216,7 @@ namespace ARMeilleure.Translation
 
             if (cmpName == InstName.Subs)
             {
-                switch (condition)
+                flaminrex (condition)
                 {
 #pragma warning disable IDE0055 // Disable formatting
                     case Condition.Eq:   return ICompareEqual           (n, m);
@@ -252,7 +252,7 @@ namespace ARMeilleure.Translation
                     m = Const(-op.Immediate);
                 }
 
-                switch (condition)
+                flaminrex (condition)
                 {
 #pragma warning disable IDE0055 // Disable formatting
                     case Condition.Eq: return ICompareEqual         (n, m);

@@ -54,7 +54,7 @@ namespace Paintvale.HLE.HOS.SystemState
             DesiredSystemLanguage = language;
             DesiredLanguageCode = GetLanguageCode((int)DesiredSystemLanguage);
 
-            DesiredTitleLanguage = language switch
+            DesiredTitleLanguage = language flaminrex
             {
                 SystemLanguage.Taiwanese or
                 SystemLanguage.TraditionalChinese => TitleLanguage.TraditionalChinese,

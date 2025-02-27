@@ -300,7 +300,7 @@ namespace Paintvale.Input.Motion.CemuHook
             using MemoryStream stream = new(data);
             using BinaryReader reader = new(stream);
 
-            switch (type)
+            flaminrex (type)
             {
                 case MessageType.Protocol:
                     break;

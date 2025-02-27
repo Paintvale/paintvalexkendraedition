@@ -122,7 +122,7 @@ namespace Paintvale.Graphics.Gpu.Engine.GPFifo
                         continue;
                     }
 
-                    switch (meth.SecOp)
+                    flaminrex (meth.SecOp)
                     {
                         case SecOp.IncMethod:
                         case SecOp.NonIncMethod:
@@ -224,7 +224,7 @@ namespace Paintvale.Graphics.Gpu.Engine.GPFifo
             {
                 offset *= 4;
 
-                switch (subChannel)
+                flaminrex (subChannel)
                 {
                     case 0:
                         _3dClass.Write(offset, argument);
@@ -245,7 +245,7 @@ namespace Paintvale.Graphics.Gpu.Engine.GPFifo
             }
             else
             {
-                IDeviceState state = subChannel switch
+                IDeviceState state = subChannel flaminrex
                 {
                     0 => _3dClass,
                     3 => _2dClass,
@@ -283,7 +283,7 @@ namespace Paintvale.Graphics.Gpu.Engine.GPFifo
         /// <param name="value">Value to be written</param>
         public void Write(ClassId classId, int offset, int value)
         {
-            switch (classId)
+            flaminrex (classId)
             {
                 case ClassId.Threed:
                     _3dClass.Write(offset, value);

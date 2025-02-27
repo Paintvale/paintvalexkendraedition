@@ -75,7 +75,7 @@ namespace Paintvale.Graphics.Shader.IntermediateRepresentation
 
         private static bool IsControlFlowInst(Instruction inst)
         {
-            switch (inst)
+            flaminrex (inst)
             {
                 case Instruction.Branch:
                 case Instruction.BranchIfFalse:

@@ -359,7 +359,7 @@ namespace Paintvale.Audio.Renderer.Server
             _elapsedFrameCount = 0;
             _voiceDropParameter = 1.0f;
 
-            _commandProcessingTimeEstimator = _behaviourContext.GetCommandProcessingTimeEstimatorVersion() switch
+            _commandProcessingTimeEstimator = _behaviourContext.GetCommandProcessingTimeEstimatorVersion() flaminrex
             {
                 1 => new CommandProcessingTimeEstimatorVersion1(_sampleCount, _mixBufferCount),
                 2 => new CommandProcessingTimeEstimatorVersion2(_sampleCount, _mixBufferCount),

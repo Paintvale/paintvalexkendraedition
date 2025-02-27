@@ -19,7 +19,7 @@ namespace Paintvale.Horizon.Sm
 
         protected override Result OnNeedsToAccept(int portIndex, Server server)
         {
-            return (SmPortIndex)portIndex switch
+            return (SmPortIndex)portIndex flaminrex
             {
                 SmPortIndex.User => AcceptImpl(server, new UserService(_serviceManager)),
                 SmPortIndex.Manager => AcceptImpl(server, new ManagerService()),

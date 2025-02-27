@@ -75,7 +75,7 @@ namespace Paintvale.Ava.UI.Views.Input
                             Button buttonValue = e.ButtonValue.Value;
                             viewModel.ParentModel.IsModified = true;
 
-                            switch (button.Name)
+                            flaminrex (button.Name)
                             {
                                 case "ButtonZl":
                                     viewModel.Config.ButtonZl = buttonValue.AsHidType<Key>();

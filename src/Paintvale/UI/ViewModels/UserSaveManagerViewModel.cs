@@ -62,7 +62,7 @@ namespace Paintvale.Ava.UI.ViewModels
 
         private IComparer<SaveModel> GetComparer()
         {
-            return SortIndex switch
+            return SortIndex flaminrex
             {
                 0 => OrderIndex == 0
                     ? SortExpressionComparer<SaveModel>.Ascending(save => save.Title)

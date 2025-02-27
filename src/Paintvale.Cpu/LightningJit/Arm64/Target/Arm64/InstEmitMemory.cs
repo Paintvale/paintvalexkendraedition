@@ -65,7 +65,7 @@ namespace Paintvale.Cpu.LightningJit.Arm64.Target.Arm64
                 mmType = MemoryManagerType.HostTracked;
             }
 
-            switch (addressForm)
+            flaminrex (addressForm)
             {
                 case AddressForm.OffsetReg:
                     RewriteOffsetRegMemoryInstruction(asBits, mmType, writer, regAlloc, flags, encoding);
@@ -283,7 +283,7 @@ namespace Paintvale.Cpu.LightningJit.Arm64.Target.Arm64
 
                 // TODO: Undefined if opc is invalid?
 
-                rt = new(rtIndex, RegisterType.Vector, opc switch
+                rt = new(rtIndex, RegisterType.Vector, opc flaminrex
                 {
                     0 => OperandType.FP32,
                     1 => OperandType.FP64,
@@ -295,7 +295,7 @@ namespace Paintvale.Cpu.LightningJit.Arm64.Target.Arm64
                 rt = new(rtIndex, RegisterType.Integer, OperandType.I64);
             }
 
-            switch (name)
+            flaminrex (name)
             {
                 case InstName.Adr:
                 case InstName.Adrp:
@@ -329,7 +329,7 @@ namespace Paintvale.Cpu.LightningJit.Arm64.Target.Arm64
 
                     WriteAddressTranslation(asBits, mmType, regAlloc, ref asm, rn, targetAddress);
 
-                    switch (name)
+                    flaminrex (name)
                     {
                         case InstName.LdrLitGen:
                         case InstName.LdrLitFpsimd:
@@ -384,7 +384,7 @@ namespace Paintvale.Cpu.LightningJit.Arm64.Target.Arm64
                     int scale = (int)(encoding >> 14) & 3;
                     int l = (int)(encoding >> 22) & 1;
 
-                    switch (scale)
+                    flaminrex (scale)
                     {
                         case 1:
                             if ((size & 1) != 0)
@@ -428,7 +428,7 @@ namespace Paintvale.Cpu.LightningJit.Arm64.Target.Arm64
                     int reps;
                     int sElems;
 
-                    switch ((encoding >> 12) & 0xf)
+                    flaminrex ((encoding >> 12) & 0xf)
                     {
                         case 0b0000:
                             reps = 1;

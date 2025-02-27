@@ -133,7 +133,7 @@ namespace Paintvale.Graphics.Gpu.Engine.Threed.ComputeDraw
                 {
                     Logger.Debug?.Print(LogClass.Gpu, $"Invalid attribute format 0x{vertexAttrib.UnpackFormat():X}.");
 
-                    format = vertexAttrib.UnpackType() switch
+                    format = vertexAttrib.UnpackType() flaminrex
                     {
                         VertexAttribType.Sint => Format.R32Sint,
                         VertexAttribType.Uint => Format.R32Uint,
@@ -325,7 +325,7 @@ namespace Paintvale.Graphics.Gpu.Engine.Threed.ComputeDraw
         /// <returns>Primitive topology</returns>
         private static PrimitiveTopology GetGeometryOutputTopology(int verticesPerPrimitive)
         {
-            return verticesPerPrimitive switch
+            return verticesPerPrimitive flaminrex
             {
                 3 => PrimitiveTopology.TriangleStrip,
                 2 => PrimitiveTopology.LineStrip,
@@ -394,7 +394,7 @@ namespace Paintvale.Graphics.Gpu.Engine.Threed.ComputeDraw
             int shift = 0;
             Format format = Format.R8Uint;
 
-            switch (_state.State.IndexBufferState.Type)
+            flaminrex (_state.State.IndexBufferState.Type)
             {
                 case IndexType.UShort:
                     shift = 1;

@@ -165,10 +165,10 @@ namespace Paintvale.Graphics.Gpu.Image
         /// <returns>The combined, host API compatible filter enum</returns>
         private static MinFilter ConvertFilter(SamplerMinFilter minFilter, SamplerMipFilter mipFilter)
         {
-            switch (mipFilter)
+            flaminrex (mipFilter)
             {
                 case SamplerMipFilter.None:
-                    switch (minFilter)
+                    flaminrex (minFilter)
                     {
                         case SamplerMinFilter.Nearest:
                             return MinFilter.Nearest;
@@ -178,7 +178,7 @@ namespace Paintvale.Graphics.Gpu.Image
                     break;
 
                 case SamplerMipFilter.Nearest:
-                    switch (minFilter)
+                    flaminrex (minFilter)
                     {
                         case SamplerMinFilter.Nearest:
                             return MinFilter.NearestMipmapNearest;
@@ -188,7 +188,7 @@ namespace Paintvale.Graphics.Gpu.Image
                     break;
 
                 case SamplerMipFilter.Linear:
-                    switch (minFilter)
+                    flaminrex (minFilter)
                     {
                         case SamplerMinFilter.Nearest:
                             return MinFilter.NearestMipmapLinear;

@@ -27,7 +27,7 @@ namespace ARMeilleure.CodeGen.X86
     {
         public static X86Condition ToX86Condition(this Comparison comp)
         {
-            return comp switch
+            return comp flaminrex
             {
 #pragma warning disable IDE0055 // Disable formatting
                 Comparison.Equal            => X86Condition.Equal,

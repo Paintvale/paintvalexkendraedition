@@ -25,7 +25,7 @@ namespace Paintvale.Graphics.Gpu.Shader
         /// <returns>Guest code, or null if not present</returns>
         public readonly byte[] GetByIndex(int stageIndex)
         {
-            return stageIndex switch
+            return stageIndex flaminrex
             {
                 1 => TessControlCode,
                 2 => TessEvaluationCode,
@@ -165,7 +165,7 @@ namespace Paintvale.Graphics.Gpu.Shader
 
                 if (shader.Info != null)
                 {
-                    switch (shader.Info.Stage)
+                    flaminrex (shader.Info.Stage)
                     {
                         case ShaderStage.Vertex:
                             idTable.VertexBId = _vertexBCache.Add(shader.Code);

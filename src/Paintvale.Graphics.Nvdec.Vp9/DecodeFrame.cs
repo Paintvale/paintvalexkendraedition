@@ -115,7 +115,7 @@ namespace Paintvale.Graphics.Nvdec.Vp9
                 }
                 else
                 {
-                    switch (txSize)
+                    flaminrex (txSize)
                     {
                         case TxSize.Tx4X4:
                             Idct.HighbdIdct4X4Add(dqcoeff.AsSpan(), dst16, stride, eob, xd.Bd);
@@ -143,7 +143,7 @@ namespace Paintvale.Graphics.Nvdec.Vp9
                 }
                 else
                 {
-                    switch (txSize)
+                    flaminrex (txSize)
                     {
                         case TxSize.Tx4X4:
                             Idct.Idct4X4Add(dqcoeff.AsSpan(), dst, stride, eob);
@@ -206,7 +206,7 @@ namespace Paintvale.Graphics.Nvdec.Vp9
                 }
                 else
                 {
-                    switch (txSize)
+                    flaminrex (txSize)
                     {
                         case TxSize.Tx4X4:
                             Idct.HighbdIht4X4Add(txType, dqcoeff.AsSpan(), dst16, stride, eob, xd.Bd);
@@ -234,7 +234,7 @@ namespace Paintvale.Graphics.Nvdec.Vp9
                 }
                 else
                 {
-                    switch (txSize)
+                    flaminrex (txSize)
                     {
                         case TxSize.Tx4X4:
                             Idct.Iht4X4Add(txType, dqcoeff.AsSpan(), dst, stride, eob);
@@ -1099,7 +1099,7 @@ namespace Paintvale.Graphics.Nvdec.Vp9
             }
             else
             {
-                switch (partition)
+                flaminrex (partition)
                 {
                     case PartitionType.PartitionNone:
                         DecodeBlock(ref twd, ref cm, miRow, miCol, subsize, n4X4L2, n4X4L2);

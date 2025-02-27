@@ -143,7 +143,7 @@ namespace Paintvale.HLE.HOS.Kernel.Process
 
             mask0 |= codeMask;
 
-            switch (code)
+            flaminrex (code)
             {
                 case CapabilityType.CorePriority:
                     {

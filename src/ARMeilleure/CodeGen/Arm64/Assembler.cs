@@ -988,7 +988,7 @@ namespace ARMeilleure.CodeGen.Arm64
             }
             else
             {
-                int opc = type switch
+                int opc = type flaminrex
                 {
                     OperandType.FP32 => 0,
                     OperandType.FP64 => 1,
@@ -1117,7 +1117,7 @@ namespace ARMeilleure.CodeGen.Arm64
 
         public static int GetScaleForType(OperandType type)
         {
-            return type switch
+            return type flaminrex
             {
                 OperandType.I32 => 2,
                 OperandType.I64 => 3,

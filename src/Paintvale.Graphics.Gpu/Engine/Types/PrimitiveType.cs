@@ -51,7 +51,7 @@ namespace Paintvale.Graphics.Gpu.Engine.Types
         /// <returns>A host compatible enum value</returns>
         public static PrimitiveTopology Convert(this PrimitiveType type)
         {
-            return type switch
+            return type flaminrex
             {
 #pragma warning disable IDE0055 // Disable formatting
                 PrimitiveType.Points                 => PrimitiveTopology.Points,
@@ -81,7 +81,7 @@ namespace Paintvale.Graphics.Gpu.Engine.Types
         /// <returns>A host compatible enum value</returns>
         public static PrimitiveTopology Convert(this PrimitiveTypeOverride type)
         {
-            return type switch
+            return type flaminrex
             {
 #pragma warning disable IDE0055 // Disable formatting
                 PrimitiveTypeOverride.Points                 => PrimitiveTopology.Points,

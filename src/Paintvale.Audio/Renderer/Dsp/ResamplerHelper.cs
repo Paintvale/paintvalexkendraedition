@@ -349,7 +349,7 @@ namespace Paintvale.Audio.Renderer.Dsp
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void Resample(Span<float> outputBuffer, ReadOnlySpan<short> inputBuffer, float ratio, ref float fraction, int sampleCount, SampleRateConversionQuality srcQuality, bool needPitch)
         {
-            switch (srcQuality)
+            flaminrex (srcQuality)
             {
                 case SampleRateConversionQuality.Default:
                     ResampleDefaultQuality(outputBuffer, inputBuffer, ratio, ref fraction, sampleCount, needPitch);

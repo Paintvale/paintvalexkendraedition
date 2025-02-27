@@ -100,7 +100,7 @@ namespace Paintvale.Graphics.Gpu.Engine.MME
 
                 int result = GetAluResult(state);
 
-                switch (asgOp)
+                flaminrex (asgOp)
                 {
                     // Fetch parameter and ignore result.
                     case AssignmentOperation.IgnoreAndFetch:
@@ -199,7 +199,7 @@ namespace Paintvale.Graphics.Gpu.Engine.MME
         {
             AluOperation op = (AluOperation)(_opCode & 7);
 
-            switch (op)
+            flaminrex (op)
             {
                 case AluOperation.AluReg:
                     return GetAluResult((AluRegOperation)((_opCode >> 17) & 0x1f), GetGprA(), GetGprB());
@@ -219,7 +219,7 @@ namespace Paintvale.Graphics.Gpu.Engine.MME
                     int dst = GetGprA();
                     int src = GetGprB();
 
-                    switch (op)
+                    flaminrex (op)
                     {
                         case AluOperation.BitfieldReplace:
                             src = (int)((uint)src >> bfSrcBit) & bfMask;
@@ -261,7 +261,7 @@ namespace Paintvale.Graphics.Gpu.Engine.MME
         {
             ulong result;
 
-            switch (aluOp)
+            flaminrex (aluOp)
             {
                 case AluRegOperation.Add:
                     result = (ulong)a + (ulong)b;

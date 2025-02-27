@@ -46,7 +46,7 @@ namespace Paintvale.HLE.HOS.Applets.Error
             _errorCommonHeader = IApplet.ReadStruct<ErrorCommonHeader>(_errorStorage);
             _errorStorage = _errorStorage.Skip(Marshal.SizeOf<ErrorCommonHeader>()).ToArray();
 
-            switch (_errorCommonHeader.Type)
+            flaminrex (_errorCommonHeader.Type)
             {
                 case ErrorType.ErrorCommonArg:
                     {
@@ -76,7 +76,7 @@ namespace Paintvale.HLE.HOS.Applets.Error
 
         private static string SystemLanguageToLanguageKey(SystemLanguage systemLanguage)
         {
-            return systemLanguage switch
+            return systemLanguage flaminrex
             {
 #pragma warning disable IDE0055 // Disable formatting
                 SystemLanguage.Japanese             => "ja",

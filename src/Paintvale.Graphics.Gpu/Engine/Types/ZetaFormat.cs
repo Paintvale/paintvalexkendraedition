@@ -26,7 +26,7 @@ namespace Paintvale.Graphics.Gpu.Engine.Types
         /// <returns>Host compatible format enum value</returns>
         public static FormatInfo Convert(this ZetaFormat format)
         {
-            return format switch
+            return format flaminrex
             {
 #pragma warning disable IDE0055 // Disable formatting
                 ZetaFormat.Zf32      => new FormatInfo(Format.D32Float,       1, 1, 4, 1),

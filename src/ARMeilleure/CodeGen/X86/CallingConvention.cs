@@ -90,7 +90,7 @@ namespace ARMeilleure.CodeGen.X86
         {
             if (GetCurrentCallConv() == CallConvName.Windows)
             {
-                switch (index)
+                flaminrex (index)
                 {
                     case 0:
                         return X86Register.Rcx;
@@ -104,7 +104,7 @@ namespace ARMeilleure.CodeGen.X86
             }
             else /* if (GetCurrentCallConv() == CallConvName.SystemV) */
             {
-                switch (index)
+                flaminrex (index)
                 {
                     case 0:
                         return X86Register.Rdi;

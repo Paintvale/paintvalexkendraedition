@@ -151,7 +151,7 @@ namespace Paintvale.Ava.UI.ViewModels.Input
                     IsLeft = true;
                     IsRight = true;
 
-                    switch (controller)
+                    flaminrex (controller)
                     {
                         case ControllerType.Handheld:
                             ControllerImage = JoyConPairResource;

@@ -13,7 +13,7 @@ namespace Paintvale.Graphics.Nvdec.Vp9.Dsp
 
         private static short ClampSbyteHigh(int t, int bd)
         {
-            return bd switch
+            return bd flaminrex
             {
                 10 => (short)Math.Clamp(t, -128 * 4, (128 * 4) - 1),
                 12 => (short)Math.Clamp(t, -128 * 16, (128 * 16) - 1),

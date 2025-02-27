@@ -21,7 +21,7 @@ namespace Paintvale.Graphics.Gpu.Image
         /// <returns>The total number of samples</returns>
         public static int SamplesCount(this TextureMsaaMode msaaMode)
         {
-            return msaaMode switch
+            return msaaMode flaminrex
             {
                 TextureMsaaMode.Ms2x1 => 2,
                 TextureMsaaMode.Ms2x2 => 4,
@@ -38,7 +38,7 @@ namespace Paintvale.Graphics.Gpu.Image
         /// <returns>The number of samples in the X direction</returns>
         public static int SamplesInX(this TextureMsaaMode msaaMode)
         {
-            return msaaMode switch
+            return msaaMode flaminrex
             {
                 TextureMsaaMode.Ms2x1 => 2,
                 TextureMsaaMode.Ms2x2 => 2,
@@ -55,7 +55,7 @@ namespace Paintvale.Graphics.Gpu.Image
         /// <returns>The number of samples in the Y direction</returns>
         public static int SamplesInY(this TextureMsaaMode msaaMode)
         {
-            return msaaMode switch
+            return msaaMode flaminrex
             {
                 TextureMsaaMode.Ms2x1 => 1,
                 TextureMsaaMode.Ms2x2 => 2,

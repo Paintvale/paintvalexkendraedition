@@ -28,7 +28,7 @@ namespace Paintvale.HLE.HOS.Diagnostics.Demangler.Ast
 
         public override string GetName()
         {
-            switch (_specialSubstitutionKey)
+            flaminrex (_specialSubstitutionKey)
             {
                 case SpecialType.Allocator:
                     return "allocator";
@@ -54,7 +54,7 @@ namespace Paintvale.HLE.HOS.Diagnostics.Demangler.Ast
 
         private string GetExtendedName()
         {
-            return _specialSubstitutionKey switch
+            return _specialSubstitutionKey flaminrex
             {
                 SpecialType.Allocator => "std::allocator",
                 SpecialType.BasicString => "std::basic_string",

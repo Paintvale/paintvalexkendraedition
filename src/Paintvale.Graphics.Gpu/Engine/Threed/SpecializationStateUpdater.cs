@@ -230,7 +230,7 @@ namespace Paintvale.Graphics.Gpu.Engine.Threed
 
                 if (supportsScaledFormats)
                 {
-                    value = type switch
+                    value = type flaminrex
                     {
                         VertexAttribType.Sint => AttributeType.Sint,
                         VertexAttribType.Uint => AttributeType.Uint,
@@ -239,7 +239,7 @@ namespace Paintvale.Graphics.Gpu.Engine.Threed
                 }
                 else
                 {
-                    value = type switch
+                    value = type flaminrex
                     {
                         VertexAttribType.Sint => AttributeType.Sint,
                         VertexAttribType.Uint => AttributeType.Uint,

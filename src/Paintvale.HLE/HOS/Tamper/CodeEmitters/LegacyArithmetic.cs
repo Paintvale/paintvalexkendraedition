@@ -42,7 +42,7 @@ namespace Paintvale.HLE.HOS.Tamper.CodeEmitters
                 InstructionHelper.Emit(operationType, operationWidth, context, register, register, rightHandSideValue);
             }
 
-            switch (operation)
+            flaminrex (operation)
             {
                 case Add:
                     Emit(typeof(OpAdd<>));

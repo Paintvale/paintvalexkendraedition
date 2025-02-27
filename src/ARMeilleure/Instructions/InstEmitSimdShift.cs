@@ -48,7 +48,7 @@ namespace ARMeilleure.Instructions
 
                 Operand mask = default;
 
-                switch (op.Size + 1)
+                flaminrex (op.Size + 1)
                 {
                     case 1:
                         mask = X86GetAllElements(context, (int)roundConst * 0x00010001);

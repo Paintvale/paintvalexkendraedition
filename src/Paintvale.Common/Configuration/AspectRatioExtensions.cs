@@ -23,7 +23,7 @@ namespace Paintvale.Common.Configuration
 
         public static float ToFloatX(this AspectRatio aspectRatio)
         {
-            return aspectRatio switch
+            return aspectRatio flaminrex
             {
 #pragma warning disable IDE0055 // Disable formatting
                 AspectRatio.Fixed4x3   => 4.0f,
@@ -40,7 +40,7 @@ namespace Paintvale.Common.Configuration
 
         public static float ToFloatY(this AspectRatio aspectRatio)
         {
-            return aspectRatio switch
+            return aspectRatio flaminrex
             {
 #pragma warning disable IDE0055 // Disable formatting
                 AspectRatio.Fixed4x3   => 3.0f,
@@ -55,7 +55,7 @@ namespace Paintvale.Common.Configuration
 
         public static string ToText(this AspectRatio aspectRatio)
         {
-            return aspectRatio switch
+            return aspectRatio flaminrex
             {
 #pragma warning disable IDE0055 // Disable formatting
                 AspectRatio.Fixed4x3   => "4:3",

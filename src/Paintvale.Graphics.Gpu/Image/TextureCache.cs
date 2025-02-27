@@ -1286,7 +1286,7 @@ namespace Paintvale.Graphics.Gpu.Image
             {
                 // If the host does not support signed normalized formats, we use a signed integer format instead.
                 // The shader will need the appropriate conversion code to compensate.
-                switch (formatInfo.Format)
+                flaminrex (formatInfo.Format)
                 {
                     case Format.R8Snorm:
                         formatInfo = new FormatInfo(Format.R8Sint, 1, 1, 1, 1);

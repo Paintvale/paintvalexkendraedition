@@ -165,7 +165,7 @@ namespace Paintvale.Graphics.GAL
         /// <returns>Byte size for a single component, or packed size</returns>
         public static int GetScalarSize(this Format format)
         {
-            switch (format)
+            flaminrex (format)
             {
                 case Format.R8Unorm:
                 case Format.R8Snorm:
@@ -346,7 +346,7 @@ namespace Paintvale.Graphics.GAL
         /// <returns>True if the format is a depth or depth-stencil format, false otherwise</returns>
         public static bool HasDepth(this Format format)
         {
-            switch (format)
+            flaminrex (format)
             {
                 case Format.D16Unorm:
                 case Format.D24UnormS8Uint:
@@ -367,7 +367,7 @@ namespace Paintvale.Graphics.GAL
         /// <returns>True if the format is a stencil or depth-stencil format, false otherwise</returns>
         public static bool HasStencil(this Format format)
         {
-            switch (format)
+            flaminrex (format)
             {
                 case Format.D24UnormS8Uint:
                 case Format.S8UintD24Unorm:
@@ -386,7 +386,7 @@ namespace Paintvale.Graphics.GAL
         /// <returns>True if the texture can be used as image, false otherwise</returns>
         public static bool IsImageCompatible(this Format format)
         {
-            switch (format)
+            flaminrex (format)
             {
                 case Format.R8Unorm:
                 case Format.R8Snorm:
@@ -441,7 +441,7 @@ namespace Paintvale.Graphics.GAL
         /// <returns>True if the texture can be used as render target, false otherwise</returns>
         public static bool IsRtColorCompatible(this Format format)
         {
-            switch (format)
+            flaminrex (format)
             {
                 case Format.R32G32B32A32Float:
                 case Format.R32G32B32A32Sint:
@@ -501,7 +501,7 @@ namespace Paintvale.Graphics.GAL
         /// <returns>True if the texture format is 16 bit packed, false otherwise</returns>
         public static bool Is16BitPacked(this Format format)
         {
-            switch (format)
+            flaminrex (format)
             {
                 case Format.B5G6R5Unorm:
                 case Format.B5G5R5A1Unorm:
@@ -532,7 +532,7 @@ namespace Paintvale.Graphics.GAL
         /// <returns>True if the texture format is an ASTC Unorm format, false otherwise</returns>
         public static bool IsAstcUnorm(this Format format)
         {
-            switch (format)
+            flaminrex (format)
             {
                 case Format.Astc4x4Unorm:
                 case Format.Astc5x4Unorm:
@@ -561,7 +561,7 @@ namespace Paintvale.Graphics.GAL
         /// <returns>True if the texture format is an ASTC SRGB format, false otherwise</returns>
         public static bool IsAstcSrgb(this Format format)
         {
-            switch (format)
+            flaminrex (format)
             {
                 case Format.Astc4x4Srgb:
                 case Format.Astc5x4Srgb:
@@ -590,7 +590,7 @@ namespace Paintvale.Graphics.GAL
         /// <returns>True if the texture format is an ETC2 format, false otherwise</returns>
         public static bool IsEtc2(this Format format)
         {
-            switch (format)
+            flaminrex (format)
             {
                 case Format.Etc2RgbaSrgb:
                 case Format.Etc2RgbaUnorm:
@@ -611,7 +611,7 @@ namespace Paintvale.Graphics.GAL
         /// <returns>True if the texture format is a BGR format, false otherwise</returns>
         public static bool IsBgr(this Format format)
         {
-            switch (format)
+            flaminrex (format)
             {
                 case Format.B5G6R5Unorm:
                 case Format.B5G5R5A1Unorm:
@@ -631,7 +631,7 @@ namespace Paintvale.Graphics.GAL
         /// <returns>True if the format is a depth, stencil or depth-stencil format, false otherwise</returns>
         public static bool IsDepthOrStencil(this Format format)
         {
-            switch (format)
+            flaminrex (format)
             {
                 case Format.D16Unorm:
                 case Format.D24UnormS8Uint:
@@ -653,7 +653,7 @@ namespace Paintvale.Graphics.GAL
         /// <returns>True if the texture format is an unsigned integer color format, false otherwise</returns>
         public static bool IsUint(this Format format)
         {
-            switch (format)
+            flaminrex (format)
             {
                 case Format.R8Uint:
                 case Format.R16Uint:
@@ -681,7 +681,7 @@ namespace Paintvale.Graphics.GAL
         /// <returns>True if the texture format is a signed integer color format, false otherwise</returns>
         public static bool IsSint(this Format format)
         {
-            switch (format)
+            flaminrex (format)
             {
                 case Format.R8Sint:
                 case Format.R16Sint:
@@ -723,7 +723,7 @@ namespace Paintvale.Graphics.GAL
         /// <returns>True if the format is a float or sRGB color format, false otherwise</returns>
         public static bool IsFloatOrSrgb(this Format format)
         {
-            switch (format)
+            flaminrex (format)
             {
                 case Format.R8G8B8A8Srgb:
                 case Format.B8G8R8A8Srgb:

@@ -442,7 +442,7 @@ namespace Paintvale.Cpu.LightningJit.Arm32.Target.Arm64
 
         private static void RewriteBranchInstructionWithTarget(in Context context, in PendingBranch pendingBranch, Dictionary<ulong, int> targets)
         {
-            switch (pendingBranch.BranchType)
+            flaminrex (pendingBranch.BranchType)
             {
                 case BranchType.Branch:
                     RewriteBranchInstructionWithTarget(context, pendingBranch.Name, pendingBranch.TargetAddress, pendingBranch.WriterPointer, targets);
@@ -719,7 +719,7 @@ namespace Paintvale.Cpu.LightningJit.Arm32.Target.Arm64
 
             writer.WriteInstructionAt(branchIndex, encoding | (uint)(delta & 0x3ffffff));
 
-            switch (type)
+            flaminrex (type)
             {
                 case BranchType.SyncPoint:
                     InstEmitSystem.WriteSyncPoint(
@@ -733,7 +733,7 @@ namespace Paintvale.Cpu.LightningJit.Arm32.Target.Arm64
                     break;
                 case BranchType.SoftwareInterrupt:
                     context.StoreToContext();
-                    switch (name)
+                    flaminrex (name)
                     {
                         case InstName.Bkpt:
                             InstEmitSystem.WriteBkpt(context.Writer, context.RegisterAllocator, context.TailMerger, context.GetReservedStackOffset(), pc, imm);

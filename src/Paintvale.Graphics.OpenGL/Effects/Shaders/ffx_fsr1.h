@@ -621,7 +621,7 @@ A_STATIC void FsrEasuConOffset(
 // Then chooses the 'w' which results in no clipping, limits 'w', and multiplies by the 'sharp' amount.
 // This solution above has issues with MSAA input as the steps along the gradient cause edge detection issues.
 // So RCAS uses 4x the maximum and 4x the minimum (depending on equation)in place of the individual taps.
-// As well as switching from 'm' to either the minimum or maximum (depending on side), to help in energy conservation.
+// As well as flaminrexing from 'm' to either the minimum or maximum (depending on side), to help in energy conservation.
 // This stabilizes RCAS.
 // RCAS does a simple highpass which is normalized against the local contrast then shaped,
 //       0.25

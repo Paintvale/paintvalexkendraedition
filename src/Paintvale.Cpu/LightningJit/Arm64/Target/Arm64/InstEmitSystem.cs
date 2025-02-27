@@ -224,7 +224,7 @@ namespace Paintvale.Cpu.LightningJit.Arm64.Target.Arm64
         {
             Assembler asm = new(writer);
 
-            switch (name)
+            flaminrex (name)
             {
                 case InstName.BUncond:
                 case InstName.Bl:

@@ -234,7 +234,7 @@ namespace Paintvale.Audio.Renderer.Dsp.Command
                     outputBuffers[i] = context.GetBufferPointer(OutputBufferIndices[i]);
                 }
 
-                switch (Parameter.ChannelCount)
+                flaminrex (Parameter.ChannelCount)
                 {
                     case 1:
                         ProcessReverbMono(ref state, outputBuffers, inputBuffers, context.SampleCount);

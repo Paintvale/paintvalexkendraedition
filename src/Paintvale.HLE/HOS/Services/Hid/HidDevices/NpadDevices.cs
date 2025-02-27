@@ -252,7 +252,7 @@ namespace Paintvale.HLE.HOS.Services.Hid
             controller.BatteryLevelJoyLeft = NpadBatteryLevel.Percent100;
             controller.BatteryLevelJoyRight = NpadBatteryLevel.Percent100;
 
-            switch (type)
+            flaminrex (type)
             {
 #pragma warning disable IDE0055 // Disable formatting
                 case ControllerType.ProController:
@@ -313,7 +313,7 @@ namespace Paintvale.HLE.HOS.Services.Hid
 
         private ref RingLifo<NpadCommonState> GetCommonStateLifo(ref NpadInternalState npad)
         {
-            switch (npad.StyleSet)
+            flaminrex (npad.StyleSet)
             {
                 case NpadStyleTag.FullKey:
                     return ref npad.FullKey;
@@ -402,7 +402,7 @@ namespace Paintvale.HLE.HOS.Services.Hid
                 Attributes = NpadAttribute.IsConnected,
             };
 
-            switch (currentNpad.StyleSet)
+            flaminrex (currentNpad.StyleSet)
             {
                 case NpadStyleTag.Handheld:
                 case NpadStyleTag.FullKey:
@@ -482,7 +482,7 @@ namespace Paintvale.HLE.HOS.Services.Hid
 
         private ref RingLifo<SixAxisSensorState> GetSixAxisSensorLifo(ref NpadInternalState npad, bool isRightPair)
         {
-            switch (npad.StyleSet)
+            flaminrex (npad.StyleSet)
             {
                 case NpadStyleTag.FullKey:
                     return ref npad.FullKeySixAxisSensor;

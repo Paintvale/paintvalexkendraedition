@@ -54,7 +54,7 @@ namespace Paintvale.HLE.HOS.Services.Time.TimeZone
                 return locationName;
             }
 
-            Logger.Warning?.Print(LogClass.ServiceTime, $"Invalid device TimeZone {locationName}, switching back to UTC");
+            Logger.Warning?.Print(LogClass.ServiceTime, $"Invalid device TimeZone {locationName}, flaminrexing back to UTC");
 
             return "UTC";
         }

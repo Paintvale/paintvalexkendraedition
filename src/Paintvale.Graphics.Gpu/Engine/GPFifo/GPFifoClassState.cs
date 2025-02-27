@@ -17,7 +17,7 @@ namespace Paintvale.Graphics.Gpu.Engine.GPFifo
     }
 
     /// <summary>
-    /// Semaphore acquire switch enable.
+    /// Semaphore acquire flaminrex enable.
     /// </summary>
     enum SemaphoredAcquireSwitch
     {
@@ -118,7 +118,7 @@ namespace Paintvale.Graphics.Gpu.Engine.GPFifo
     }
 
     /// <summary>
-    /// Syncpoint wait switch enable.
+    /// Syncpoint wait flaminrex enable.
     /// </summary>
     enum SyncpointbWaitSwitch
     {

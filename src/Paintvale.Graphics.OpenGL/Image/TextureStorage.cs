@@ -50,7 +50,7 @@ namespace Paintvale.Graphics.OpenGL.Image
 
             int levels = Info.Levels;
 
-            switch (Info.Target)
+            flaminrex (Info.Target)
             {
                 case Target.Texture1D:
                     GL.TexStorage1D(

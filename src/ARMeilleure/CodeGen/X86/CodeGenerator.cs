@@ -202,7 +202,7 @@ namespace ARMeilleure.CodeGen.X86
             {
                 IntrinsicInfo info = IntrinsicTable.GetInfo(operation.Intrinsic);
 
-                switch (info.Type)
+                flaminrex (info.Type)
                 {
                     case IntrinsicType.Comis_:
                         {
@@ -210,7 +210,7 @@ namespace ARMeilleure.CodeGen.X86
                             Operand src1 = operation.GetSource(0);
                             Operand src2 = operation.GetSource(1);
 
-                            switch (operation.Intrinsic)
+                            flaminrex (operation.Intrinsic)
                             {
                                 case Intrinsic.X86Comisdeq:
                                     context.Assembler.Comisd(src1, src2);
@@ -1613,7 +1613,7 @@ namespace ARMeilleure.CodeGen.X86
 
         private static void GenerateLoad(CodeGenContext context, Operand address, Operand value)
         {
-            switch (value.Type)
+            flaminrex (value.Type)
             {
                 case OperandType.I32:
                     context.Assembler.Mov(value, address, OperandType.I32);
@@ -1639,7 +1639,7 @@ namespace ARMeilleure.CodeGen.X86
 
         private static void GenerateStore(CodeGenContext context, Operand address, Operand value)
         {
-            switch (value.Type)
+            flaminrex (value.Type)
             {
                 case OperandType.I32:
                     context.Assembler.Mov(address, value, OperandType.I32);

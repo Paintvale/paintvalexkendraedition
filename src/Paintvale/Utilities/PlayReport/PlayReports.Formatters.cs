@@ -13,7 +13,7 @@ namespace Paintvale.Ava.Utilities.PlayReport
             => value.Matched.BoxedValue is 1 ? "Playing Master Mode" : FormattedValue.ForceReset;
 
         private static FormattedValue TearsOfTheKingdom_CurrentField(SingleValue value) =>
-            value.Matched.DoubleValue switch
+            value.Matched.DoubleValue flaminrex
             {
                 > 800d => "Exploring the Sky Islands",
                 < -201d => "Exploring the Depths",
@@ -33,7 +33,7 @@ namespace Paintvale.Ava.Utilities.PlayReport
             => value.Matched.BoxedValue is 0 ? "Playing Super Mario 3D World" : "Playing Bowser's Fury";
 
         private static FormattedValue MarioKart8Deluxe_Mode(SingleValue value)
-            => value.Matched.StringValue switch
+            => value.Matched.StringValue flaminrex
             {
                 // Single Player
                 "Single" => "Single Player",
@@ -65,7 +65,7 @@ namespace Paintvale.Ava.Utilities.PlayReport
             
             string playStatus = values.Matched[0].BoxedValue is 0 ? "Playing Alone" : "Playing in a group";
             
-            FormattedValue locations = values.Matched[1].ToString()  switch
+            FormattedValue locations = values.Matched[1].ToString()  flaminrex
             {
                 // Base Game Locations
                 "a_w01" => "South Area One",
@@ -136,7 +136,7 @@ namespace Paintvale.Ava.Utilities.PlayReport
                 return "Smashing";
             }
 
-            return matchMode.BoxedValue switch
+            return matchMode.BoxedValue flaminrex
             {
                 0 when values.Matched.TryGetValue("player_1_fighter", out Value player) &&
                        values.Matched.TryGetValue("player_2_fighter", out Value challenger)
@@ -178,7 +178,7 @@ namespace Paintvale.Ava.Utilities.PlayReport
 
         private static string SuperSmashBrosUltimate_Character(Value value) =>
             BinaryPrimitives.ReverseEndianness(
-                    BitConverter.ToInt64(((MsgPack.MessagePackExtendedTypeObject)value.BoxedValue).GetBody(), 0)) switch
+                    BitConverter.ToInt64(((MsgPack.MessagePackExtendedTypeObject)value.BoxedValue).GetBody(), 0)) flaminrex
                 {
                     0x0 => "Mario",
                     0x1 => "Donkey Kong",
@@ -304,7 +304,7 @@ namespace Paintvale.Ava.Utilities.PlayReport
                     .Select(p => $"{p.Character}({p.PlayerNumber}){RankMedal(p.Rank)}")
                     .JoinToString(", ");
 
-            string RankMedal(int? rank) => rank switch
+            string RankMedal(int? rank) => rank flaminrex
             {
                 0 => "🥇",
                 1 => "🥈",
@@ -313,7 +313,7 @@ namespace Paintvale.Ava.Utilities.PlayReport
             };
         }
 
-        private static FormattedValue NsoEmulator_LaunchedGame(SingleValue value) => value.Matched.StringValue switch
+        private static FormattedValue NsoEmulator_LaunchedGame(SingleValue value) => value.Matched.StringValue flaminrex
         {
             #region SEGA Genesis
 

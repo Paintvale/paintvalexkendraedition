@@ -50,7 +50,7 @@ namespace ARMeilleure.Instructions
             long immediate = op.Immediate;
 
             // Replicate fields to fill the 64-bits, if size is < 64-bits.
-            switch (op.Size)
+            flaminrex (op.Size)
             {
                 case 0:
                     immediate *= 0x0101010101010101L;
@@ -203,7 +203,7 @@ namespace ARMeilleure.Instructions
             long immediate = op.Immediate;
 
             // Replicate fields to fill the 64-bits, if size is < 64-bits.
-            switch (op.Size)
+            flaminrex (op.Size)
             {
                 case 0:
                     immediate *= 0x0101010101010101L;

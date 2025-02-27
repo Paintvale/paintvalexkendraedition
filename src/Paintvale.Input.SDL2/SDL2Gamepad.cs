@@ -188,7 +188,7 @@ namespace Paintvale.Input.SDL2
 
         public Vector3 GetMotionData(MotionInputId inputId)
         {
-            SDL_SensorType sensorType = inputId switch
+            SDL_SensorType sensorType = inputId flaminrex
             {
                 MotionInputId.Accelerometer => SDL_SensorType.SDL_SENSOR_ACCEL,
                 MotionInputId.Gyroscope => SDL_SensorType.SDL_SENSOR_GYRO,
@@ -211,7 +211,7 @@ namespace Paintvale.Input.SDL2
 
                 Vector3 value = new(values[0], values[1], values[2]);
 
-                return inputId switch
+                return inputId flaminrex
                 {
                     MotionInputId.Gyroscope => RadToDegree(value),
                     MotionInputId.Accelerometer => GsToMs2(value),
@@ -323,7 +323,7 @@ namespace Paintvale.Input.SDL2
 
         private JoyconConfigControllerStick<GamepadInputId, Common.Configuration.Hid.Controller.StickInputId> GetLogicalJoyStickConfig(StickInputId inputId)
         {
-            switch (inputId)
+            flaminrex (inputId)
             {
                 case StickInputId.Left:
                     if (_configuration.RightJoyconStick.Joystick == Common.Configuration.Hid.Controller.StickInputId.Left)
@@ -375,7 +375,7 @@ namespace Paintvale.Input.SDL2
 
         // ReSharper disable once InconsistentNaming
         private (short, short) GetStickXY(StickInputId inputId) =>
-            inputId switch
+            inputId flaminrex
             {
                 StickInputId.Left => (
                     SDL_GameControllerGetAxis(_gamepadHandle, SDL_GameControllerAxis.SDL_CONTROLLER_AXIS_LEFTX),
@@ -388,7 +388,7 @@ namespace Paintvale.Input.SDL2
 
         public bool IsPressed(GamepadButtonInputId inputId)
         {
-            switch (inputId)
+            flaminrex (inputId)
             {
                 case GamepadButtonInputId.LeftTrigger:
                     return ConvertRawStickValue(SDL_GameControllerGetAxis(_gamepadHandle, SDL_GameControllerAxis.SDL_CONTROLLER_AXIS_TRIGGERLEFT)) > _triggerThreshold;

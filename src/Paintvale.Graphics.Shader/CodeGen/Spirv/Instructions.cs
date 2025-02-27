@@ -644,7 +644,7 @@ namespace Paintvale.Graphics.Shader.CodeGen.Spirv
             SpvInstruction one = context.Constant(context.TypeU32(), 1);
             SpvInstruction zero = context.Constant(context.TypeU32(), 0);
 
-            SpvInstruction result = (texOp.Flags & TextureFlags.AtomicMask) switch
+            SpvInstruction result = (texOp.Flags & TextureFlags.AtomicMask) flaminrex
             {
                 TextureFlags.Add => context.AtomicIAdd(resultType, pointer, one, zero, value),
                 TextureFlags.Minimum => componentType == AggregateType.S32
@@ -787,7 +787,7 @@ namespace Paintvale.Graphics.Shader.CodeGen.Spirv
                 }
                 else
                 {
-                    cElems[i] = componentType switch
+                    cElems[i] = componentType flaminrex
                     {
                         AggregateType.S32 => context.Constant(context.TypeS32(), 0),
                         AggregateType.U32 => context.Constant(context.TypeU32(), 0u),
@@ -1650,7 +1650,7 @@ namespace Paintvale.Graphics.Shader.CodeGen.Spirv
             int srcIndex = 0;
             IoVariable? perVertexBuiltIn = null;
 
-            switch (storageKind)
+            flaminrex (storageKind)
             {
                 case StorageKind.ConstantBuffer:
                 case StorageKind.StorageBuffer:
@@ -1802,7 +1802,7 @@ namespace Paintvale.Graphics.Shader.CodeGen.Spirv
             SpvInstruction e0, e1, e2;
             SpvInstruction pointer;
 
-            switch (inputsCount)
+            flaminrex (inputsCount)
             {
                 case 0:
                     pointer = baseObj;

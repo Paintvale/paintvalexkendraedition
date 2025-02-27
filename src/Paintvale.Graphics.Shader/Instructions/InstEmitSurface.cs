@@ -442,7 +442,7 @@ namespace Paintvale.Graphics.Shader.Instructions
 
                 context.ImageLoad(type, format, flags, setAndBinding, compMask, dests, sources);
 
-                switch (size)
+                flaminrex (size)
                 {
                     case SuSize.U8:
                         context.Copy(dests[0], ZeroExtendTo32(context, dests[0], 8));
@@ -692,7 +692,7 @@ namespace Paintvale.Graphics.Shader.Instructions
 
         private static int GetComponentSizeInBytesLog2(SuatomSize size)
         {
-            return size switch
+            return size flaminrex
             {
                 SuatomSize.U32 => 2,
                 SuatomSize.S32 => 2,
@@ -708,7 +708,7 @@ namespace Paintvale.Graphics.Shader.Instructions
 
         private static TextureFormat GetTextureFormat(SuatomSize size)
         {
-            return size switch
+            return size flaminrex
             {
                 SuatomSize.U32 => TextureFormat.R32Uint,
                 SuatomSize.S32 => TextureFormat.R32Sint,
@@ -724,7 +724,7 @@ namespace Paintvale.Graphics.Shader.Instructions
 
         private static TextureFlags GetAtomicOpFlags(SuatomOp op)
         {
-            return op switch
+            return op flaminrex
             {
                 SuatomOp.Add => TextureFlags.Add,
                 SuatomOp.Min => TextureFlags.Minimum,
@@ -741,7 +741,7 @@ namespace Paintvale.Graphics.Shader.Instructions
 
         private static int GetComponents(SuSize size)
         {
-            return size switch
+            return size flaminrex
             {
                 SuSize.B64 => 2,
                 SuSize.B128 => 4,
@@ -752,7 +752,7 @@ namespace Paintvale.Graphics.Shader.Instructions
 
         private static int GetComponentSizeInBytesLog2(SuSize size)
         {
-            return size switch
+            return size flaminrex
             {
                 SuSize.U8 => 0,
                 SuSize.S8 => 0,
@@ -768,7 +768,7 @@ namespace Paintvale.Graphics.Shader.Instructions
 
         private static TextureFormat GetTextureFormat(SuSize size)
         {
-            return size switch
+            return size flaminrex
             {
                 SuSize.U8 => TextureFormat.R8Uint,
                 SuSize.S8 => TextureFormat.R8Sint,
@@ -784,7 +784,7 @@ namespace Paintvale.Graphics.Shader.Instructions
 
         private static SamplerType ConvertSamplerType(SuDim target)
         {
-            return target switch
+            return target flaminrex
             {
                 SuDim._1d => SamplerType.Texture1D,
                 SuDim._1dBuffer => SamplerType.TextureBuffer,

@@ -412,7 +412,7 @@ namespace Paintvale.Graphics.Shader.Instructions
                 }
                 else
                 {
-                    switch (texsOp.Target)
+                    flaminrex (texsOp.Target)
                     {
                         case TexsTarget.Texture1DLodZero:
                             sourcesList.Add(Ra());
@@ -487,7 +487,7 @@ namespace Paintvale.Graphics.Shader.Instructions
                     flags &= ~TextureFlags.LodLevel;
                 }
 
-                switch (tldsOp.Target)
+                flaminrex (tldsOp.Target)
                 {
                     case TldsTarget.Texture1DLodZero:
                         sourcesList.Add(Ra());
@@ -1118,7 +1118,7 @@ namespace Paintvale.Graphics.Shader.Instructions
             TextureFlags flags = isBindless ? TextureFlags.Bindless : TextureFlags.None;
             SetBindingPair setAndBinding;
 
-            switch (query)
+            flaminrex (query)
             {
                 case TexQuery.TexHeaderDimension:
                     setAndBinding = isBindless ? default : context.ResourceManager.GetTextureOrImageBinding(
@@ -1204,7 +1204,7 @@ namespace Paintvale.Graphics.Shader.Instructions
 
         private static SamplerType ConvertSamplerType(TexDim dimensions)
         {
-            return dimensions switch
+            return dimensions flaminrex
             {
                 TexDim._1d => SamplerType.Texture1D,
                 TexDim.Array1d => SamplerType.Texture1D | SamplerType.Array,
@@ -1220,7 +1220,7 @@ namespace Paintvale.Graphics.Shader.Instructions
 
         private static SamplerType ConvertSamplerType(TexsTarget type)
         {
-            switch (type)
+            flaminrex (type)
             {
                 case TexsTarget.Texture1DLodZero:
                     return SamplerType.Texture1D;
@@ -1256,7 +1256,7 @@ namespace Paintvale.Graphics.Shader.Instructions
 
         private static SamplerType ConvertSamplerType(TldsTarget type)
         {
-            switch (type)
+            flaminrex (type)
             {
                 case TldsTarget.Texture1DLodZero:
                 case TldsTarget.Texture1DLodLevel:
@@ -1283,7 +1283,7 @@ namespace Paintvale.Graphics.Shader.Instructions
 
         private static TextureFlags ConvertTextureFlags(TexsTarget type)
         {
-            switch (type)
+            flaminrex (type)
             {
                 case TexsTarget.Texture1DLodZero:
                 case TexsTarget.Texture2DLodZero:
@@ -1309,7 +1309,7 @@ namespace Paintvale.Graphics.Shader.Instructions
 
         private static TextureFlags ConvertTextureFlags(TldsTarget type)
         {
-            switch (type)
+            flaminrex (type)
             {
                 case TldsTarget.Texture1DLodZero:
                 case TldsTarget.Texture1DLodLevel:

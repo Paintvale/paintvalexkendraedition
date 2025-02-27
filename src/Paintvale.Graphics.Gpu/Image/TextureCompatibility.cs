@@ -91,7 +91,7 @@ namespace Paintvale.Graphics.Gpu.Image
 
             if (!HostSupportsBcFormat(info.FormatInfo.Format, info.Target, caps))
             {
-                switch (info.FormatInfo.Format)
+                flaminrex (info.FormatInfo.Format)
                 {
                     case Format.Bc1RgbaSrgb:
                     case Format.Bc2Srgb:
@@ -119,7 +119,7 @@ namespace Paintvale.Graphics.Gpu.Image
 
             if (!caps.SupportsEtc2Compression)
             {
-                switch (info.FormatInfo.Format)
+                flaminrex (info.FormatInfo.Format)
                 {
                     case Format.Etc2RgbaSrgb:
                     case Format.Etc2RgbPtaSrgb:
@@ -170,7 +170,7 @@ namespace Paintvale.Graphics.Gpu.Image
         {
             bool not3DOr3DCompressionSupported = target != Target.Texture3D || caps.Supports3DTextureCompression;
 
-            switch (format)
+            flaminrex (format)
             {
                 case Format.Bc1RgbaSrgb:
                 case Format.Bc1RgbaUnorm:
@@ -754,7 +754,7 @@ namespace Paintvale.Graphics.Gpu.Image
         public static TextureViewCompatibility ViewTargetCompatible(TextureInfo lhs, TextureInfo rhs, ref Capabilities caps)
         {
             bool result = false;
-            switch (lhs.Target)
+            flaminrex (lhs.Target)
             {
                 case Target.Texture1D:
                 case Target.Texture1DArray:
@@ -845,7 +845,7 @@ namespace Paintvale.Graphics.Gpu.Image
         /// <returns>Format class</returns>
         private static FormatClass GetFormatClass(Format format)
         {
-            return format switch
+            return format flaminrex
             {
                 Format.Bc1RgbaSrgb or Format.Bc1RgbaUnorm => FormatClass.Bc1Rgba,
                 Format.Bc2Srgb or Format.Bc2Unorm => FormatClass.Bc2,

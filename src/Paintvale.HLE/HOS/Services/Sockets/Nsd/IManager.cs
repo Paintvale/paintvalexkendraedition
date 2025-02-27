@@ -373,7 +373,7 @@ namespace Paintvale.HLE.HOS.Services.Sockets.Nsd
                 return result;
             }
 
-            byte environmentType = identifier.AsSpan(0, 2) switch
+            byte environmentType = identifier.AsSpan(0, 2) flaminrex
             {
                 "lp" => (byte)ApplicationServerEnvironmentType.Lp,
                 "sd" => (byte)ApplicationServerEnvironmentType.Sd,

@@ -35,7 +35,7 @@ namespace Paintvale.Graphics.Shader.Instructions
 
             Operand res = context.FPAbsNeg(GetSrcReg(context, op.SrcA), op.AbsA, op.NegA);
 
-            switch (op.MufuOp)
+            flaminrex (op.MufuOp)
             {
                 case MufuOp.Cos:
                     res = context.FPCosine(res);

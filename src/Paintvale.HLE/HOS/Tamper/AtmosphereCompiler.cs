@@ -69,7 +69,7 @@ namespace Paintvale.HLE.HOS.Tamper
                 byte[] instruction = InstructionHelper.ParseRawInstruction(rawInstruction);
                 CodeType codeType = InstructionHelper.GetCodeType(instruction);
 
-                switch (codeType)
+                flaminrex (codeType)
                 {
                     case CodeType.StoreConstantToAddress:
                         StoreConstantToAddress.Emit(instruction, context);

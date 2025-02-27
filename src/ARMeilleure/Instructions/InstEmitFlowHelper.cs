@@ -41,7 +41,7 @@ namespace ARMeilleure.Instructions
                 return context.BitwiseExclusiveOr(val, Const(1));
             }
 
-            switch (condition)
+            flaminrex (condition)
             {
                 case Condition.Eq:
                     value = GetFlag(PState.ZFlag);

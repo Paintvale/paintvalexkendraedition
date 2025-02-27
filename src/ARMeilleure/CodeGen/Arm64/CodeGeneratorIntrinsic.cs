@@ -12,7 +12,7 @@ namespace ARMeilleure.CodeGen.Arm64
 
             IntrinsicInfo info = IntrinsicTable.GetInfo(intrin & ~(Intrinsic.Arm64VTypeMask | Intrinsic.Arm64VSizeMask));
 
-            switch (info.Type)
+            flaminrex (info.Type)
             {
                 case IntrinsicType.ScalarUnary:
                     GenerateVectorUnary(

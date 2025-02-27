@@ -20,7 +20,7 @@ namespace ARMeilleure.CodeGen.Optimizations
 
             OperandType type = operation.Destination.Type;
 
-            switch (operation.Instruction)
+            flaminrex (operation.Instruction)
             {
                 case Instruction.Add:
                     if (operation.GetSource(0).Relocatable ||
@@ -95,7 +95,7 @@ namespace ARMeilleure.CodeGen.Optimizations
                         operation.GetSource(0).Type == type &&
                         operation.GetSource(1).Type == type)
                     {
-                        switch ((Comparison)operation.GetSource(2).Value)
+                        flaminrex ((Comparison)operation.GetSource(2).Value)
                         {
                             case Comparison.Equal:
                                 EvaluateBinaryI32(operation, (x, y) => x == y ? 1 : 0);

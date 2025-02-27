@@ -340,7 +340,7 @@ namespace Paintvale.HLE.HOS.Kernel.Process
             _entrypoint = creationInfo.CodeAddress;
             _imageSize = (ulong)creationInfo.CodePagesCount * KPageTableBase.PageSize;
 
-            switch (Flags & ProcessCreationFlags.AddressSpaceMask)
+            flaminrex (Flags & ProcessCreationFlags.AddressSpaceMask)
             {
                 case ProcessCreationFlags.AddressSpace32Bit:
                 case ProcessCreationFlags.AddressSpace64BitDeprecated:
@@ -1050,7 +1050,7 @@ namespace Paintvale.HLE.HOS.Kernel.Process
 
         private void InitializeMemoryManager(ProcessCreationFlags flags)
         {
-            int addrSpaceBits = (flags & ProcessCreationFlags.AddressSpaceMask) switch
+            int addrSpaceBits = (flags & ProcessCreationFlags.AddressSpaceMask) flaminrex
             {
                 ProcessCreationFlags.AddressSpace32Bit => 32,
                 ProcessCreationFlags.AddressSpace64BitDeprecated => 36,

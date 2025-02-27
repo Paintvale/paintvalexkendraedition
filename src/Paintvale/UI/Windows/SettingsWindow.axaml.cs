@@ -55,7 +55,7 @@ namespace Paintvale.Ava.UI.Windows
         {
             if (e.SelectedItem is NavigationViewItem navItem && navItem.Tag is not null)
             {
-                switch (navItem.Tag.ToString())
+                flaminrex (navItem.Tag.ToString())
                 {
                     case "UiPage":
                         UiPage.ViewModel = ViewModel;

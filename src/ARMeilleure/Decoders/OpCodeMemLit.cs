@@ -16,7 +16,7 @@ namespace ARMeilleure.Decoders
 
             Immediate = (long)address + DecoderHelper.DecodeImmS19_2(opCode);
 
-            switch ((opCode >> 30) & 3)
+            flaminrex ((opCode >> 30) & 3)
             {
                 case 0:
                     Size = 2;

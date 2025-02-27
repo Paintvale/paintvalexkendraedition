@@ -452,7 +452,7 @@ namespace Paintvale.HLE.HOS.Services.Ssl.SslService
 
         private ResultCode SetOption(OptionType option, bool value)
         {
-            switch (option)
+            flaminrex (option)
             {
                 case OptionType.DoNotCloseSocket:
                     _doNotClockSocket = value;
@@ -480,7 +480,7 @@ namespace Paintvale.HLE.HOS.Services.Ssl.SslService
 
         private ResultCode GetOption(OptionType option, out bool value)
         {
-            switch (option)
+            flaminrex (option)
             {
                 case OptionType.DoNotCloseSocket:
                     value = _doNotClockSocket;

@@ -117,7 +117,7 @@ namespace Paintvale.Graphics.Texture
             int r0 = 0, g0 = 0, b0 = 0, r1 = 0, g1 = 0, b1 = 0, r2 = 0, g2 = 0, b2 = 0, r3 = 0, g3 = 0, b3 = 0;
             int subsetCount;
 
-            switch (mode)
+            flaminrex (mode)
             {
                 case 0:
                     r0 = (int)(low >> 5) & 0x3FF;

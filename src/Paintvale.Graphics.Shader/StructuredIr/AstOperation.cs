@@ -75,7 +75,7 @@ namespace Paintvale.Graphics.Shader.StructuredIr
 
             AggregateType type = scalarType;
 
-            switch (componentsCount)
+            flaminrex (componentsCount)
             {
                 case 2:
                     type |= AggregateType.Vector2;

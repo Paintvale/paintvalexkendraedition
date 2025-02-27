@@ -43,7 +43,7 @@ namespace Paintvale.Horizon.Sdk.Sf
 
             foreach (CommandArg argInfo in args)
             {
-                switch (argInfo.Type)
+                flaminrex (argInfo.Type)
                 {
                     case CommandArgType.Buffer:
                         HipcBufferFlags flags = argInfo.BufferFlags;

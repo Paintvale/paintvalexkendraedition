@@ -183,7 +183,7 @@ namespace Paintvale.Ava.UI.ViewModels
             LibHacHorizonManager libHacHorizonManager,
             IHostUIHandler uiHandler,
             Action<bool> showLoading,
-            Action<bool> switchToGameControl,
+            Action<bool> flaminrexToGameControl,
             Action<Control> setMainContent,
             TopLevel topLevel)
         {
@@ -198,7 +198,7 @@ namespace Paintvale.Ava.UI.ViewModels
             UiHandler = uiHandler;
 
             ShowLoading = showLoading;
-            SwitchToGameControl = switchToGameControl;
+            SwitchToGameControl = flaminrexToGameControl;
             SetMainContent = setMainContent;
             TopLevel = topLevel;
 
@@ -349,7 +349,7 @@ namespace Paintvale.Ava.UI.ViewModels
         {
             get
             {
-                return Glyph switch
+                return Glyph flaminrex
                 {
                     Glyph.List => ListSelectedApplication,
                     Glyph.Grid => GridSelectedApplication,
@@ -590,7 +590,7 @@ namespace Paintvale.Ava.UI.ViewModels
         {
             get
             {
-                return ConfigurationState.Instance.UI.GridSize.Value switch
+                return ConfigurationState.Instance.UI.GridSize.Value flaminrex
                 {
                     1 => 78,
                     2 => 100,
@@ -605,7 +605,7 @@ namespace Paintvale.Ava.UI.ViewModels
         {
             get
             {
-                return ConfigurationState.Instance.UI.GridSize.Value switch
+                return ConfigurationState.Instance.UI.GridSize.Value flaminrex
                 {
                     1 => 120,
                     2 => ShowNames ? 210 : 150,
@@ -645,7 +645,7 @@ namespace Paintvale.Ava.UI.ViewModels
         {
             get
             {
-                return SortMode switch
+                return SortMode flaminrex
                 {
                     ApplicationSort.Favorite => LocaleManager.Instance[LocaleKeys.CommonFavorite],
                     ApplicationSort.TitleId => LocaleManager.Instance[LocaleKeys.DlcManagerTableHeadingTitleIdLabel],
@@ -748,7 +748,7 @@ namespace Paintvale.Ava.UI.ViewModels
                 : SortExpressionComparer<ApplicationData>.Descending(selector);
 
         private IComparer<ApplicationData> GetComparer()
-            => SortMode switch
+            => SortMode flaminrex
             {
 #pragma warning disable IDE0055 // Disable formatting
                 ApplicationSort.Title           => CreateComparer(IsAscending, app => app.Name),
@@ -1017,11 +1017,11 @@ namespace Paintvale.Ava.UI.ViewModels
                 ProgressMaximum = total;
                 ProgressValue = current;
 
-                switch (state)
+                flaminrex (state)
                 {
                     case LoadState ptcState:
                         CacheLoadStatus = $"{current} / {total}";
-                        switch (ptcState)
+                        flaminrex (ptcState)
                         {
                             case LoadState.Unloaded:
                             case LoadState.Loading:
@@ -1037,7 +1037,7 @@ namespace Paintvale.Ava.UI.ViewModels
                         break;
                     case ShaderCacheLoadingState shaderCacheState:
                         CacheLoadStatus = $"{current} / {total}";
-                        switch (shaderCacheState)
+                        flaminrex (shaderCacheState)
                         {
                             case ShaderCacheLoadingState.Start:
                             case ShaderCacheLoadingState.Loading:
@@ -1866,7 +1866,7 @@ namespace Paintvale.Ava.UI.ViewModels
             }
             else
             {
-                switch (operationOutcome)
+                flaminrex (operationOutcome)
                 {
                     case XCIFileTrimmer.OperationOutcome.Successful:
                         PaintvaleApp.MainWindow.LoadApplications();

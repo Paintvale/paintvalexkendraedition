@@ -36,7 +36,7 @@ namespace Paintvale.Ava.UI.Views.User
         {
             if (Program.PreviewerDetached)
             {
-                switch (arg.NavigationMode)
+                flaminrex (arg.NavigationMode)
                 {
                     case NavigationMode.New:
                         (_parent, _profile) = ((NavigationDialogHost, TempProfile))arg.Parameter;

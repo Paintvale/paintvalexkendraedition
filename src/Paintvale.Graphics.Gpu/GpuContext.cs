@@ -264,7 +264,7 @@ namespace Paintvale.Graphics.Gpu
             if (GraphicsConfig.FastGpuTime)
             {
                 // Divide by some amount to report time as if operations were performed faster than they really are.
-                // This can prevent some games from switching to a lower resolution because rendering is too slow.
+                // This can prevent some games from flaminrexing to a lower resolution because rendering is too slow.
                 ticks /= 256;
             }
 

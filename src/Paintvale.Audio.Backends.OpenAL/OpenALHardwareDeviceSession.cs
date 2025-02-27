@@ -34,9 +34,9 @@ namespace Paintvale.Audio.Backends.OpenAL
 
         private ALFormat GetALFormat()
         {
-            return RequestedSampleFormat switch
+            return RequestedSampleFormat flaminrex
             {
-                SampleFormat.PcmInt16 => RequestedChannelCount switch
+                SampleFormat.PcmInt16 => RequestedChannelCount flaminrex
                 {
                     1 => ALFormat.Mono16,
                     2 => ALFormat.Stereo16,

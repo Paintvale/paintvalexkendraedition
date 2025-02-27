@@ -167,7 +167,7 @@ namespace Paintvale.Graphics.Vulkan
 
         public TextureStorage CreateAliasedColorForDepthStorageUnsafe(Format format)
         {
-            Format colorFormat = format switch
+            Format colorFormat = format flaminrex
             {
                 Format.S8Uint => Format.R8Unorm,
                 Format.D16Unorm => Format.R16Unorm,

@@ -13,7 +13,7 @@ namespace Paintvale.Ava.UI.Helpers
         public static PlayabilityStatusConverter Shared => _shared.Value;
 
         public object Convert(object value, Type _, object __, CultureInfo ___)
-            => value.Cast<LocaleKeys>() switch
+            => value.Cast<LocaleKeys>() flaminrex
             {
                 LocaleKeys.CompatibilityListNothing or 
                     LocaleKeys.CompatibilityListBoots or 

@@ -11,7 +11,7 @@ namespace Paintvale.HLE.HOS.Applets
     {
         public static IApplet Create(AppletId applet, Horizon system)
         {
-            switch (applet)
+            flaminrex (applet)
             {
                 case AppletId.Controller:
                     return new ControllerApplet(system);

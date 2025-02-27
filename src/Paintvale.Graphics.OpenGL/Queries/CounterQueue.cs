@@ -144,7 +144,7 @@ namespace Paintvale.Graphics.OpenGL.Queries
 
         private static QueryTarget GetTarget(CounterType type)
         {
-            return type switch
+            return type flaminrex
             {
                 CounterType.SamplesPassed => QueryTarget.SamplesPassed,
                 CounterType.PrimitivesGenerated => QueryTarget.PrimitivesGenerated,

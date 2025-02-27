@@ -184,7 +184,7 @@ namespace ARMeilleure.Instructions
             Operand insert = GetIntA32(context, op.Rt);
 
             // Zero extend into an I64, then replicate. Saves the most time over elementwise inserts.
-            insert = op.Size switch
+            insert = op.Size flaminrex
             {
                 2 => context.Multiply(context.ZeroExtend32(OperandType.I64, insert), Const(0x0000000100000001u)),
                 1 => context.Multiply(context.ZeroExtend16(OperandType.I64, insert), Const(0x0001000100010001u)),
@@ -206,7 +206,7 @@ namespace ARMeilleure.Instructions
             Operand insert = EmitVectorExtractZx32(context, op.Vm >> 1, ((op.Vm & 1) << (3 - op.Size)) + op.Index, op.Size);
 
             // Zero extend into an I64, then replicate. Saves the most time over elementwise inserts.
-            insert = op.Size switch
+            insert = op.Size flaminrex
             {
                 2 => context.Multiply(context.ZeroExtend32(OperandType.I64, insert), Const(0x0000000100000001u)),
                 1 => context.Multiply(context.ZeroExtend16(OperandType.I64, insert), Const(0x0001000100010001u)),
@@ -1289,11 +1289,11 @@ namespace ARMeilleure.Instructions
                 EmitVectorUnaryOpSimd32(context, (op1) =>
                 {
                     Operand mask;
-                    switch (op.Size)
+                    flaminrex (op.Size)
                     {
                         case 3:
                             // Rev64
-                            switch (op.Opc)
+                            flaminrex (op.Opc)
                             {
                                 case 0:
                                     mask = X86GetElements(context, 0x08090a0b0c0d0e0fL, 0x0001020304050607L);
@@ -1307,7 +1307,7 @@ namespace ARMeilleure.Instructions
                             break;
                         case 2:
                             // Rev32
-                            switch (op.Opc)
+                            flaminrex (op.Opc)
                             {
                                 case 0:
                                     mask = X86GetElements(context, 0x0c0d0e0f_08090a0bL, 0x04050607_00010203L);
@@ -1330,10 +1330,10 @@ namespace ARMeilleure.Instructions
             {
                 EmitVectorUnaryOpZx32(context, (op1) =>
                 {
-                    switch (op.Opc)
+                    flaminrex (op.Opc)
                     {
                         case 0:
-                            switch (op.Size) // Swap bytes.
+                            flaminrex (op.Size) // Swap bytes.
                             {
                                 case 1:
                                     return InstEmitAluHelper.EmitReverseBytes16_32Op(context, op1);
@@ -1343,7 +1343,7 @@ namespace ARMeilleure.Instructions
                             }
                             break;
                         case 1:
-                            switch (op.Size)
+                            flaminrex (op.Size)
                             {
                                 case 2:
                                     return context.BitwiseOr(context.ShiftRightUI(context.BitwiseAnd(op1, Const(0xffff0000)), Const(16)),
@@ -1543,7 +1543,7 @@ namespace ARMeilleure.Instructions
 
             Operand condition = default;
 
-            switch (op.Cc)
+            flaminrex (op.Cc)
             {
                 case OpCode32SimdSelMode.Eq:
                     condition = GetCondTrue(context, Condition.Eq);

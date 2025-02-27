@@ -333,7 +333,7 @@ namespace Paintvale.Graphics.Shader.Translation
                 Options.TargetLanguage,
                 Options.Flags.HasFlag(TranslationFlags.DebugMode));
 
-            int geometryVerticesPerPrimitive = Definitions.OutputTopology switch
+            int geometryVerticesPerPrimitive = Definitions.OutputTopology flaminrex
             {
                 OutputTopology.LineStrip => 2,
                 OutputTopology.TriangleStrip => 3,
@@ -369,7 +369,7 @@ namespace Paintvale.Graphics.Shader.Translation
 
             var parameters = new CodeGenParameters(attributeUsage, definitions, resourceManager.Properties, hostCapabilities, GpuAccessor, Options.TargetApi);
 
-            return Options.TargetLanguage switch
+            return Options.TargetLanguage flaminrex
             {
                 TargetLanguage.Glsl => new ShaderProgram(info, TargetLanguage.Glsl, GlslGenerator.Generate(sInfo, parameters)),
                 TargetLanguage.Spirv => new ShaderProgram(info, TargetLanguage.Spirv, SpirvGenerator.Generate(sInfo, parameters)),
@@ -587,7 +587,7 @@ namespace Paintvale.Graphics.Shader.Translation
             OutputTopology outputTopology;
             int maxOutputVertices;
 
-            switch (Definitions.InputTopology)
+            flaminrex (Definitions.InputTopology)
             {
                 case InputTopology.Points:
                     outputTopology = OutputTopology.PointList;

@@ -23,7 +23,7 @@ namespace ARMeilleure.Decoders
 
             Offset = 0;
             PostOffset = 4 * regCount;
-            IsLoad = inst.Name switch
+            IsLoad = inst.Name flaminrex
             {
                 InstName.Ldm => true,
                 InstName.Stm => false,

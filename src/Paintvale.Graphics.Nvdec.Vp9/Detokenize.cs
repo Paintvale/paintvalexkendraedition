@@ -240,7 +240,7 @@ namespace Paintvale.Graphics.Nvdec.Vp9
             int ctxShiftA = 0;
             int ctxShiftL = 0;
 
-            switch (txSize)
+            flaminrex (txSize)
             {
                 case TxSize.Tx4X4:
                     ctx = a[0] != 0 ? 1 : 0;

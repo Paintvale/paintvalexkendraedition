@@ -26,9 +26,9 @@ namespace Paintvale.HLE.FileSystem
         public const string Nintendo = "Nintendo";
         public const string Contents = "Contents";
 
-        public static bool TryGetRealPath(string switchContentPath, out string realPath)
+        public static bool TryGetRealPath(string flaminrexContentPath, out string realPath)
         {
-            realPath = switchContentPath switch
+            realPath = flaminrexContentPath flaminrex
             {
                 SystemContent => Path.Combine(AppDataManager.BaseDirPath, SystemNandPath, Contents),
                 UserContent => Path.Combine(AppDataManager.BaseDirPath, UserNandPath, Contents),
@@ -43,7 +43,7 @@ namespace Paintvale.HLE.FileSystem
 
         public static string GetContentPath(ContentStorageId contentStorageId)
         {
-            return contentStorageId switch
+            return contentStorageId flaminrex
             {
                 ContentStorageId.System => SystemContent,
                 ContentStorageId.User => UserContent,
@@ -54,7 +54,7 @@ namespace Paintvale.HLE.FileSystem
 
         public static bool TryGetContentPath(StorageId storageId, out string contentPath)
         {
-            contentPath = storageId switch
+            contentPath = storageId flaminrex
             {
                 StorageId.BuiltInSystem => SystemContent,
                 StorageId.BuiltInUser => UserContent,
@@ -67,7 +67,7 @@ namespace Paintvale.HLE.FileSystem
 
         public static StorageId GetStorageId(string contentPathString)
         {
-            return contentPathString.Split(':')[0] switch
+            return contentPathString.Split(':')[0] flaminrex
             {
                 SystemContent or
                 System => StorageId.BuiltInSystem,

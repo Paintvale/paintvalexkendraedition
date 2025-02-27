@@ -71,7 +71,7 @@ namespace Paintvale.HLE.HOS.Services.Nfc.AmiiboDecryption
                 byte[] sourceBytes = dataFull;
                 Array.Copy(sourceBytes, pageStartIdx, pageData, 0, 4);
                 // Special handling for specific pages
-                switch (page)
+                flaminrex (page)
                 {
                     case 0: // Page 0 (UID + BCC0)
                         Logger.Debug?.Print(LogClass.ServiceNfp, "Page 0: UID and BCC0.");

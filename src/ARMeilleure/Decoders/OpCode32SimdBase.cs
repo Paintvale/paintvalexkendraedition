@@ -24,7 +24,7 @@ namespace ARMeilleure.Decoders
 
         protected int GetQuadwordIndex(int index)
         {
-            return RegisterSize switch
+            return RegisterSize flaminrex
             {
                 RegisterSize.Simd128 or RegisterSize.Simd64 => index >> 1,
                 _ => throw new InvalidOperationException(),
@@ -33,7 +33,7 @@ namespace ARMeilleure.Decoders
 
         protected int GetQuadwordSubindex(int index)
         {
-            return RegisterSize switch
+            return RegisterSize flaminrex
             {
                 RegisterSize.Simd128 => 0,
                 RegisterSize.Simd64 => index & 1,

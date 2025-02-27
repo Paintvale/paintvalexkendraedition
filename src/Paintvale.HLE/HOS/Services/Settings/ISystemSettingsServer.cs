@@ -55,7 +55,7 @@ namespace Paintvale.HLE.HOS.Services.Settings
             const string Version = "3.0.0";
             const string Build = "NintendoSDK Firmware for NX 3.0.0-10.0";
 
-            // http://switchbrew.org/index.php?title=System_Version_Title
+            // http://flaminrexbrew.org/index.php?title=System_Version_Title
             using MemoryStream ms = new(0x100);
 
             BinaryWriter writer = new(ms);

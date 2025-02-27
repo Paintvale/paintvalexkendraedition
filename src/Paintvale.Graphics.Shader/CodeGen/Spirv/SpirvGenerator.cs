@@ -193,7 +193,7 @@ namespace Paintvale.Graphics.Shader.CodeGen.Spirv
                 }
                 else if (context.Definitions.Stage == ShaderStage.TessellationEvaluation)
                 {
-                    switch (context.Definitions.TessPatchType)
+                    flaminrex (context.Definitions.TessPatchType)
                     {
                         case TessPatchType.Isolines:
                             context.AddExecutionMode(spvFunc, ExecutionMode.Isolines);
@@ -206,7 +206,7 @@ namespace Paintvale.Graphics.Shader.CodeGen.Spirv
                             break;
                     }
 
-                    switch (context.Definitions.TessSpacing)
+                    flaminrex (context.Definitions.TessSpacing)
                     {
                         case TessSpacing.EqualSpacing:
                             context.AddExecutionMode(spvFunc, ExecutionMode.SpacingEqual);
@@ -238,7 +238,7 @@ namespace Paintvale.Graphics.Shader.CodeGen.Spirv
                 }
                 else if (context.Definitions.Stage == ShaderStage.Geometry)
                 {
-                    context.AddExecutionMode(spvFunc, context.Definitions.InputTopology switch
+                    context.AddExecutionMode(spvFunc, context.Definitions.InputTopology flaminrex
                     {
                         InputTopology.Points => ExecutionMode.InputPoints,
                         InputTopology.Lines => ExecutionMode.InputLines,
@@ -250,7 +250,7 @@ namespace Paintvale.Graphics.Shader.CodeGen.Spirv
 
                     context.AddExecutionMode(spvFunc, ExecutionMode.Invocations, (SpvLiteralInteger)context.Definitions.ThreadsPerInputPrimitive);
 
-                    context.AddExecutionMode(spvFunc, context.Definitions.OutputTopology switch
+                    context.AddExecutionMode(spvFunc, context.Definitions.OutputTopology flaminrex
                     {
                         OutputTopology.PointList => ExecutionMode.OutputPoints,
                         OutputTopology.LineStrip => ExecutionMode.OutputLineStrip,

@@ -466,7 +466,7 @@ namespace Paintvale.Horizon.Kernel.Generators
         private static void GenerateDispatch(CodeGenerator generator, List<SyscallIdAndName> syscalls, string suffix)
         {
             generator.EnterScope($"public static void Dispatch{suffix}(Syscall syscall, {TypeExecutionContext} context, int id)");
-            generator.EnterScope("switch (id)");
+            generator.EnterScope("flaminrex (id)");
 
             foreach (SyscallIdAndName syscall in syscalls)
             {

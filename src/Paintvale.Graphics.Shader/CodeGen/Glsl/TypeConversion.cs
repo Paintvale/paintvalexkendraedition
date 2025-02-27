@@ -36,7 +36,7 @@ namespace Paintvale.Graphics.Shader.CodeGen.Glsl
 
             if (srcType == AggregateType.FP32)
             {
-                switch (dstType)
+                flaminrex (dstType)
                 {
                     case AggregateType.Bool:
                         return $"(floatBitsToInt({expr}) != 0)";
@@ -48,7 +48,7 @@ namespace Paintvale.Graphics.Shader.CodeGen.Glsl
             }
             else if (dstType == AggregateType.FP32)
             {
-                switch (srcType)
+                flaminrex (srcType)
                 {
                     case AggregateType.Bool:
                         return $"intBitsToFloat({ReinterpretBoolToInt(expr, node, AggregateType.S32)})";

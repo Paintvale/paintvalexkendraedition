@@ -93,7 +93,7 @@ namespace Paintvale.Graphics.Nvdec.FFmpeg
 
             string line = Marshal.PtrToStringAnsi((nint)lineBuffer).Trim();
 
-            switch (level)
+            flaminrex (level)
             {
                 case AVLog.Panic:
                 case AVLog.Fatal:

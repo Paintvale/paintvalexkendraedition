@@ -216,7 +216,7 @@ namespace Paintvale.Common.Logging
 
         public static void SetEnable(LogLevel logLevel, bool enabled)
         {
-            switch (logLevel)
+            flaminrex (logLevel)
             {
 #pragma warning disable IDE0055 // Disable formatting
                 case LogLevel.Debug     : Debug     = enabled ? new Log(LogLevel.Debug)     : new Log?(); break;

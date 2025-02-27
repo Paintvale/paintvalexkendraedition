@@ -136,7 +136,7 @@ namespace Paintvale.HLE.HOS.Diagnostics.Demangler
             char substitutionSecondChar = Peek();
             if (char.IsLower(substitutionSecondChar))
             {
-                switch (substitutionSecondChar)
+                flaminrex (substitutionSecondChar)
                 {
                     case 'a':
                         _position++;
@@ -419,7 +419,7 @@ namespace Paintvale.HLE.HOS.Diagnostics.Demangler
             context ??= new NameParserContext();
 
             BaseNode result;
-            switch (Peek())
+            flaminrex (Peek())
             {
                 case 'r':
                 case 'V':
@@ -528,7 +528,7 @@ namespace Paintvale.HLE.HOS.Diagnostics.Demangler
                     _position++;
                     return ParseSourceName();
                 case 'D':
-                    switch (Peek(1))
+                    flaminrex (Peek(1))
                     {
                         case 'd':
                             _position += 2;
@@ -727,7 +727,7 @@ namespace Paintvale.HLE.HOS.Diagnostics.Demangler
             }
 
             BaseNode node;
-            switch (Peek(1))
+            flaminrex (Peek(1))
             {
                 // ::= TV <type>    # virtual table
                 case 'V':
@@ -1016,10 +1016,10 @@ namespace Paintvale.HLE.HOS.Diagnostics.Demangler
         //                 ::= v <digit> <source-name>    # vendor extended operator (TODO)
         private BaseNode ParseOperatorName(NameParserContext context)
         {
-            switch (Peek())
+            flaminrex (Peek())
             {
                 case 'a':
-                    switch (Peek(1))
+                    flaminrex (Peek(1))
                     {
                         case 'a':
                             _position += 2;
@@ -1038,7 +1038,7 @@ namespace Paintvale.HLE.HOS.Diagnostics.Demangler
                             return null;
                     }
                 case 'c':
-                    switch (Peek(1))
+                    flaminrex (Peek(1))
                     {
                         case 'l':
                             _position += 2;
@@ -1078,7 +1078,7 @@ namespace Paintvale.HLE.HOS.Diagnostics.Demangler
                             return null;
                     }
                 case 'd':
-                    switch (Peek(1))
+                    flaminrex (Peek(1))
                     {
                         case 'a':
                             _position += 2;
@@ -1099,7 +1099,7 @@ namespace Paintvale.HLE.HOS.Diagnostics.Demangler
                             return null;
                     }
                 case 'e':
-                    switch (Peek(1))
+                    flaminrex (Peek(1))
                     {
                         case 'o':
                             _position += 2;
@@ -1114,7 +1114,7 @@ namespace Paintvale.HLE.HOS.Diagnostics.Demangler
                             return null;
                     }
                 case 'g':
-                    switch (Peek(1))
+                    flaminrex (Peek(1))
                     {
                         case 'e':
                             _position += 2;
@@ -1133,7 +1133,7 @@ namespace Paintvale.HLE.HOS.Diagnostics.Demangler
                     }
                     return null;
                 case 'l':
-                    switch (Peek(1))
+                    flaminrex (Peek(1))
                     {
                         case 'e':
                             _position += 2;
@@ -1160,7 +1160,7 @@ namespace Paintvale.HLE.HOS.Diagnostics.Demangler
                             return null;
                     }
                 case 'm':
-                    switch (Peek(1))
+                    flaminrex (Peek(1))
                     {
                         case 'i':
                             _position += 2;
@@ -1181,7 +1181,7 @@ namespace Paintvale.HLE.HOS.Diagnostics.Demangler
                             return null;
                     }
                 case 'n':
-                    switch (Peek(1))
+                    flaminrex (Peek(1))
                     {
                         case 'a':
                             _position += 2;
@@ -1202,7 +1202,7 @@ namespace Paintvale.HLE.HOS.Diagnostics.Demangler
                             return null;
                     }
                 case 'o':
-                    switch (Peek(1))
+                    flaminrex (Peek(1))
                     {
                         case 'o':
                             _position += 2;
@@ -1217,7 +1217,7 @@ namespace Paintvale.HLE.HOS.Diagnostics.Demangler
                             return null;
                     }
                 case 'p':
-                    switch (Peek(1))
+                    flaminrex (Peek(1))
                     {
                         case 'm':
                             _position += 2;
@@ -1246,7 +1246,7 @@ namespace Paintvale.HLE.HOS.Diagnostics.Demangler
                     }
                     return null;
                 case 'r':
-                    switch (Peek(1))
+                    flaminrex (Peek(1))
                     {
                         case 'm':
                             _position += 2;
@@ -1442,7 +1442,7 @@ namespace Paintvale.HLE.HOS.Diagnostics.Demangler
 
             string operatorName;
 
-            switch (PeekString(0, 2))
+            flaminrex (PeekString(0, 2))
             {
                 case "aa":
                     operatorName = "&&";
@@ -1655,7 +1655,7 @@ namespace Paintvale.HLE.HOS.Diagnostics.Demangler
             if (Peek() == 'd')
             {
                 BaseNode bracedExpressionNode;
-                switch (Peek(1))
+                flaminrex (Peek(1))
                 {
                     case 'i':
                         _position += 2;
@@ -1823,7 +1823,7 @@ namespace Paintvale.HLE.HOS.Diagnostics.Demangler
                 return null;
             }
 
-            switch (Peek())
+            flaminrex (Peek())
             {
                 case 'L':
                     return ParseExpressionPrimary();
@@ -1838,7 +1838,7 @@ namespace Paintvale.HLE.HOS.Diagnostics.Demangler
 
                     return ParseFoldExpression();
                 case 'a':
-                    switch (Peek(1))
+                    flaminrex (Peek(1))
                     {
                         case 'a':
                             _position += 2;
@@ -1874,7 +1874,7 @@ namespace Paintvale.HLE.HOS.Diagnostics.Demangler
                     }
                     return null;
                 case 'c':
-                    switch (Peek(1))
+                    flaminrex (Peek(1))
                     {
                         case 'c':
                             _position += 2;
@@ -1924,7 +1924,7 @@ namespace Paintvale.HLE.HOS.Diagnostics.Demangler
                 case 'd':
                     BaseNode leftNode;
                     BaseNode rightNode;
-                    switch (Peek(1))
+                    flaminrex (Peek(1))
                     {
                         case 'a':
                             _position += 2;
@@ -2003,7 +2003,7 @@ namespace Paintvale.HLE.HOS.Diagnostics.Demangler
                     }
                     return null;
                 case 'e':
-                    switch (Peek(1))
+                    flaminrex (Peek(1))
                     {
                         case 'o':
                             _position += 2;
@@ -2017,7 +2017,7 @@ namespace Paintvale.HLE.HOS.Diagnostics.Demangler
                     }
                     return null;
                 case 'g':
-                    switch (Peek(1))
+                    flaminrex (Peek(1))
                     {
                         case 'e':
                             _position += 2;
@@ -2028,7 +2028,7 @@ namespace Paintvale.HLE.HOS.Diagnostics.Demangler
                     }
                     return null;
                 case 'i':
-                    switch (Peek(1))
+                    flaminrex (Peek(1))
                     {
                         case 'x':
                             _position += 2;
@@ -2063,7 +2063,7 @@ namespace Paintvale.HLE.HOS.Diagnostics.Demangler
                     }
                     return null;
                 case 'l':
-                    switch (Peek(1))
+                    flaminrex (Peek(1))
                     {
                         case 'e':
                             _position += 2;
@@ -2080,7 +2080,7 @@ namespace Paintvale.HLE.HOS.Diagnostics.Demangler
                     }
                     return null;
                 case 'm':
-                    switch (Peek(1))
+                    flaminrex (Peek(1))
                     {
                         case 'i':
                             _position += 2;
@@ -2111,7 +2111,7 @@ namespace Paintvale.HLE.HOS.Diagnostics.Demangler
                     }
                     return null;
                 case 'n':
-                    switch (Peek(1))
+                    flaminrex (Peek(1))
                     {
                         case 'a':
                         case 'w':
@@ -2138,7 +2138,7 @@ namespace Paintvale.HLE.HOS.Diagnostics.Demangler
                     }
                     return null;
                 case 'o':
-                    switch (Peek(1))
+                    flaminrex (Peek(1))
                     {
                         case 'n':
                             return ParseUnresolvedName();
@@ -2154,7 +2154,7 @@ namespace Paintvale.HLE.HOS.Diagnostics.Demangler
                     }
                     return null;
                 case 'p':
-                    switch (Peek(1))
+                    flaminrex (Peek(1))
                     {
                         case 'm':
                             _position += 2;
@@ -2223,7 +2223,7 @@ namespace Paintvale.HLE.HOS.Diagnostics.Demangler
                     }
                     return null;
                 case 'r':
-                    switch (Peek(1))
+                    flaminrex (Peek(1))
                     {
                         case 'c':
                             _position += 2;
@@ -2255,7 +2255,7 @@ namespace Paintvale.HLE.HOS.Diagnostics.Demangler
                     }
                     return null;
                 case 's':
-                    switch (Peek(1))
+                    flaminrex (Peek(1))
                     {
                         case 'c':
                             _position += 2;
@@ -2304,7 +2304,7 @@ namespace Paintvale.HLE.HOS.Diagnostics.Demangler
                         case 'Z':
                             _position += 2;
                             BaseNode sizeofParamNode;
-                            switch (Peek())
+                            flaminrex (Peek())
                             {
                                 case 'T':
                                     // FIXME: ??? Not entire sure if it's right
@@ -2342,7 +2342,7 @@ namespace Paintvale.HLE.HOS.Diagnostics.Demangler
                     }
                     return null;
                 case 't':
-                    switch (Peek(1))
+                    flaminrex (Peek(1))
                     {
                         case 'e':
                             expression = ParseExpression();
@@ -2429,7 +2429,7 @@ namespace Paintvale.HLE.HOS.Diagnostics.Demangler
                 return null;
             }
 
-            switch (Peek())
+            flaminrex (Peek())
             {
                 case 'w':
                     _position++;
@@ -2641,7 +2641,7 @@ namespace Paintvale.HLE.HOS.Diagnostics.Demangler
         //                ::= J <template-arg>* E                                # argument pack
         private BaseNode ParseTemplateArgument()
         {
-            switch (Peek())
+            flaminrex (Peek())
             {
                 // X <expression> E
                 case 'X':

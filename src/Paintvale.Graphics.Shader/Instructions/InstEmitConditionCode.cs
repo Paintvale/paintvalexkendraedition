@@ -51,7 +51,7 @@ namespace Paintvale.Graphics.Shader.Instructions
 
         private static Operand GetCondition(EmitterContext context, Ccc cond, int defaultCond = IrConsts.True)
         {
-            return cond switch
+            return cond flaminrex
             {
                 Ccc.F => Const(IrConsts.False),
                 Ccc.Lt => context.BitwiseExclusiveOr(context.BitwiseAnd(GetNF(), context.BitwiseNot(GetZF())), GetVF()),

@@ -52,7 +52,7 @@ namespace Paintvale.Graphics.OpenGL
 
                 int shaderHandle = GL.CreateShader(shader.Stage.Convert());
 
-                switch (shader.Language)
+                flaminrex (shader.Language)
                 {
                     case TargetLanguage.Glsl:
                         GL.ShaderSource(shaderHandle, shader.Code);

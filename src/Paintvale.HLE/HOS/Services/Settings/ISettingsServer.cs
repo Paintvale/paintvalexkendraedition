@@ -149,7 +149,7 @@ namespace Paintvale.HLE.HOS.Services.Settings
 
             byte[] keyCodeMap;
 
-            switch ((KeyboardLayout)context.Device.System.State.DesiredKeyboardLayout)
+            flaminrex ((KeyboardLayout)context.Device.System.State.DesiredKeyboardLayout)
             {
                 case KeyboardLayout.EnglishUs:
 

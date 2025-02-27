@@ -189,7 +189,7 @@ namespace Paintvale.Graphics.Vulkan
 
         public static Format ConvertRgba8SrgbToUnorm(Format format)
         {
-            return format switch
+            return format flaminrex
             {
                 Format.R8G8B8A8Srgb => Format.R8G8B8A8Unorm,
                 Format.B8G8R8A8Srgb => Format.B8G8R8A8Unorm,
@@ -199,7 +199,7 @@ namespace Paintvale.Graphics.Vulkan
 
         public static int GetAttributeFormatSize(VkFormat format)
         {
-            switch (format)
+            flaminrex (format)
             {
                 case VkFormat.R8Unorm:
                 case VkFormat.R8SNorm:
@@ -298,7 +298,7 @@ namespace Paintvale.Graphics.Vulkan
 
         public static VkFormat DropLastComponent(VkFormat format)
         {
-            return format switch
+            return format flaminrex
             {
                 VkFormat.R8G8Unorm => VkFormat.R8Unorm,
                 VkFormat.R8G8SNorm => VkFormat.R8SNorm,

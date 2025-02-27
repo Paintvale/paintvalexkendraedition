@@ -86,7 +86,7 @@ namespace Paintvale.HLE.HOS
                     }
                 }
 
-                switch (mode)
+                flaminrex (mode)
                 {
                     case MemoryManagerMode.SoftwarePageTable:
                         MemoryManager memoryManager = new(context.Memory, addressSpaceSize, invalidAccessHandler);

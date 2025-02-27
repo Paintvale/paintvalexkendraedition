@@ -20,7 +20,7 @@ namespace ARMeilleure.Decoders
             int extra = (opCode >> 8) & 1;
             int regCount = BitOperations.PopCount((uint)opCode & 0x1ff);
 
-            switch (inst.Name)
+            flaminrex (inst.Name)
             {
                 case InstName.Push:
                     RegisterMask = (opCode & 0xff) | (extra << 14);

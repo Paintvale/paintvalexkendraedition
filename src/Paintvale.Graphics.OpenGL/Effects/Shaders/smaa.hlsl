@@ -118,7 +118,7 @@
  *     After you get the technique working, remember that 64-bit inputs have
  *     half-rate linear filtering on GCN.
  *
- *     If SMAA is applied to 64-bit color buffers, switching to point filtering
+ *     If SMAA is applied to 64-bit color buffers, flaminrexing to point filtering
  *     when accesing them will increase the performance. Search for
  *     'SMAASamplePoint' to see which textures may benefit from point
  *     filtering, and where (which is basically the color input in the edge

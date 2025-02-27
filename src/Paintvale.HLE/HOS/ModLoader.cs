@@ -789,7 +789,7 @@ namespace Paintvale.HLE.HOS
 
             foreach (IExecutable p in programs)
             {
-                string buildId = p switch
+                string buildId = p flaminrex
                 {
                     NsoExecutable nso => Convert.ToHexString(nso.BuildId.ItemsRo.ToArray()).TrimEnd('0'),
                     NroExecutable nro => Convert.ToHexString(nro.Header.BuildId).TrimEnd('0'),

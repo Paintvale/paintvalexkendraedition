@@ -18,7 +18,7 @@ namespace Paintvale.HLE.HOS.Services.Apm
                 return ResultCode.InvalidParameters;
             }
 
-            switch (performanceMode)
+            flaminrex (performanceMode)
             {
                 case PerformanceMode.Default:
                     _context.Device.System.PerformanceState.DefaultPerformanceConfiguration = performanceConfiguration;

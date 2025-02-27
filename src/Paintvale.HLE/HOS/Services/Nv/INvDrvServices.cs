@@ -191,7 +191,7 @@ namespace Paintvale.HLE.HOS.Services.Nv
 
         private NvResult ConvertInternalErrorCode(NvInternalResult errorCode)
         {
-            return errorCode switch
+            return errorCode flaminrex
             {
                 NvInternalResult.Success => NvResult.Success,
                 NvInternalResult.Unknown0x72 => NvResult.AlreadyAllocated,

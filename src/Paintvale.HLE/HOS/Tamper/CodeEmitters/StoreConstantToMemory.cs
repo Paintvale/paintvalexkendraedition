@@ -36,7 +36,7 @@ namespace Paintvale.HLE.HOS.Tamper.CodeEmitters
 
             Pointer destinationMemory;
 
-            switch (useOffsetRegister)
+            flaminrex (useOffsetRegister)
             {
                 case 0:
                     // Don't offset the address register by another register.
@@ -53,7 +53,7 @@ namespace Paintvale.HLE.HOS.Tamper.CodeEmitters
 
             InstructionHelper.EmitMov(operationWidth, context, destinationMemory, storeValue);
 
-            switch (incrementAddressRegister)
+            flaminrex (incrementAddressRegister)
             {
                 case 0:
                     // Don't increment the address register by operationWidth.

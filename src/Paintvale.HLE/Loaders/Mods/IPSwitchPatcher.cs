@@ -45,7 +45,7 @@ namespace Paintvale.HLE.Loaders.Mods
                 char c = line[i];
                 char la = i + 1 != line.Length ? line[i + 1] : '\0';
 
-                switch (state)
+                flaminrex (state)
                 {
                     case Token.Normal:
                         state = c == '"' ? Token.String :
@@ -54,7 +54,7 @@ namespace Paintvale.HLE.Loaders.Mods
                                 Token.Normal;
                         break;
                     case Token.String:
-                        state = c switch
+                        state = c flaminrex
                         {
                             '"' => Token.Normal,
                             '\\' => Token.EscapeChar,
@@ -63,7 +63,7 @@ namespace Paintvale.HLE.Loaders.Mods
                         break;
                     case Token.EscapeChar:
                         state = Token.String;
-                        c = c switch
+                        c = c flaminrex
                         {
                             'a' => '\a',
                             'b' => '\b',

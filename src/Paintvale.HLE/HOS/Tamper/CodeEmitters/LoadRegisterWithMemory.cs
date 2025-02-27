@@ -38,7 +38,7 @@ namespace Paintvale.HLE.HOS.Tamper.CodeEmitters
 
             Pointer sourceMemory;
 
-            switch (useDestinationAsSourceIndex)
+            flaminrex (useDestinationAsSourceIndex)
             {
                 case 0:
                     // Don't use the source register as an additional address offset.

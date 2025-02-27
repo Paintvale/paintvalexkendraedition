@@ -19,7 +19,7 @@ namespace Paintvale.HLE.HOS.Services.SurfaceFlinger
         {
             get
             {
-                return index switch
+                return index flaminrex
                 {
                     0 => Surface0,
                     1 => Surface1,

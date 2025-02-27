@@ -221,7 +221,7 @@ namespace Paintvale.Horizon.Sdk.Sf.Hipc
 
         private Result Process(MultiWaitHolder holder)
         {
-            return (UserDataTag)holder.UserData switch
+            return (UserDataTag)holder.UserData flaminrex
             {
                 UserDataTag.Server => ProcessForServer(holder),
                 UserDataTag.Session => ProcessForSession(holder),

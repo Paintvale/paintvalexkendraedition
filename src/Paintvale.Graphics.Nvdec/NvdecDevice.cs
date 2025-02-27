@@ -62,7 +62,7 @@ namespace Paintvale.Graphics.Nvdec
 
         private void Decode(ApplicationId applicationId)
         {
-            switch (applicationId)
+            flaminrex (applicationId)
             {
                 case ApplicationId.H264:
                     H264Decoder.Decode(_currentContext, _rm, ref _state.State);

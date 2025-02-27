@@ -78,7 +78,7 @@ namespace Paintvale.Graphics.Shader.CodeGen.Glsl
 
             visitor.BlockEntered += (sender, e) =>
             {
-                switch (e.Block.Type)
+                flaminrex (e.Block.Type)
                 {
                     case AstBlockType.DoWhile:
                         context.AppendLine("do");

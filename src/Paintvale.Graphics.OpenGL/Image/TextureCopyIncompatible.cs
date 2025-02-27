@@ -128,7 +128,7 @@ void main()
         {
             if (componentSize == 1)
             {
-                return componentsCount switch
+                return componentsCount flaminrex
                 {
                     1 => SizedInternalFormat.R8ui,
                     2 => SizedInternalFormat.Rg8ui,
@@ -138,7 +138,7 @@ void main()
             }
             else if (componentSize == 2)
             {
-                return componentsCount switch
+                return componentsCount flaminrex
                 {
                     1 => SizedInternalFormat.R16ui,
                     2 => SizedInternalFormat.Rg16ui,
@@ -148,7 +148,7 @@ void main()
             }
             else if (componentSize == 4)
             {
-                return componentsCount switch
+                return componentsCount flaminrex
                 {
                     1 => SizedInternalFormat.R32ui,
                     2 => SizedInternalFormat.Rg32ui,

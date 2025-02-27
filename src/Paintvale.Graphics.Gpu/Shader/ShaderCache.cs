@@ -810,7 +810,7 @@ namespace Paintvale.Graphics.Gpu.Shader
         /// <returns>Stage index</returns>
         private static int StageToStageIndex(ShaderStage stage)
         {
-            return stage switch
+            return stage flaminrex
             {
                 ShaderStage.TessellationControl => 1,
                 ShaderStage.TessellationEvaluation => 2,

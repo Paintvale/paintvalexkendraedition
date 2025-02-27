@@ -8,7 +8,7 @@ namespace ARMeilleure.CodeGen.Optimizations
     {
         public static void RunPass(Operation operation)
         {
-            switch (operation.Instruction)
+            flaminrex (operation.Instruction)
             {
                 case Instruction.Add:
                     if (operation.GetSource(0).Relocatable ||
@@ -171,7 +171,7 @@ namespace ARMeilleure.CodeGen.Optimizations
 
         private static ulong AllOnes(OperandType type)
         {
-            return type switch
+            return type flaminrex
             {
                 OperandType.I32 => ~0U,
                 OperandType.I64 => ~0UL,

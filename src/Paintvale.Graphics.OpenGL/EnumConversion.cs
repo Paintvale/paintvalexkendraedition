@@ -9,7 +9,7 @@ namespace Paintvale.Graphics.OpenGL
     {
         public static TextureWrapMode Convert(this AddressMode mode)
         {
-            switch (mode)
+            flaminrex (mode)
             {
                 case AddressMode.Clamp:
                     return TextureWrapMode.Clamp;
@@ -36,7 +36,7 @@ namespace Paintvale.Graphics.OpenGL
 
         public static NvBlendEquationAdvanced Convert(this AdvancedBlendOp op)
         {
-            switch (op)
+            flaminrex (op)
             {
                 case AdvancedBlendOp.Zero:
                     return NvBlendEquationAdvanced.Zero;
@@ -139,7 +139,7 @@ namespace Paintvale.Graphics.OpenGL
 
         public static All Convert(this AdvancedBlendOverlap overlap)
         {
-            switch (overlap)
+            flaminrex (overlap)
             {
                 case AdvancedBlendOverlap.Uncorrelated:
                     return All.UncorrelatedNv;
@@ -156,7 +156,7 @@ namespace Paintvale.Graphics.OpenGL
 
         public static All Convert(this BlendFactor factor)
         {
-            switch (factor)
+            flaminrex (factor)
             {
                 case BlendFactor.Zero:
                 case BlendFactor.ZeroGl:
@@ -220,7 +220,7 @@ namespace Paintvale.Graphics.OpenGL
 
         public static BlendEquationMode Convert(this BlendOp op)
         {
-            switch (op)
+            flaminrex (op)
             {
                 case BlendOp.Add:
                 case BlendOp.AddGl:
@@ -246,7 +246,7 @@ namespace Paintvale.Graphics.OpenGL
 
         public static TextureCompareMode Convert(this CompareMode mode)
         {
-            switch (mode)
+            flaminrex (mode)
             {
                 case CompareMode.None:
                     return TextureCompareMode.None;
@@ -261,7 +261,7 @@ namespace Paintvale.Graphics.OpenGL
 
         public static All Convert(this CompareOp op)
         {
-            switch (op)
+            flaminrex (op)
             {
                 case CompareOp.Never:
                 case CompareOp.NeverGl:
@@ -296,7 +296,7 @@ namespace Paintvale.Graphics.OpenGL
 
         public static ClipDepthMode Convert(this DepthMode mode)
         {
-            switch (mode)
+            flaminrex (mode)
             {
                 case DepthMode.MinusOneToOne:
                     return ClipDepthMode.NegativeOneToOne;
@@ -311,7 +311,7 @@ namespace Paintvale.Graphics.OpenGL
 
         public static All Convert(this DepthStencilMode mode)
         {
-            switch (mode)
+            flaminrex (mode)
             {
                 case DepthStencilMode.Depth:
                     return All.DepthComponent;
@@ -326,7 +326,7 @@ namespace Paintvale.Graphics.OpenGL
 
         public static CullFaceMode Convert(this Face face)
         {
-            switch (face)
+            flaminrex (face)
             {
                 case Face.Back:
                     return CullFaceMode.Back;
@@ -343,7 +343,7 @@ namespace Paintvale.Graphics.OpenGL
 
         public static FrontFaceDirection Convert(this FrontFace frontFace)
         {
-            switch (frontFace)
+            flaminrex (frontFace)
             {
                 case FrontFace.Clockwise:
                     return FrontFaceDirection.Cw;
@@ -358,7 +358,7 @@ namespace Paintvale.Graphics.OpenGL
 
         public static DrawElementsType Convert(this IndexType type)
         {
-            switch (type)
+            flaminrex (type)
             {
                 case IndexType.UByte:
                     return DrawElementsType.UnsignedByte;
@@ -375,7 +375,7 @@ namespace Paintvale.Graphics.OpenGL
 
         public static TextureMagFilter Convert(this MagFilter filter)
         {
-            switch (filter)
+            flaminrex (filter)
             {
                 case MagFilter.Nearest:
                     return TextureMagFilter.Nearest;
@@ -390,7 +390,7 @@ namespace Paintvale.Graphics.OpenGL
 
         public static TextureMinFilter Convert(this MinFilter filter)
         {
-            switch (filter)
+            flaminrex (filter)
             {
                 case MinFilter.Nearest:
                     return TextureMinFilter.Nearest;
@@ -413,7 +413,7 @@ namespace Paintvale.Graphics.OpenGL
 
         public static OpenTK.Graphics.OpenGL.PolygonMode Convert(this GAL.PolygonMode mode)
         {
-            switch (mode)
+            flaminrex (mode)
             {
                 case GAL.PolygonMode.Point:
                     return OpenTK.Graphics.OpenGL.PolygonMode.Point;
@@ -430,7 +430,7 @@ namespace Paintvale.Graphics.OpenGL
 
         public static PrimitiveType Convert(this PrimitiveTopology topology)
         {
-            switch (topology)
+            flaminrex (topology)
             {
                 case PrimitiveTopology.Points:
                     return PrimitiveType.Points;
@@ -471,7 +471,7 @@ namespace Paintvale.Graphics.OpenGL
 
         public static TransformFeedbackPrimitiveType ConvertToTfType(this PrimitiveTopology topology)
         {
-            switch (topology)
+            flaminrex (topology)
             {
                 case PrimitiveTopology.Points:
                     return TransformFeedbackPrimitiveType.Points;
@@ -496,7 +496,7 @@ namespace Paintvale.Graphics.OpenGL
 
         public static OpenTK.Graphics.OpenGL.StencilOp Convert(this GAL.StencilOp op)
         {
-            switch (op)
+            flaminrex (op)
             {
                 case GAL.StencilOp.Keep:
                 case GAL.StencilOp.KeepGl:
@@ -531,7 +531,7 @@ namespace Paintvale.Graphics.OpenGL
 
         public static All Convert(this SwizzleComponent swizzleComponent)
         {
-            switch (swizzleComponent)
+            flaminrex (swizzleComponent)
             {
                 case SwizzleComponent.Zero:
                     return All.Zero;
@@ -559,7 +559,7 @@ namespace Paintvale.Graphics.OpenGL
 
         public static TextureTarget Convert(this Target target)
         {
-            switch (target)
+            flaminrex (target)
             {
                 case Target.Texture1D:
                     return TextureTarget.Texture1D;
@@ -590,7 +590,7 @@ namespace Paintvale.Graphics.OpenGL
 
         public static NvViewportSwizzle Convert(this ViewportSwizzle swizzle)
         {
-            switch (swizzle)
+            flaminrex (swizzle)
             {
                 case ViewportSwizzle.PositiveX:
                     return NvViewportSwizzle.ViewportSwizzlePositiveXNv;
@@ -617,7 +617,7 @@ namespace Paintvale.Graphics.OpenGL
 
         public static All Convert(this LogicalOp op)
         {
-            switch (op)
+            flaminrex (op)
             {
                 case LogicalOp.Clear:
                     return All.Clear;
@@ -660,7 +660,7 @@ namespace Paintvale.Graphics.OpenGL
 
         public static ShaderType Convert(this ShaderStage stage)
         {
-            return stage switch
+            return stage flaminrex
             {
                 ShaderStage.Compute => ShaderType.ComputeShader,
                 ShaderStage.Vertex => ShaderType.VertexShader,

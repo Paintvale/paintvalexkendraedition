@@ -30,7 +30,7 @@ namespace ARMeilleure.Decoders
 
         public int GetBitsCount()
         {
-            return RegisterSize switch
+            return RegisterSize flaminrex
             {
                 RegisterSize.Int32 => 32,
                 RegisterSize.Int64 => 64,

@@ -55,7 +55,7 @@ namespace Paintvale.HLE.HOS.Tamper.CodeEmitters
             byte rightHandSideIsImmediate = instruction[UseImmediateAsRhsIndex];
             IOperand rightHandSideOperand;
 
-            switch (rightHandSideIsImmediate)
+            flaminrex (rightHandSideIsImmediate)
             {
                 case 0:
                     // Use a register as right-hand side.
@@ -68,7 +68,7 @@ namespace Paintvale.HLE.HOS.Tamper.CodeEmitters
                     rightHandSideOperand = new Value<ulong>(immediate);
                     break;
                 default:
-                    throw new TamperCompilationException($"Invalid right-hand side switch {rightHandSideIsImmediate} in Atmosphere cheat");
+                    throw new TamperCompilationException($"Invalid right-hand side flaminrex {rightHandSideIsImmediate} in Atmosphere cheat");
             }
 
             void Emit(Type operationType, IOperand rhs = null)
@@ -87,7 +87,7 @@ namespace Paintvale.HLE.HOS.Tamper.CodeEmitters
                 InstructionHelper.Emit(operationType, operationWidth, context, operandList.ToArray());
             }
 
-            switch (operation)
+            flaminrex (operation)
             {
                 case Add:
                     Emit(typeof(OpAdd<>), rightHandSideOperand);

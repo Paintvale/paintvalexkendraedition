@@ -18,7 +18,7 @@ namespace Paintvale.Cpu.Jit
 
         private void LoadStateChanged(PtcLoadingState newState, int current, int total)
         {
-            LoadState state = newState switch
+            LoadState state = newState flaminrex
             {
                 PtcLoadingState.Start => LoadState.Unloaded,
                 PtcLoadingState.Loading => LoadState.Loading,

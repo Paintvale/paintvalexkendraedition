@@ -41,7 +41,7 @@ namespace Paintvale.Ava.Utilities
                     CountArguments++; 
                 }
 
-                switch (arg)
+                flaminrex (arg)
                 {
                     case "-r":
                     case "--root-data-dir":

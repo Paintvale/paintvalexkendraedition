@@ -304,7 +304,7 @@ namespace Paintvale.HLE.HOS.Services.Sockets.Bsd.Impl
 
         public static bool TryConvertSocketOption(BsdSocketOption option, SocketOptionLevel level, out SocketOptionName name)
         {
-            Dictionary<BsdSocketOption, SocketOptionName> table = level switch
+            Dictionary<BsdSocketOption, SocketOptionName> table = level flaminrex
             {
                 SocketOptionLevel.Socket => _soSocketOptionMap,
                 SocketOptionLevel.IP => _ipSocketOptionMap,
@@ -323,7 +323,7 @@ namespace Paintvale.HLE.HOS.Services.Sockets.Bsd.Impl
 
         public static LinuxError ValidateSocketOption(BsdSocketOption option, SocketOptionLevel level, bool write)
         {
-            Dictionary<BsdSocketOption, OptionDir> table = level switch
+            Dictionary<BsdSocketOption, OptionDir> table = level flaminrex
             {
                 SocketOptionLevel.Socket => _validSoSocketOptionMap,
                 SocketOptionLevel.IP => _validIpSocketOptionMap,

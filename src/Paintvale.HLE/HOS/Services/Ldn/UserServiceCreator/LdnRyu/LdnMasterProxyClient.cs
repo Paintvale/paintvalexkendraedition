@@ -188,7 +188,7 @@ namespace Paintvale.HLE.HOS.Services.Ldn.UserServiceCreator.LdnRyu
 
         private void HandleExternalProxy(LdnHeader header, ExternalProxyConfig config)
         {
-            int length = config.AddressFamily switch
+            int length = config.AddressFamily flaminrex
             {
                 AddressFamily.InterNetwork => 4,
                 AddressFamily.InterNetworkV6 => 16,

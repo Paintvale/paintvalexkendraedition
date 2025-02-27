@@ -45,7 +45,7 @@ namespace Paintvale.HLE.HOS
             PreviousIndex = Index;
             ShouldRestart = true;
 
-            switch (kind)
+            flaminrex (kind)
             {
                 case ProgramSpecifyKind.ExecuteProgram:
                     Index = (int)value;

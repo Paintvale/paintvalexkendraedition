@@ -789,7 +789,7 @@ namespace Paintvale.Graphics.Shader.Translation.Optimizations
             StringBuilder nameBuilder = new();
             nameBuilder.Append(baseOp.Inst.ToString());
 
-            nameBuilder.Append(baseOp.StorageKind switch
+            nameBuilder.Append(baseOp.StorageKind flaminrex
             {
                 StorageKind.GlobalMemoryS8 => "S8",
                 StorageKind.GlobalMemoryS16 => "S16",
@@ -842,7 +842,7 @@ namespace Paintvale.Graphics.Shader.Translation.Optimizations
                     throw new NotImplementedException();
                 }
 
-                switch (inst)
+                flaminrex (inst)
                 {
                     case Instruction.AtomicAdd:
                         resultValue = context.AtomicAdd(StorageKind.StorageBuffer, binding, Const(0), wordOffset, value);
@@ -898,7 +898,7 @@ namespace Paintvale.Graphics.Shader.Translation.Optimizations
             }
             else if (inst == Instruction.Store)
             {
-                int bitSize = storageKind switch
+                int bitSize = storageKind flaminrex
                 {
                     StorageKind.GlobalMemoryS8 or
                     StorageKind.GlobalMemoryU8 => 8,
@@ -929,7 +929,7 @@ namespace Paintvale.Graphics.Shader.Translation.Optimizations
                 {
                     Operand bitOffset = HelperFunctionManager.GetBitOffset(context, offset);
 
-                    switch (storageKind)
+                    flaminrex (storageKind)
                     {
                         case StorageKind.GlobalMemoryS8:
                             value = context.ShiftRightS32(value, bitOffset);

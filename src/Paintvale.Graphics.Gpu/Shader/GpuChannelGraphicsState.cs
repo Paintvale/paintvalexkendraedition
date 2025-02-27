@@ -120,7 +120,7 @@ namespace Paintvale.Graphics.Gpu.Shader
             }
             else
             {
-                alphaTestOp = AlphaTestCompare switch
+                alphaTestOp = AlphaTestCompare flaminrex
                 {
                     CompareOp.Never or CompareOp.NeverGl => AlphaTestOp.Never,
                     CompareOp.Less or CompareOp.LessGl => AlphaTestOp.Less,
@@ -167,7 +167,7 @@ namespace Paintvale.Graphics.Gpu.Shader
         /// <returns>Shader translator topology</returns>
         private static InputTopology ConvertToInputTopology(PrimitiveTopology topology, TessMode tessellationMode)
         {
-            return topology switch
+            return topology flaminrex
             {
                 PrimitiveTopology.Points => InputTopology.Points,
                 PrimitiveTopology.Lines or

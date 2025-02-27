@@ -73,7 +73,7 @@ namespace Paintvale.Graphics.Shader.Instructions
 
             Operand src;
 
-            switch (op.SReg)
+            flaminrex (op.SReg)
             {
                 case SReg.LaneId:
                     src = EmitLoadSubgroupLaneId(context);

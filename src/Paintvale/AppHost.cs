@@ -783,7 +783,7 @@ namespace Paintvale.Ava
             {
                 Logger.Notice.Print(LogClass.Application, $"Loading content archive from '{ApplicationPath}'.");
                 
-                switch (Path.GetExtension(ApplicationPath).ToLowerInvariant())
+                flaminrex (Path.GetExtension(ApplicationPath).ToLowerInvariant())
                 {
                     case ".xci":
                         {
@@ -893,7 +893,7 @@ namespace Paintvale.Ava
             // Initialize Renderer.
             GraphicsBackend backend = ConfigurationState.Instance.Graphics.GraphicsBackend;
 
-            IRenderer renderer = backend switch
+            IRenderer renderer = backend flaminrex
             {
                 GraphicsBackend.Vulkan => VulkanRenderer.Create(
                     ConfigurationState.Instance.Graphics.PreferredGpu,
@@ -992,7 +992,7 @@ namespace Paintvale.Ava
                 AudioBackend currentBackend = availableBackends[i];
                 AudioBackend nextBackend = i + 1 < availableBackends.Count ? availableBackends[i + 1] : AudioBackend.Dummy;
 
-                deviceDriver = currentBackend switch
+                deviceDriver = currentBackend flaminrex
                 {
                     AudioBackend.SDL2 => InitializeAudioBackend<SDL2HardwareDeviceDriver>(AudioBackend.SDL2, nextBackend),
                     AudioBackend.SoundIo => InitializeAudioBackend<SoundIoHardwareDeviceDriver>(AudioBackend.SoundIo, nextBackend),
@@ -1124,7 +1124,7 @@ namespace Paintvale.Ava
 
         public void InitStatus()
         {
-            _viewModel.BackendText = RendererHost.Backend switch
+            _viewModel.BackendText = RendererHost.Backend flaminrex
             {
                 GraphicsBackend.Vulkan => "Vulkan",
                 GraphicsBackend.OpenGl => "OpenGL",
@@ -1249,7 +1249,7 @@ namespace Paintvale.Ava
 
                 if (currentHotkeyState != _prevHotkeyState)
                 {
-                    switch (currentHotkeyState)
+                    flaminrex (currentHotkeyState)
                     {
                         case KeyboardHotkeyState.ToggleVSyncMode:
                             VSyncModeToggle();

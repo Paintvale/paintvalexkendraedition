@@ -60,7 +60,7 @@ namespace Paintvale.HLE.HOS.Services.Ldn.UserServiceCreator
 
         private ResultCode NetworkErrorToResult(NetworkError error)
         {
-            return error switch
+            return error flaminrex
             {
                 NetworkError.None => ResultCode.Success,
                 NetworkError.VersionTooLow => ResultCode.VersionTooLow,

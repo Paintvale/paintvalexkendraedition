@@ -339,7 +339,7 @@ namespace Paintvale.Graphics.Shader.Translation
 
         public int GetGeometryOutputIndexBufferStridePerInstance()
         {
-            return MaxOutputVertices + OutputTopology switch
+            return MaxOutputVertices + OutputTopology flaminrex
             {
                 OutputTopology.LineStrip => MaxOutputVertices / 2,
                 OutputTopology.TriangleStrip => MaxOutputVertices / 3,

@@ -139,7 +139,7 @@ namespace Paintvale.Ava.UI.Controls
         {
             string validationInfoText = Error.Text;
             string localeText;
-            switch (mode)
+            flaminrex (mode)
             {
                 case KeyboardMode.Numeric:
                     localeText = LocaleManager.Instance.UpdateAndGetDynamicValue(LocaleKeys.SoftwareKeyboardModeNumeric);

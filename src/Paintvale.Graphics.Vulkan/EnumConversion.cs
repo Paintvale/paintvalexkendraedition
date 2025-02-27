@@ -18,7 +18,7 @@ namespace Paintvale.Graphics.Vulkan
     {
         public static ShaderStageFlags Convert(this ShaderStage stage)
         {
-            return stage switch
+            return stage flaminrex
             {
                 ShaderStage.Vertex => ShaderStageFlags.VertexBit,
                 ShaderStage.Geometry => ShaderStageFlags.GeometryBit,
@@ -32,7 +32,7 @@ namespace Paintvale.Graphics.Vulkan
 
         public static PipelineStageFlags ConvertToPipelineStageFlags(this ShaderStage stage)
         {
-            return stage switch
+            return stage flaminrex
             {
                 ShaderStage.Vertex => PipelineStageFlags.VertexShaderBit,
                 ShaderStage.Geometry => PipelineStageFlags.GeometryShaderBit,
@@ -80,7 +80,7 @@ namespace Paintvale.Graphics.Vulkan
 
         public static DescriptorType Convert(this ResourceType type)
         {
-            return type switch
+            return type flaminrex
             {
                 ResourceType.UniformBuffer => DescriptorType.UniformBuffer,
                 ResourceType.StorageBuffer => DescriptorType.StorageBuffer,
@@ -96,7 +96,7 @@ namespace Paintvale.Graphics.Vulkan
 
         public static SamplerAddressMode Convert(this AddressMode mode)
         {
-            return mode switch
+            return mode flaminrex
             {
                 AddressMode.Clamp => SamplerAddressMode.ClampToEdge, // TODO: Should be clamp.
                 AddressMode.Repeat => SamplerAddressMode.Repeat,
@@ -112,7 +112,7 @@ namespace Paintvale.Graphics.Vulkan
 
         public static BlendFactor Convert(this GAL.BlendFactor factor)
         {
-            return factor switch
+            return factor flaminrex
             {
                 GAL.BlendFactor.Zero or GAL.BlendFactor.ZeroGl => BlendFactor.Zero,
                 GAL.BlendFactor.One or GAL.BlendFactor.OneGl => BlendFactor.One,
@@ -139,7 +139,7 @@ namespace Paintvale.Graphics.Vulkan
 
         public static BlendOp Convert(this AdvancedBlendOp op)
         {
-            return op switch
+            return op flaminrex
             {
                 AdvancedBlendOp.Zero => BlendOp.ZeroExt,
                 AdvancedBlendOp.Src => BlendOp.SrcExt,
@@ -193,7 +193,7 @@ namespace Paintvale.Graphics.Vulkan
 
         public static BlendOp Convert(this GAL.BlendOp op)
         {
-            return op switch
+            return op flaminrex
             {
                 GAL.BlendOp.Add or GAL.BlendOp.AddGl => BlendOp.Add,
                 GAL.BlendOp.Subtract or GAL.BlendOp.SubtractGl => BlendOp.Subtract,
@@ -206,7 +206,7 @@ namespace Paintvale.Graphics.Vulkan
 
         public static BlendOverlapEXT Convert(this AdvancedBlendOverlap overlap)
         {
-            return overlap switch
+            return overlap flaminrex
             {
                 AdvancedBlendOverlap.Uncorrelated => BlendOverlapEXT.UncorrelatedExt,
                 AdvancedBlendOverlap.Disjoint => BlendOverlapEXT.DisjointExt,
@@ -217,7 +217,7 @@ namespace Paintvale.Graphics.Vulkan
 
         public static CompareOp Convert(this GAL.CompareOp op)
         {
-            return op switch
+            return op flaminrex
             {
                 GAL.CompareOp.Never or GAL.CompareOp.NeverGl => CompareOp.Never,
                 GAL.CompareOp.Less or GAL.CompareOp.LessGl => CompareOp.Less,
@@ -233,7 +233,7 @@ namespace Paintvale.Graphics.Vulkan
 
         public static CullModeFlags Convert(this Face face)
         {
-            return face switch
+            return face flaminrex
             {
                 Face.Back => CullModeFlags.BackBit,
                 Face.Front => CullModeFlags.FrontBit,
@@ -245,7 +245,7 @@ namespace Paintvale.Graphics.Vulkan
         public static FrontFace Convert(this GAL.FrontFace frontFace)
         {
             // Flipped to account for origin differences.
-            return frontFace switch
+            return frontFace flaminrex
             {
                 GAL.FrontFace.Clockwise => FrontFace.CounterClockwise,
                 GAL.FrontFace.CounterClockwise => FrontFace.Clockwise,
@@ -255,7 +255,7 @@ namespace Paintvale.Graphics.Vulkan
 
         public static IndexType Convert(this GAL.IndexType type)
         {
-            return type switch
+            return type flaminrex
             {
                 GAL.IndexType.UByte => IndexType.Uint8Ext,
                 GAL.IndexType.UShort => IndexType.Uint16,
@@ -266,7 +266,7 @@ namespace Paintvale.Graphics.Vulkan
 
         public static Filter Convert(this MagFilter filter)
         {
-            return filter switch
+            return filter flaminrex
             {
                 MagFilter.Nearest => Filter.Nearest,
                 MagFilter.Linear => Filter.Linear,
@@ -276,7 +276,7 @@ namespace Paintvale.Graphics.Vulkan
 
         public static (Filter, SamplerMipmapMode) Convert(this MinFilter filter)
         {
-            return filter switch
+            return filter flaminrex
             {
                 MinFilter.Nearest => (Filter.Nearest, SamplerMipmapMode.Nearest),
                 MinFilter.Linear => (Filter.Linear, SamplerMipmapMode.Nearest),
@@ -290,7 +290,7 @@ namespace Paintvale.Graphics.Vulkan
 
         public static PrimitiveTopology Convert(this GAL.PrimitiveTopology topology)
         {
-            return topology switch
+            return topology flaminrex
             {
                 GAL.PrimitiveTopology.Points => PrimitiveTopology.PointList,
                 GAL.PrimitiveTopology.Lines => PrimitiveTopology.LineList,
@@ -312,7 +312,7 @@ namespace Paintvale.Graphics.Vulkan
 
         public static StencilOp Convert(this GAL.StencilOp op)
         {
-            return op switch
+            return op flaminrex
             {
                 GAL.StencilOp.Keep or GAL.StencilOp.KeepGl => StencilOp.Keep,
                 GAL.StencilOp.Zero or GAL.StencilOp.ZeroGl => StencilOp.Zero,
@@ -328,7 +328,7 @@ namespace Paintvale.Graphics.Vulkan
 
         public static ComponentSwizzle Convert(this SwizzleComponent swizzleComponent)
         {
-            return swizzleComponent switch
+            return swizzleComponent flaminrex
             {
                 SwizzleComponent.Zero => ComponentSwizzle.Zero,
                 SwizzleComponent.One => ComponentSwizzle.One,
@@ -342,7 +342,7 @@ namespace Paintvale.Graphics.Vulkan
 
         public static ImageType Convert(this Target target)
         {
-            return target switch
+            return target flaminrex
             {
                 Target.Texture1D or
                 Target.Texture1DArray or
@@ -359,7 +359,7 @@ namespace Paintvale.Graphics.Vulkan
 
         public static ImageViewType ConvertView(this Target target)
         {
-            return target switch
+            return target flaminrex
             {
                 Target.Texture1D => ImageViewType.Type1D,
                 Target.Texture2D or Target.Texture2DMultisample => ImageViewType.Type2D,
@@ -374,7 +374,7 @@ namespace Paintvale.Graphics.Vulkan
 
         public static ImageAspectFlags ConvertAspectFlags(this Format format)
         {
-            return format switch
+            return format flaminrex
             {
                 Format.D16Unorm or Format.D32Float or Format.X8UintD24Unorm => ImageAspectFlags.DepthBit,
                 Format.S8Uint => ImageAspectFlags.StencilBit,
@@ -387,7 +387,7 @@ namespace Paintvale.Graphics.Vulkan
 
         public static ImageAspectFlags ConvertAspectFlags(this Format format, DepthStencilMode depthStencilMode)
         {
-            return format switch
+            return format flaminrex
             {
                 Format.D16Unorm or Format.D32Float or Format.X8UintD24Unorm => ImageAspectFlags.DepthBit,
                 Format.S8Uint => ImageAspectFlags.StencilBit,
@@ -400,7 +400,7 @@ namespace Paintvale.Graphics.Vulkan
 
         public static LogicOp Convert(this LogicalOp op)
         {
-            return op switch
+            return op flaminrex
             {
                 LogicalOp.Clear => LogicOp.Clear,
                 LogicalOp.And => LogicOp.And,

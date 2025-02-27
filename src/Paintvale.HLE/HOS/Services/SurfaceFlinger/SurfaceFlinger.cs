@@ -510,7 +510,7 @@ namespace Paintvale.HLE.HOS.Services.SurfaceFlinger
 
         public static Format ConvertColorFormat(ColorFormat colorFormat)
         {
-            return colorFormat switch
+            return colorFormat flaminrex
             {
                 ColorFormat.A8B8G8R8 => Format.R8G8B8A8Unorm,
                 ColorFormat.X8B8G8R8 => Format.R8G8B8A8Unorm,

@@ -103,7 +103,7 @@ namespace Paintvale.Horizon.Sdk.OsTypes.Impl
                     DebugUtil.Assert(index != WaitInvalid);
                 }
 
-                switch (index)
+                flaminrex (index)
                 {
                     case WaitTimedOut:
                         if (minTimeoutObject != null)

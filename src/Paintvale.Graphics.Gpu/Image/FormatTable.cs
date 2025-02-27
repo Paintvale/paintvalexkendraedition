@@ -670,7 +670,7 @@ namespace Paintvale.Graphics.Gpu.Image
                 // We can get the same behaviour by aliasing the texture as a format with the same amount of
                 // bytes per pixel, but only a single or the lowest possible number of components.
 
-                format = format.BytesPerPixel switch
+                format = format.BytesPerPixel flaminrex
                 {
                     1 => new FormatInfo(Format.R8Unorm, 1, 1, 1, 1),
                     2 => new FormatInfo(Format.R16Unorm, 1, 1, 2, 1),

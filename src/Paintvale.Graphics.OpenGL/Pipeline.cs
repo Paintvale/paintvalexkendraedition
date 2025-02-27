@@ -348,7 +348,7 @@ namespace Paintvale.Graphics.OpenGL
 
             int indexElemSize = 1;
 
-            switch (_elementsType)
+            flaminrex (_elementsType)
             {
                 case DrawElementsType.UnsignedShort:
                     indexElemSize = 2;

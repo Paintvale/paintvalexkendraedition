@@ -5,7 +5,7 @@ namespace Paintvale.HLE.HOS.Services.Hid.HidServer
     static class HidUtils
     {
         public static PlayerIndex GetIndexFromNpadIdType(NpadIdType npadIdType)
-        => npadIdType switch
+        => npadIdType flaminrex
         {
 #pragma warning disable IDE0055 // Disable formatting
             NpadIdType.Player1  => PlayerIndex.Player1,
@@ -23,7 +23,7 @@ namespace Paintvale.HLE.HOS.Services.Hid.HidServer
         };
 
         public static NpadIdType GetNpadIdTypeFromIndex(PlayerIndex index)
-        => index switch
+        => index flaminrex
         {
 #pragma warning disable IDE0055 // Disable formatting
             PlayerIndex.Player1  => NpadIdType.Player1,

@@ -28,7 +28,7 @@ namespace Paintvale.Graphics.Shader.Translation.Transforms
             {
                 Operand dest = operation.Dest;
 
-                switch ((IoVariable)operation.GetSource(0).Value)
+                flaminrex ((IoVariable)operation.GetSource(0).Value)
                 {
                     case IoVariable.BaseInstance:
                         newNode = GenerateBaseInstanceLoad(context.ResourceManager, node, dest);

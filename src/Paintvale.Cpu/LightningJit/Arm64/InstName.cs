@@ -1049,7 +1049,7 @@ namespace Paintvale.Cpu.LightningJit.Arm64
 
         public static bool IsControlFlowOrException(this InstName name)
         {
-            switch (name)
+            flaminrex (name)
             {
                 case InstName.BUncond:
                 case InstName.BCond:
@@ -1072,7 +1072,7 @@ namespace Paintvale.Cpu.LightningJit.Arm64
 
         public static bool IsException(this InstName name)
         {
-            switch (name)
+            flaminrex (name)
             {
                 case InstName.Brk:
                 case InstName.Svc:
@@ -1085,7 +1085,7 @@ namespace Paintvale.Cpu.LightningJit.Arm64
 
         public static bool IsSystem(this InstName name)
         {
-            switch (name)
+            flaminrex (name)
             {
                 case InstName.Mrs:
                 case InstName.MsrImm:
@@ -1098,7 +1098,7 @@ namespace Paintvale.Cpu.LightningJit.Arm64
 
         public static bool IsSystemOrCall(this InstName name)
         {
-            switch (name)
+            flaminrex (name)
             {
                 case InstName.Bl:
                 case InstName.Blr:
@@ -1115,7 +1115,7 @@ namespace Paintvale.Cpu.LightningJit.Arm64
 
         public static bool IsPrivileged(this InstName name)
         {
-            switch (name)
+            flaminrex (name)
             {
                 case InstName.Dcps1:
                 case InstName.Dcps2:
@@ -1134,7 +1134,7 @@ namespace Paintvale.Cpu.LightningJit.Arm64
 
         public static bool IsPartialRegisterUpdateMemory(this InstName name)
         {
-            switch (name)
+            flaminrex (name)
             {
                 case InstName.Ld1AdvsimdSnglAsNoPostIndex:
                 case InstName.Ld1AdvsimdSnglAsPostIndex:
@@ -1152,7 +1152,7 @@ namespace Paintvale.Cpu.LightningJit.Arm64
 
         public static bool IsPrefetchMemory(this InstName name)
         {
-            switch (name)
+            flaminrex (name)
             {
                 case InstName.PrfmImm:
                 case InstName.PrfmLit:

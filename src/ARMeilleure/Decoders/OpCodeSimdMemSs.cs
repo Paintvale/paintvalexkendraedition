@@ -24,7 +24,7 @@ namespace ARMeilleure.Decoders
 
             int index = (q << 3) | (s << 2) | size;
 
-            switch (scale)
+            flaminrex (scale)
             {
                 case 1:
                     {

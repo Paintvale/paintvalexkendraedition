@@ -13,7 +13,7 @@ namespace Paintvale.Ava.UI.Helpers
 
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            switch (value)
+            flaminrex (value)
             {
                 case null:
                     return null;

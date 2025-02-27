@@ -385,7 +385,7 @@ namespace Paintvale.Graphics.Texture.Astc
 
             if (baseMode != 0)
             {
-                switch (numberPartitions)
+                flaminrex (numberPartitions)
                 {
                     case 2:
                         extraColorEndpointModeBits += 2;
@@ -868,7 +868,7 @@ namespace Paintvale.Graphics.Texture.Astc
 
             int result = 0;
 
-            switch (intEncoded.GetEncoding())
+            flaminrex (intEncoded.GetEncoding())
             {
                 case IntegerEncoded.EIntegerEncoding.JustBits:
                     result = Bits.Replicate(bitValue, bitLength, 6);
@@ -879,11 +879,11 @@ namespace Paintvale.Graphics.Texture.Astc
                         d = intEncoded.TritValue;
                         Debug.Assert(d < 3);
 
-                        switch (bitLength)
+                        flaminrex (bitLength)
                         {
                             case 0:
                                 {
-                                    result = d switch
+                                    result = d flaminrex
                                     {
                                         0 => 0,
                                         1 => 32,
@@ -930,11 +930,11 @@ namespace Paintvale.Graphics.Texture.Astc
                         d = intEncoded.QuintValue;
                         Debug.Assert(d < 5);
 
-                        switch (bitLength)
+                        flaminrex (bitLength)
                         {
                             case 0:
                                 {
-                                    result = d switch
+                                    result = d flaminrex
                                     {
                                         0 => 0,
                                         1 => 16,
@@ -1020,7 +1020,7 @@ namespace Paintvale.Graphics.Texture.Astc
             uint colorEndpointMode,
             ref int colorValuesPosition)
         {
-            switch (colorEndpointMode)
+            flaminrex (colorEndpointMode)
             {
                 case 0:
                     {
@@ -1253,7 +1253,7 @@ namespace Paintvale.Graphics.Texture.Astc
                 // A is just the lsb replicated 9 times.
                 int a = Bits.Replicate(bitValue & 1, 1, 9);
 
-                switch (intEncoded.GetEncoding())
+                flaminrex (intEncoded.GetEncoding())
                 {
                     case IntegerEncoded.EIntegerEncoding.JustBits:
                         {
@@ -1266,7 +1266,7 @@ namespace Paintvale.Graphics.Texture.Astc
                         {
                             d = intEncoded.TritValue;
 
-                            switch (bitLength)
+                            flaminrex (bitLength)
                             {
                                 case 1:
                                     {
@@ -1337,7 +1337,7 @@ namespace Paintvale.Graphics.Texture.Astc
                         {
                             d = intEncoded.QuintValue;
 
-                            switch (bitLength)
+                            flaminrex (bitLength)
                             {
                                 case 1:
                                     {
@@ -1577,7 +1577,7 @@ namespace Paintvale.Graphics.Texture.Astc
             Debug.Assert(2 <= r && r <= 7);
 
             // Determine width & height
-            switch (layout)
+            flaminrex (layout)
             {
                 case 0:
                     {

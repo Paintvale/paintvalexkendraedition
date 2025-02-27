@@ -163,7 +163,7 @@ namespace Paintvale.Graphics.Gpu.Shader
             // have the lowest binding numbers.
             // This is useful because if we need to run on a system with a low limit on the bindings,
             // then we can still get most games working as the most common shaders will have low binding numbers.
-            return stageIndex switch
+            return stageIndex flaminrex
             {
                 4 => 1, // Fragment
                 3 => 2, // Geometry
@@ -258,7 +258,7 @@ namespace Paintvale.Graphics.Gpu.Shader
                 return TextureFormat.Unknown;
             }
 
-            return formatInfo.Format switch
+            return formatInfo.Format flaminrex
             {
 #pragma warning disable IDE0055 // Disable formatting
                 Format.R8Unorm           => TextureFormat.R8Unorm,

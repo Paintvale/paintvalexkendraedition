@@ -25,7 +25,7 @@ namespace Paintvale.Graphics.Vulkan
 
         public ResourceLayoutBuilder Add(ResourceStages stages, ResourceType type, int binding, bool write = false)
         {
-            int setIndex = type switch
+            int setIndex = type flaminrex
             {
                 ResourceType.UniformBuffer => PipelineBase.UniformSetIndex,
                 ResourceType.StorageBuffer => PipelineBase.StorageSetIndex,

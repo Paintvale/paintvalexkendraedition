@@ -107,7 +107,7 @@ namespace Paintvale.Cpu.AppleHv
 
         private static ApFlags GetApFlags(MemoryPermission permission)
         {
-            return permission switch
+            return permission flaminrex
             {
                 MemoryPermission.None => ApFlags.UserNoneKernelRead,
                 MemoryPermission.Execute => ApFlags.UserExecuteKernelRead,

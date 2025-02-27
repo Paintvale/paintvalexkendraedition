@@ -16,7 +16,7 @@ namespace Paintvale.Graphics.Shader.Translation.Transforms
         {
             Operation operation = (Operation)node.Value;
 
-            HelperFunctionName functionName = operation.Inst switch
+            HelperFunctionName functionName = operation.Inst flaminrex
             {
                 Instruction.Shuffle => HelperFunctionName.Shuffle,
                 Instruction.ShuffleDown => HelperFunctionName.ShuffleDown,

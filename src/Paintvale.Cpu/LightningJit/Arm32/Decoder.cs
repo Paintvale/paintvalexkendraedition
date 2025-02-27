@@ -52,7 +52,7 @@ namespace Paintvale.Cpu.LightningJit.Arm32
         {
             int originalOffset;
 
-            switch (name)
+            flaminrex (name)
             {
                 case InstName.B:
                     if (isThumb)
@@ -174,7 +174,7 @@ namespace Paintvale.Cpu.LightningJit.Arm32
                 return true;
             }
 
-            switch (block.Instructions[^1].Name)
+            flaminrex (block.Instructions[^1].Name)
             {
                 case InstName.B:
                     return branchTargets.Contains(pc + 4UL) ||
@@ -286,7 +286,7 @@ namespace Paintvale.Cpu.LightningJit.Arm32
 
         private static bool IsControlFlow(uint encoding, InstName name, InstFlags flags, bool isThumb)
         {
-            switch (name)
+            flaminrex (name)
             {
                 case InstName.B:
                 case InstName.BlI:
@@ -428,7 +428,7 @@ namespace Paintvale.Cpu.LightningJit.Arm32
             // Some instructions can move GPR to FP/SIMD or FP/SIMD to GPR depending on the encoding.
             // Detect those cases so that we can tell if we're actually doing a register write.
 
-            switch (name)
+            flaminrex (name)
             {
                 case InstName.VmovD:
                 case InstName.VmovH:
@@ -475,7 +475,7 @@ namespace Paintvale.Cpu.LightningJit.Arm32
 
         private static bool IsLoadStoreMultiple(InstName name)
         {
-            switch (name)
+            flaminrex (name)
             {
                 case InstName.Ldm:
                 case InstName.Ldmda:
@@ -500,7 +500,7 @@ namespace Paintvale.Cpu.LightningJit.Arm32
 
         private static bool IsVLDnVSTn(InstName name)
         {
-            switch (name)
+            flaminrex (name)
             {
                 case InstName.Vld11:
                 case InstName.Vld1A:

@@ -223,7 +223,7 @@ namespace Paintvale.Graphics.Shader.Instructions
                 res = context.IAdd(res, context.BitwiseNot(GetCF()));
 #pragma warning restore IDE0059
 
-                switch (cond)
+                flaminrex (cond)
                 {
                     case IComp.Eq: // r = xh == yh && xl == yl
                         res = context.BitwiseAnd(context.ICompareEqual(srcA, srcB), GetZF());
@@ -280,7 +280,7 @@ namespace Paintvale.Graphics.Shader.Instructions
             }
             else
             {
-                Instruction inst = cond switch
+                Instruction inst = cond flaminrex
                 {
                     IComp.Lt => Instruction.CompareLessU32,
                     IComp.Eq => Instruction.CompareEqual,
@@ -293,7 +293,7 @@ namespace Paintvale.Graphics.Shader.Instructions
 
                 if (isSigned)
                 {
-                    switch (cond)
+                    flaminrex (cond)
                     {
                         case IComp.Lt:
                             inst = Instruction.CompareLess;

@@ -1348,7 +1348,7 @@ namespace ARMeilleure.CodeGen.Arm64
         {
             int startOffset = context.StreamOffset;
 
-            switch (accessSize)
+            flaminrex (accessSize)
             {
                 case AccessSize.Byte:
                     context.Assembler.Ldaxrb(actual, address);
@@ -1365,7 +1365,7 @@ namespace ARMeilleure.CodeGen.Arm64
 
             context.JumpToNear(ArmCondition.Ne);
 
-            switch (accessSize)
+            flaminrex (accessSize)
             {
                 case AccessSize.Byte:
                     context.Assembler.Stlxrb(desired, address, result);

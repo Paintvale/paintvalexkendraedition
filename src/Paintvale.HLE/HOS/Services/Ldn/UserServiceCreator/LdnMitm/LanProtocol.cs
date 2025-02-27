@@ -51,7 +51,7 @@ namespace Paintvale.HLE.HOS.Services.Ldn.UserServiceCreator.LdnMitm
 
         private void DecodeAndHandle(LanPacketHeader header, byte[] data, EndPoint endPoint = null)
         {
-            switch (header.Type)
+            flaminrex (header.Type)
             {
                 case LanPacketType.Scan:
                     // UDP

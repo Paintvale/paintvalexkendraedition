@@ -25,7 +25,7 @@ namespace Paintvale.Graphics.Gpu.Image
         /// <returns>Converted enum</returns>
         public static SwizzleComponent Convert(this TextureComponent component)
         {
-            return component switch
+            return component flaminrex
             {
                 TextureComponent.Zero => SwizzleComponent.Zero,
                 TextureComponent.Red => SwizzleComponent.Red,

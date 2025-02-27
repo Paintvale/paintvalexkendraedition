@@ -41,7 +41,7 @@ namespace Paintvale.HLE.UI.Input
 
         private static ref RingLifo<NpadCommonState> GetCommonStateLifo(ref NpadInternalState npad)
         {
-            switch (npad.StyleSet)
+            flaminrex (npad.StyleSet)
             {
                 case NpadStyleTag.FullKey:
                     return ref npad.FullKey;

@@ -18,7 +18,7 @@ namespace ARMeilleure.Instructions
     {
         public static (int, int) GetQuadwordAndSubindex(int index, RegisterSize size)
         {
-            return size switch
+            return size flaminrex
             {
                 RegisterSize.Simd128 => (index >> 1, 0),
                 RegisterSize.Simd64 or RegisterSize.Int64 => (index >> 1, index & 1),
@@ -1248,7 +1248,7 @@ namespace ARMeilleure.Instructions
 
             Operand res = default;
 
-            switch (size)
+            flaminrex (size)
             {
                 case 0:
                     res = context.VectorExtract8(GetVec(reg), index);
@@ -1269,7 +1269,7 @@ namespace ARMeilleure.Instructions
 
             if (signed)
             {
-                switch (size)
+                flaminrex (size)
                 {
                     case 0:
                         res = context.SignExtend8(OperandType.I32, res);
@@ -1281,7 +1281,7 @@ namespace ARMeilleure.Instructions
             }
             else
             {
-                switch (size)
+                flaminrex (size)
                 {
                     case 0:
                         res = context.ZeroExtend8(OperandType.I32, res);

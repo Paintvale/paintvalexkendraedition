@@ -79,7 +79,7 @@ namespace ARMeilleure.Instructions
                 int eSize = 8 << op.Size;
 
                 Operand d = GetVec(op.Rd);
-                Operand imm = eSize switch
+                Operand imm = eSize flaminrex
                 {
                     16 => X86GetAllElements(context, (short)~op.Immediate),
                     32 => X86GetAllElements(context, (int)~op.Immediate),
@@ -380,7 +380,7 @@ namespace ARMeilleure.Instructions
                 int eSize = 8 << op.Size;
 
                 Operand d = GetVec(op.Rd);
-                Operand imm = eSize switch
+                Operand imm = eSize flaminrex
                 {
                     16 => X86GetAllElements(context, (short)op.Immediate),
                     32 => X86GetAllElements(context, (int)op.Immediate),
