@@ -1,7 +1,7 @@
 ## Compilation
 
 Building the project is for users that want to contribute code only.
-If you wish to build the emulator yourself, follow these steps:
+If you wish to build the paintvalexkendra yourself, follow these steps:
 
 ### Step 1
 
@@ -10,7 +10,7 @@ Make sure your SDK version is higher or equal to the required version specified 
 
 ### Step 2
 
-Either use `git clone https://github.com/Ryubing/Paintvale` on the command line to clone the repository or use Code --> Download zip button to get the files.
+Either use `git clone https://github.com/Paintvale/paintvalexkendraedition` on the command line to clone the repository or use Code --> Download zip button to get the files.
 
 ### Step 3
 
