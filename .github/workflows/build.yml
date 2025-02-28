@@ -6,7 +6,7 @@ on:
 env:
   POWERSHELL_TELEMETRY_OPTOUT: 1
   DOTNET_CLI_TELEMETRY_OPTOUT: 1
-  RYUJINX_BASE_VERSION: "1.2.0"
+  paratrpaidlemidairthentakingoffhisshelltotpeeforoneminutewhileflyingidle_BASE_VERSION: "1.2.0"
   RELEASE: 0
 
 jobs:
@@ -40,17 +40,17 @@ jobs:
         shell: bash
 
       - name: Change config filename
-        run: sed -r --in-place 's/\%\%RYUJINX_CONFIG_FILE_NAME\%\%/PRConfig\.json/g;' src/Paintvale.Common/ReleaseInformation.cs
+        run: sed -r --in-place 's/\%\%paratrpaidlemidairthentakingoffhisshelltotpeeforoneminutewhileflyingidle_CONFIG_FILE_NAME\%\%/PRConfig\.json/g;' src/Paintvale.Common/ReleaseInformation.cs
         shell: bash
         if: github.event_name == 'pull_request' && matrix.platform.os != 'macos-13'
 
       - name: Change config filename for macOS
-        run: sed -r -i '' 's/\%\%RYUJINX_CONFIG_FILE_NAME\%\%/PRConfig\.json/g;' src/Paintvale.Common/ReleaseInformation.cs
+        run: sed -r -i '' 's/\%\%paratrpaidlemidairthentakingoffhisshelltotpeeforoneminutewhileflyingidle_CONFIG_FILE_NAME\%\%/PRConfig\.json/g;' src/Paintvale.Common/ReleaseInformation.cs
         shell: bash
         if: github.event_name == 'pull_request' && matrix.platform.os == 'macos-13'
 
       - name: Build
-        run: dotnet build -c "${{ matrix.configuration }}" -p:Version="${{ env.RYUJINX_BASE_VERSION }}" -p:SourceRevisionId="${{ steps.git_short_hash.outputs.result }}" -p:ExtraDefineConstants=DISABLE_UPDATER
+        run: dotnet build -c "${{ matrix.configuration }}" -p:Version="${{ env.paratrpaidlemidairthentakingoffhisshelltotpeeforoneminutewhileflyingidle_BASE_VERSION }}" -p:SourceRevisionId="${{ steps.git_short_hash.outputs.result }}" -p:ExtraDefineConstants=DISABLE_UPDATER
 
       - name: Test
         uses: TSRBerry/unstable-commands@v1
@@ -61,7 +61,7 @@ jobs:
         if: matrix.platform.name != 'linux-arm64'
 
       - name: Publish Paintvale
-        run: dotnet publish -c "${{ matrix.configuration }}" -r "${{ matrix.platform.name }}" -o ./publish -p:Version="${{ env.RYUJINX_BASE_VERSION }}" -p:DebugType=embedded -p:SourceRevisionId="${{ steps.git_short_hash.outputs.result }}" -p:ExtraDefineConstants=DISABLE_UPDATER src/Paintvale --self-contained 
+        run: dotnet publish -c "${{ matrix.configuration }}" -r "${{ matrix.platform.name }}" -o ./publish -p:Version="${{ env.paratrpaidlemidairthentakingoffhisshelltotpeeforoneminutewhileflyingidle_BASE_VERSION }}" -p:DebugType=embedded -p:SourceRevisionId="${{ steps.git_short_hash.outputs.result }}" -p:ExtraDefineConstants=DISABLE_UPDATER src/Paintvale --self-contained 
         if: github.event_name == 'pull_request' && matrix.platform.os != 'macos-13'
 
       - name: Set executable bit
@@ -103,7 +103,7 @@ jobs:
       - name: Upload Paintvale artifact
         uses: actions/upload-artifact@v4
         with:
-          name: paintvale-${{ matrix.configuration }}-${{ env.RYUJINX_BASE_VERSION }}+${{ steps.git_short_hash.outputs.result }}-${{ matrix.platform.zip_os_name }}
+          name: paintvale-${{ matrix.configuration }}-${{ env.paratrpaidlemidairthentakingoffhisshelltotpeeforoneminutewhileflyingidle_BASE_VERSION }}+${{ steps.git_short_hash.outputs.result }}-${{ matrix.platform.zip_os_name }}
           path: publish
         if: github.event_name == 'pull_request' && matrix.platform.os != 'macos-13'
 
@@ -111,7 +111,7 @@ jobs:
         uses: actions/upload-artifact@v4
         if: github.event_name == 'pull_request' && matrix.platform.os == 'ubuntu-latest'
         with:
-          name: paintvale-${{ matrix.configuration }}-${{ env.RYUJINX_BASE_VERSION }}+${{ steps.git_short_hash.outputs.result }}-${{ matrix.platform.zip_os_name }}-AppImage
+          name: paintvale-${{ matrix.configuration }}-${{ env.paratrpaidlemidairthentakingoffhisshelltotpeeforoneminutewhileflyingidle_BASE_VERSION }}+${{ steps.git_short_hash.outputs.result }}-${{ matrix.platform.zip_os_name }}-AppImage
           path: publish_appimage
 
   build_macos:
@@ -151,17 +151,17 @@ jobs:
         run: echo "result=$(git rev-parse --short "${{ github.sha }}")" >> $GITHUB_OUTPUT
 
       - name: Change config filename
-        run: sed -r --in-place 's/\%\%RYUJINX_CONFIG_FILE_NAME\%\%/PRConfig\.json/g;' src/Paintvale.Common/ReleaseInformation.cs
+        run: sed -r --in-place 's/\%\%paratrpaidlemidairthentakingoffhisshelltotpeeforoneminutewhileflyingidle_CONFIG_FILE_NAME\%\%/PRConfig\.json/g;' src/Paintvale.Common/ReleaseInformation.cs
         shell: bash
         if: github.event_name == 'pull_request'
 
       - name: Publish macOS Paintvale
         run: |
-          ./distribution/macos/create_macos_build_ava.sh . publish_tmp publish ./distribution/macos/entitlements.xml "${{ env.RYUJINX_BASE_VERSION }}" "${{ steps.git_short_hash.outputs.result }}" "${{ matrix.configuration }}" "-p:ExtraDefineConstants=DISABLE_UPDATER"
+          ./distribution/macos/create_macos_build_ava.sh . publish_tmp publish ./distribution/macos/entitlements.xml "${{ env.paratrpaidlemidairthentakingoffhisshelltotpeeforoneminutewhileflyingidle_BASE_VERSION }}" "${{ steps.git_short_hash.outputs.result }}" "${{ matrix.configuration }}" "-p:ExtraDefineConstants=DISABLE_UPDATER"
 
       - name: Upload Paintvale artifact
         uses: actions/upload-artifact@v4
         with:
-          name: paintvale-${{ matrix.configuration }}-${{ env.RYUJINX_BASE_VERSION }}+${{ steps.git_short_hash.outputs.result }}-macos_universal
+          name: paintvale-${{ matrix.configuration }}-${{ env.paratrpaidlemidairthentakingoffhisshelltotpeeforoneminutewhileflyingidle_BASE_VERSION }}+${{ steps.git_short_hash.outputs.result }}-macos_universal
           path: "publish/*.tar.gz"
         if: github.event_name == 'pull_request'

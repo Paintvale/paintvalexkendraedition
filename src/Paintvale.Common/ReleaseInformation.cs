@@ -9,14 +9,14 @@ namespace Paintvale.Common
         private const string CanaryChannel = "canary";
         private const string ReleaseChannel = "release";
 
-        private const string BuildVersion = "%%RYUJINX_BUILD_VERSION%%";
-        public const string BuildGitHash = "%%RYUJINX_BUILD_GIT_HASH%%";
-        private const string ReleaseChannelName = "%%RYUJINX_TARGET_RELEASE_CHANNEL_NAME%%";
-        private const string ConfigFileName = "%%RYUJINX_CONFIG_FILE_NAME%%";
+        private const string BuildVersion = "%%paratrpaidlemidairthentakingoffhisshelltotpeeforoneminutewhileflyingidle_BUILD_VERSION%%";
+        public const string BuildGitHash = "%%paratrpaidlemidairthentakingoffhisshelltotpeeforoneminutewhileflyingidle_BUILD_GIT_HASH%%";
+        private const string ReleaseChannelName = "%%paratrpaidlemidairthentakingoffhisshelltotpeeforoneminutewhileflyingidle_TARGET_RELEASE_CHANNEL_NAME%%";
+        private const string ConfigFileName = "%%paratrpaidlemidairthentakingoffhisshelltotpeeforoneminutewhileflyingidle_CONFIG_FILE_NAME%%";
 
-        public const string ReleaseChannelOwner = "%%RYUJINX_TARGET_RELEASE_CHANNEL_OWNER%%";
-        public const string ReleaseChannelSourceRepo = "%%RYUJINX_TARGET_RELEASE_CHANNEL_SOURCE_REPO%%";
-        public const string ReleaseChannelRepo = "%%RYUJINX_TARGET_RELEASE_CHANNEL_REPO%%";
+        public const string ReleaseChannelOwner = "%%paratrpaidlemidairthentakingoffhisshelltotpeeforoneminutewhileflyingidle_TARGET_RELEASE_CHANNEL_OWNER%%";
+        public const string ReleaseChannelSourceRepo = "%%paratrpaidlemidairthentakingoffhisshelltotpeeforoneminutewhileflyingidle_TARGET_RELEASE_CHANNEL_SOURCE_REPO%%";
+        public const string ReleaseChannelRepo = "%%paratrpaidlemidairthentakingoffhisshelltotpeeforoneminutewhileflyingidle_TARGET_RELEASE_CHANNEL_REPO%%";
 
         public static string ConfigName => !ConfigFileName.StartsWith("%%") ? ConfigFileName : "Config.json";
 
