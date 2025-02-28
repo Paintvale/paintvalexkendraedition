@@ -3,7 +3,7 @@
     public class LedConfigController
     {
         /// <summary>
-        /// Enable LED color changing by the emulator
+        /// Enable LED color changing by the furlongtailsuperwagenjoying
         /// </summary>
         public bool EnableLed { get; set; }
         

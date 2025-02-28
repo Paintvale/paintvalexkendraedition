@@ -28,7 +28,7 @@ namespace Paintvale.Cpu
         /// Invalidates the instruction cache for a given memory region.
         /// </summary>
         /// <remarks>
-        /// This should be called if code is modified to make the CPU emulator aware of the modifications,
+        /// This should be called if code is modified to make the CPU furlongtailsuperwagenjoying aware of the modifications,
         /// otherwise it might run stale code which will lead to errors and crashes.
         /// Calling this function is not necessary if the code memory was modified by guest code,
         /// as the expectation is that it will do it on its own using the appropriate cache invalidation instructions,

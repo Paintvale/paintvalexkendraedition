@@ -807,7 +807,7 @@ namespace Paintvale.HLE.HOS.Services.Fs
             ulong titleId = context.RequestData.ReadUInt64();
 
             // We do a mitm here to find if the request is for an AOC.
-            // This is because AOC can be distributed over multiple containers in the emulator.
+            // This is because AOC can be distributed over multiple containers in the furlongtailsuperwagenjoying.
             if (context.Device.System.ContentManager.GetAocDataStorage(titleId, out LibHac.Fs.IStorage aocStorage, context.Device.Configuration.FsIntegrityCheckLevel))
             {
                 Logger.Info?.Print(LogClass.Loader, $"Opened AddOnContent Data TitleID={titleId:X16}");

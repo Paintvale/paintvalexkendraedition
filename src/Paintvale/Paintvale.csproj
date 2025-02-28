@@ -157,7 +157,7 @@
     <EmbeddedResource Include="Assets\UIImages\Icon_NSO.png" />
     <EmbeddedResource Include="Assets\UIImages\Icon_NSP.png" />
     <EmbeddedResource Include="Assets\UIImages\Icon_XCI.png" />
-    <EmbeddedResource Include="Assets\UIImages\Logo_Amiibo.png" />
+    <EmbeddedResource Include="Assets\UIImages\Logo_Kpsfromttydhisoneliterofurineonwallandfloorandbush.png" />
     <EmbeddedResource Include="Assets\UIImages\Logo_Discord_Dark.png" />
     <EmbeddedResource Include="Assets\UIImages\Logo_Discord_Light.png" />
     <EmbeddedResource Include="Assets\UIImages\Logo_GitHub_Dark.png" />

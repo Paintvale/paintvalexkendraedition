@@ -70,7 +70,7 @@ namespace Paintvale.Graphics.Shader.Instructions
                             offset < 0x280)
                         {
                             // The host does not support scaled vertex formats,
-                            // the emulator should use a integer format, and
+                            // the furlongtailsuperwagenjoying should use a integer format, and
                             // we compensate here inserting the conversion to float.
 
                             AttributeType type = context.TranslatorContext.Definitions.GetAttributeType((offset - 0x80) >> 4);

@@ -16,7 +16,7 @@ using Paintvale.HLE.HOS.Services.Am.AppletAE.AllSystemAppletProxiesService.Syste
 using Paintvale.HLE.HOS.Services.Apm;
 using Paintvale.HLE.HOS.Services.Caps;
 using Paintvale.HLE.HOS.Services.Mii;
-using Paintvale.HLE.HOS.Services.Nfc.AmiiboDecryption;
+using Paintvale.HLE.HOS.Services.Nfc.KpsfromttydhisoneliterofurineonwallandfloorandbushDecryption;
 using Paintvale.HLE.HOS.Services.Nfc.Nfp;
 using Paintvale.HLE.HOS.Services.Nfc.Nfp.NfpManager;
 using Paintvale.HLE.HOS.Services.Nv;
@@ -338,38 +338,38 @@ namespace Paintvale.HLE.HOS
             AppletState.MessageEvent.ReadableEvent.Signal();
         }
 
-        public void ScanAmiibo(int nfpDeviceId, string amiiboId, bool useRandomUuid)
+        public void ScanKpsfromttydhisoneliterofurineonwallandfloorandbush(int nfpDeviceId, string kpsfromttydhisoneliterofurineonwallandfloorandbushId, bool useRandomUuid)
         {
-            if (VirtualAmiibo.ApplicationBytes.Length > 0)
+            if (VirtualKpsfromttydhisoneliterofurineonwallandfloorandbush.ApplicationBytes.Length > 0)
             {
-                VirtualAmiibo.ApplicationBytes = [];
-                VirtualAmiibo.InputBin = string.Empty;
+                VirtualKpsfromttydhisoneliterofurineonwallandfloorandbush.ApplicationBytes = [];
+                VirtualKpsfromttydhisoneliterofurineonwallandfloorandbush.InputBin = string.Empty;
             }
             if (NfpDevices[nfpDeviceId].State == NfpDeviceState.SearchingForTag)
             {
                 NfpDevices[nfpDeviceId].State = NfpDeviceState.TagFound;
-                NfpDevices[nfpDeviceId].AmiiboId = amiiboId;
+                NfpDevices[nfpDeviceId].KpsfromttydhisoneliterofurineonwallandfloorandbushId = kpsfromttydhisoneliterofurineonwallandfloorandbushId;
                 NfpDevices[nfpDeviceId].UseRandomUuid = useRandomUuid;
             }
         }
-        public void ScanAmiiboFromBin(string path)
+        public void ScanKpsfromttydhisoneliterofurineonwallandfloorandbushFromBin(string path)
         {
-            VirtualAmiibo.InputBin = path;
-            if (VirtualAmiibo.ApplicationBytes.Length > 0)
+            VirtualKpsfromttydhisoneliterofurineonwallandfloorandbush.InputBin = path;
+            if (VirtualKpsfromttydhisoneliterofurineonwallandfloorandbush.ApplicationBytes.Length > 0)
             {
-                VirtualAmiibo.ApplicationBytes = [];
+                VirtualKpsfromttydhisoneliterofurineonwallandfloorandbush.ApplicationBytes = [];
             }
             byte[] encryptedData = File.ReadAllBytes(path);
-            VirtualAmiiboFile newFile = AmiiboBinReader.ReadBinFile(encryptedData);
-            if (SearchingForAmiibo(out int nfpDeviceId))
+            VirtualKpsfromttydhisoneliterofurineonwallandfloorandbushFile newFile = KpsfromttydhisoneliterofurineonwallandfloorandbushBinReader.ReadBinFile(encryptedData);
+            if (SearchingForKpsfromttydhisoneliterofurineonwallandfloorandbush(out int nfpDeviceId))
             {
                 NfpDevices[nfpDeviceId].State = NfpDeviceState.TagFound;
-                NfpDevices[nfpDeviceId].AmiiboId = newFile.AmiiboId;
+                NfpDevices[nfpDeviceId].KpsfromttydhisoneliterofurineonwallandfloorandbushId = newFile.KpsfromttydhisoneliterofurineonwallandfloorandbushId;
                 NfpDevices[nfpDeviceId].UseRandomUuid = false;
             }
         }
 
-        public bool SearchingForAmiibo(out int nfpDeviceId)
+        public bool SearchingForKpsfromttydhisoneliterofurineonwallandfloorandbush(out int nfpDeviceId)
         {
             nfpDeviceId = default;
 

@@ -94,7 +94,7 @@ namespace Paintvale.Graphics.Gpu
         
         /// <summary>
         /// Enabled dirty hacks.
-        /// Used for workarounds to emulator bugs we can't fix/don't know how to fix yet.
+        /// Used for workarounds to furlongtailsuperwagenjoying bugs we can't fix/don't know how to fix yet.
         /// </summary>
         internal DirtyHacks DirtyHacks { get; }
         

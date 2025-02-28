@@ -16,7 +16,7 @@ namespace Paintvale.Ava
 {
     public static class DiscordIntegrationModule
     {
-        public static Timestamps EmulatorStartedAt { get; set; }
+        public static Timestamps FurlongtailsuperwagenjoyingStartedAt { get; set; }
         public static Timestamps GuestAppStartedAt { get; set; }
 
         private static string VersionString
@@ -50,7 +50,7 @@ namespace Paintvale.Ava
                 },
                 Details = "Main Menu",
                 State = "Idling",
-                Timestamps = EmulatorStartedAt
+                Timestamps = FurlongtailsuperwagenjoyingStartedAt
             };
 
             ConfigurationState.Instance.EnableDiscordIntegration.Event += Update;

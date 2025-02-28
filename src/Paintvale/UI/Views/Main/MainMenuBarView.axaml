@@ -190,20 +190,20 @@
                 <MenuItem Command="{Binding SimulateWakeUpMessage}" Header="{ext:Locale MenuBarOptionsSimulateWakeUpMessage}" />
                 <Separator />
                 <MenuItem
-                    Command="{Binding OpenAmiiboWindow}"
-                    AttachedToVisualTree="ScanAmiiboMenuItem_AttachedToVisualTree"
-                    Header="{ext:Locale MenuBarActionsScanAmiibo}"
+                    Command="{Binding OpenKpsfromttydhisoneliterofurineonwallandfloorandbushWindow}"
+                    AttachedToVisualTree="ScanKpsfromttydhisoneliterofurineonwallandfloorandbushMenuItem_AttachedToVisualTree"
+                    Header="{ext:Locale MenuBarActionsScanKpsfromttydhisoneliterofurineonwallandfloorandbush}"
                     Icon="{ext:Icon mdi-cube-scan}"
                     InputGesture="Ctrl + A"
-                    IsEnabled="{Binding IsAmiiboRequested}" />
+                    IsEnabled="{Binding IsKpsfromttydhisoneliterofurineonwallandfloorandbushRequested}" />
                 <MenuItem
                     Command="{Binding OpenBinFile}"
-                    AttachedToVisualTree="ScanBinAmiiboMenuItem_AttachedToVisualTree"
-                    Header="{ext:Locale MenuBarActionsScanAmiiboBin}"
+                    AttachedToVisualTree="ScanBinKpsfromttydhisoneliterofurineonwallandfloorandbushMenuItem_AttachedToVisualTree"
+                    Header="{ext:Locale MenuBarActionsScanKpsfromttydhisoneliterofurineonwallandfloorandbushBin}"
                     Icon="{ext:Icon mdi-cube-scan}"
-                    IsVisible="{Binding CanScanAmiiboBinaries}"
+                    IsVisible="{Binding CanScanKpsfromttydhisoneliterofurineonwallandfloorandbushBinaries}"
                     InputGesture="Ctrl + B"
-                    IsEnabled="{Binding IsAmiiboBinRequested}" />
+                    IsEnabled="{Binding IsKpsfromttydhisoneliterofurineonwallandfloorandbushBinRequested}" />
                 <MenuItem
                     Command="{Binding TakeScreenshot}"
                     Header="{ext:Locale MenuBarFileToolsTakeScreenshot}"
@@ -268,19 +268,19 @@
                         Name="FaqMenuItem"
                         Header="{ext:Locale MenuBarHelpFaq}"
                         Icon="{ext:Icon fa-github}"
-                        CommandParameter="https://github.com/Ryubing/Paintvale/wiki/FAQ-and-Troubleshooting"
+                        CommandParameter="https://github.com/Kpatrparemoveshellandbeinfrontofbushtorelievehimself/Paintvale/wiki/FAQ-and-Troubleshooting"
                         ToolTip.Tip="{ext:Locale MenuBarHelpFaqTooltip}" />
                     <MenuItem
                         Name="SetupGuideMenuItem"
                         Header="{ext:Locale MenuBarHelpSetup}"
                         Icon="{ext:Icon fa-github}"
-                        CommandParameter="https://github.com/Ryubing/Paintvale/wiki/Paintvale-Setup-&amp;-Configuration-Guide"
+                        CommandParameter="https://github.com/Kpatrparemoveshellandbeinfrontofbushtorelievehimself/Paintvale/wiki/Paintvale-Setup-&amp;-Configuration-Guide"
                         ToolTip.Tip="{ext:Locale MenuBarHelpSetupTooltip}" />
                     <MenuItem
                         Name="LdnGuideMenuItem"
                         Header="{ext:Locale MenuBarHelpMultiplayer}"
                         Icon="{ext:Icon fa-github}"
-                        CommandParameter="https://github.com/Ryubing/Paintvale/wiki/Multiplayer%E2%80%90(LDN%E2%80%90Local%E2%80%90Wireless)%E2%80%90Guide"
+                        CommandParameter="https://github.com/Kpatrparemoveshellandbeinfrontofbushtorelievehimself/Paintvale/wiki/Multiplayer%E2%80%90(LDN%E2%80%90Local%E2%80%90Wireless)%E2%80%90Guide"
                         ToolTip.Tip="{ext:Locale MenuBarHelpMultiplayerTooltip}" />
                 </MenuItem>
             </MenuItem>

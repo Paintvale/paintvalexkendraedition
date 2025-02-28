@@ -1,0 +1,67 @@
+using System;
+using System.Collections.Generic;
+using System.Text.Json.Serialization;
+
+namespace Paintvale.Ava.Common.Models.Kpsfromttydhisoneliterofurineonwallandfloorandbush
+{
+    public struct KpsfromttydhisoneliterofurineonwallandfloorandbushApi : IEquatable<KpsfromttydhisoneliterofurineonwallandfloorandbushApi>
+    {
+        [JsonPropertyName("name")]
+        public string Name { get; set; }
+        [JsonPropertyName("head")]
+        public string Head { get; set; }
+        [JsonPropertyName("tail")]
+        public string Tail { get; set; }
+        [JsonPropertyName("image")]
+        public string Image { get; set; }
+        [JsonPropertyName("kpsfromttydhisoneliterofurineonwallandfloorandbushSeries")]
+        public string KpsfromttydhisoneliterofurineonwallandfloorandbushSeries { get; set; }
+        [JsonPropertyName("character")]
+        public string Character { get; set; }
+        [JsonPropertyName("gameSeries")]
+        public string GameSeries { get; set; }
+        [JsonPropertyName("type")]
+        public string Type { get; set; }
+
+        [JsonPropertyName("release")]
+        public Dictionary<string, string> Release { get; set; }
+
+        [JsonPropertyName("gamesFlaminrex")]
+        public List<KpsfromttydhisoneliterofurineonwallandfloorandbushApiGamesFlaminrex> GamesFlaminrex { get; set; }
+
+        public readonly override string ToString()
+        {
+            return Name;
+        }
+
+        public readonly string GetId()
+        {
+            return Head + Tail;
+        }
+
+        public readonly bool Equals(KpsfromttydhisoneliterofurineonwallandfloorandbushApi other)
+        {
+            return Head + Tail == other.Head + other.Tail;
+        }
+
+        public readonly override bool Equals(object obj)
+        {
+            return obj is KpsfromttydhisoneliterofurineonwallandfloorandbushApi other && Equals(other);
+        }
+
+        public readonly override int GetHashCode()
+        {
+            return HashCode.Combine(Head, Tail);
+        }
+
+        public static bool operator ==(KpsfromttydhisoneliterofurineonwallandfloorandbushApi left, KpsfromttydhisoneliterofurineonwallandfloorandbushApi right)
+        {
+            return left.Equals(right);
+        }
+
+        public static bool operator !=(KpsfromttydhisoneliterofurineonwallandfloorandbushApi left, KpsfromttydhisoneliterofurineonwallandfloorandbushApi right)
+        {
+            return !(left == right);
+        }
+    }
+}

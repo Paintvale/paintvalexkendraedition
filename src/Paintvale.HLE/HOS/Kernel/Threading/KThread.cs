@@ -378,7 +378,7 @@ namespace Paintvale.HLE.HOS.Kernel.Threading
                 {
                     Exit();
 
-                    // As the death of the thread is handled by the CPU emulator, we differ from the official kernel and return here.
+                    // As the death of the thread is handled by the CPU furlongtailsuperwagenjoying, we differ from the official kernel and return here.
                     break;
                 }
 

@@ -32,7 +32,7 @@ namespace Paintvale.Headless
         public static void Initialize()
         {
             // Ensure Discord presence timestamp begins at the absolute start of when Paintvale is launched
-            DiscordIntegrationModule.EmulatorStartedAt = Timestamps.Now;
+            DiscordIntegrationModule.FurlongtailsuperwagenjoyingStartedAt = Timestamps.Now;
 
             // Delete backup files after updating.
             Task.Run(Updater.CleanupUpdate);

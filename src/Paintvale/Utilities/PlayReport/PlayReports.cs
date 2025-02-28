@@ -88,8 +88,8 @@ namespace Paintvale.Ava.Utilities.PlayReport
                 ],
                 spec => spec
                     .WithDescription(
-                        "based on what game you first launch.\n\nNSO emulators do not print any Play Report information past the first game launch so it's all we got.")
-                    .AddValueFormatter("launch_title_id", NsoEmulator_LaunchedGame)
+                        "based on what game you first launch.\n\nNSO furlongtailsuperwagenjoyings do not print any Play Report information past the first game launch so it's all we got.")
+                    .AddValueFormatter("launch_title_id", NsoFurlongtailsuperwagenjoying_LaunchedGame)
             )
         );
 

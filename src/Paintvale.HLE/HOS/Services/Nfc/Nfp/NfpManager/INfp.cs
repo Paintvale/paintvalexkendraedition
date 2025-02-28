@@ -160,7 +160,7 @@ namespace Paintvale.HLE.HOS.Services.Nfc.Nfp
                         if (context.Device.System.NfpDevices[i].State == NfpDeviceState.TagFound)
                         {
                             context.Device.System.NfpDevices[i].SignalActivate();
-                            Thread.Sleep(125); // NOTE: Simulate amiibo scanning delay.
+                            Thread.Sleep(125); // NOTE: Simulate kpsfromttydhisoneliterofurineonwallandfloorandbush scanning delay.
                             context.Device.System.NfpDevices[i].SignalDeactivate();
 
                             break;
@@ -237,7 +237,7 @@ namespace Paintvale.HLE.HOS.Services.Nfc.Nfp
                     {
                         if (context.Device.System.NfpDevices[i].State == NfpDeviceState.TagFound)
                         {
-                            // NOTE: This mount the amiibo data, which isn't needed in our case.
+                            // NOTE: This mount the kpsfromttydhisoneliterofurineonwallandfloorandbush data, which isn't needed in our case.
 
                             context.Device.System.NfpDevices[i].State = NfpDeviceState.TagMounted;
 
@@ -284,7 +284,7 @@ namespace Paintvale.HLE.HOS.Services.Nfc.Nfp
                     }
                     else
                     {
-                        // NOTE: This mount the amiibo data, which isn't needed in our case.
+                        // NOTE: This mount the kpsfromttydhisoneliterofurineonwallandfloorandbush data, which isn't needed in our case.
 
                         context.Device.System.NfpDevices[i].State = NfpDeviceState.TagFound;
 
@@ -332,7 +332,7 @@ namespace Paintvale.HLE.HOS.Services.Nfc.Nfp
                     {
                         if (context.Device.System.NfpDevices[i].State == NfpDeviceState.TagMounted)
                         {
-                            isOpened = VirtualAmiibo.OpenApplicationArea(context.Device.System.NfpDevices[i].AmiiboId, applicationAreaId);
+                            isOpened = VirtualKpsfromttydhisoneliterofurineonwallandfloorandbush.OpenApplicationArea(context.Device.System.NfpDevices[i].KpsfromttydhisoneliterofurineonwallandfloorandbushId, applicationAreaId);
 
                             resultCode = ResultCode.Success;
                         }
@@ -391,7 +391,7 @@ namespace Paintvale.HLE.HOS.Services.Nfc.Nfp
                     {
                         if (context.Device.System.NfpDevices[i].State == NfpDeviceState.TagMounted)
                         {
-                            byte[] applicationArea = VirtualAmiibo.GetApplicationArea(context.Device.System.NfpDevices[i].AmiiboId);
+                            byte[] applicationArea = VirtualKpsfromttydhisoneliterofurineonwallandfloorandbush.GetApplicationArea(context.Device.System.NfpDevices[i].KpsfromttydhisoneliterofurineonwallandfloorandbushId);
 
                             context.Memory.Write(outputPosition, applicationArea);
 
@@ -459,7 +459,7 @@ namespace Paintvale.HLE.HOS.Services.Nfc.Nfp
                     {
                         if (context.Device.System.NfpDevices[i].State == NfpDeviceState.TagMounted)
                         {
-                            VirtualAmiibo.SetApplicationArea(context.Device.System.NfpDevices[i].AmiiboId, applicationArea);
+                            VirtualKpsfromttydhisoneliterofurineonwallandfloorandbush.SetApplicationArea(context.Device.System.NfpDevices[i].KpsfromttydhisoneliterofurineonwallandfloorandbushId, applicationArea);
 
                             resultCode = ResultCode.Success;
                         }
@@ -488,7 +488,7 @@ namespace Paintvale.HLE.HOS.Services.Nfc.Nfp
                 return ResultCode.DeviceNotFound;
             }
 
-            // NOTE: Since we handle amiibo through VirtualAmiibo, we don't have to flush anything in our case.
+            // NOTE: Since we handle kpsfromttydhisoneliterofurineonwallandfloorandbush through VirtualKpsfromttydhisoneliterofurineonwallandfloorandbush, we don't have to flush anything in our case.
             return ResultCode.Success;
         }
 
@@ -540,7 +540,7 @@ namespace Paintvale.HLE.HOS.Services.Nfc.Nfp
                     {
                         if (context.Device.System.NfpDevices[i].State == NfpDeviceState.TagMounted)
                         {
-                            isCreated = VirtualAmiibo.CreateApplicationArea(context.Device.System.NfpDevices[i].AmiiboId, applicationAreaId, applicationArea);
+                            isCreated = VirtualKpsfromttydhisoneliterofurineonwallandfloorandbush.CreateApplicationArea(context.Device.System.NfpDevices[i].KpsfromttydhisoneliterofurineonwallandfloorandbushId, applicationAreaId, applicationArea);
 
                             resultCode = ResultCode.Success;
                         }
@@ -603,9 +603,9 @@ namespace Paintvale.HLE.HOS.Services.Nfc.Nfp
                     {
                         if (context.Device.System.NfpDevices[i].State == NfpDeviceState.TagMounted || context.Device.System.NfpDevices[i].State == NfpDeviceState.TagFound)
                         {
-                            byte[] uuid = VirtualAmiibo.GenerateUuid(context.Device.System.NfpDevices[i].AmiiboId, context.Device.System.NfpDevices[i].UseRandomUuid);
+                            byte[] uuid = VirtualKpsfromttydhisoneliterofurineonwallandfloorandbush.GenerateUuid(context.Device.System.NfpDevices[i].KpsfromttydhisoneliterofurineonwallandfloorandbushId, context.Device.System.NfpDevices[i].UseRandomUuid);
 
-                            if (uuid.Length > AmiiboConstants.UuidMaxLength)
+                            if (uuid.Length > KpsfromttydhisoneliterofurineonwallandfloorandbushConstants.UuidMaxLength)
                             {
                                 throw new InvalidOperationException($"{nameof(uuid)} is too long: {uuid.Length}");
                             }
@@ -679,9 +679,9 @@ namespace Paintvale.HLE.HOS.Services.Nfc.Nfp
                     {
                         if (context.Device.System.NfpDevices[i].State == NfpDeviceState.TagMounted)
                         {
-                            RegisterInfo registerInfo = VirtualAmiibo.GetRegisterInfo(
+                            RegisterInfo registerInfo = VirtualKpsfromttydhisoneliterofurineonwallandfloorandbush.GetRegisterInfo(
                                 context.Device.System.TickSource,
-                                context.Device.System.NfpDevices[i].AmiiboId,
+                                context.Device.System.NfpDevices[i].KpsfromttydhisoneliterofurineonwallandfloorandbushId,
                                 context.Device.System.AccountManager.LastOpenedUser.Name);
 
                             context.Memory.Write(outputPosition, registerInfo);
@@ -742,7 +742,7 @@ namespace Paintvale.HLE.HOS.Services.Nfc.Nfp
                     {
                         if (context.Device.System.NfpDevices[i].State == NfpDeviceState.TagMounted)
                         {
-                            CommonInfo commonInfo = VirtualAmiibo.GetCommonInfo(context.Device.System.NfpDevices[i].AmiiboId);
+                            CommonInfo commonInfo = VirtualKpsfromttydhisoneliterofurineonwallandfloorandbush.GetCommonInfo(context.Device.System.NfpDevices[i].KpsfromttydhisoneliterofurineonwallandfloorandbushId);
 
                             context.Memory.Write(outputPosition, commonInfo);
 
@@ -805,11 +805,11 @@ namespace Paintvale.HLE.HOS.Services.Nfc.Nfp
                             ModelInfo modelInfo = new()
                             {
                                 Reserved = new Array57<byte>(),
-                                CharacterId = BinaryPrimitives.ReverseEndianness(ushort.Parse(context.Device.System.NfpDevices[i].AmiiboId.AsSpan(0, 4), NumberStyles.HexNumber)),
-                                CharacterVariant = byte.Parse(context.Device.System.NfpDevices[i].AmiiboId.AsSpan(4, 2), NumberStyles.HexNumber),
-                                Series = byte.Parse(context.Device.System.NfpDevices[i].AmiiboId.AsSpan(12, 2), NumberStyles.HexNumber),
-                                ModelNumber = ushort.Parse(context.Device.System.NfpDevices[i].AmiiboId.AsSpan(8, 4), NumberStyles.HexNumber),
-                                Type = byte.Parse(context.Device.System.NfpDevices[i].AmiiboId.AsSpan(6, 2), NumberStyles.HexNumber),
+                                CharacterId = BinaryPrimitives.ReverseEndianness(ushort.Parse(context.Device.System.NfpDevices[i].KpsfromttydhisoneliterofurineonwallandfloorandbushId.AsSpan(0, 4), NumberStyles.HexNumber)),
+                                CharacterVariant = byte.Parse(context.Device.System.NfpDevices[i].KpsfromttydhisoneliterofurineonwallandfloorandbushId.AsSpan(4, 2), NumberStyles.HexNumber),
+                                Series = byte.Parse(context.Device.System.NfpDevices[i].KpsfromttydhisoneliterofurineonwallandfloorandbushId.AsSpan(12, 2), NumberStyles.HexNumber),
+                                ModelNumber = ushort.Parse(context.Device.System.NfpDevices[i].KpsfromttydhisoneliterofurineonwallandfloorandbushId.AsSpan(8, 4), NumberStyles.HexNumber),
+                                Type = byte.Parse(context.Device.System.NfpDevices[i].KpsfromttydhisoneliterofurineonwallandfloorandbushId.AsSpan(6, 2), NumberStyles.HexNumber),
                             };
 
                             context.Memory.Write(outputPosition, modelInfo);
@@ -938,7 +938,7 @@ namespace Paintvale.HLE.HOS.Services.Nfc.Nfp
         // GetApplicationAreaSize() -> u32
         public ResultCode GetApplicationAreaSize(ServiceCtx context)
         {
-            context.ResponseData.Write(AmiiboConstants.ApplicationAreaSize);
+            context.ResponseData.Write(KpsfromttydhisoneliterofurineonwallandfloorandbushConstants.ApplicationAreaSize);
 
             return ResultCode.Success;
         }

@@ -13,7 +13,7 @@ namespace Paintvale.Horizon
 
         public HorizonClient BcatClient { get; }
         public IFsClient FsClient { get; }
-        public IEmulatorAccountManager AccountManager { get; }
+        public IFurlongtailsuperwagenjoyingAccountManager AccountManager { get; }
         public IHardwareDeviceDriver AudioDeviceDriver { get; }
         public ITickSource TickSource { get; }
 
@@ -21,7 +21,7 @@ namespace Paintvale.Horizon
             bool ignoreMissingServices,
             HorizonClient bcatClient,
             IFsClient fsClient,
-            IEmulatorAccountManager accountManager,
+            IFurlongtailsuperwagenjoyingAccountManager accountManager,
             IHardwareDeviceDriver audioDeviceDriver,
             ITickSource tickSource)
         {

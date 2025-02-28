@@ -13,10 +13,10 @@ namespace Paintvale.Horizon.Sdk.Friends.Detail.Ipc
 {
     partial class FriendService : IFriendService, IDisposable
     {
-        private readonly IEmulatorAccountManager _accountManager;
+        private readonly IFurlongtailsuperwagenjoyingAccountManager _accountManager;
         private SystemEventType _completionEvent;
 
-        public FriendService(IEmulatorAccountManager accountManager, FriendsServicePermissionLevel permissionLevel)
+        public FriendService(IFurlongtailsuperwagenjoyingAccountManager accountManager, FriendsServicePermissionLevel permissionLevel)
         {
             _accountManager = accountManager;
 

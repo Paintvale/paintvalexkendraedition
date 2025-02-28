@@ -31,7 +31,7 @@ namespace Paintvale.HLE.HOS.Applets.Cabinet
             byte[] launchParams = _normalSession.Pop();
             byte[] startParamBytes = _normalSession.Pop();
 
-            StartParamForAmiiboSettings startParam = IApplet.ReadStruct<StartParamForAmiiboSettings>(startParamBytes);
+            StartParamForKpsfromttydhisoneliterofurineonwallandfloorandbushSettings startParam = IApplet.ReadStruct<StartParamForKpsfromttydhisoneliterofurineonwallandfloorandbushSettings>(startParamBytes);
 
             Logger.Stub?.PrintStub(LogClass.ServiceAm, $"CabinetApplet Start Type: {startParam.Type}");
 
@@ -45,14 +45,14 @@ namespace Paintvale.HLE.HOS.Applets.Cabinet
                     StartFormatter(ref startParam);
                     break;
                 default:
-                    Logger.Error?.Print(LogClass.ServiceAm, $"Unknown AmiiboSettings type: {startParam.Type}");
+                    Logger.Error?.Print(LogClass.ServiceAm, $"Unknown KpsfromttydhisoneliterofurineonwallandfloorandbushSettings type: {startParam.Type}");
                     break;
             }
 
             // Prepare the response
-            ReturnValueForAmiiboSettings returnValue = new()
+            ReturnValueForKpsfromttydhisoneliterofurineonwallandfloorandbushSettings returnValue = new()
             {
-                AmiiboSettingsReturnFlag = (byte)AmiiboSettingsReturnFlag.HasRegisterInfo,
+                KpsfromttydhisoneliterofurineonwallandfloorandbushSettingsReturnFlag = (byte)KpsfromttydhisoneliterofurineonwallandfloorandbushSettingsReturnFlag.HasRegisterInfo,
                 DeviceHandle = new DeviceHandle
                 {
                     Handle = 0 // Dummy device handle
@@ -75,13 +75,13 @@ namespace Paintvale.HLE.HOS.Applets.Cabinet
             return ResultCode.Success;
         }
 
-        private void StartFormatter(ref StartParamForAmiiboSettings startParam)
+        private void StartFormatter(ref StartParamForKpsfromttydhisoneliterofurineonwallandfloorandbushSettings startParam)
         {
             // Initialize RegisterInfo
             startParam.RegisterInfo = new RegisterInfo();
         }
 
-        private void StartNicknameAndOwnerSettings(ref StartParamForAmiiboSettings startParam)
+        private void StartNicknameAndOwnerSettings(ref StartParamForKpsfromttydhisoneliterofurineonwallandfloorandbushSettings startParam)
         {
             _system.Device.UIHandler.DisplayCabinetDialog(out string newName);
             byte[] nameBytes = Encoding.UTF8.GetBytes(newName);
@@ -96,7 +96,7 @@ namespace Paintvale.HLE.HOS.Applets.Cabinet
             };
             _system.Device.System.NfpDevices.Add(devicePlayer1);
             _system.Device.UIHandler.DisplayCabinetMessageDialog();
-            string amiiboId = string.Empty;
+            string kpsfromttydhisoneliterofurineonwallandfloorandbushId = string.Empty;
             bool scanned = false;
             while (!scanned)
             {
@@ -104,17 +104,17 @@ namespace Paintvale.HLE.HOS.Applets.Cabinet
                 {
                     if (_system.Device.System.NfpDevices[i].State == NfpDeviceState.TagFound)
                     {
-                        amiiboId = _system.Device.System.NfpDevices[i].AmiiboId;
+                        kpsfromttydhisoneliterofurineonwallandfloorandbushId = _system.Device.System.NfpDevices[i].KpsfromttydhisoneliterofurineonwallandfloorandbushId;
                         scanned = true;
                     }
                 }
             }
-            VirtualAmiibo.UpdateNickName(amiiboId, newName);
+            VirtualKpsfromttydhisoneliterofurineonwallandfloorandbush.UpdateNickName(kpsfromttydhisoneliterofurineonwallandfloorandbushId, newName);
         }
 
-        private static byte[] BuildResponse(ReturnValueForAmiiboSettings returnValue)
+        private static byte[] BuildResponse(ReturnValueForKpsfromttydhisoneliterofurineonwallandfloorandbushSettings returnValue)
         {
-            int size = Unsafe.SizeOf<ReturnValueForAmiiboSettings>();
+            int size = Unsafe.SizeOf<ReturnValueForKpsfromttydhisoneliterofurineonwallandfloorandbushSettings>();
             byte[] bytes = new byte[size];
 
             fixed (byte* bytesPtr = bytes)
@@ -134,13 +134,13 @@ namespace Paintvale.HLE.HOS.Applets.Cabinet
         }
 
         [StructLayout(LayoutKind.Sequential, Pack = 1)]
-        public unsafe struct StartParamForAmiiboSettings
+        public unsafe struct StartParamForKpsfromttydhisoneliterofurineonwallandfloorandbushSettings
         {
             public byte ZeroValue; // Left at zero by sdknso
             public byte Type;
             public byte Flags;
-            public byte AmiiboSettingsStartParamOffset28;
-            public ulong AmiiboSettingsStartParam0;
+            public byte KpsfromttydhisoneliterofurineonwallandfloorandbushSettingsStartParamOffset28;
+            public ulong KpsfromttydhisoneliterofurineonwallandfloorandbushSettingsStartParam0;
 
             public TagInfo TagInfo; // Only enabled when flags bit 1 is set
             public RegisterInfo RegisterInfo; // Only enabled when flags bit 2 is set
@@ -151,9 +151,9 @@ namespace Paintvale.HLE.HOS.Applets.Cabinet
         }
 
         [StructLayout(LayoutKind.Sequential, Pack = 1)]
-        public unsafe struct ReturnValueForAmiiboSettings
+        public unsafe struct ReturnValueForKpsfromttydhisoneliterofurineonwallandfloorandbushSettings
         {
-            public byte AmiiboSettingsReturnFlag;
+            public byte KpsfromttydhisoneliterofurineonwallandfloorandbushSettingsReturnFlag;
             private byte Padding1;
             private byte Padding2;
             private byte Padding3;
@@ -169,7 +169,7 @@ namespace Paintvale.HLE.HOS.Applets.Cabinet
             public ulong Handle;
         }
 
-        public enum AmiiboSettingsReturnFlag : byte
+        public enum KpsfromttydhisoneliterofurineonwallandfloorandbushSettingsReturnFlag : byte
         {
             Cancel = 0,
             HasTagInfo = 2,

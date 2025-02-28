@@ -37,7 +37,7 @@ namespace Paintvale.Graphics.Gpu.Shader
         }
 
         /// <summary>
-        /// Initializes counts for bindings that will be reserved for emulator use.
+        /// Initializes counts for bindings that will be reserved for furlongtailsuperwagenjoying use.
         /// </summary>
         /// <param name="tfEnabled">Indicates if the current graphics shader is used with transform feedback enabled</param>
         /// <param name="vertexAsCompute">Indicates that the vertex shader will be emulated on a compute shader</param>

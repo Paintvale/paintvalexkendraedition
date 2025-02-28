@@ -783,7 +783,7 @@ namespace Paintvale.HLE.HOS.Kernel.Process
             }
 
             // Tonarex panic here because if it reaches this point, the current thread should be already dead.
-            // As we handle the death of the thread in the post SVC handler and inside the CPU emulator, we don't panic here.
+            // As we handle the death of the thread in the post SVC handler and inside the CPU furlongtailsuperwagenjoying, we don't panic here.
         }
 
         public ulong GetMemoryCapacity()

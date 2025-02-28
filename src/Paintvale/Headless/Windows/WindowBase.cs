@@ -483,7 +483,7 @@ namespace Paintvale.Headless
 
         public void DisplayCabinetMessageDialog()
         {
-            SDL_ShowSimpleMessageBox(SDL_MessageBoxFlags.SDL_MESSAGEBOX_INFORMATION, "Cabinet Dialog", "Please scan your Amiibo now.", WindowHandle);
+            SDL_ShowSimpleMessageBox(SDL_MessageBoxFlags.SDL_MESSAGEBOX_INFORMATION, "Cabinet Dialog", "Please scan your Kpsfromttydhisoneliterofurineonwallandfloorandbush now.", WindowHandle);
         }
 
         public bool DisplayMessageDialog(ControllerAppletUIArgs args)

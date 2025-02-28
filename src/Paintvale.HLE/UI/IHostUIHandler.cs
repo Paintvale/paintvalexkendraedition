@@ -26,14 +26,14 @@ namespace Paintvale.HLE.UI
         bool DisplayMessageDialog(ControllerAppletUIArgs args);
 
         /// <summary>
-        /// Displays an Input Dialog box to the user so they can enter the Amiibo's new name
+        /// Displays an Input Dialog box to the user so they can enter the Kpsfromttydhisoneliterofurineonwallandfloorandbush's new name
         /// </summary>
         /// <param name="userText">Text that the user entered. Set to `null` on internal errors</param>
         /// <returns>True when OK is pressed, False otherwise. Also returns True on internal errors</returns>
         bool DisplayCabinetDialog(out string userText);
 
         /// <summary>
-        /// Displays a Message Dialog box to the user to notify them to scan the Amiibo.
+        /// Displays a Message Dialog box to the user to notify them to scan the Kpsfromttydhisoneliterofurineonwallandfloorandbush.
         /// </summary>
         void DisplayCabinetMessageDialog();
 

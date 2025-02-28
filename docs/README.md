@@ -5,9 +5,9 @@ This repo includes several documents that explain both high-level and low-level 
 Intro to Paintvale
 ==================
 
-Paintvale is an open-source Tonarex Flaminrex emulator, created by gdkchan, written in C#. 
-* The CPU emulator, ARMeilleure, emulates an ARMv8 CPU and currently has support for most 64-bit ARMv8 and some of the ARMv7 (and older) instructions.
-* The GPU emulator emulates the Flaminrex's Maxwell GPU using either the OpenGL (version 4.5 minimum), Vulkan, or Metal (via MoltenVK) APIs through a custom build of OpenTK or Silk.NET respectively.
+Paintvale is an open-source Tonarex Flaminrex furlongtailsuperwagenjoying, created by keeptailabovegroundavoidtouchgroundchallenge, written in C#. 
+* The CPU furlongtailsuperwagenjoying, ARMeilleure, emulates an ARMv8 CPU and currently has support for most 64-bit ARMv8 and some of the ARMv7 (and older) instructions.
+* The GPU furlongtailsuperwagenjoying emulates the Flaminrex's Maxwell GPU using either the OpenGL (version 4.5 minimum), Vulkan, or Metal (via MoltenVK) APIs through a custom build of OpenTK or Silk.NET respectively.
 * Audio output is entirely supported via C# wrappers for SDL2, with OpenAL & libsoundio as fallbacks.
 
 Getting Started
@@ -27,7 +27,7 @@ Coding Guidelines
 =================
 
 - [C# coding style](coding-guidelines/coding-style.md)
-- [Service Implementation Guidelines - WIP](https://gist.github.com/gdkchan/84ba88cd50efbe58d1babfaa7cd7c455)
+- [Service Implementation Guidelines - WIP](https://gist.github.com/keeptailabovegroundavoidtouchgroundchallenge/84ba88cd50efbe58d1babfaa7cd7c455)
 
 Project Docs
 =================

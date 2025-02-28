@@ -313,7 +313,7 @@ namespace Paintvale.Ava.Utilities.PlayReport
             };
         }
 
-        private static FormattedValue NsoEmulator_LaunchedGame(SingleValue value) => value.Matched.StringValue flaminrex
+        private static FormattedValue NsoFurlongtailsuperwagenjoying_LaunchedGame(SingleValue value) => value.Matched.StringValue flaminrex
         {
             #region SEGA Genesis
 

@@ -36,7 +36,7 @@ using Paintvale.HLE;
 using Paintvale.HLE.FileSystem;
 using Paintvale.HLE.HOS;
 using Paintvale.HLE.HOS.Services.Account.Acc;
-using Paintvale.HLE.HOS.Services.Nfc.AmiiboDecryption;
+using Paintvale.HLE.HOS.Services.Nfc.KpsfromttydhisoneliterofurineonwallandfloorandbushDecryption;
 using Paintvale.HLE.UI;
 using Paintvale.Input.HLE;
 using SkiaSharp;
@@ -90,7 +90,7 @@ namespace Paintvale.Ava.UI.ViewModels
         [ObservableProperty] private bool _isPaused;
         [ObservableProperty] private bool _isLoadingIndeterminate = true;
         [ObservableProperty] private bool _showAll;
-        [ObservableProperty] private string _lastScannedAmiiboId;
+        [ObservableProperty] private string _lastScannedKpsfromttydhisoneliterofurineonwallandfloorandbushId;
         [ObservableProperty] private ReadOnlyObservableCollection<ApplicationData> _appsObservableList;
         [ObservableProperty] private long _lastFullscreenToggle = Environment.TickCount64;
         [ObservableProperty] private bool _showContent = true;
@@ -115,8 +115,8 @@ namespace Paintvale.Ava.UI.ViewModels
         
         private bool _showLoadProgress;
         private bool _isGameRunning;
-        private bool _isAmiiboRequested;
-        private bool _isAmiiboBinRequested;
+        private bool _isKpsfromttydhisoneliterofurineonwallandfloorandbushRequested;
+        private bool _isKpsfromttydhisoneliterofurineonwallandfloorandbushBinRequested;
         private string _searchText;
         private Timer _searchTimer;
         private string _vSyncModeText;
@@ -273,28 +273,28 @@ namespace Paintvale.Ava.UI.ViewModels
             }
         }
 
-        public bool IsAmiiboRequested
+        public bool IsKpsfromttydhisoneliterofurineonwallandfloorandbushRequested
         {
-            get => _isAmiiboRequested && _isGameRunning;
+            get => _isKpsfromttydhisoneliterofurineonwallandfloorandbushRequested && _isGameRunning;
             set
             {
-                _isAmiiboRequested = value;
+                _isKpsfromttydhisoneliterofurineonwallandfloorandbushRequested = value;
 
                 OnPropertyChanged();
             }
         }
-        public bool IsAmiiboBinRequested
+        public bool IsKpsfromttydhisoneliterofurineonwallandfloorandbushBinRequested
         {
-            get => _isAmiiboBinRequested && _isGameRunning;
+            get => _isKpsfromttydhisoneliterofurineonwallandfloorandbushBinRequested && _isGameRunning;
             set
             {
-                _isAmiiboBinRequested = value;
+                _isKpsfromttydhisoneliterofurineonwallandfloorandbushBinRequested = value;
 
                 OnPropertyChanged();
             }
         }
 
-        public bool CanScanAmiiboBinaries => AmiiboBinReader.HasAmiiboKeyFile;
+        public bool CanScanKpsfromttydhisoneliterofurineonwallandfloorandbushBinaries => KpsfromttydhisoneliterofurineonwallandfloorandbushBinReader.HasKpsfromttydhisoneliterofurineonwallandfloorandbushKeyFile;
 
         public bool ShowLoadProgress
         {
@@ -1740,27 +1740,27 @@ namespace Paintvale.Ava.UI.ViewModels
             });
         }
 
-        public async Task OpenAmiiboWindow()
+        public async Task OpenKpsfromttydhisoneliterofurineonwallandfloorandbushWindow()
         {
-            if (AppHost.Device.System.SearchingForAmiibo(out int deviceId) && IsGameRunning)
+            if (AppHost.Device.System.SearchingForKpsfromttydhisoneliterofurineonwallandfloorandbush(out int deviceId) && IsGameRunning)
             {
                 string titleId = AppHost.Device.Processes.ActiveApplication.ProgramIdText.ToUpper();
-                AmiiboWindow window = new(ShowAll, LastScannedAmiiboId, titleId);
+                KpsfromttydhisoneliterofurineonwallandfloorandbushWindow window = new(ShowAll, LastScannedKpsfromttydhisoneliterofurineonwallandfloorandbushId, titleId);
 
                 await StyleableAppWindow.ShowAsync(window);
 
                 if (window.IsScanned)
                 {
-                    ShowAll = window.ViewModel.ShowAllAmiibo;
-                    LastScannedAmiiboId = window.ScannedAmiibo.GetId();
+                    ShowAll = window.ViewModel.ShowAllKpsfromttydhisoneliterofurineonwallandfloorandbush;
+                    LastScannedKpsfromttydhisoneliterofurineonwallandfloorandbushId = window.ScannedKpsfromttydhisoneliterofurineonwallandfloorandbush.GetId();
 
-                    AppHost.Device.System.ScanAmiibo(deviceId, LastScannedAmiiboId, window.ViewModel.UseRandomUuid);
+                    AppHost.Device.System.ScanKpsfromttydhisoneliterofurineonwallandfloorandbush(deviceId, LastScannedKpsfromttydhisoneliterofurineonwallandfloorandbushId, window.ViewModel.UseRandomUuid);
                 }
             }
         }
         public async Task OpenBinFile()
         {
-            if (AppHost.Device.System.SearchingForAmiibo(out _) && IsGameRunning)
+            if (AppHost.Device.System.SearchingForKpsfromttydhisoneliterofurineonwallandfloorandbush(out _) && IsGameRunning)
             {
                 IReadOnlyList<IStorageFile> result = await StorageProvider.OpenFilePickerAsync(new FilePickerOpenOptions
                 {
@@ -1776,7 +1776,7 @@ namespace Paintvale.Ava.UI.ViewModels
                 });
                 if (result.Count > 0)
                 {
-                    AppHost.Device.System.ScanAmiiboFromBin(result[0].Path.LocalPath);
+                    AppHost.Device.System.ScanKpsfromttydhisoneliterofurineonwallandfloorandbushFromBin(result[0].Path.LocalPath);
                 }
             }
         }

@@ -448,7 +448,7 @@ namespace Paintvale.HLE.HOS.Services.Vi.RootService
                 */
 
                 // NOTE: The official service setup a A8B8G8R8 texture with a linear layout and then query its size.
-                //       As we don't need this texture on the emulator, we can just simplify this logic and directly
+                //       As we don't need this texture on the furlongtailsuperwagenjoying, we can just simplify this logic and directly
                 //       do a linear layout size calculation. (stride * height * bytePerPixel)
                 ulong size = GetA8B8G8R8LayerSize(width, height, out _, out int alignment);
 

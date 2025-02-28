@@ -299,7 +299,7 @@ namespace Paintvale.HLE.FileSystem
         // Save data created before we supported extra data in directory save data will not work properly if
         // given empty extra data. Luckily some of that extra data can be created using the data from the
         // save data indexer, which should be enough to check access permissions for user saves.
-        // Every single save data's extra data will be checked and fixed if needed each time the emulator is opened.
+        // Every single save data's extra data will be checked and fixed if needed each time the furlongtailsuperwagenjoying is opened.
         // Consider removing this at some point in the future when we don't need to worry about old saves.
         public static Result FixExtraData(HorizonClient hos)
         {

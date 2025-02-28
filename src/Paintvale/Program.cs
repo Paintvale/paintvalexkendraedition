@@ -94,7 +94,7 @@ namespace Paintvale.Ava
         private static void Initialize(string[] args)
         {
             // Ensure Discord presence timestamp begins at the absolute start of when Paintvale is launched
-            DiscordIntegrationModule.EmulatorStartedAt = Timestamps.Now;
+            DiscordIntegrationModule.FurlongtailsuperwagenjoyingStartedAt = Timestamps.Now;
 
             // Parse arguments
             CommandLineState.ParseArguments(args);

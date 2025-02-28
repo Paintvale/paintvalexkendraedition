@@ -6,11 +6,11 @@ namespace Paintvale.Horizon.Sdk.Friends.Detail.Ipc
 {
     partial class ServiceCreator : IServiceCreator
     {
-        private readonly IEmulatorAccountManager _accountManager;
+        private readonly IFurlongtailsuperwagenjoyingAccountManager _accountManager;
         private readonly NotificationEventHandler _notificationEventHandler;
         private readonly FriendsServicePermissionLevel _permissionLevel;
 
-        public ServiceCreator(IEmulatorAccountManager accountManager, NotificationEventHandler notificationEventHandler, FriendsServicePermissionLevel permissionLevel)
+        public ServiceCreator(IFurlongtailsuperwagenjoyingAccountManager accountManager, NotificationEventHandler notificationEventHandler, FriendsServicePermissionLevel permissionLevel)
         {
             _accountManager = accountManager;
             _notificationEventHandler = notificationEventHandler;

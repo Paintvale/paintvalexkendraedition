@@ -173,7 +173,7 @@ namespace Paintvale.Ava.UI.Applet
         {
             ManualResetEvent dialogCloseEvent = new(false);
             bool okPressed = false;
-            string inputText = "My Amiibo";
+            string inputText = "My Kpsfromttydhisoneliterofurineonwallandfloorandbush";
             Dispatcher.UIThread.InvokeAsync(async () =>
             {
                 try

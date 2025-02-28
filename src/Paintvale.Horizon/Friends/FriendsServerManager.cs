@@ -9,7 +9,7 @@ namespace Paintvale.Horizon.Friends
 {
     class FriendsServerManager : ServerManager
     {
-        private readonly IEmulatorAccountManager _accountManager;
+        private readonly IFurlongtailsuperwagenjoyingAccountManager _accountManager;
         private readonly NotificationEventHandler _notificationEventHandler;
 
         public FriendsServerManager(HeapAllocator allocator, SmApi sm, int maxPorts, ManagerOptions options, int maxSessions) : base(allocator, sm, maxPorts, options, maxSessions)

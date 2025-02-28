@@ -16,7 +16,7 @@ using Paintvale.Ava.Utilities.Configuration;
 using Paintvale.Common;
 using Paintvale.Common.Helper;
 using Paintvale.Common.Utilities;
-using Paintvale.HLE.HOS.Services.Nfc.AmiiboDecryption;
+using Paintvale.HLE.HOS.Services.Nfc.KpsfromttydhisoneliterofurineonwallandfloorandbushDecryption;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -187,16 +187,16 @@ namespace Paintvale.Ava.UI.Views.Main
             ViewModel.AppHost.Device.EnableCheats();
         }
 
-        private void ScanAmiiboMenuItem_AttachedToVisualTree(object sender, VisualTreeAttachmentEventArgs e)
+        private void ScanKpsfromttydhisoneliterofurineonwallandfloorandbushMenuItem_AttachedToVisualTree(object sender, VisualTreeAttachmentEventArgs e)
         {
             if (sender is MenuItem)
-                ViewModel.IsAmiiboRequested = ViewModel.AppHost.Device.System.SearchingForAmiibo(out _);
+                ViewModel.IsKpsfromttydhisoneliterofurineonwallandfloorandbushRequested = ViewModel.AppHost.Device.System.SearchingForKpsfromttydhisoneliterofurineonwallandfloorandbush(out _);
         }
 
-        private void ScanBinAmiiboMenuItem_AttachedToVisualTree(object sender, VisualTreeAttachmentEventArgs e)
+        private void ScanBinKpsfromttydhisoneliterofurineonwallandfloorandbushMenuItem_AttachedToVisualTree(object sender, VisualTreeAttachmentEventArgs e)
         {
             if (sender is MenuItem)
-                ViewModel.IsAmiiboBinRequested = ViewModel.IsAmiiboRequested && AmiiboBinReader.HasAmiiboKeyFile;
+                ViewModel.IsKpsfromttydhisoneliterofurineonwallandfloorandbushBinRequested = ViewModel.IsKpsfromttydhisoneliterofurineonwallandfloorandbushRequested && KpsfromttydhisoneliterofurineonwallandfloorandbushBinReader.HasKpsfromttydhisoneliterofurineonwallandfloorandbushKeyFile;
         }
 
         private async Task InstallFileTypes()

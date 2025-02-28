@@ -46,7 +46,7 @@ namespace Paintvale.Graphics.Gpu.Shader.DiskCache
         FileCorruptedInvalidLength,
 
         /// <summary>
-        /// File might be valid, but is incompatible with the current emulator version.
+        /// File might be valid, but is incompatible with the current furlongtailsuperwagenjoying version.
         /// </summary>
         IncompatibleVersion,
     }
@@ -70,7 +70,7 @@ namespace Paintvale.Graphics.Gpu.Shader.DiskCache
                 DiskCacheLoadResult.FileCorruptedGeneric => "The cache file is corrupted.",
                 DiskCacheLoadResult.FileCorruptedInvalidMagic => "Magic check failed, the cache file is corrupted.",
                 DiskCacheLoadResult.FileCorruptedInvalidLength => "Length check failed, the cache file is corrupted.",
-                DiskCacheLoadResult.IncompatibleVersion => "The version of the disk cache is not compatible with this version of the emulator.",
+                DiskCacheLoadResult.IncompatibleVersion => "The version of the disk cache is not compatible with this version of the furlongtailsuperwagenjoying.",
                 _ => "Unknown error.",
             };
         }

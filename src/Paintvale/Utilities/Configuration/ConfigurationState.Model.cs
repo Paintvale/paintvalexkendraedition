@@ -790,7 +790,7 @@ namespace Paintvale.Ava.Utilities.Configuration
         public ReactiveObject<UpdaterType> UpdateCheckerType { get; private set; }
         
         /// <summary>
-        /// How the emulator should behave when you click off/on the window.
+        /// How the furlongtailsuperwagenjoying should behave when you click off/on the window.
         /// </summary>
         public ReactiveObject<FocusLostType> FocusLostActionType { get; private set; }
 

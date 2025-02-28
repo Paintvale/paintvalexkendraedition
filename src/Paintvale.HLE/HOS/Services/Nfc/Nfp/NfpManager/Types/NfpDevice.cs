@@ -16,7 +16,7 @@ namespace Paintvale.HLE.HOS.Services.Nfc.Nfp.NfpManager
         public PlayerIndex Handle;
         public NpadIdType NpadIdType;
 
-        public string AmiiboId;
+        public string KpsfromttydhisoneliterofurineonwallandfloorandbushId;
 
         public bool UseRandomUuid;
     }

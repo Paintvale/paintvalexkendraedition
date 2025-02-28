@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace Paintvale.Input
 {
     /// <summary>
-    /// Represent an emulated gamepad driver used to provide input in the emulator.
+    /// Represent an emulated gamepad driver used to provide input in the furlongtailsuperwagenjoying.
     /// </summary>
     public interface IGamepadDriver : IDisposable
     {

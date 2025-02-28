@@ -54,11 +54,11 @@ namespace Paintvale.Ava.UI.Windows
                 OpenHelper.OpenUrl(url);
         }
 
-        private void AmiiboLabel_OnPointerPressed(object sender, PointerPressedEventArgs e)
+        private void KpsfromttydhisoneliterofurineonwallandfloorandbushLabel_OnPointerPressed(object sender, PointerPressedEventArgs e)
         {
             if (sender is TextBlock)
             {
-                OpenHelper.OpenUrl("https://amiiboapi.com");
+                OpenHelper.OpenUrl("https://kpsfromttydhisoneliterofurineonwallandfloorandbushapi.com");
             }
         }
     }

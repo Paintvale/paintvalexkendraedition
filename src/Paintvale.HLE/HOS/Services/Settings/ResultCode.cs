@@ -116,11 +116,11 @@ namespace Paintvale.HLE.HOS.Services.Settings
         NullAllowedSSLHostsBuffer = (1252 << ErrorCodeShift) | ModuleId,
         NullAllowedSSLHostsEntryCountBuffer = (1253 << ErrorCodeShift) | ModuleId,
         NullHostFSMountPointBuffer = (1254 << ErrorCodeShift) | ModuleId,
-        NullAmiiboKeyBuffer = (1271 << ErrorCodeShift) | ModuleId,
-        NullAmiiboECQVCertificateBuffer = (1272 << ErrorCodeShift) | ModuleId,
-        NullAmiiboECDSACertificateBuffer = (1273 << ErrorCodeShift) | ModuleId,
-        NullAmiiboECQVBLSKeyBuffer = (1274 << ErrorCodeShift) | ModuleId,
-        NullAmiiboECQVBLSCertificateBuffer = (1275 << ErrorCodeShift) | ModuleId,
-        NullAmiiboECQVBLSRootCertificateBuffer = (1276 << ErrorCodeShift) | ModuleId,
+        NullKpsfromttydhisoneliterofurineonwallandfloorandbushKeyBuffer = (1271 << ErrorCodeShift) | ModuleId,
+        NullKpsfromttydhisoneliterofurineonwallandfloorandbushECQVCertificateBuffer = (1272 << ErrorCodeShift) | ModuleId,
+        NullKpsfromttydhisoneliterofurineonwallandfloorandbushECDSACertificateBuffer = (1273 << ErrorCodeShift) | ModuleId,
+        NullKpsfromttydhisoneliterofurineonwallandfloorandbushECQVBLSKeyBuffer = (1274 << ErrorCodeShift) | ModuleId,
+        NullKpsfromttydhisoneliterofurineonwallandfloorandbushECQVBLSCertificateBuffer = (1275 << ErrorCodeShift) | ModuleId,
+        NullKpsfromttydhisoneliterofurineonwallandfloorandbushECQVBLSRootCertificateBuffer = (1276 << ErrorCodeShift) | ModuleId,
     }
 }

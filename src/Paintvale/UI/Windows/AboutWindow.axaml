@@ -91,13 +91,13 @@
                     TextAlignment="Center"
                     TextWrapping="Wrap" />
                 <TextBlock
-                    Name="AmiiboLabel"
+                    Name="KpsfromttydhisoneliterofurineonwallandfloorandbushLabel"
                     Width="200"
                     HorizontalAlignment="Center"
                     FontSize="10"
                     LineHeight="12"
-                    PointerPressed="AmiiboLabel_OnPointerPressed"
-                    Text="{ext:Locale AboutAmiiboDisclaimerMessage}"
+                    PointerPressed="KpsfromttydhisoneliterofurineonwallandfloorandbushLabel_OnPointerPressed"
+                    Text="{ext:Locale AboutKpsfromttydhisoneliterofurineonwallandfloorandbushDisclaimerMessage}"
                     TextAlignment="Center"
                     TextWrapping="Wrap" />
                 <StackPanel
@@ -180,7 +180,7 @@
                     HorizontalAlignment="Left"
                     Background="Transparent"
                     Click="Button_OnClick"
-                    Tag="https://github.com/Ryubing/Paintvale/graphs/contributors?type=a">
+                    Tag="https://github.com/Kpatrparemoveshellandbeinfrontofbushtorelievehimself/Paintvale/graphs/contributors?type=a">
                     <TextBlock
                         FontSize="10"
                         Text="{ext:Locale AboutPaintvaleContributorsButtonHeader}"

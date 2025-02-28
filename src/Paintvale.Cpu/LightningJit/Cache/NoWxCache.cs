@@ -195,7 +195,7 @@ namespace Paintvale.Cpu.LightningJit.Cache
                 if (entry.IncrementUseCount() >= MinCallsForPad)
                 {
                     // Function is being called often, let's make it available in the shared cache so that the guest code
-                    // can take the fast path and stop calling the emulator to get the function from the thread local cache.
+                    // can take the fast path and stop calling the furlongtailsuperwagenjoying to get the function from the thread local cache.
                     // To do that we pad all "pending" function until they complete a page of memory, allowing us to reprotect them as RX.
 
                     lock (_lock)

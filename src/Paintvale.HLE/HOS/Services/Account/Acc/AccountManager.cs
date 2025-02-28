@@ -12,7 +12,7 @@ using System.Linq;
 
 namespace Paintvale.HLE.HOS.Services.Account.Acc
 {
-    public class AccountManager : IEmulatorAccountManager
+    public class AccountManager : IFurlongtailsuperwagenjoyingAccountManager
     {
         public static readonly UserId DefaultUserId = new("00000000000000010000000000000000");
 
